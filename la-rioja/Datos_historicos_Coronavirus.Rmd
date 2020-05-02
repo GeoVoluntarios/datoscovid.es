@@ -462,19 +462,52 @@ saveRDS(rioja_llamadas, file = paste0('./data/rioja_llamadas_', Sys.Date(),'.rds
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+********************************************************************************
+
+
+
 ## Situación por Zonas Básicas de Salud
 
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-460](https://web.larioja.org/dato-abierto/datoabierto?n=opd-460)
 
 En este caso cargamos el histórico que voy almacenando
 
-```{r}
+```{r, eval=FALSE}
 page_casos_activos_zonas <- read_html('/media/enero/Disco1/Varios/GitHub/Corona_Virus_La_Rioja/Situación epidemiológica del COVID-19 en La Rioja_2020-04-30_files/a_012.html')
 ```
 
 Buscamos la fecha
 
-```{r}
+```{r, eval=FALSE}
 # find all nodes with a class of "col_md_6"
 fecha_zonas_xml <- html_nodes(page_casos_activos_zonas, css = '.chart-intro')
 fecha_zonas_xml
@@ -482,7 +515,7 @@ fecha_zonas_xml
 
 Pasamos a caracter
 
-```{r}
+```{r, eval=FALSE}
 fecha_zonas <- html_text(fecha_zonas_xml)
 fecha_zonas
 ```
@@ -492,25 +525,23 @@ Ahora los datos de los mapas
 marker-text label label-style-box label-style-box-rounded
 
 
-```{r}
+```{r, eval=FALSE}
 # find all nodes with a class of "col_md_6"
 chart_zonas <- html_nodes(page_casos_activos_zonas, css = '.chart')
 chart_zonas
 ```
 
-```{r}
+```{r, eval=FALSE}
 casos_fuera_rioja <- html_children(chart_zonas)[3]
 casos_fuera_rioja
 ```
 
-```{r}
+```{r, eval=FALSE}
 casos_fuera_rioja <- html_text((html_children(chart_zonas)[3]), trim = TRUE)
 casos_fuera_rioja
 ```
 
-
-
-```{r}
+```{r, eval=FALSE}
 # find all nodes with a class of "col_md_6"
 casos_zonas_raw <- html_text((html_children(chart_zonas)[2]), trim = TRUE)
 casos_zonas_raw
@@ -518,7 +549,7 @@ casos_zonas_raw
 
 Limpiamos
 
-```{r}
+```{r, eval=FALSE}
 # Separamos
 casos_zonas <- unlist(strsplit(casos_zonas_raw, 'ZBS '))
 
@@ -541,22 +572,22 @@ rioja_casos_activos_zonas_basicas
 
 Incluimos los de fuera
 
-```{r}
+```{r, eval=FALSE}
 rioja_casos_activos_zonas_basicas <- rbind(rioja_casos_activos_zonas_basicas,  data.frame(localidad  = 'Fuera Rioja', casos_activos = as.integer(unlist(strsplit(casos_fuera_rioja, ':'))[2])))
 ```
 
-```{r}
+```{r, eval=FALSE}
 rioja_casos_activos_zonas_basicas
 ```
 
-```{r}
+```{r, eval=FALSE}
 sum(rioja_casos_activos_zonas_basicas$casos_activos)
 ```
 
 **Comprobar que cuadra**
 
 
-```{r}
+```{r, eval=FALSE}
 diario <- data.frame(casos_activos_aberite      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Alberite'],
                      casos_activos_alfaro       = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Alfaro'],
                      casos_activos_arnedo       = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Arnedo'],
@@ -570,99 +601,146 @@ diario <- data.frame(casos_activos_aberite      = rioja_casos_activos_zonas_basi
                      casos_activos_san_roman    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'San Román'],
                      casos_activos_s_domingo    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Santo Domingo'],
                      casos_activos_torrecilla   = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Torrecilla'],
-                     casos_activos_fuera        = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Fuera Rioja']
+                     casos_activos_fuera        = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Fuera Rioja'],
+                     fecha_web                  = as.Date(unlist(strsplit(fecha_zonas, 'Datos actualizados el '))[2], '%d de %B de %Y')
                      )
 ```
 
 
+
+
+
+
+
+En un bucle
+
 ```{r}
-fecha_campos_zonas <- html_children(col_md_6_zonas[8]) %>% 
-    html_nodes("dt") %>% 
-    html_text(trim = TRUE)
-fecha_campos_zonas
+files_data <- list.files('/media/enero/Disco1/Varios/GitHub/Corona_Virus_La_Rioja/', pattern = 'COVID-19 en La Rioja')
+
+# Nos quedamos con los html
+files_data <- files_data[grep('html', files_data, invert = TRUE)]
+
+# Incluimos el fichero html
+files_data <- paste0(files_data, '/a_012.html')
+files_data
+```
+
+Hay que revisarlo a mano
+
+```{r}
+files_data <- c(
+                # "Situación epidemiológica del COVID-19 en La Rioja_2020-04-16_files/a_008.html",
+                "Situación epidemiológica del COVID-19 en La Rioja_2020-04-17_files/a_008.html", # Ok
+                "Situación epidemiológica del COVID-19 en La Rioja_2020-04-19_files/a_008.html",
+                "Situación epidemiológica del COVID-19 en La Rioja_2020-04-20_files/a_008.html",
+                "Situación epidemiológica del COVID-19 en La Rioja_2020-04-21_files/a_008.html",
+                "Situación epidemiológica del COVID-19 en La Rioja_2020-04-22_files/a_008.html", # Ok
+                "Situación epidemiológica del COVID-19 en La Rioja_2020-04-23_files/a_012.html", # Ok
+                "Situación epidemiológica del COVID-19 en La Rioja_2020-04-24_files/a_012.html",
+                "Situación epidemiológica del COVID-19 en La Rioja_2020-04-25_files/a_012.html",
+                "Situación epidemiológica del COVID-19 en La Rioja_2020-04-26_files/a_012.html",
+                "Situación epidemiológica del COVID-19 en La Rioja_2020-04-27_files/a_012.html",
+                "Situación epidemiológica del COVID-19 en La Rioja_2020-04-28_files/a_012.html",
+                "Situación epidemiológica del COVID-19 en La Rioja_2020-04-29_files/a_012.html", 
+                "Situación epidemiológica del COVID-19 en La Rioja_2020-04-30_files/a_012.html", # Ok
+                "Situación epidemiológica del COVID-19 en La Rioja_2020-05-01_files/a_012.html"
+                )
+```
+
+
+```{r}
+pcr_diario_zonas <- data.frame()
+```
+
+
+```{r}
+setwd('/media/enero/Disco1/Varios/GitHub/Corona_Virus_La_Rioja/')
+
+i <- 0
+
+for (html_index in files_data) {
+  
+  i <- i+1
+  
+  page_casos_activos_zonas <- read_html(html_index)
+  # print(page_casos_activos_zonas)
+  
+  fecha_zonas_xml <- html_nodes(page_casos_activos_zonas, css = '.chart-intro')
+  
+  fecha_zonas <- html_text(fecha_zonas_xml)
+  # print(fecha_zonas)
+  
+  chart_zonas <- html_nodes(page_casos_activos_zonas, css = '.chart')
+  
+  casos_fuera_rioja <- html_text((html_children(chart_zonas)[3]), trim = TRUE)
+  
+  casos_zonas_raw <- html_text((html_children(chart_zonas)[2]), trim = TRUE)
+  
+  # Separamos
+  casos_zonas <- unlist(strsplit(casos_zonas_raw, 'ZBS '))
+
+  # Quitamos puntos de separación de miles
+  casos_zonas <- gsub('\\.' , '', casos_zonas)
+
+  # Quitamos los contributors
+  casos_zonas <- casos_zonas[-1]
+
+  # Quitamos el |
+  casos_zonas <- unlist(strsplit(casos_zonas, '\\|'))
+
+  # Nombres
+  rioja_casos_activos_zonas_basicas <- data.frame(localidad     = stringr::str_trim(casos_zonas[c(TRUE, FALSE)]),
+                             casos_activos = as.integer(casos_zonas[c(FALSE, TRUE)]))
+  
+  rioja_casos_activos_zonas_basicas <- rbind(rioja_casos_activos_zonas_basicas,  
+                                             data.frame(localidad  = 'Fuera Rioja', 
+                                                        casos_activos = as.integer(unlist(strsplit(casos_fuera_rioja, ':'))[2])))
+  
+  diario <- data.frame(casos_activos_aberite      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Alberite'],
+                       casos_activos_alfaro       = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Alfaro'],
+                       casos_activos_arnedo       = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Arnedo'],
+                       casos_activos_calahorra    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Calahorra'],
+                       casos_activos_cervera      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Cervera'],
+                       casos_activos_haro         = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Haro'],
+                       casos_activos_logrono      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Logroño'],
+                       casos_activos_murillo      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Murillo'],
+                       casos_activos_najera       = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Nájera'],
+                       casos_activos_navarrete    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Navarrete'],
+                       casos_activos_san_roman    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'San Román'],
+                       casos_activos_s_domingo    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Santo Domingo'],
+                       casos_activos_torrecilla   = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Torrecilla'],
+                       casos_activos_fuera        = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Fuera Rioja'],
+                       casos_activos              = sum(rioja_casos_activos_zonas_basicas$casos_activos),
+                       fecha_web                  = as.Date(unlist(strsplit(fecha_zonas, 'Datos actualizados el '))[2], '%d de %B de %Y')
+                       )
+  
+  print(diario)
+  
+  pcr_diario_zonas <- rbind(pcr_diario_zonas, diario)
+}
 ```
 
 ```{r}
-fecha_valores_zonas <- html_children(col_md_6_zonas[8]) %>% 
-    html_nodes("dd") %>% 
-    html_text(trim = TRUE)
-fecha_valores_zonas
+summary(pcr_diario_zonas)
 ```
 
-Ahora bajamos el fichero
+**El 2020-04-24 pasa algo con los datos**
 
-```{r}
-link_casos_activos_zonas_basicas <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDYwfGNmPTAz'
-```
+El total de casos activos coincide a partir del 2020-04-25, antes hay una diferencia 
 
-```{r}
-rioja_casos_activos_zonas_basicas <- read_delim(link_casos_activos_zonas_basicas, 
-                                              ";", escape_double = FALSE, trim_ws = TRUE)
-```
-
-```{r}
-names(rioja_casos_activos_zonas_basicas) <- c("latitud", "longitud", "localidad",
-                                              "nombre_zbs", "casos_activos")
-```
-
-Incorporamos la fecha del dato
-
-```{r}
-rioja_casos_activos_zonas_basicas$fecha_publicacion_zonas    = as.Date(fecha_valores_zonas[1], '%d/%m/%Y')
-rioja_casos_activos_zonas_basicas$ultima_actualizacion_zonas = as.Date(fecha_valores_zonas[2], '%d/%m/%Y')
-rioja_casos_activos_zonas_basicas$ambito_temporal_zonas      = as.Date(fecha_valores_zonas[3], '%d/%m/%Y')
-```
-
-```{r}
-sum(rioja_casos_activos_zonas_basicas$casos_activos)
-```
-
-**Revisar que cuadra**
-
-Pasamos a incorporar los datos diarios
-
-```{r}
-diario <- data.frame(casos_activos_aberite      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Alberite'],
-                     casos_activos_alfaro       = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Alfaro'],
-                     casos_activos_arnedo       = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Arnedo'],
-                     casos_activos_calahorra    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Calahorra'],
-                     casos_activos_cervera      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Cervera del Río Alhama'],
-                     casos_activos_haro         = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Haro'],
-                     casos_activos_logrono      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Logroño'],
-                     casos_activos_murillo      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Murillo del Río Leza'],
-                     casos_activos_najera       = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Nájera'],
-                     casos_activos_navarrete    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Navarrete'],
-                     casos_activos_san_roman    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'San Román de Cameros'],
-                     casos_activos_s_domingo    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Santo Domingo de la Calzada'],
-                     casos_activos_torrecilla   = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Torrecilla en Cameros'],
-                     fecha_publicacion_zonas    = as.Date(fecha_valores_zonas[1], '%d/%m/%Y'),
-                     ultima_actualizacion_zonas = as.Date(fecha_valores_zonas[2], '%d/%m/%Y'),
-                     ambito_temporal_zonas      = as.Date(fecha_valores_zonas[3], '%d/%m/%Y')
-                     )
-```
-
-```{r}
-resumen_diario <- cbind(resumen_diario, diario)
-```
-
-Guardamos
-
-```{r}
-saveRDS(rioja_casos_activos_zonas_basicas, file = paste0('./data/rioja_casos_activos_zonas_basicas_', Sys.Date(),'.rds'))
-```
 
 Hacemos un mapa
 
 Le asigno un CRS "a capón", el de OSM
 
-```{r}
+```{r, eval=FALSE}
 rioja_casos_activos_zonas_basicas_shp <-  sf::st_as_sf(as.data.frame(rioja_casos_activos_zonas_basicas), 
                                                        coords = c('longitud', 'latitud'), 
                                                        crs = 4326)
 ```
 
 
-```{r mapa_callejero_chamberi1, fig.align="center", message=FALSE, warning=FALSE}
+```{r mapa_callejero_chamberi1, fig.align="center", message=FALSE, warning=FALSE, eval=FALSE}
 # tmap object
 mapa_casos_activos_zonas_basicas <- tm_shape(rioja_casos_activos_zonas_basicas_shp) +
     tm_dots("casos_activos")
@@ -672,15 +750,38 @@ tmap_leaflet(mapa_casos_activos_zonas_basicas)
 ```
 
 
-
-
 ## Resumen diario
 
 Guardamos el resumen diario
 
 ```{r}
-saveRDS(resumen_diario, file = paste0('./data/resumen_diario_', Sys.Date(),'.rds'))
+saveRDS(pcr_diario_zonas, file = paste0('./data/pcr_diario_zonas_', Sys.Date(),'.rds'))
 ```
+
+
+
+
+********************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

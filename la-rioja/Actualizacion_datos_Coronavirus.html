@@ -11,7 +11,7 @@
 
 <meta name="author" content="by Santiago Mota" />
 
-<meta name="date" content="2020-05-01" />
+<meta name="date" content="2020-05-02" />
 
 <title>Actualización de los datos de Coronavirus</title>
 
@@ -6420,7 +6420,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Actualización de los datos de Coronavirus</h1>
 <h4 class="author">by <a href="https://www.linkedin.com/in/santiagomota/">Santiago Mota</a></h4>
-<h4 class="date">2020-05-01</h4>
+<h4 class="date">2020-05-02</h4>
 
 </div>
 
@@ -6510,9 +6510,9 @@ div.tocify {
 <a class="sourceLine" id="cb23-3" data-line-number="3"><span class="st">    </span><span class="kw">html_text</span>(<span class="dt">trim =</span> <span class="ot">TRUE</span>)</a>
 <a class="sourceLine" id="cb23-4" data-line-number="4">fecha_valores_evolucion</a></code></pre></div>
 <pre><code>## [1] &quot;28/04/2020&quot;                                                                   
-## [2] &quot;30/04/2020&quot;                                                                   
+## [2] &quot;02/05/2020&quot;                                                                   
 ## [3] &quot;24/02/2020&quot;                                                                   
-## [4] &quot;Fecha de creación: 28/04/2020 Fecha de actualización de los datos: 30/04/2020&quot;</code></pre>
+## [4] &quot;Fecha de creación: 28/04/2020 Fecha de actualización de los datos: 02/05/2020&quot;</code></pre>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1">link_evolucion &lt;-<span class="st"> 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDUyfGNmPTAz'</span></a></code></pre></div>
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">rioja_evolucion &lt;-<span class="st"> </span><span class="kw">read_csv</span>(link_evolucion, <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">date_names =</span> <span class="st">&quot;es&quot;</span>),</a>
 <a class="sourceLine" id="cb26-2" data-line-number="2">                            <span class="dt">skip =</span> <span class="dv">1</span>, </a>
@@ -6524,7 +6524,7 @@ div.tocify {
 ##   altas = col_double(),
 ##   fallecidos = col_double()
 ## )</code></pre>
-<pre><code>## Warning: 67 parsing failures.
+<pre><code>## Warning: 68 parsing failures.
 ## row col  expected    actual                                                            file
 ##   1  -- 4 columns 6 columns 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDUyfGNmPTAz'
 ##   2  -- 4 columns 6 columns 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDUyfGNmPTAz'
@@ -6554,27 +6554,27 @@ div.tocify {
 <a class="sourceLine" id="cb32-2" data-line-number="2">rioja_evolucion<span class="op">$</span>ultima_actualizacion_evolucion =<span class="st"> </span><span class="kw">as.Date</span>(fecha_valores_evolucion[<span class="dv">2</span>], <span class="st">'%d/%m/%Y'</span>)</a>
 <a class="sourceLine" id="cb32-3" data-line-number="3">rioja_evolucion<span class="op">$</span>ambito_temporal_evolucion      =<span class="st"> </span><span class="kw">as.Date</span>(fecha_valores_evolucion[<span class="dv">3</span>], <span class="st">'%d/%m/%Y'</span>)</a></code></pre></div>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw">summary</span>(rioja_evolucion)</a></code></pre></div>
-<pre><code>##      fecha            confirmados_PCR      altas          fallecidos   
-##  Min.   :2020-02-24   Min.   :  0.00   Min.   :  0.00   Min.   : 0.00  
-##  1st Qu.:2020-03-11   1st Qu.: 15.50   1st Qu.:  0.50   1st Qu.: 0.00  
-##  Median :2020-03-28   Median : 39.00   Median : 30.00   Median : 4.00  
-##  Mean   :2020-03-28   Mean   : 58.75   Mean   : 33.13   Mean   : 4.97  
-##  3rd Qu.:2020-04-13   3rd Qu.: 80.50   3rd Qu.: 61.00   3rd Qu.: 8.00  
-##  Max.   :2020-04-30   Max.   :241.00   Max.   :111.00   Max.   :19.00  
-##  acumulado_confirmados acumulado_altas  acumulado_fallecidos
-##  Min.   :   0.0        Min.   :   0.0   Min.   :  0.0       
-##  1st Qu.: 239.5        1st Qu.:   2.5   1st Qu.:  2.5       
-##  Median :1629.0        Median : 397.0   Median : 68.0       
-##  Mean   :1776.3        Mean   : 754.6   Mean   :118.2       
-##  3rd Qu.:3438.5        3rd Qu.:1552.0   3rd Qu.:240.0       
-##  Max.   :3936.0        Max.   :2220.0   Max.   :333.0       
+<pre><code>##      fecha            confirmados_PCR      altas          fallecidos    
+##  Min.   :2020-02-24   Min.   :  0.00   Min.   :  0.00   Min.   : 0.000  
+##  1st Qu.:2020-03-11   1st Qu.: 12.75   1st Qu.:  0.75   1st Qu.: 0.000  
+##  Median :2020-03-28   Median : 38.00   Median : 31.50   Median : 4.000  
+##  Mean   :2020-03-28   Mean   : 58.04   Mean   : 33.51   Mean   : 4.912  
+##  3rd Qu.:2020-04-14   3rd Qu.: 79.75   3rd Qu.: 61.00   3rd Qu.: 8.000  
+##  Max.   :2020-05-01   Max.   :241.00   Max.   :111.00   Max.   :19.000  
+##  acumulado_confirmados acumulado_altas   acumulado_fallecidos
+##  Min.   :   0.0        Min.   :   0.00   Min.   :  0.00      
+##  1st Qu.: 249.2        1st Qu.:   2.75   1st Qu.:  2.75      
+##  Median :1681.0        Median : 414.00   Median : 69.50      
+##  Mean   :1808.2        Mean   : 777.00   Mean   :121.35      
+##  3rd Qu.:3477.5        3rd Qu.:1602.25   3rd Qu.:248.75      
+##  Max.   :3947.0        Max.   :2279.00   Max.   :334.00      
 ##  fecha_publicacion_evolucion ultima_actualizacion_evolucion
-##  Min.   :2020-04-28          Min.   :2020-04-30            
-##  1st Qu.:2020-04-28          1st Qu.:2020-04-30            
-##  Median :2020-04-28          Median :2020-04-30            
-##  Mean   :2020-04-28          Mean   :2020-04-30            
-##  3rd Qu.:2020-04-28          3rd Qu.:2020-04-30            
-##  Max.   :2020-04-28          Max.   :2020-04-30            
+##  Min.   :2020-04-28          Min.   :2020-05-02            
+##  1st Qu.:2020-04-28          1st Qu.:2020-05-02            
+##  Median :2020-04-28          Median :2020-05-02            
+##  Mean   :2020-04-28          Mean   :2020-05-02            
+##  3rd Qu.:2020-04-28          3rd Qu.:2020-05-02            
+##  Max.   :2020-04-28          Max.   :2020-05-02            
 ##  ambito_temporal_evolucion
 ##  Min.   :2020-02-24       
 ##  1st Qu.:2020-02-24       
@@ -6621,9 +6621,9 @@ div.tocify {
 <a class="sourceLine" id="cb40-3" data-line-number="3"><span class="st">    </span><span class="kw">html_text</span>(<span class="dt">trim =</span> <span class="ot">TRUE</span>)</a>
 <a class="sourceLine" id="cb40-4" data-line-number="4">fecha_valores_sanitarios</a></code></pre></div>
 <pre><code>## [1] &quot;28/04/2020&quot;                                                                   
-## [2] &quot;30/04/2020&quot;                                                                   
+## [2] &quot;02/05/2020&quot;                                                                   
 ## [3] &quot;24/02/2020&quot;                                                                   
-## [4] &quot;Fecha de creación: 28/04/2020 Fecha de actualización de los datos: 30/04/2020&quot;</code></pre>
+## [4] &quot;Fecha de creación: 28/04/2020 Fecha de actualización de los datos: 02/05/2020&quot;</code></pre>
 <p>Ahora bajamos el fichero</p>
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1">link_personal_sanitario &lt;-<span class="st"> 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDU3fGNmPTAz'</span></a></code></pre></div>
 <div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" data-line-number="1">rioja_personal_sanitario &lt;-<span class="st"> </span><span class="kw">read_delim</span>(link_personal_sanitario, <span class="st">&quot;,&quot;</span>, <span class="dt">escape_double =</span> <span class="ot">FALSE</span>, <span class="dt">trim_ws =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
@@ -6661,12 +6661,12 @@ div.tocify {
 ##  3rd Qu.: 96.50              3rd Qu.:2020-04-28          
 ##  Max.   :339.00              Max.   :2020-04-28          
 ##  ultima_actualizacion_sanitarios ambito_temporal_sanitarios
-##  Min.   :2020-04-30              Min.   :2020-02-24        
-##  1st Qu.:2020-04-30              1st Qu.:2020-02-24        
-##  Median :2020-04-30              Median :2020-02-24        
-##  Mean   :2020-04-30              Mean   :2020-02-24        
-##  3rd Qu.:2020-04-30              3rd Qu.:2020-02-24        
-##  Max.   :2020-04-30              Max.   :2020-02-24</code></pre>
+##  Min.   :2020-05-02              Min.   :2020-02-24        
+##  1st Qu.:2020-05-02              1st Qu.:2020-02-24        
+##  Median :2020-05-02              Median :2020-02-24        
+##  Mean   :2020-05-02              Mean   :2020-02-24        
+##  3rd Qu.:2020-05-02              3rd Qu.:2020-02-24        
+##  Max.   :2020-05-02              Max.   :2020-02-24</code></pre>
 <p><strong>Revisar que cuadra</strong></p>
 <div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" data-line-number="1">diario &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">sanitarios_casos_activos_diario    =</span> rioja_personal_sanitario<span class="op">$</span>sanitarios_casos_activos[rioja_personal_sanitario<span class="op">$</span>sanitarios_categoria_laboral <span class="op">==</span><span class="st"> 'Total'</span>],</a>
 <a class="sourceLine" id="cb52-2" data-line-number="2">                     <span class="dt">sanitarios_casos_activos_altas     =</span> rioja_personal_sanitario<span class="op">$</span>sanitarios_altas[rioja_personal_sanitario<span class="op">$</span>sanitarios_categoria_laboral <span class="op">==</span><span class="st"> 'Total'</span>],</a>
@@ -6710,9 +6710,9 @@ div.tocify {
 <a class="sourceLine" id="cb59-3" data-line-number="3"><span class="st">    </span><span class="kw">html_text</span>(<span class="dt">trim =</span> <span class="ot">TRUE</span>)</a>
 <a class="sourceLine" id="cb59-4" data-line-number="4">fecha_valores_fallecidos</a></code></pre></div>
 <pre><code>## [1] &quot;28/04/2020&quot;                                                                   
-## [2] &quot;30/04/2020&quot;                                                                   
+## [2] &quot;02/05/2020&quot;                                                                   
 ## [3] &quot;09/03/2020&quot;                                                                   
-## [4] &quot;Fecha de creación: 28/04/2020 Fecha de actualización de los datos: 30/04/2020&quot;</code></pre>
+## [4] &quot;Fecha de creación: 28/04/2020 Fecha de actualización de los datos: 02/05/2020&quot;</code></pre>
 <p>Ahora bajamos el fichero</p>
 <div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb61-1" data-line-number="1">link_fallecidos &lt;-<span class="st"> 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDU4fGNmPTAz'</span></a></code></pre></div>
 <div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb62-1" data-line-number="1">rioja_fallecidos &lt;-<span class="st"> </span><span class="kw">read_delim</span>(link_fallecidos, <span class="st">&quot;,&quot;</span>, <span class="dt">escape_double =</span> <span class="ot">FALSE</span>, <span class="dt">trim_ws =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
@@ -6742,27 +6742,27 @@ div.tocify {
 <div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb69-1" data-line-number="1"><span class="kw">summary</span>(rioja_fallecidos)</a></code></pre></div>
 <pre><code>##      fecha            fallecidos_totales fallecidos_residencias
 ##  Min.   :2020-03-09   Min.   : 0.000     Min.   : 0.000        
-##  1st Qu.:2020-03-22   1st Qu.: 3.000     1st Qu.: 0.000        
+##  1st Qu.:2020-03-22   1st Qu.: 2.250     1st Qu.: 0.000        
 ##  Median :2020-04-04   Median : 5.000     Median : 3.000        
-##  Mean   :2020-04-04   Mean   : 6.283     Mean   : 3.585        
-##  3rd Qu.:2020-04-17   3rd Qu.:10.000     3rd Qu.: 5.000        
-##  Max.   :2020-04-30   Max.   :19.000     Max.   :14.000        
-##  NA's   :106          NA's   :106        NA's   :106           
+##  Mean   :2020-04-04   Mean   : 6.185     Mean   : 3.537        
+##  3rd Qu.:2020-04-17   3rd Qu.: 9.750     3rd Qu.: 5.000        
+##  Max.   :2020-05-01   Max.   :19.000     Max.   :14.000        
+##  NA's   :105          NA's   :105        NA's   :105           
 ##  acumulado_fallecidos_totales acumulado_fallecidos_residencias
 ##  Min.   :  1.0                Min.   :  0.00                  
-##  1st Qu.: 22.0                1st Qu.:  0.00                  
-##  Median :134.0                Median : 58.00                  
-##  Mean   :149.4                Mean   : 75.74                  
-##  3rd Qu.:272.0                3rd Qu.:150.00                  
-##  Max.   :333.0                Max.   :190.00                  
-##  NA's   :106                  NA's   :106                     
+##  1st Qu.: 24.0                1st Qu.:  1.50                  
+##  Median :137.5                Median : 60.50                  
+##  Mean   :152.8                Mean   : 77.87                  
+##  3rd Qu.:275.8                3rd Qu.:151.50                  
+##  Max.   :334.0                Max.   :191.00                  
+##  NA's   :105                  NA's   :105                     
 ##  fecha_publicacion_fallecidos ultima_actualizacion_fallecidos
-##  Min.   :2020-04-28           Min.   :2020-04-30             
-##  1st Qu.:2020-04-28           1st Qu.:2020-04-30             
-##  Median :2020-04-28           Median :2020-04-30             
-##  Mean   :2020-04-28           Mean   :2020-04-30             
-##  3rd Qu.:2020-04-28           3rd Qu.:2020-04-30             
-##  Max.   :2020-04-28           Max.   :2020-04-30             
+##  Min.   :2020-04-28           Min.   :2020-05-02             
+##  1st Qu.:2020-04-28           1st Qu.:2020-05-02             
+##  Median :2020-04-28           Median :2020-05-02             
+##  Mean   :2020-04-28           Mean   :2020-05-02             
+##  3rd Qu.:2020-04-28           3rd Qu.:2020-05-02             
+##  Max.   :2020-04-28           Max.   :2020-05-02             
 ##                                                              
 ##  ambito_temporal_fallecidos
 ##  Min.   :2020-03-09        
@@ -6803,9 +6803,9 @@ div.tocify {
 <a class="sourceLine" id="cb76-3" data-line-number="3"><span class="st">    </span><span class="kw">html_text</span>(<span class="dt">trim =</span> <span class="ot">TRUE</span>)</a>
 <a class="sourceLine" id="cb76-4" data-line-number="4">fecha_valores_llamadas</a></code></pre></div>
 <pre><code>## [1] &quot;29/04/2020&quot;                                                                   
-## [2] &quot;30/04/2020&quot;                                                                   
+## [2] &quot;02/05/2020&quot;                                                                   
 ## [3] &quot;24/02/2020&quot;                                                                   
-## [4] &quot;Fecha de creación: 29/04/2020 Fecha de actualización de los datos: 30/04/2020&quot;</code></pre>
+## [4] &quot;Fecha de creación: 29/04/2020 Fecha de actualización de los datos: 02/05/2020&quot;</code></pre>
 <p>Ahora bajamos el fichero</p>
 <div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb78-1" data-line-number="1">link_llamadas &lt;-<span class="st"> 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDY1fGNmPTAz'</span></a></code></pre></div>
 <div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb79-1" data-line-number="1">rioja_llamadas &lt;-<span class="st"> </span><span class="kw">read_delim</span>(link_llamadas, <span class="st">&quot;,&quot;</span>, <span class="dt">escape_double =</span> <span class="ot">FALSE</span>, <span class="dt">trim_ws =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
@@ -6830,18 +6830,18 @@ div.tocify {
 <div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb85-1" data-line-number="1"><span class="kw">summary</span>(rioja_llamadas)</a></code></pre></div>
 <pre><code>##      fecha               llamadas     acumulado_llamadas
 ##  Min.   :2020-02-24   Min.   :  0.0   Min.   :    0     
-##  1st Qu.:2020-03-11   1st Qu.:149.5   1st Qu.: 3554     
-##  Median :2020-03-28   Median :213.0   Median :12336     
-##  Mean   :2020-03-28   Mean   :274.6   Mean   :10176     
-##  3rd Qu.:2020-04-13   3rd Qu.:389.0   3rd Qu.:15908     
-##  Max.   :2020-04-30   Max.   :873.0   Max.   :18400     
+##  1st Qu.:2020-03-11   1st Qu.:148.2   1st Qu.: 3650     
+##  Median :2020-03-28   Median :209.5   Median :12461     
+##  Mean   :2020-03-28   Mean   :272.1   Mean   :10299     
+##  3rd Qu.:2020-04-14   3rd Qu.:387.5   3rd Qu.:16047     
+##  Max.   :2020-05-01   Max.   :873.0   Max.   :18502     
 ##  fecha_publicacion_llamadas ultima_actualizacion_llamadas
-##  Min.   :2020-04-29         Min.   :2020-04-30           
-##  1st Qu.:2020-04-29         1st Qu.:2020-04-30           
-##  Median :2020-04-29         Median :2020-04-30           
-##  Mean   :2020-04-29         Mean   :2020-04-30           
-##  3rd Qu.:2020-04-29         3rd Qu.:2020-04-30           
-##  Max.   :2020-04-29         Max.   :2020-04-30           
+##  Min.   :2020-04-29         Min.   :2020-05-02           
+##  1st Qu.:2020-04-29         1st Qu.:2020-05-02           
+##  Median :2020-04-29         Median :2020-05-02           
+##  Mean   :2020-04-29         Mean   :2020-05-02           
+##  3rd Qu.:2020-04-29         3rd Qu.:2020-05-02           
+##  Max.   :2020-04-29         Max.   :2020-05-02           
 ##  ambito_temporal_llamadas
 ##  Min.   :2020-02-24      
 ##  1st Qu.:2020-02-24      
@@ -6880,9 +6880,9 @@ div.tocify {
 <a class="sourceLine" id="cb92-3" data-line-number="3"><span class="st">    </span><span class="kw">html_text</span>(<span class="dt">trim =</span> <span class="ot">TRUE</span>)</a>
 <a class="sourceLine" id="cb92-4" data-line-number="4">fecha_valores_zonas</a></code></pre></div>
 <pre><code>## [1] &quot;28/04/2020&quot;                                                                   
-## [2] &quot;30/04/2020&quot;                                                                   
+## [2] &quot;02/05/2020&quot;                                                                   
 ## [3] &quot;24/02/2020&quot;                                                                   
-## [4] &quot;Fecha de creación: 28/04/2020 Fecha de actualización de los datos: 30/04/2020&quot;</code></pre>
+## [4] &quot;Fecha de creación: 28/04/2020 Fecha de actualización de los datos: 02/05/2020&quot;</code></pre>
 <p>Ahora bajamos el fichero</p>
 <div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb94-1" data-line-number="1">link_casos_activos_zonas_basicas &lt;-<span class="st"> 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDYwfGNmPTAz'</span></a></code></pre></div>
 <div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb95-1" data-line-number="1">rioja_casos_activos_zonas_basicas &lt;-<span class="st"> </span><span class="kw">read_delim</span>(link_casos_activos_zonas_basicas, </a>
@@ -6926,27 +6926,23 @@ div.tocify {
 <p>Guardamos</p>
 <div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb103-1" data-line-number="1"><span class="kw">saveRDS</span>(rioja_casos_activos_zonas_basicas, <span class="dt">file =</span> <span class="kw">paste0</span>(<span class="st">'./data/rioja_casos_activos_zonas_basicas_'</span>, <span class="kw">Sys.Date</span>(),<span class="st">'.rds'</span>))</a></code></pre></div>
 <p>Hacemos un mapa</p>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb104-1" data-line-number="1"><span class="co"># Le asignamos un CRS 25830 (según documentación) a partir de x, y</span></a>
-<a class="sourceLine" id="cb104-2" data-line-number="2">callejero_chamberi_temp_shp &lt;-<span class="st"> </span>sf<span class="op">::</span><span class="kw">st_as_sf</span>(<span class="kw">as.data.frame</span>(callejero_chamberi_shp), </a>
-<a class="sourceLine" id="cb104-3" data-line-number="3">                                       <span class="dt">coords =</span> <span class="kw">c</span>(<span class="st">'utm_x'</span>, <span class="st">'utm_y'</span>), </a>
-<a class="sourceLine" id="cb104-4" data-line-number="4">                                       <span class="dt">crs =</span> <span class="dv">25830</span>)</a></code></pre></div>
 <p>Le asigno un CRS “a capón”, el de OSM</p>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb105-1" data-line-number="1">rioja_casos_activos_zonas_basicas_shp &lt;-<span class="st">  </span>sf<span class="op">::</span><span class="kw">st_as_sf</span>(<span class="kw">as.data.frame</span>(rioja_casos_activos_zonas_basicas), </a>
-<a class="sourceLine" id="cb105-2" data-line-number="2">                                                       <span class="dt">coords =</span> <span class="kw">c</span>(<span class="st">'longitud'</span>, <span class="st">'latitud'</span>), </a>
-<a class="sourceLine" id="cb105-3" data-line-number="3">                                                       <span class="dt">crs =</span> <span class="dv">4326</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb106-1" data-line-number="1"><span class="co"># tmap object</span></a>
-<a class="sourceLine" id="cb106-2" data-line-number="2">mapa_casos_activos_zonas_basicas &lt;-<span class="st"> </span><span class="kw">tm_shape</span>(rioja_casos_activos_zonas_basicas_shp) <span class="op">+</span></a>
-<a class="sourceLine" id="cb106-3" data-line-number="3"><span class="st">    </span><span class="kw">tm_dots</span>(<span class="st">&quot;casos_activos&quot;</span>)</a>
-<a class="sourceLine" id="cb106-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb106-5" data-line-number="5"><span class="co"># dynamic map</span></a>
-<a class="sourceLine" id="cb106-6" data-line-number="6"><span class="kw">tmap_leaflet</span>(mapa_casos_activos_zonas_basicas)</a></code></pre></div>
-<div id="htmlwidget-6fbe42aa685fdbd7cc6e" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6fbe42aa685fdbd7cc6e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"createMapPane","args":["tmap401",401]},{"method":"addProviderTiles","args":["Esri.WorldGrayCanvas",null,"Esri.WorldGrayCanvas",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["OpenStreetMap",null,"OpenStreetMap",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["Esri.WorldTopoMap",null,"Esri.WorldTopoMap",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addCircleMarkers","args":[[42.4661196,42.5768922,42.416745,42.4406711,42.2560793,42.4289697,42.45782,42.3035212,42.4060734,42.2273401,42.23199,42.0058319,42.1785741],[-2.4396676,-2.8466768,-2.7336874,-2.9536395,-2.6305716,-2.5616234,-2.30105,-1.9648758,-2.4392907,-2.0995697,-2.4737,-1.9554794,-1.7492454],[2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619],["Logroño","Haro","Nájera","Santo.Domingo.de.la.Calzada","Torrecilla.en.Cameros","Navarrete","Murillo.del.Río.Leza","Calahorra","Alberite","Arnedo","San.Román.de.Cameros","Cervera.del.Río.Alhama","Alfaro"],"rioja_casos_activos_zonas_basicas_shp",{"interactive":true,"className":"","pane":"tmap401","stroke":true,"color":"#666666","weight":1,"opacity":0.5,"fill":true,"fillColor":["#8E3004","#FEECA5","#FEECA5","#FECF66","#FFFBD4","#FFFBD4","#FFFBD4","#FEECA5","#FEECA5","#FFFBD4","#FFFBD4","#FFFBD4","#FFFBD4"],"fillOpacity":[1,1,1,1,1,1,1,1,1,1,1,1,1]},null,null,["<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Logroño<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>1,392<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Haro<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>333<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Nájera<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>203<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Santo Domingo de la Calzada<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>427<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Torrecilla en Cameros<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>8<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Navarrete<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>83<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Murillo del Río Leza<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>28<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Calahorra<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>318<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Alberite<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>275<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Arnedo<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>84<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>San Román de Cameros<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>1<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Cervera del Río Alhama<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>19<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Alfaro<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>108<\/nobr><\/td><\/tr><\/table><\/div>"],null,["Logroño","Haro","Nájera","Santo Domingo de la Calzada","Torrecilla en Cameros","Navarrete","Murillo del Río Leza","Calahorra","Alberite","Arnedo","San Román de Cameros","Cervera del Río Alhama","Alfaro"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#FFFBD4","#FEECA5","#FECF66","#FEA332","#EC7114","#C74A02","#8E3004"],"labels":["0 to 200","200 to 400","400 to 600","600 to 800","800 to 1,000","1,000 to 1,200","1,200 to 1,400"],"na_color":null,"na_label":"NA","opacity":1,"position":"topright","type":"unknown","title":"casos_activos","extra":null,"layerId":"legend401","className":"info legend","group":"rioja_casos_activos_zonas_basicas_shp"}]},{"method":"addLayersControl","args":[["Esri.WorldGrayCanvas","OpenStreetMap","Esri.WorldTopoMap"],"rioja_casos_activos_zonas_basicas_shp",{"collapsed":true,"autoZIndex":true,"position":"topleft"}]}],"limits":{"lat":[42.0058319,42.5768922],"lng":[-2.9536395,-1.7492454]},"fitBounds":[42.0058319,-2.9536395,42.5768922,-1.7492454,[]]},"evals":[],"jsHooks":[]}</script>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb104-1" data-line-number="1">rioja_casos_activos_zonas_basicas_shp &lt;-<span class="st">  </span>sf<span class="op">::</span><span class="kw">st_as_sf</span>(<span class="kw">as.data.frame</span>(rioja_casos_activos_zonas_basicas), </a>
+<a class="sourceLine" id="cb104-2" data-line-number="2">                                                       <span class="dt">coords =</span> <span class="kw">c</span>(<span class="st">'longitud'</span>, <span class="st">'latitud'</span>), </a>
+<a class="sourceLine" id="cb104-3" data-line-number="3">                                                       <span class="dt">crs =</span> <span class="dv">4326</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb105-1" data-line-number="1"><span class="co"># tmap object</span></a>
+<a class="sourceLine" id="cb105-2" data-line-number="2">mapa_casos_activos_zonas_basicas &lt;-<span class="st"> </span><span class="kw">tm_shape</span>(rioja_casos_activos_zonas_basicas_shp) <span class="op">+</span></a>
+<a class="sourceLine" id="cb105-3" data-line-number="3"><span class="st">    </span><span class="kw">tm_dots</span>(<span class="st">&quot;casos_activos&quot;</span>)</a>
+<a class="sourceLine" id="cb105-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb105-5" data-line-number="5"><span class="co"># dynamic map</span></a>
+<a class="sourceLine" id="cb105-6" data-line-number="6"><span class="kw">tmap_leaflet</span>(mapa_casos_activos_zonas_basicas)</a></code></pre></div>
+<div id="htmlwidget-6c6818d7ab947245be97" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6c6818d7ab947245be97">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"createMapPane","args":["tmap401",401]},{"method":"addProviderTiles","args":["Esri.WorldGrayCanvas",null,"Esri.WorldGrayCanvas",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["OpenStreetMap",null,"OpenStreetMap",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["Esri.WorldTopoMap",null,"Esri.WorldTopoMap",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addCircleMarkers","args":[[42.4661196,42.5768922,42.416745,42.4406711,42.2560793,42.4289697,42.45782,42.3035212,42.4060734,42.2273401,42.23199,42.0058319,42.1785741],[-2.4396676,-2.8466768,-2.7336874,-2.9536395,-2.6305716,-2.5616234,-2.30105,-1.9648758,-2.4392907,-2.0995697,-2.4737,-1.9554794,-1.7492454],[2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619],["Logroño","Haro","Nájera","Santo.Domingo.de.la.Calzada","Torrecilla.en.Cameros","Navarrete","Murillo.del.Río.Leza","Calahorra","Alberite","Arnedo","San.Román.de.Cameros","Cervera.del.Río.Alhama","Alfaro"],"rioja_casos_activos_zonas_basicas_shp",{"interactive":true,"className":"","pane":"tmap401","stroke":true,"color":"#666666","weight":1,"opacity":0.5,"fill":true,"fillColor":["#8E3004","#FEECA5","#FEECA5","#FECF66","#FFFBD4","#FFFBD4","#FFFBD4","#FEECA5","#FEECA5","#FFFBD4","#FFFBD4","#FFFBD4","#FFFBD4"],"fillOpacity":[1,1,1,1,1,1,1,1,1,1,1,1,1]},null,null,["<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Logroño<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>1,392<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Haro<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>333<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Nájera<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>203<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Santo Domingo de la Calzada<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>427<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Torrecilla en Cameros<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>8<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Navarrete<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>83<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Murillo del Río Leza<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>28<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Calahorra<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>318<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Alberite<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>275<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Arnedo<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>84<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>San Román de Cameros<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>1<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Cervera del Río Alhama<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>19<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Alfaro<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\">casos_activos<\/td><td align=\"right\"><nobr>108<\/nobr><\/td><\/tr><\/table><\/div>"],null,["Logroño","Haro","Nájera","Santo Domingo de la Calzada","Torrecilla en Cameros","Navarrete","Murillo del Río Leza","Calahorra","Alberite","Arnedo","San Román de Cameros","Cervera del Río Alhama","Alfaro"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#FFFBD4","#FEECA5","#FECF66","#FEA332","#EC7114","#C74A02","#8E3004"],"labels":["0 to 200","200 to 400","400 to 600","600 to 800","800 to 1,000","1,000 to 1,200","1,200 to 1,400"],"na_color":null,"na_label":"NA","opacity":1,"position":"topright","type":"unknown","title":"casos_activos","extra":null,"layerId":"legend401","className":"info legend","group":"rioja_casos_activos_zonas_basicas_shp"}]},{"method":"addLayersControl","args":[["Esri.WorldGrayCanvas","OpenStreetMap","Esri.WorldTopoMap"],"rioja_casos_activos_zonas_basicas_shp",{"collapsed":true,"autoZIndex":true,"position":"topleft"}]}],"limits":{"lat":[42.0058319,42.5768922],"lng":[-2.9536395,-1.7492454]},"fitBounds":[42.0058319,-2.9536395,42.5768922,-1.7492454,[]]},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="resumen-diario" class="section level2">
 <h2>Resumen diario</h2>
 <p>Guardamos el resumen diario</p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb107-1" data-line-number="1"><span class="kw">saveRDS</span>(resumen_diario, <span class="dt">file =</span> <span class="kw">paste0</span>(<span class="st">'./data/resumen_diario_'</span>, <span class="kw">Sys.Date</span>(),<span class="st">'.rds'</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb106-1" data-line-number="1"><span class="kw">saveRDS</span>(resumen_diario, <span class="dt">file =</span> <span class="kw">paste0</span>(<span class="st">'./data/resumen_diario_'</span>, <span class="kw">Sys.Date</span>(),<span class="st">'.rds'</span>))</a></code></pre></div>
 </div>
 </div>
 <div id="datos-de-isciii" class="section level1">
@@ -6954,11 +6950,11 @@ div.tocify {
 <div id="serie-historica" class="section level2">
 <h2>Serie historica</h2>
 <p>Los datos de (ISCIII)[<a href="https://covid19.isciii.es/" class="uri">https://covid19.isciii.es/</a>]</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb108-1" data-line-number="1">link_isciii &lt;-<span class="st"> 'https://covid19.isciii.es/resources/serie_historica_acumulados.csv'</span></a></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb107-1" data-line-number="1">link_isciii &lt;-<span class="st"> 'https://covid19.isciii.es/resources/serie_historica_acumulados.csv'</span></a></code></pre></div>
 <p>En los datos en local se han eliminado las últimas filas que corresponden a comentarios.</p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb109-1" data-line-number="1"><span class="co"># Datos en local</span></a>
-<a class="sourceLine" id="cb109-2" data-line-number="2">serie_historica_acumulados_isciii &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/serie_historica_acumulados.csv&quot;</span>, </a>
-<a class="sourceLine" id="cb109-3" data-line-number="3">                                              <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">date_names =</span> <span class="st">&quot;es&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb108-1" data-line-number="1"><span class="co"># Datos en local</span></a>
+<a class="sourceLine" id="cb108-2" data-line-number="2">serie_historica_acumulados_isciii &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/serie_historica_acumulados.csv&quot;</span>, </a>
+<a class="sourceLine" id="cb108-3" data-line-number="3">                                              <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">date_names =</span> <span class="st">&quot;es&quot;</span>))</a></code></pre></div>
 <pre><code>## Parsed with column specification:
 ## cols(
 ##   CCAA = col_character(),
@@ -6980,37 +6976,37 @@ div.tocify {
 ## 1048 PCR+    1/0/T/F/TRUE/FALSE  2081  'data/serie_historica_acumulados.csv'
 ## .... ....... .................. ...... .....................................
 ## See problems(...) for more details.</code></pre>
-<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb112-1" data-line-number="1"><span class="co"># Directamente de Internet</span></a>
-<a class="sourceLine" id="cb112-2" data-line-number="2">serie_historica_acumulados_isciii &lt;-<span class="st"> </span><span class="kw">read_csv</span>(link_isciii, </a>
-<a class="sourceLine" id="cb112-3" data-line-number="3">                                              <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">date_names =</span> <span class="st">&quot;es&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb111-1" data-line-number="1"><span class="co"># Directamente de Internet</span></a>
+<a class="sourceLine" id="cb111-2" data-line-number="2">serie_historica_acumulados_isciii &lt;-<span class="st"> </span><span class="kw">read_csv</span>(link_isciii, </a>
+<a class="sourceLine" id="cb111-3" data-line-number="3">                                              <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">date_names =</span> <span class="st">&quot;es&quot;</span>))</a></code></pre></div>
 <p>Vemos los datos por CC.AA.</p>
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb113-1" data-line-number="1"><span class="kw">table</span>(serie_historica_acumulados_isciii<span class="op">$</span>CCAA, <span class="dt">useNA =</span> <span class="st">'ifany'</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb112-1" data-line-number="1"><span class="kw">table</span>(serie_historica_acumulados_isciii<span class="op">$</span>CCAA, <span class="dt">useNA =</span> <span class="st">'ifany'</span>)</a></code></pre></div>
 <pre><code>## 
 ## AN AR AS CB CE CL CM CN CT EX GA IB MC MD ML NC PV RI VC 
 ## 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70 70</code></pre>
 <p>Comunidades autónomas</p>
-<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb115-1" data-line-number="1">serie_historica_acumulados_isciii<span class="op">$</span>CCAA &lt;-<span class="st"> </span><span class="kw">factor</span>(serie_historica_acumulados_isciii<span class="op">$</span>CCAA, </a>
-<a class="sourceLine" id="cb115-2" data-line-number="2">                                                 <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">'AN'</span>, <span class="st">'AR'</span>, <span class="st">'AS'</span>, <span class="st">'CB'</span>, <span class="st">'CE'</span>, </a>
-<a class="sourceLine" id="cb115-3" data-line-number="3">                                                            <span class="st">'CL'</span>, <span class="st">'CM'</span>, <span class="st">'CN'</span>, <span class="st">'CT'</span>, <span class="st">'EX'</span>, </a>
-<a class="sourceLine" id="cb115-4" data-line-number="4">                                                            <span class="st">'GA'</span>, <span class="st">'IB'</span>, <span class="st">'MC'</span>, <span class="st">'MD'</span>, <span class="st">'ML'</span>, </a>
-<a class="sourceLine" id="cb115-5" data-line-number="5">                                                            <span class="st">'NC'</span>, <span class="st">'PV'</span>, <span class="st">'RI'</span>, <span class="st">'VC'</span>),</a>
-<a class="sourceLine" id="cb115-6" data-line-number="6">                                                 <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">'Andalucía'</span>, <span class="st">'Aragón', </span></a>
-<a class="sourceLine" id="cb115-7" data-line-number="7"><span class="st">                                                            '</span>Asturias, Principado de<span class="st">', </span></a>
-<a class="sourceLine" id="cb115-8" data-line-number="8"><span class="st">                                                            '</span>Cantabria<span class="st">', '</span>Ceuta<span class="st">', </span></a>
-<a class="sourceLine" id="cb115-9" data-line-number="9"><span class="st">                                                            '</span>Castilla y León', </a>
-<a class="sourceLine" id="cb115-10" data-line-number="10">                                                            <span class="st">'Castilla - La Mancha'</span>, </a>
-<a class="sourceLine" id="cb115-11" data-line-number="11">                                                            <span class="st">'Canarias'</span>, <span class="st">'Cantabria'</span>, </a>
-<a class="sourceLine" id="cb115-12" data-line-number="12">                                                            <span class="st">'Extremadura'</span>, </a>
-<a class="sourceLine" id="cb115-13" data-line-number="13">                                                            <span class="st">'Galicia'</span>, <span class="st">'Balears, Illes'</span>, </a>
-<a class="sourceLine" id="cb115-14" data-line-number="14">                                                            <span class="st">'Murcia, Región de'</span>, </a>
-<a class="sourceLine" id="cb115-15" data-line-number="15">                                                            <span class="st">'Madrid, Comunidad de'</span>, </a>
-<a class="sourceLine" id="cb115-16" data-line-number="16">                                                            <span class="st">'Melilla'</span>, </a>
-<a class="sourceLine" id="cb115-17" data-line-number="17">                                                            <span class="st">'Navarra, Comunidad Foral de'</span>, </a>
-<a class="sourceLine" id="cb115-18" data-line-number="18">                                                            <span class="st">'País Vasco'</span>, <span class="st">'Rioja, La'</span>, </a>
-<a class="sourceLine" id="cb115-19" data-line-number="19">                                                            <span class="st">'Comunitat Valenciana'</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb114-1" data-line-number="1">serie_historica_acumulados_isciii<span class="op">$</span>CCAA &lt;-<span class="st"> </span><span class="kw">factor</span>(serie_historica_acumulados_isciii<span class="op">$</span>CCAA, </a>
+<a class="sourceLine" id="cb114-2" data-line-number="2">                                                 <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">'AN'</span>, <span class="st">'AR'</span>, <span class="st">'AS'</span>, <span class="st">'CB'</span>, <span class="st">'CE'</span>, </a>
+<a class="sourceLine" id="cb114-3" data-line-number="3">                                                            <span class="st">'CL'</span>, <span class="st">'CM'</span>, <span class="st">'CN'</span>, <span class="st">'CT'</span>, <span class="st">'EX'</span>, </a>
+<a class="sourceLine" id="cb114-4" data-line-number="4">                                                            <span class="st">'GA'</span>, <span class="st">'IB'</span>, <span class="st">'MC'</span>, <span class="st">'MD'</span>, <span class="st">'ML'</span>, </a>
+<a class="sourceLine" id="cb114-5" data-line-number="5">                                                            <span class="st">'NC'</span>, <span class="st">'PV'</span>, <span class="st">'RI'</span>, <span class="st">'VC'</span>),</a>
+<a class="sourceLine" id="cb114-6" data-line-number="6">                                                 <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">'Andalucía'</span>, <span class="st">'Aragón', </span></a>
+<a class="sourceLine" id="cb114-7" data-line-number="7"><span class="st">                                                            '</span>Asturias, Principado de<span class="st">', </span></a>
+<a class="sourceLine" id="cb114-8" data-line-number="8"><span class="st">                                                            '</span>Cantabria<span class="st">', '</span>Ceuta<span class="st">', </span></a>
+<a class="sourceLine" id="cb114-9" data-line-number="9"><span class="st">                                                            '</span>Castilla y León', </a>
+<a class="sourceLine" id="cb114-10" data-line-number="10">                                                            <span class="st">'Castilla - La Mancha'</span>, </a>
+<a class="sourceLine" id="cb114-11" data-line-number="11">                                                            <span class="st">'Canarias'</span>, <span class="st">'Cantabria'</span>, </a>
+<a class="sourceLine" id="cb114-12" data-line-number="12">                                                            <span class="st">'Extremadura'</span>, </a>
+<a class="sourceLine" id="cb114-13" data-line-number="13">                                                            <span class="st">'Galicia'</span>, <span class="st">'Balears, Illes'</span>, </a>
+<a class="sourceLine" id="cb114-14" data-line-number="14">                                                            <span class="st">'Murcia, Región de'</span>, </a>
+<a class="sourceLine" id="cb114-15" data-line-number="15">                                                            <span class="st">'Madrid, Comunidad de'</span>, </a>
+<a class="sourceLine" id="cb114-16" data-line-number="16">                                                            <span class="st">'Melilla'</span>, </a>
+<a class="sourceLine" id="cb114-17" data-line-number="17">                                                            <span class="st">'Navarra, Comunidad Foral de'</span>, </a>
+<a class="sourceLine" id="cb114-18" data-line-number="18">                                                            <span class="st">'País Vasco'</span>, <span class="st">'Rioja, La'</span>, </a>
+<a class="sourceLine" id="cb114-19" data-line-number="19">                                                            <span class="st">'Comunitat Valenciana'</span>))</a></code></pre></div>
 <p>Pasamos la fecha a formato <em>Date</em></p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb116-1" data-line-number="1">serie_historica_acumulados_isciii<span class="op">$</span>FECHA &lt;-<span class="st"> </span><span class="kw">as.Date</span>(serie_historica_acumulados_isciii<span class="op">$</span>FECHA, <span class="st">&quot;%d/%m/%Y&quot;</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb117-1" data-line-number="1"><span class="kw">summary</span>(serie_historica_acumulados_isciii)</a></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb115-1" data-line-number="1">serie_historica_acumulados_isciii<span class="op">$</span>FECHA &lt;-<span class="st"> </span><span class="kw">as.Date</span>(serie_historica_acumulados_isciii<span class="op">$</span>FECHA, <span class="st">&quot;%d/%m/%Y&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb116-1" data-line-number="1"><span class="kw">summary</span>(serie_historica_acumulados_isciii)</a></code></pre></div>
 <pre><code>##                       CCAA         FECHA                CASOS      
 ##  Cantabria              :140   Min.   :2020-02-20   Min.   :    0  
 ##  Andalucía              : 70   1st Qu.:2020-03-08   1st Qu.:   29  
@@ -7037,17 +7033,17 @@ div.tocify {
 ##  NA's   :323      NA's   :342</code></pre>
 <div id="nuevas-columnas" class="section level3">
 <h3>Nuevas columnas</h3>
-<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb119-1" data-line-number="1"><span class="co"># Valores diarios</span></a>
-<a class="sourceLine" id="cb119-2" data-line-number="2">serie_historica_acumulados_isciii &lt;-<span class="st"> </span>serie_historica_acumulados_isciii <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb119-3" data-line-number="3"><span class="st">  </span><span class="kw">group_by</span>(CCAA) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb119-4" data-line-number="4"><span class="st">  </span><span class="kw">arrange</span>(FECHA) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb119-5" data-line-number="5"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">diario_hospitalizados =</span> Hospitalizados <span class="op">-</span><span class="st"> </span><span class="kw">lag</span>(Hospitalizados, <span class="dt">order_by =</span> FECHA),</a>
-<a class="sourceLine" id="cb119-6" data-line-number="6">         <span class="dt">diario_uci            =</span> UCI <span class="op">-</span><span class="st"> </span><span class="kw">lag</span>(UCI, <span class="dt">order_by =</span> FECHA),</a>
-<a class="sourceLine" id="cb119-7" data-line-number="7">         <span class="dt">diario_fallecidos     =</span> Fallecidos <span class="op">-</span><span class="st"> </span><span class="kw">lag</span>(Fallecidos, <span class="dt">order_by =</span> FECHA)</a>
-<a class="sourceLine" id="cb119-8" data-line-number="8">         <span class="co"># diario_recuperados    = Recuperados - lag(Recuperados) # Este es acumulado</span></a>
-<a class="sourceLine" id="cb119-9" data-line-number="9">  )</a></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb118-1" data-line-number="1"><span class="co"># Valores diarios</span></a>
+<a class="sourceLine" id="cb118-2" data-line-number="2">serie_historica_acumulados_isciii &lt;-<span class="st"> </span>serie_historica_acumulados_isciii <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb118-3" data-line-number="3"><span class="st">  </span><span class="kw">group_by</span>(CCAA) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb118-4" data-line-number="4"><span class="st">  </span><span class="kw">arrange</span>(FECHA) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb118-5" data-line-number="5"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">diario_hospitalizados =</span> Hospitalizados <span class="op">-</span><span class="st"> </span><span class="kw">lag</span>(Hospitalizados, <span class="dt">order_by =</span> FECHA),</a>
+<a class="sourceLine" id="cb118-6" data-line-number="6">         <span class="dt">diario_uci            =</span> UCI <span class="op">-</span><span class="st"> </span><span class="kw">lag</span>(UCI, <span class="dt">order_by =</span> FECHA),</a>
+<a class="sourceLine" id="cb118-7" data-line-number="7">         <span class="dt">diario_fallecidos     =</span> Fallecidos <span class="op">-</span><span class="st"> </span><span class="kw">lag</span>(Fallecidos, <span class="dt">order_by =</span> FECHA)</a>
+<a class="sourceLine" id="cb118-8" data-line-number="8">         <span class="co"># diario_recuperados    = Recuperados - lag(Recuperados) # Este es acumulado</span></a>
+<a class="sourceLine" id="cb118-9" data-line-number="9">  )</a></code></pre></div>
 <p>Guardamos</p>
-<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb120-1" data-line-number="1"><span class="kw">saveRDS</span>(serie_historica_acumulados_isciii, <span class="dt">file =</span> <span class="kw">paste0</span>(<span class="st">'./data/serie_historica_acumulados_isciii_'</span>, <span class="kw">Sys.Date</span>(),<span class="st">'.rds'</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb119-1" data-line-number="1"><span class="kw">saveRDS</span>(serie_historica_acumulados_isciii, <span class="dt">file =</span> <span class="kw">paste0</span>(<span class="st">'./data/serie_historica_acumulados_isciii_'</span>, <span class="kw">Sys.Date</span>(),<span class="st">'.rds'</span>))</a></code></pre></div>
 </div>
 </div>
 <div id="momo-isciii" class="section level2">
@@ -7072,12 +7068,12 @@ defunciones_esperadas_q99: de forma equivalente, el límite superior, al percent
 <p>Las series vienen agregadas por ámbito, código de ámbito, sexo, grupo de edad y fecha de defunción. Nótese que las series que son agregados del resto vienen en otra serie aparte. P.e., si se quiere elegir la serie de toda la población (nacional, todos los sexos, todas las edades), hay que filtrar por ambito=“nacional”, cod_sexo=“all” y cod_gedad=“all”.</p>
 <p>Los datos aquí descargados se refieren a las defunciones por todas las causas notificadas por los registros civiles informatizados de los municipios correspondientes. Para saber más, consulta las pestañas de “Documentación” y “Notificación”.</p>
 <p>Nota: los datos cambian de forma retroactiva, especialmente en los días más recientes. Lo que hoy puedes descargar (o consultar en este portal) mañana puede tener indicadores diferentes en fechas pasadas. El motivo es el retraso en la notificación, detallado en la sección de <a href="https://momo.isciii.es/public/momo/dashboard/momo_dashboard.html#documentacion">Documentación</a>.</p>
-<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb122-1" data-line-number="1">link_momo &lt;-<span class="st"> 'https://momo.isciii.es/public/momo/data'</span></a></code></pre></div>
-<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb123-1" data-line-number="1"><span class="co"># Los datos en local</span></a>
-<a class="sourceLine" id="cb123-2" data-line-number="2">data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/data.csv&quot;</span>, <span class="dt">col_types =</span> <span class="kw">cols</span>(<span class="dt">cod_ambito =</span> <span class="kw">col_character</span>(), </a>
-<a class="sourceLine" id="cb123-3" data-line-number="3">    <span class="dt">cod_ine_ambito =</span> <span class="kw">col_character</span>(), <span class="dt">nombre_ambito =</span> <span class="kw">col_character</span>()), </a>
-<a class="sourceLine" id="cb123-4" data-line-number="4">    <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">date_names =</span> <span class="st">&quot;es&quot;</span>, <span class="dt">encoding =</span> <span class="st">&quot;ISO-8859-1&quot;</span>))</a></code></pre></div>
-<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb124-1" data-line-number="1"><span class="kw">summary</span>(data)</a></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb121-1" data-line-number="1">link_momo &lt;-<span class="st"> 'https://momo.isciii.es/public/momo/data'</span></a></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb122-1" data-line-number="1"><span class="co"># Los datos en local</span></a>
+<a class="sourceLine" id="cb122-2" data-line-number="2">data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;data/data.csv&quot;</span>, <span class="dt">col_types =</span> <span class="kw">cols</span>(<span class="dt">cod_ambito =</span> <span class="kw">col_character</span>(), </a>
+<a class="sourceLine" id="cb122-3" data-line-number="3">    <span class="dt">cod_ine_ambito =</span> <span class="kw">col_character</span>(), <span class="dt">nombre_ambito =</span> <span class="kw">col_character</span>()), </a>
+<a class="sourceLine" id="cb122-4" data-line-number="4">    <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">date_names =</span> <span class="st">&quot;es&quot;</span>, <span class="dt">encoding =</span> <span class="st">&quot;ISO-8859-1&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb123-1" data-line-number="1"><span class="kw">summary</span>(data)</a></code></pre></div>
 <pre><code>##     ambito           cod_ambito        cod_ine_ambito     nombre_ambito     
 ##  Length:179760      Length:179760      Length:179760      Length:179760     
 ##  Class :character   Class :character   Class :character   Class :character  
@@ -7113,29 +7109,29 @@ defunciones_esperadas_q99: de forma equivalente, el límite superior, al percent
 ##  Mean   :  47.50          
 ##  3rd Qu.:  38.62          
 ##  Max.   :1689.27</code></pre>
-<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb126-1" data-line-number="1"><span class="co"># Directamente de Internet</span></a>
-<a class="sourceLine" id="cb126-2" data-line-number="2"><span class="co"># momo_isciii &lt;- read_csv(link_momo, locale = locale(date_names = &quot;es&quot;))</span></a>
-<a class="sourceLine" id="cb126-3" data-line-number="3"><span class="co"># momo_isciii &lt;- read_delim(link_momo, &quot;,&quot;, escape_double = FALSE, </span></a>
-<a class="sourceLine" id="cb126-4" data-line-number="4"><span class="co">#                           # col_names = FALSE, </span></a>
-<a class="sourceLine" id="cb126-5" data-line-number="5"><span class="co">#                           locale = locale(date_names = &quot;es&quot;, </span></a>
-<a class="sourceLine" id="cb126-6" data-line-number="6"><span class="co">#                                           decimal_mark = &quot;,&quot;,      </span></a>
-<a class="sourceLine" id="cb126-7" data-line-number="7"><span class="co">#                                           grouping_mark = &quot;.&quot;),</span></a>
-<a class="sourceLine" id="cb126-8" data-line-number="8"><span class="co">#                           trim_ws = TRUE)</span></a>
-<a class="sourceLine" id="cb126-9" data-line-number="9">momo_isciii &lt;-<span class="st"> </span><span class="kw">read_csv</span>(link_momo, <span class="dt">col_types =</span> <span class="kw">cols</span>(<span class="dt">cod_ambito =</span> <span class="kw">col_character</span>(), </a>
-<a class="sourceLine" id="cb126-10" data-line-number="10">    <span class="dt">cod_ine_ambito =</span> <span class="kw">col_character</span>(), <span class="dt">nombre_ambito =</span> <span class="kw">col_character</span>()), </a>
-<a class="sourceLine" id="cb126-11" data-line-number="11">    <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">date_names =</span> <span class="st">&quot;es&quot;</span>, <span class="dt">encoding =</span> <span class="st">&quot;UTF-8&quot;</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb125-1" data-line-number="1"><span class="co"># Directamente de Internet</span></a>
+<a class="sourceLine" id="cb125-2" data-line-number="2"><span class="co"># momo_isciii &lt;- read_csv(link_momo, locale = locale(date_names = &quot;es&quot;))</span></a>
+<a class="sourceLine" id="cb125-3" data-line-number="3"><span class="co"># momo_isciii &lt;- read_delim(link_momo, &quot;,&quot;, escape_double = FALSE, </span></a>
+<a class="sourceLine" id="cb125-4" data-line-number="4"><span class="co">#                           # col_names = FALSE, </span></a>
+<a class="sourceLine" id="cb125-5" data-line-number="5"><span class="co">#                           locale = locale(date_names = &quot;es&quot;, </span></a>
+<a class="sourceLine" id="cb125-6" data-line-number="6"><span class="co">#                                           decimal_mark = &quot;,&quot;,      </span></a>
+<a class="sourceLine" id="cb125-7" data-line-number="7"><span class="co">#                                           grouping_mark = &quot;.&quot;),</span></a>
+<a class="sourceLine" id="cb125-8" data-line-number="8"><span class="co">#                           trim_ws = TRUE)</span></a>
+<a class="sourceLine" id="cb125-9" data-line-number="9">momo_isciii &lt;-<span class="st"> </span><span class="kw">read_csv</span>(link_momo, <span class="dt">col_types =</span> <span class="kw">cols</span>(<span class="dt">cod_ambito =</span> <span class="kw">col_character</span>(), </a>
+<a class="sourceLine" id="cb125-10" data-line-number="10">    <span class="dt">cod_ine_ambito =</span> <span class="kw">col_character</span>(), <span class="dt">nombre_ambito =</span> <span class="kw">col_character</span>()), </a>
+<a class="sourceLine" id="cb125-11" data-line-number="11">    <span class="dt">locale =</span> <span class="kw">locale</span>(<span class="dt">date_names =</span> <span class="st">&quot;es&quot;</span>, <span class="dt">encoding =</span> <span class="st">&quot;UTF-8&quot;</span>))</a></code></pre></div>
 <div id="etl" class="section level3">
 <h3>ETL</h3>
 <p>Pasamos algunos valores a factor</p>
-<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb127-1" data-line-number="1">momo_isciii<span class="op">$</span>ambito          &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>ambito)</a>
-<a class="sourceLine" id="cb127-2" data-line-number="2">momo_isciii<span class="op">$</span>cod_ambito      &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>cod_ambito)</a>
-<a class="sourceLine" id="cb127-3" data-line-number="3">momo_isciii<span class="op">$</span>cod_ine_ambito  &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>cod_ine_ambito)</a>
-<a class="sourceLine" id="cb127-4" data-line-number="4">momo_isciii<span class="op">$</span>nombre_ambito   &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>nombre_ambito)</a>
-<a class="sourceLine" id="cb127-5" data-line-number="5">momo_isciii<span class="op">$</span>cod_sexo        &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>cod_sexo)</a>
-<a class="sourceLine" id="cb127-6" data-line-number="6">momo_isciii<span class="op">$</span>nombre_sexo     &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>nombre_sexo)</a>
-<a class="sourceLine" id="cb127-7" data-line-number="7">momo_isciii<span class="op">$</span>cod_gedad       &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>cod_gedad)</a>
-<a class="sourceLine" id="cb127-8" data-line-number="8">momo_isciii<span class="op">$</span>nombre_gedad    &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>nombre_gedad)</a></code></pre></div>
-<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb128-1" data-line-number="1"><span class="kw">summary</span>(momo_isciii)</a></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb126-1" data-line-number="1">momo_isciii<span class="op">$</span>ambito          &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>ambito)</a>
+<a class="sourceLine" id="cb126-2" data-line-number="2">momo_isciii<span class="op">$</span>cod_ambito      &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>cod_ambito)</a>
+<a class="sourceLine" id="cb126-3" data-line-number="3">momo_isciii<span class="op">$</span>cod_ine_ambito  &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>cod_ine_ambito)</a>
+<a class="sourceLine" id="cb126-4" data-line-number="4">momo_isciii<span class="op">$</span>nombre_ambito   &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>nombre_ambito)</a>
+<a class="sourceLine" id="cb126-5" data-line-number="5">momo_isciii<span class="op">$</span>cod_sexo        &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>cod_sexo)</a>
+<a class="sourceLine" id="cb126-6" data-line-number="6">momo_isciii<span class="op">$</span>nombre_sexo     &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>nombre_sexo)</a>
+<a class="sourceLine" id="cb126-7" data-line-number="7">momo_isciii<span class="op">$</span>cod_gedad       &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>cod_gedad)</a>
+<a class="sourceLine" id="cb126-8" data-line-number="8">momo_isciii<span class="op">$</span>nombre_gedad    &lt;-<span class="st"> </span><span class="kw">as.factor</span>(momo_isciii<span class="op">$</span>nombre_gedad)</a></code></pre></div>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb127-1" data-line-number="1"><span class="kw">summary</span>(momo_isciii)</a></code></pre></div>
 <pre><code>##       ambito         cod_ambito     cod_ine_ambito  
 ##  ccaa    :170772   AN     :  8988   1      :  8988  
 ##  nacional:  8988   AR     :  8988   10     :  8988  
@@ -7153,31 +7149,31 @@ defunciones_esperadas_q99: de forma equivalente, el límite superior, al percent
 ##  (Other)                :125832                                               
 ##  NA's                   :  8988                                               
 ##      nombre_gedad   fecha_defuncion      defunciones_observadas
-##  edad &lt; 65 :44940   Min.   :2018-04-13   Min.   :   0.00       
-##  edad &gt; 75 :44940   1st Qu.:2018-10-17   1st Qu.:   2.00       
-##  edad 65-74:44940   Median :2019-04-22   Median :   8.00       
-##  todos     :44940   Mean   :2019-04-22   Mean   :  36.85       
-##                     3rd Qu.:2019-10-26   3rd Qu.:  27.00       
-##                     Max.   :2020-04-30   Max.   :2466.00       
+##  edad &lt; 65 :44940   Min.   :2018-04-14   Min.   :   0.0        
+##  edad &gt; 75 :44940   1st Qu.:2018-10-18   1st Qu.:   2.0        
+##  edad 65-74:44940   Median :2019-04-23   Median :   8.0        
+##  todos     :44940   Mean   :2019-04-23   Mean   :  36.8        
+##                     3rd Qu.:2019-10-27   3rd Qu.:  27.0        
+##                     Max.   :2020-05-01   Max.   :2466.0        
 ##                                                                
 ##  defunciones_observadas_lim_inf defunciones_observadas_lim_sup
 ##  Min.   :   0.00                Min.   :   0.00               
 ##  1st Qu.:   2.00                1st Qu.:   2.00               
 ##  Median :   8.00                Median :   8.00               
-##  Mean   :  36.82                Mean   :  36.88               
+##  Mean   :  36.78                Mean   :  36.83               
 ##  3rd Qu.:  27.00                3rd Qu.:  27.00               
 ##  Max.   :2466.00                Max.   :2466.00               
 ##                                                               
 ##  defunciones_esperadas defunciones_esperadas_q01 defunciones_esperadas_q99
 ##  Min.   :   0.00       Min.   :   0.00           Min.   :   0.00          
-##  1st Qu.:   2.00       1st Qu.:   0.00           1st Qu.:   6.31          
+##  1st Qu.:   2.00       1st Qu.:   0.00           1st Qu.:   6.00          
 ##  Median :   8.00       Median :   2.69           Median :  15.00          
-##  Mean   :  36.02       Mean   :  27.28           Mean   :  47.50          
-##  3rd Qu.:  26.50       3rd Qu.:  16.14           3rd Qu.:  38.62          
+##  Mean   :  35.92       Mean   :  27.19           Mean   :  47.41          
+##  3rd Qu.:  26.50       3rd Qu.:  16.11           3rd Qu.:  38.62          
 ##  Max.   :1323.00       Max.   :1172.28           Max.   :1689.27          
 ## </code></pre>
 <p>Esto lo necesitamos para “traducir” los códigos</p>
-<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb130-1" data-line-number="1"><span class="kw">table</span>(momo_isciii<span class="op">$</span>cod_ambito, momo_isciii<span class="op">$</span>nombre_ambito)</a></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb129-1" data-line-number="1"><span class="kw">table</span>(momo_isciii<span class="op">$</span>cod_ambito, momo_isciii<span class="op">$</span>nombre_ambito)</a></code></pre></div>
 <pre><code>##     
 ##      Andalucía Aragón Asturias, Principado de Balears, Illes Canarias Cantabria
 ##   AN      8988      0                       0              0        0         0
@@ -7263,15 +7259,15 @@ defunciones_esperadas_q99: de forma equivalente, el límite superior, al percent
 ##   RI                           0          0      8988
 ##   VC                           0          0         0</code></pre>
 <p>Guardamos</p>
-<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb132-1" data-line-number="1"><span class="kw">saveRDS</span>(momo_isciii, <span class="dt">file =</span> <span class="kw">paste0</span>(<span class="st">'./data/momo_isciii_'</span>, <span class="kw">Sys.Date</span>(),<span class="st">'.rds'</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb131-1" data-line-number="1"><span class="kw">saveRDS</span>(momo_isciii, <span class="dt">file =</span> <span class="kw">paste0</span>(<span class="st">'./data/momo_isciii_'</span>, <span class="kw">Sys.Date</span>(),<span class="st">'.rds'</span>))</a></code></pre></div>
 </div>
 </div>
 </div>
 <div id="analisis" class="section level1">
 <h1>Analisis</h1>
-<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb133-1" data-line-number="1">madrid &lt;-<span class="st"> </span>serie_historica_acumulados_isciii[serie_historica_acumulados_isciii<span class="op">$</span>CCAA <span class="op">==</span><span class="st"> 'Madrid, Comunidad de'</span>, ]</a></code></pre></div>
-<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb134-1" data-line-number="1">rioja &lt;-<span class="st"> </span>serie_historica_acumulados_isciii[serie_historica_acumulados_isciii<span class="op">$</span>CCAA <span class="op">==</span><span class="st"> 'Rioja, La'</span>, ]</a></code></pre></div>
-<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb135-1" data-line-number="1"><span class="kw">summary</span>(rioja)</a></code></pre></div>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb132-1" data-line-number="1">madrid &lt;-<span class="st"> </span>serie_historica_acumulados_isciii[serie_historica_acumulados_isciii<span class="op">$</span>CCAA <span class="op">==</span><span class="st"> 'Madrid, Comunidad de'</span>, ]</a></code></pre></div>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb133-1" data-line-number="1">rioja &lt;-<span class="st"> </span>serie_historica_acumulados_isciii[serie_historica_acumulados_isciii<span class="op">$</span>CCAA <span class="op">==</span><span class="st"> 'Rioja, La'</span>, ]</a></code></pre></div>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb134-1" data-line-number="1"><span class="kw">summary</span>(rioja)</a></code></pre></div>
 <pre><code>##                       CCAA        FECHA                CASOS     
 ##  Rioja, La              :70   Min.   :2020-02-20   Min.   :   1  
 ##  Andalucía              : 0   1st Qu.:2020-03-08   1st Qu.: 243  
@@ -7296,24 +7292,24 @@ defunciones_esperadas_q99: de forma equivalente, el límite superior, al percent
 ##  3rd Qu.:1753.0   3rd Qu.:40.00         3rd Qu.:2.000   3rd Qu.:10.000   
 ##  Max.   :2159.0   Max.   :78.00         Max.   :9.000   Max.   :19.000   
 ##  NA's   :19       NA's   :20            NA's   :18      NA's   :18</code></pre>
-<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb137-1" data-line-number="1">start_point_daily &lt;-<span class="st">  </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">1</span>)</a>
-<a class="sourceLine" id="cb137-2" data-line-number="2">start_point_daily </a></code></pre></div>
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb136-1" data-line-number="1">start_point_daily &lt;-<span class="st">  </span><span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb136-2" data-line-number="2">start_point_daily </a></code></pre></div>
 <pre><code>## [1] 1 1</code></pre>
-<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb139-1" data-line-number="1"><span class="co">## [1] 1 1</span></a></code></pre></div>
-<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb140-1" data-line-number="1">rioja_ts_uci_daily &lt;-<span class="st"> </span></a>
-<a class="sourceLine" id="cb140-2" data-line-number="2"><span class="st">  </span>rioja <span class="op">%&gt;%</span><span class="st">  </span></a>
-<a class="sourceLine" id="cb140-3" data-line-number="3"><span class="st">  </span><span class="kw">select</span>(UCI) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb140-4" data-line-number="4"><span class="st">  </span><span class="kw">ts</span>(<span class="dt">start =</span> start_point_daily, <span class="dt">frequency =</span> <span class="dv">365</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb138-1" data-line-number="1"><span class="co">## [1] 1 1</span></a></code></pre></div>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb139-1" data-line-number="1">rioja_ts_uci_daily &lt;-<span class="st"> </span></a>
+<a class="sourceLine" id="cb139-2" data-line-number="2"><span class="st">  </span>rioja <span class="op">%&gt;%</span><span class="st">  </span></a>
+<a class="sourceLine" id="cb139-3" data-line-number="3"><span class="st">  </span><span class="kw">select</span>(UCI) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb139-4" data-line-number="4"><span class="st">  </span><span class="kw">ts</span>(<span class="dt">start =</span> start_point_daily, <span class="dt">frequency =</span> <span class="dv">365</span>)</a></code></pre></div>
 <pre><code>## Adding missing grouping variables: `CCAA`</code></pre>
-<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb142-1" data-line-number="1"><span class="kw">ts_info</span>(rioja_ts_uci_daily)</a></code></pre></div>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb141-1" data-line-number="1"><span class="kw">ts_info</span>(rioja_ts_uci_daily)</a></code></pre></div>
 <pre><code>##  The rioja_ts_uci_daily series is a mts object with 2 variables and 70 observations
 ##  Frequency: 365 
 ##  Start time: 1 1 
 ##  End time: 1 70</code></pre>
-<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb144-1" data-line-number="1"><span class="co"># Tiene que haber al menos dos años</span></a>
-<a class="sourceLine" id="cb144-2" data-line-number="2"><span class="kw">ts_decompose</span>(rioja_ts_uci_daily, <span class="dt">type =</span> <span class="st">'additive'</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb145-1" data-line-number="1"><span class="kw">ts_acf</span>(rioja_ts_uci_daily, <span class="dt">lag.max =</span> <span class="dv">365</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb146-1" data-line-number="1"><span class="kw">summary</span>(rioja_ts_uci_daily)</a></code></pre></div>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb143-1" data-line-number="1"><span class="co"># Tiene que haber al menos dos años</span></a>
+<a class="sourceLine" id="cb143-2" data-line-number="2"><span class="kw">ts_decompose</span>(rioja_ts_uci_daily, <span class="dt">type =</span> <span class="st">'additive'</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb144-1" data-line-number="1"><span class="kw">ts_acf</span>(rioja_ts_uci_daily, <span class="dt">lag.max =</span> <span class="dv">365</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb145-1" data-line-number="1"><span class="kw">summary</span>(rioja_ts_uci_daily)</a></code></pre></div>
 <pre><code>##       CCAA         UCI       
 ##  Min.   :17   Min.   : 1.00  
 ##  1st Qu.:17   1st Qu.:17.00  
@@ -7322,8 +7318,8 @@ defunciones_esperadas_q99: de forma equivalente, el límite superior, al percent
 ##  3rd Qu.:17   3rd Qu.:76.00  
 ##  Max.   :17   Max.   :88.00  
 ##               NA's   :17</code></pre>
-<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb148-1" data-line-number="1">rioja_ts &lt;-<span class="st"> </span><span class="kw">ts</span>(rioja, <span class="dt">frequency =</span> <span class="dv">365</span>, <span class="dt">start =</span> <span class="kw">as.Date</span>(<span class="st">'2020-02-20'</span>))</a></code></pre></div>
-<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb149-1" data-line-number="1"><span class="kw">summary</span>(rioja_ts)</a></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb147-1" data-line-number="1">rioja_ts &lt;-<span class="st"> </span><span class="kw">ts</span>(rioja, <span class="dt">frequency =</span> <span class="dv">365</span>, <span class="dt">start =</span> <span class="kw">as.Date</span>(<span class="st">'2020-02-20'</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb148-1" data-line-number="1"><span class="kw">summary</span>(rioja_ts)</a></code></pre></div>
 <pre><code>##       CCAA        FECHA           CASOS           PCR+        TestAc+   
 ##  Min.   :17   Min.   :18312   Min.   :   1   Min.   : NA   Min.   : NA  
 ##  1st Qu.:17   1st Qu.:18329   1st Qu.: 243   1st Qu.: NA   1st Qu.: NA  
@@ -7349,7 +7345,7 @@ defunciones_esperadas_q99: de forma equivalente, el límite superior, al percent
 ##  Max.   :78.00         Max.   :9.000   Max.   :19.000   
 ##  NA's   :20            NA's   :18      NA's   :18</code></pre>
 <p>Terminamos con la información de la sesión</p>
-<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb151-1" data-line-number="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb150-1" data-line-number="1"><span class="kw">sessionInfo</span>()</a></code></pre></div>
 <pre><code>## R version 4.0.0 (2020-04-24)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
 ## Running under: Ubuntu 18.04.4 LTS
