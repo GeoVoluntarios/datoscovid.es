@@ -1,0 +1,964 @@
+---
+title:    "Recuperar información de los datos de Coronavirus"
+author:   "by [Santiago Mota](https://www.linkedin.com/in/santiagomota/)"
+mail:     "santiago_mota@yahoo.es"
+linkedin: "santiagomota"
+twitter:  "mota_santiago"
+github:   "santiagomota"
+date:     "`r Sys.Date()`"
+# logo:     "./figs/logo3.png"
+license:  by-nc-sa
+urlcolor: blue
+output:
+  html_document: 
+    theme:        cosmo # "default", "cerulean", "journal", "flatly", "readable", "spacelab", "united", "cosmo", "lumen", "paper", "sandstone", "simplex", "yeti"
+    highlight:    tango # "default", "tango", "pygments", "kate", "monochrome", "espresso", "zenburn", "haddock", "textmate"
+    toc:          true
+    toc_float:    true
+    code_folding: show
+    includes:
+      after_body: footer.html
+  word_document:  default
+  pdf_document:   default
+  epuRate::epurate:
+    toc:             TRUE
+    number_sections: FALSE
+    code_folding:    "show"
+  rmdformats::readthedown:
+    toc:          true      
+---
+
+```{r}
+library(readr)
+library(dplyr)
+library(TSstudio)
+library(xml2)
+library(rvest)
+library(tmap)
+```
+
+
+# Acceso a los datos de Open Data en La Rioja
+
+La base del acceso se hace en [https://actualidad.larioja.org/coronavirus/datos](https://actualidad.larioja.org/coronavirus/datos)
+
+
+## Evolución
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-452](https://web.larioja.org/dato-abierto/datoabierto?n=opd-452)
+
+La estructura html la sacamos copiando el html en local y abriéndolo con notepad++
+
+```{html}
+<div class="col-md-6">
+                        <dl>
+                            <dt>Fecha de publicación:</dt>
+                            <dd>28/04/2020</dd>
+
+                            <dt>Última actualización:</dt>
+                            <dd>30/04/2020</dd>
+
+                            <dt>Ámbito temporal</dt>
+                            <dd><i class="far fa-calendar-check" aria-hidden="true"></i> 24/02/2020
+                                </dd>
+
+                            <dt>Cronología</dt>
+                            <dd>Fecha de creación: 28/04/2020 <br>Fecha de actualización de los datos: 30/04/2020</dd>
+                        </dl>
+                    </div>
+```
+
+```{r}
+page_evolucion <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-452')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_evolucion <- html_nodes(page_evolucion, css = '.col-md-6')
+col_md_6_evolucion
+```
+
+```{r, eval=FALSE}
+html_children(col_md_6_evolucion[8])
+```
+
+```{r, eval=FALSE}
+class(html_children(col_md_6_evolucion[8]))
+```
+
+```{r, eval=FALSE}
+# La fecha está en col_md_6_evolucion[8]
+html_text(html_children(col_md_6_evolucion[8]))
+```
+
+```{r, eval=FALSE}
+class(html_text(html_children(col_md_6_evolucion[8])))
+```
+
+```{r, eval=FALSE}
+json_data <- jsonlite::toJSON(html_text(html_children(col_md_6_evolucion[8])))
+json_data
+```
+
+```{r, eval=FALSE}
+html_children(col_md_6_evolucion[8]) %>%
+  str_split("\n")
+```
+
+```{r, eval=FALSE}
+html_children(col_md_6_evolucion[8]) %>%
+  str_split("\n") %>%
+  class()
+```
+
+```{r, eval=FALSE}
+html_children(col_md_6_evolucion[8]) %>%
+  str_split("\n") %>%
+  unlist()
+```
+
+```{r, eval=FALSE}
+html_text(html_children(col_md_6_evolucion[8])) %>%
+  str_split("\n")
+```
+
+Esto si vale
+
+```{r}
+fecha_campos_evolucion <- html_children(col_md_6_evolucion[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_evolucion
+```
+
+```{r}
+fecha_valores_evolucion <- html_children(col_md_6_evolucion[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_evolucion
+```
+
+```{r}
+link_evolucion <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDUyfGNmPTAz'
+```
+
+```{r}
+rioja_evolucion <- read_csv(link_evolucion, locale = locale(date_names = "es"),
+                            skip = 1, 
+                            col_names = c('fecha', 'confirmados_PCR', 'altas', 'fallecidos'))
+```
+
+```{r}
+rioja_evolucion$fecha <- as.Date(rioja_evolucion$fecha, '%m/%d/%y')
+```
+
+
+Calculamos los acumulados
+
+
+A la mierda, con un for...
+
+
+```{r}
+# Valores diarios
+rioja_evolucion$acumulado_confirmados <- rioja_evolucion$confirmados_PCR[1]
+rioja_evolucion$acumulado_altas       <- rioja_evolucion$altas[1]
+rioja_evolucion$acumulado_fallecidos  <- rioja_evolucion$fallecidos[1]
+
+for (i in 2:dim(rioja_evolucion)[1]) {
+  rioja_evolucion$acumulado_confirmados[i] <- rioja_evolucion$acumulado_confirmados[i-1] + rioja_evolucion$confirmados_PCR[i]
+  rioja_evolucion$acumulado_altas[i]       <- rioja_evolucion$acumulado_altas[i-1] +       rioja_evolucion$altas[i]
+  rioja_evolucion$acumulado_fallecidos[i]  <- rioja_evolucion$acumulado_fallecidos[i-1] +  rioja_evolucion$fallecidos[i]
+}
+```
+
+```{r, eval=FALSE}
+rioja_evolucion2 <- rioja_evolucion %>%
+  arrange(fecha) %>% 
+  mutate(total_confirmados = confirmados_PCR + lag(total_confirmados))
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_evolucion$fecha_publicacion_evolucion    = as.Date(fecha_valores_evolucion[1], '%d/%m/%Y')
+rioja_evolucion$ultima_actualizacion_evolucion = as.Date(fecha_valores_evolucion[2], '%d/%m/%Y')
+rioja_evolucion$ambito_temporal_evolucion      = as.Date(fecha_valores_evolucion[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_evolucion)
+```
+
+Guardamos
+
+```{r}
+saveRDS(rioja_evolucion, file = paste0('./data/rioja_evolucion_', Sys.Date(),'.rds'))
+```
+
+
+## Porcentaje de casos, hospitalizados, UCI y fallecidos por grupo de edad
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?filtros=%7B%22title%22%3A%22coronavirus%2520por%2520grupo%2520de%2520edad%2520y%2520sexo%22%7D&q=&page=1&sort=fecha_publicacion+desc](https://web.larioja.org/dato-abierto/datoabierto?filtros=%7B%22title%22%3A%22coronavirus%2520por%2520grupo%2520de%2520edad%2520y%2520sexo%22%7D&q=&page=1&sort=fecha_publicacion+desc)
+
+
+## Situación de los hospitales de La Rioja
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-461](https://web.larioja.org/dato-abierto/datoabierto?n=opd-461)
+
+
+## Personal afectado del Servicio Público de Salud de La Rioja
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-457](https://web.larioja.org/dato-abierto/datoabierto?n=opd-457)
+
+
+```{r}
+page_casos_activos_sanitarios <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-457')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_sanitarios <- html_nodes(page_casos_activos_sanitarios, css = '.col-md-6')
+col_md_6_sanitarios
+```
+
+```{r}
+fecha_campos_sanitarios <- html_children(col_md_6_sanitarios[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_sanitarios
+```
+
+```{r}
+fecha_valores_sanitarios <- html_children(col_md_6_sanitarios[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_sanitarios
+```
+
+Ahora bajamos el fichero
+
+
+```{r}
+link_personal_sanitario <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDU3fGNmPTAz'
+```
+
+```{r}
+rioja_personal_sanitario <- read_delim(link_personal_sanitario, ",", escape_double = FALSE, trim_ws = TRUE)
+```
+
+```{r}
+rioja_personal_sanitario <- as.data.frame(rioja_personal_sanitario)
+```
+
+
+```{r}
+names(rioja_personal_sanitario) <- c("sanitarios_categoria_laboral", 
+                                     "sanitarios_casos_activos",
+                                     "sanitarios_altas", 
+                                     "sanitarios_casos_acumulados")
+```
+
+```{r}
+sum(rioja_personal_sanitario$casos_activos)
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_personal_sanitario$fecha_publicacion_sanitarios    = as.Date(fecha_valores_sanitarios [1], '%d/%m/%Y')
+rioja_personal_sanitario$ultima_actualizacion_sanitarios = as.Date(fecha_valores_sanitarios[2], '%d/%m/%Y')
+rioja_personal_sanitario$ambito_temporal_sanitarios      = as.Date(fecha_valores_sanitarios[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_personal_sanitario)
+```
+
+
+**Revisar que cuadra**
+
+```{r}
+diario <- data.frame(sanitarios_casos_activos_diario    = rioja_personal_sanitario$sanitarios_casos_activos[rioja_personal_sanitario$sanitarios_categoria_laboral == 'Total'],
+                     sanitarios_casos_activos_altas     = rioja_personal_sanitario$sanitarios_altas[rioja_personal_sanitario$sanitarios_categoria_laboral == 'Total'],
+                     sanitarios_casos_activos_acumulado = rioja_personal_sanitario$sanitarios_casos_acumulados[rioja_personal_sanitario$sanitarios_categoria_laboral == 'Total'],
+                     fecha_publicacion_sanitarios       = as.Date(fecha_valores_sanitarios[1], '%d/%m/%Y'),
+                     ultima_actualizacion_sanitarios    = as.Date(fecha_valores_sanitarios[2], '%d/%m/%Y'),
+                     ambito_temporal_sanitarios         = as.Date(fecha_valores_sanitarios[3], '%d/%m/%Y')
+                     )
+```
+
+**Sólo pongo los totales. Los datos son semanales**
+
+Guardamos
+
+```{r}
+saveRDS(rioja_personal_sanitario, file = paste0('./data/rioja_personal_sanitario_', Sys.Date(),'.rds'))
+```
+
+Añadimos al diario
+
+```{r}
+resumen_diario <- data.frame(time_stamp = Sys.time())
+resumen_diario <- cbind(resumen_diario, diario)
+```
+
+
+## Fallecimientos por días
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-458](https://web.larioja.org/dato-abierto/datoabierto?n=opd-458)
+
+```{r}
+page_casos_activos_fallecidos <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-458')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_fallecidos <- html_nodes(page_casos_activos_fallecidos, css = '.col-md-6')
+col_md_6_fallecidos
+```
+
+```{r}
+fecha_campos_fallecidos <- html_children(col_md_6_fallecidos[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_fallecidos
+```
+
+```{r}
+fecha_valores_fallecidos <- html_children(col_md_6_fallecidos[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_fallecidos
+```
+
+Ahora bajamos el fichero
+
+```{r}
+link_fallecidos <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDU4fGNmPTAz'
+```
+
+```{r}
+rioja_fallecidos <- read_delim(link_fallecidos, ",", escape_double = FALSE, trim_ws = TRUE)
+```
+
+```{r}
+rioja_fallecidos <- as.data.frame(rioja_fallecidos)
+```
+
+```{r}
+names(rioja_fallecidos) <- c("fecha", "fallecidos_totales", 
+                             "fallecidos_residencias")
+```
+
+```{r}
+rioja_fallecidos$fecha <- as.Date(rioja_fallecidos$fecha, '%m/%d/%y')
+```
+
+Calculamos los acumulados
+
+```{r}
+# Valores diarios
+rioja_fallecidos$acumulado_fallecidos_totales     <- rioja_fallecidos$fallecidos_totales[1]
+rioja_fallecidos$acumulado_fallecidos_residencias <- rioja_fallecidos$fallecidos_residencias[1]
+
+for (i in 2:dim(rioja_fallecidos)[1]) {
+  rioja_fallecidos$acumulado_fallecidos_totales[i]     <- rioja_fallecidos$acumulado_fallecidos_totales[i-1] + rioja_fallecidos$fallecidos_totales[i]
+  rioja_fallecidos$acumulado_fallecidos_residencias[i] <- rioja_fallecidos$acumulado_fallecidos_residencias[i-1] + rioja_fallecidos$fallecidos_residencias[i]
+}
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_fallecidos$fecha_publicacion_fallecidos    = as.Date(fecha_valores_fallecidos[1], '%d/%m/%Y')
+rioja_fallecidos$ultima_actualizacion_fallecidos = as.Date(fecha_valores_fallecidos[2], '%d/%m/%Y')
+rioja_fallecidos$ambito_temporal_fallecidos      = as.Date(fecha_valores_fallecidos[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_fallecidos)
+```
+
+
+Guardamos
+
+```{r}
+saveRDS(rioja_fallecidos, file = paste0('./data/rioja_fallecidos_', Sys.Date(),'.rds'))
+```
+
+
+## Consultas telefónicas atendidas en La Rioja
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-465](https://web.larioja.org/dato-abierto/datoabierto?n=opd-465)
+
+```{r}
+page_casos_activos_llamadas <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-465')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_llamadas <- html_nodes(page_casos_activos_llamadas, css = '.col-md-6')
+col_md_6_llamadas
+```
+
+```{r}
+fecha_campos_llamadas <- html_children(col_md_6_llamadas[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_llamadas
+```
+
+```{r}
+fecha_valores_llamadas <- html_children(col_md_6_llamadas[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_llamadas
+```
+
+Ahora bajamos el fichero
+
+```{r}
+link_llamadas <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDY1fGNmPTAz'
+```
+
+```{r}
+rioja_llamadas <- read_delim(link_llamadas, ",", escape_double = FALSE, trim_ws = TRUE)
+```
+
+```{r}
+names(rioja_llamadas) <- tolower(names(rioja_llamadas))
+```
+
+```{r}
+rioja_llamadas$fecha <- as.Date(rioja_llamadas$fecha, '%m/%d/%y')
+```
+
+Calculamos los acumulados
+
+```{r}
+# Valores diarios
+rioja_llamadas$acumulado_llamadas <- 0
+
+for (i in 2:dim(rioja_llamadas)[1]) {
+  rioja_llamadas$acumulado_llamadas[i] <- rioja_llamadas$acumulado_llamadas[i-1] + rioja_llamadas$llamadas[i]
+}
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_llamadas$fecha_publicacion_llamadas    = as.Date(fecha_valores_llamadas[1], '%d/%m/%Y')
+rioja_llamadas$ultima_actualizacion_llamadas = as.Date(fecha_valores_llamadas[2], '%d/%m/%Y')
+rioja_llamadas$ambito_temporal_llamadas      = as.Date(fecha_valores_llamadas[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_llamadas)
+```
+
+Guardamos
+
+```{r}
+saveRDS(rioja_llamadas, file = paste0('./data/rioja_llamadas_', Sys.Date(),'.rds'))
+```
+
+
+
+
+
+
+
+
+## Situación por Zonas Básicas de Salud
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-460](https://web.larioja.org/dato-abierto/datoabierto?n=opd-460)
+
+En este caso cargamos el histórico que voy almacenando
+
+```{r}
+page_casos_activos_zonas <- read_html('/media/enero/Disco1/Varios/GitHub/Corona_Virus_La_Rioja/Situación epidemiológica del COVID-19 en La Rioja_2020-04-30_files/a_012.html')
+```
+
+Buscamos la fecha
+
+```{r}
+# find all nodes with a class of "col_md_6"
+fecha_zonas_xml <- html_nodes(page_casos_activos_zonas, css = '.chart-intro')
+fecha_zonas_xml
+```
+
+Pasamos a caracter
+
+```{r}
+fecha_zonas <- html_text(fecha_zonas_xml)
+fecha_zonas
+```
+
+Ahora los datos de los mapas
+
+marker-text label label-style-box label-style-box-rounded
+
+
+```{r}
+# find all nodes with a class of "col_md_6"
+chart_zonas <- html_nodes(page_casos_activos_zonas, css = '.chart')
+chart_zonas
+```
+
+```{r}
+casos_fuera_rioja <- html_children(chart_zonas)[3]
+casos_fuera_rioja
+```
+
+```{r}
+casos_fuera_rioja <- html_text((html_children(chart_zonas)[3]), trim = TRUE)
+casos_fuera_rioja
+```
+
+
+
+```{r}
+# find all nodes with a class of "col_md_6"
+casos_zonas_raw <- html_text((html_children(chart_zonas)[2]), trim = TRUE)
+casos_zonas_raw
+```
+
+Limpiamos
+
+```{r}
+# Separamos
+casos_zonas <- unlist(strsplit(casos_zonas_raw, 'ZBS '))
+
+# Quitamos puntos de separación de miles
+casos_zonas <- gsub('\\.' , '', casos_zonas)
+
+# Quitamos los contributors
+casos_zonas <- casos_zonas[-1]
+
+# Quitamos el |
+casos_zonas <- unlist(strsplit(casos_zonas, '\\|'))
+
+# Nombres
+rioja_casos_activos_zonas_basicas <- data.frame(localidad     = stringr::str_trim(casos_zonas[c(TRUE, FALSE)]),
+                             casos_activos = as.integer(casos_zonas[c(FALSE, TRUE)]))
+
+casos_zonas
+rioja_casos_activos_zonas_basicas
+```
+
+Incluimos los de fuera
+
+```{r}
+rioja_casos_activos_zonas_basicas <- rbind(rioja_casos_activos_zonas_basicas,  data.frame(localidad  = 'Fuera Rioja', casos_activos = as.integer(unlist(strsplit(casos_fuera_rioja, ':'))[2])))
+```
+
+```{r}
+rioja_casos_activos_zonas_basicas
+```
+
+```{r}
+sum(rioja_casos_activos_zonas_basicas$casos_activos)
+```
+
+**Comprobar que cuadra**
+
+
+```{r}
+diario <- data.frame(casos_activos_aberite      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Alberite'],
+                     casos_activos_alfaro       = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Alfaro'],
+                     casos_activos_arnedo       = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Arnedo'],
+                     casos_activos_calahorra    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Calahorra'],
+                     casos_activos_cervera      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Cervera'],
+                     casos_activos_haro         = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Haro'],
+                     casos_activos_logrono      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Logroño'],
+                     casos_activos_murillo      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Murillo'],
+                     casos_activos_najera       = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Nájera'],
+                     casos_activos_navarrete    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Navarrete'],
+                     casos_activos_san_roman    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'San Román'],
+                     casos_activos_s_domingo    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Santo Domingo'],
+                     casos_activos_torrecilla   = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Torrecilla'],
+                     casos_activos_fuera        = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Fuera Rioja']
+                     )
+```
+
+
+```{r}
+fecha_campos_zonas <- html_children(col_md_6_zonas[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_zonas
+```
+
+```{r}
+fecha_valores_zonas <- html_children(col_md_6_zonas[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_zonas
+```
+
+Ahora bajamos el fichero
+
+```{r}
+link_casos_activos_zonas_basicas <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDYwfGNmPTAz'
+```
+
+```{r}
+rioja_casos_activos_zonas_basicas <- read_delim(link_casos_activos_zonas_basicas, 
+                                              ";", escape_double = FALSE, trim_ws = TRUE)
+```
+
+```{r}
+names(rioja_casos_activos_zonas_basicas) <- c("latitud", "longitud", "localidad",
+                                              "nombre_zbs", "casos_activos")
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_casos_activos_zonas_basicas$fecha_publicacion_zonas    = as.Date(fecha_valores_zonas[1], '%d/%m/%Y')
+rioja_casos_activos_zonas_basicas$ultima_actualizacion_zonas = as.Date(fecha_valores_zonas[2], '%d/%m/%Y')
+rioja_casos_activos_zonas_basicas$ambito_temporal_zonas      = as.Date(fecha_valores_zonas[3], '%d/%m/%Y')
+```
+
+```{r}
+sum(rioja_casos_activos_zonas_basicas$casos_activos)
+```
+
+**Revisar que cuadra**
+
+Pasamos a incorporar los datos diarios
+
+```{r}
+diario <- data.frame(casos_activos_aberite      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Alberite'],
+                     casos_activos_alfaro       = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Alfaro'],
+                     casos_activos_arnedo       = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Arnedo'],
+                     casos_activos_calahorra    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Calahorra'],
+                     casos_activos_cervera      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Cervera del Río Alhama'],
+                     casos_activos_haro         = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Haro'],
+                     casos_activos_logrono      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Logroño'],
+                     casos_activos_murillo      = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Murillo del Río Leza'],
+                     casos_activos_najera       = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Nájera'],
+                     casos_activos_navarrete    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Navarrete'],
+                     casos_activos_san_roman    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'San Román de Cameros'],
+                     casos_activos_s_domingo    = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Santo Domingo de la Calzada'],
+                     casos_activos_torrecilla   = rioja_casos_activos_zonas_basicas$casos_activos[rioja_casos_activos_zonas_basicas$localidad == 'Torrecilla en Cameros'],
+                     fecha_publicacion_zonas    = as.Date(fecha_valores_zonas[1], '%d/%m/%Y'),
+                     ultima_actualizacion_zonas = as.Date(fecha_valores_zonas[2], '%d/%m/%Y'),
+                     ambito_temporal_zonas      = as.Date(fecha_valores_zonas[3], '%d/%m/%Y')
+                     )
+```
+
+```{r}
+resumen_diario <- cbind(resumen_diario, diario)
+```
+
+Guardamos
+
+```{r}
+saveRDS(rioja_casos_activos_zonas_basicas, file = paste0('./data/rioja_casos_activos_zonas_basicas_', Sys.Date(),'.rds'))
+```
+
+Hacemos un mapa
+
+Le asigno un CRS "a capón", el de OSM
+
+```{r}
+rioja_casos_activos_zonas_basicas_shp <-  sf::st_as_sf(as.data.frame(rioja_casos_activos_zonas_basicas), 
+                                                       coords = c('longitud', 'latitud'), 
+                                                       crs = 4326)
+```
+
+
+```{r mapa_callejero_chamberi1, fig.align="center", message=FALSE, warning=FALSE}
+# tmap object
+mapa_casos_activos_zonas_basicas <- tm_shape(rioja_casos_activos_zonas_basicas_shp) +
+    tm_dots("casos_activos")
+
+# dynamic map
+tmap_leaflet(mapa_casos_activos_zonas_basicas)
+```
+
+
+
+
+## Resumen diario
+
+Guardamos el resumen diario
+
+```{r}
+saveRDS(resumen_diario, file = paste0('./data/resumen_diario_', Sys.Date(),'.rds'))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Datos de ISCIII
+
+
+## Serie historica
+
+Los datos de (ISCIII)[https://covid19.isciii.es/]
+
+```{r}
+link_isciii <- 'https://covid19.isciii.es/resources/serie_historica_acumulados.csv'
+```
+
+En los datos en local se han eliminado las últimas filas que corresponden a comentarios.
+
+```{r}
+# Datos en local
+serie_historica_acumulados_isciii <- read_csv("data/serie_historica_acumulados.csv", 
+                                              locale = locale(date_names = "es"))
+```
+
+```{r, eval=FALSE}
+# Directamente de Internet
+serie_historica_acumulados_isciii <- read_csv(link_isciii, 
+                                              locale = locale(date_names = "es"))
+```
+
+Vemos los datos por CC.AA.
+
+```{r}
+table(serie_historica_acumulados_isciii$CCAA, useNA = 'ifany')
+```
+
+Comunidades autónomas
+
+```{r}
+serie_historica_acumulados_isciii$CCAA <- factor(serie_historica_acumulados_isciii$CCAA, 
+                                                 levels = c('AN', 'AR', 'AS', 'CB', 'CE', 
+                                                            'CL', 'CM', 'CN', 'CT', 'EX', 
+                                                            'GA', 'IB', 'MC', 'MD', 'ML', 
+                                                            'NC', 'PV', 'RI', 'VC'),
+                                                 labels = c('Andalucía', 'Aragón', 
+                                                            'Asturias, Principado de', 
+                                                            'Cantabria', 'Ceuta', 
+                                                            'Castilla y León', 
+                                                            'Castilla - La Mancha', 
+                                                            'Canarias', 'Cantabria', 
+                                                            'Extremadura', 
+                                                            'Galicia', 'Balears, Illes', 
+                                                            'Murcia, Región de', 
+                                                            'Madrid, Comunidad de', 
+                                                            'Melilla', 
+                                                            'Navarra, Comunidad Foral de', 
+                                                            'País Vasco', 'Rioja, La', 
+                                                            'Comunitat Valenciana'))
+```
+
+
+Pasamos la fecha a formato *Date*
+
+```{r}
+serie_historica_acumulados_isciii$FECHA <- as.Date(serie_historica_acumulados_isciii$FECHA, "%d/%m/%Y")
+```
+
+```{r}
+summary(serie_historica_acumulados_isciii)
+```
+
+
+### Nuevas columnas
+
+```{r}
+# Valores diarios
+serie_historica_acumulados_isciii <- serie_historica_acumulados_isciii %>% 
+  group_by(CCAA) %>% 
+  arrange(FECHA) %>% 
+  mutate(diario_hospitalizados = Hospitalizados - lag(Hospitalizados, order_by = FECHA),
+         diario_uci            = UCI - lag(UCI, order_by = FECHA),
+         diario_fallecidos     = Fallecidos - lag(Fallecidos, order_by = FECHA)
+         # diario_recuperados    = Recuperados - lag(Recuperados) # Este es acumulado
+  )
+```
+
+
+Guardamos
+
+```{r}
+saveRDS(serie_historica_acumulados_isciii, file = paste0('./data/serie_historica_acumulados_isciii_', Sys.Date(),'.rds'))
+```
+
+
+
+## MoMo ISCIII
+
+Los modelos [MoMo del ISCIII](https://momo.isciii.es/public/momo/dashboard/momo_dashboard.html#nacional).
+
+Los datos están disponibles [aquí](https://momo.isciii.es/public/momo/data) en formato CSV, y se actualizan diariamente. Son las series temporales con los resultados de MoMo para ámbito nacional y de comunidades autónomas, en diferentes grupos poblacionales, durante los últimos dos años. Consta de las siguientes columnas:
+
+    ambito: nacional o ccaa
+    cod_ambito: si es nacional, viene vacío. Si es una comunidad autónoma, trae su código ISO 3166-2.
+    cod_ine_ambito: columna informativa sobre la comunidad autónoma, si aplica. Es su código INE.
+    nombre_ambito: columna informativa sobre la comunidad autónoma, si aplica. Es su nombre.
+    cod_sexo: código INE del sexo. 1 para hombres, 6 para mujeres.
+    nombre_sexo: columna informativa sobre el sexo. Su nombre descriptivo (hombres, mujeres).
+    cod_gedad: código del grupo de edad. Los posibles son: menos_65, 65_74, mas_74.
+    nombre_gedad: columna informativa sobre el grupo de edad. Su nombre descriptivo (p.e. edad < 65).
+    fecha_defuncion: la fecha a la que se refieren los indicadores descritos de aquí en adelante. Es la fecha en la que ocurre la defunción.
+    defunciones_observadas: el número de defunciones observadas (incluye la corrección por retraso).
+    defunciones_observadas_lim_inf: el límite inferior del invervalo de confianza de las defunciones observadas (debido a la corrección).
+    defunciones_observadas_lim_sup: de forma equivalente, el límite superior.
+    defunciones_esperadas: el número de defunciones esperadas, resultantes del modelo.
+    defunciones_esperadas_q01: el límite inferior del intervalo de confianza de las defunciones esperadas, correspondiente al percentil 1 de la distribución.
+    defunciones_esperadas_q99: de forma equivalente, el límite superior, al percentil 99.
+
+Las series vienen agregadas por ámbito, código de ámbito, sexo, grupo de edad y fecha de defunción. Nótese que las series que son agregados del resto vienen en otra serie aparte. P.e., si se quiere elegir la serie de toda la población (nacional, todos los sexos, todas las edades), hay que filtrar por ambito="nacional", cod_sexo="all" y cod_gedad="all".
+
+Los datos aquí descargados se refieren a las defunciones por todas las causas notificadas por los registros civiles informatizados de los municipios correspondientes. Para saber más, consulta las pestañas de “Documentación” y “Notificación”.
+
+Nota: los datos cambian de forma retroactiva, especialmente en los días más recientes. Lo que hoy puedes descargar (o consultar en este portal) mañana puede tener indicadores diferentes en fechas pasadas. El motivo es el retraso en la notificación, detallado en la sección de [Documentación](https://momo.isciii.es/public/momo/dashboard/momo_dashboard.html#documentacion).
+
+
+```{r}
+link_momo <- 'https://momo.isciii.es/public/momo/data'
+```
+
+```{r}
+# Los datos en local
+data <- read_csv("data/data.csv", col_types = cols(cod_ambito = col_character(), 
+    cod_ine_ambito = col_character(), nombre_ambito = col_character()), 
+    locale = locale(date_names = "es", encoding = "ISO-8859-1"))
+```
+
+```{r}
+summary(data)
+```
+
+
+```{r}
+# Directamente de Internet
+# momo_isciii <- read_csv(link_momo, locale = locale(date_names = "es"))
+# momo_isciii <- read_delim(link_momo, ",", escape_double = FALSE, 
+#                           # col_names = FALSE, 
+#                           locale = locale(date_names = "es", 
+#                                           decimal_mark = ",",      
+#                                           grouping_mark = "."),
+#                           trim_ws = TRUE)
+momo_isciii <- read_csv(link_momo, col_types = cols(cod_ambito = col_character(), 
+    cod_ine_ambito = col_character(), nombre_ambito = col_character()), 
+    locale = locale(date_names = "es", encoding = "UTF-8"))
+```
+
+
+### ETL
+
+Pasamos algunos valores a factor
+
+```{r}
+momo_isciii$ambito          <- as.factor(momo_isciii$ambito)
+momo_isciii$cod_ambito      <- as.factor(momo_isciii$cod_ambito)
+momo_isciii$cod_ine_ambito  <- as.factor(momo_isciii$cod_ine_ambito)
+momo_isciii$nombre_ambito   <- as.factor(momo_isciii$nombre_ambito)
+momo_isciii$cod_sexo        <- as.factor(momo_isciii$cod_sexo)
+momo_isciii$nombre_sexo     <- as.factor(momo_isciii$nombre_sexo)
+momo_isciii$cod_gedad       <- as.factor(momo_isciii$cod_gedad)
+momo_isciii$nombre_gedad    <- as.factor(momo_isciii$nombre_gedad)
+```
+
+```{r}
+summary(momo_isciii)
+```
+
+Esto lo necesitamos para "traducir" los códigos
+
+```{r}
+table(momo_isciii$cod_ambito, momo_isciii$nombre_ambito)
+```
+
+Guardamos
+
+```{r}
+saveRDS(momo_isciii, file = paste0('./data/momo_isciii_', Sys.Date(),'.rds'))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+# Analisis 
+
+```{r}
+madrid <- serie_historica_acumulados_isciii[serie_historica_acumulados_isciii$CCAA == 'Madrid, Comunidad de', ]
+```
+
+```{r}
+rioja <- serie_historica_acumulados_isciii[serie_historica_acumulados_isciii$CCAA == 'Rioja, La', ]
+```
+
+```{r}
+summary(rioja)
+```
+
+```{r}
+start_point_daily <-  c(1, 1)
+start_point_daily 
+## [1] 1 1
+```
+
+```{r}
+rioja_ts_uci_daily <- 
+  rioja %>%  
+  select(UCI) %>%
+  ts(start = start_point_daily, frequency = 365)
+```
+
+```{r}
+ts_info(rioja_ts_uci_daily)
+```
+
+```{r, eval=FALSE}
+# Tiene que haber al menos dos años
+ts_decompose(rioja_ts_uci_daily, type = 'additive')
+```
+
+```{r, eval=FALSE}
+ts_acf(rioja_ts_uci_daily, lag.max = 365)
+```
+
+```{r}
+summary(rioja_ts_uci_daily)
+```
+
+
+
+```{r}
+rioja_ts <- ts(rioja, frequency = 365, start = as.Date('2020-02-20'))
+```
+
+```{r}
+summary(rioja_ts)
+```
+
+
+
+
+
+Terminamos con la información de la sesión
+
+```{r}
+sessionInfo()
+```
+
+## Datos
+
+* [Situación de COVID-19 en España](https://covid19.isciii.es/)
+
+## Referencias
+
+* []()
+
+
+## Licencias
