@@ -204,6 +204,139 @@ La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/dato
 
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-461](https://web.larioja.org/dato-abierto/datoabierto?n=opd-461)
 
+```{r}
+page_hospitales <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-461')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_hospitales <- html_nodes(page_hospitales, css = '.col-md-6')
+col_md_6_hospitales
+```
+
+```{r}
+fecha_campos_hospitales <- html_children(col_md_6_hospitales[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_hospitales
+```
+
+```{r}
+fecha_valores_hospitales <- html_children(col_md_6_hospitales[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_hospitales
+```
+
+Ahora bajamos el fichero
+
+
+```{r}
+link_hospitales <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDYxfGNmPTAz'
+```
+
+```{r}
+rioja_hospitales <- read_delim(link_hospitales, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
+```{r}
+rioja_hospitales <- as.data.frame(rioja_hospitales)
+```
+
+```{r}
+names(rioja_hospitales) <- c("hospital", "hospitalizados_total", 
+                             "hospitalizados_planta", "hospitalizados_uci")
+```
+
+```{r}
+sum(rioja_hospitales$hospitalizados_total, na.rm = TRUE)
+```
+
+Creamos una línea con los totales
+
+```{r}
+rioja_hospitales <- rbind(rioja_hospitales, data.frame(hospital = 'Total', 
+                                                       hospitalizados_total  = sum(rioja_hospitales$hospitalizados_total, na.rm = TRUE), 
+                                                       hospitalizados_planta = sum(rioja_hospitales$hospitalizados_planta, na.rm = TRUE), 
+                                                       hospitalizados_uci    = sum(rioja_hospitales$hospitalizados_uci, na.rm = TRUE)))
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_hospitales$fecha_publicacion_hospitales    = as.Date(fecha_valores_hospitales[1], '%d/%m/%Y')
+rioja_hospitales$ultima_actualizacion_hospitales = as.Date(fecha_valores_hospitales[2], '%d/%m/%Y')
+rioja_hospitales$ambito_temporal_hospitales      = as.Date(fecha_valores_hospitales[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_hospitales)
+```
+
+**Revisar que cuadra**
+
+```{r}
+# En esta caso es la última línea
+diario <- data.frame(hospitalizados_total               = rioja_hospitales$hospitalizados_total[dim(rioja_hospitales)[1]],
+                     hospitalizados_planta              = rioja_hospitales$hospitalizados_planta[dim(rioja_hospitales)[1]],
+                     hospitalizados_uci                 = rioja_hospitales$hospitalizados_uci[dim(rioja_hospitales)[1]],
+                     
+                     hospitalizados_total_s_pedro       = rioja_hospitales$hospitalizados_total[rioja_hospitales$hospital == 'Hospital San Pedro'],
+                     hospitalizados_planta_s_pedro      = rioja_hospitales$hospitalizados_planta[rioja_hospitales$hospital == 'Hospital San Pedro'],
+                     hospitalizados_uci_s_pedro         = rioja_hospitales$hospitalizados_uci[rioja_hospitales$hospital == 'Hospital San Pedro'],
+                     
+                     hospitalizados_total_la_rioja      = rioja_hospitales$hospitalizados_total[rioja_hospitales$hospital == 'Hospital de La Rioja'],
+                     hospitalizados_planta_la_rioja     = rioja_hospitales$hospitalizados_planta[rioja_hospitales$hospital == 'Hospital de La Rioja'],
+                     hospitalizados_uci_la_rioja        = rioja_hospitales$hospitalizados_uci[rioja_hospitales$hospital == 'Hospital de La Rioja'],
+                     
+                     hospitalizados_total_calahorra     = rioja_hospitales$hospitalizados_total[rioja_hospitales$hospital == 'F. H. Calahorra'],
+                     hospitalizados_planta_calahorra    = rioja_hospitales$hospitalizados_planta[rioja_hospitales$hospital == 'F. H. Calahorra'],
+                     hospitalizados_uci_calahorra       = rioja_hospitales$hospitalizados_uci[rioja_hospitales$hospital == 'F. H. Calahorra'],
+                     
+                     hospitalizados_total_manzanos      = rioja_hospitales$hospitalizados_total[rioja_hospitales$hospital == 'Los Manzanos'],
+                     hospitalizados_planta_manzanos     = rioja_hospitales$hospitalizados_planta[rioja_hospitales$hospital == 'Los Manzanos'],
+                     hospitalizados_uci_manzanos        = rioja_hospitales$hospitalizados_uci[rioja_hospitales$hospital == 'Los Manzanos'],
+                     
+                     fecha_publicacion_hospitales       = as.Date(fecha_valores_hospitales[1], '%d/%m/%Y'),
+                     ultima_actualizacion_hospitales    = as.Date(fecha_valores_hospitales[2], '%d/%m/%Y'),
+                     ambito_temporal_hospitales         = as.Date(fecha_valores_hospitales[3], '%d/%m/%Y')
+                     )
+```
+
+**Sólo pongo los totales. Los datos son semanales**
+
+Guardamos
+
+```{r}
+saveRDS(rioja_hospitales, file = paste0('./data/rioja_hospitales_', Sys.Date(),'.rds'))
+```
+
+Añadimos al diario
+
+```{r}
+resumen_diario <- data.frame(time_stamp = Sys.time())
+resumen_diario <- cbind(resumen_diario, diario)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -273,7 +406,7 @@ sum(rioja_personal_sanitario$casos_activos)
 Incorporamos la fecha del dato
 
 ```{r}
-rioja_personal_sanitario$fecha_publicacion_sanitarios    = as.Date(fecha_valores_sanitarios [1], '%d/%m/%Y')
+rioja_personal_sanitario$fecha_publicacion_sanitarios    = as.Date(fecha_valores_sanitarios[1], '%d/%m/%Y')
 rioja_personal_sanitario$ultima_actualizacion_sanitarios = as.Date(fecha_valores_sanitarios[2], '%d/%m/%Y')
 rioja_personal_sanitario$ambito_temporal_sanitarios      = as.Date(fecha_valores_sanitarios[3], '%d/%m/%Y')
 ```
@@ -299,14 +432,14 @@ diario <- data.frame(sanitarios_casos_activos_diario    = rioja_personal_sanitar
 
 Guardamos
 
-```{r, eval=FALSE}
+```{r}
 saveRDS(rioja_personal_sanitario, file = paste0('./data/rioja_personal_sanitario_', Sys.Date(),'.rds'))
 ```
 
 Añadimos al diario
 
 ```{r}
-resumen_diario <- data.frame(time_stamp = Sys.time())
+# resumen_diario <- data.frame(time_stamp = Sys.time())
 resumen_diario <- cbind(resumen_diario, diario)
 ```
 
@@ -557,14 +690,6 @@ saveRDS(rioja_casos_activos_zonas_basicas, file = paste0('./data/rioja_casos_act
 
 Hacemos un mapa
 
-
-```{r, eval=FALSE}
-# Le asignamos un CRS 25830 (según documentación) a partir de x, y
-callejero_chamberi_temp_shp <- sf::st_as_sf(as.data.frame(callejero_chamberi_shp), 
-                                       coords = c('utm_x', 'utm_y'), 
-                                       crs = 25830)
-```
-
 Le asigno un CRS "a capón", el de OSM
 
 ```{r}
@@ -756,6 +881,7 @@ momo_isciii <- read_csv(link_momo, col_types = cols(cod_ambito = col_character()
     cod_ine_ambito = col_character(), nombre_ambito = col_character()), 
     locale = locale(date_names = "es", encoding = "UTF-8"))
 ```
+
 
 ### ETL
 
