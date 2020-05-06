@@ -1,0 +1,271 @@
+---
+title:    "EDA datos Coronavirus"
+author:   "by [Santiago Mota](https://www.linkedin.com/in/santiagomota/)"
+mail:     "santiago_mota@yahoo.es"
+linkedin: "santiagomota"
+twitter:  "mota_santiago"
+github:   "santiagomota"
+date:     "`r Sys.Date()`"
+# logo:     "./figs/logo3.png"
+license:  by-nc-sa
+urlcolor: blue
+output:
+  html_document: 
+    theme:        cosmo # "default", "cerulean", "journal", "flatly", "readable", "spacelab", "united", "cosmo", "lumen", "paper", "sandstone", "simplex", "yeti"
+    highlight:    tango # "default", "tango", "pygments", "kate", "monochrome", "espresso", "zenburn", "haddock", "textmate"
+    toc:          true
+    toc_float:    true
+    code_folding: show
+    includes:
+      after_body: footer.html
+  word_document:  default
+  pdf_document:   default
+  epuRate::epurate:
+    toc:             TRUE
+    number_sections: FALSE
+    code_folding:    "show"
+  rmdformats::readthedown:
+    toc:          true      
+---
+
+```{r}
+library(readr)
+library(dplyr)
+library(TSstudio)
+```
+
+
+
+## Datos de ISCIII
+
+Los datos de (ISCIII)[https://covid19.isciii.es/]
+
+```{r}
+link_isciii <- 'https://covid19.isciii.es/resources/serie_historica_acumulados.csv'
+```
+
+En los datos en local se han eliminado las últimas filas que corresponden a comentarios.
+
+```{r}
+# Datos en local
+serie_historica_acumulados_isciii <- read_csv("data/serie_historica_acumulados.csv", 
+                                              locale = locale(date_names = "es"))
+```
+
+```{r, eval=FALSE}
+# Directamente de Internet
+serie_historica_acumulados_isciii <- read_csv(link_isciii, 
+                                              locale = locale(date_names = "es"))
+```
+
+Vemos los datos por CC.AA.
+
+```{r}
+table(serie_historica_acumulados_isciii$CCAA, useNA = 'ifany')
+```
+
+Comunidades autónomas
+
+```{r}
+serie_historica_acumulados_isciii$CCAA <- factor(serie_historica_acumulados_isciii$CCAA, 
+                                                 levels = c('AN', 'AR', 'AS', 'CB', 'CE', 
+                                                            'CL', 'CM', 'CN', 'CT', 'EX', 
+                                                            'GA', 'IB', 'MC', 'MD', 'ML', 
+                                                            'NC', 'PV', 'RI', 'VC'),
+                                                 labels = c('Andalucía', 'Aragón', 
+                                                            'Asturias, Principado de', 
+                                                            'Cantabria', 'Ceuta', 
+                                                            'Castilla y León', 
+                                                            'Castilla - La Mancha', 
+                                                            'Canarias', 'Cantabria', 
+                                                            'Extremadura', 
+                                                            'Galicia', 'Balears, Illes', 
+                                                            'Murcia, Región de', 
+                                                            'Madrid, Comunidad de', 
+                                                            'Melilla', 
+                                                            'Navarra, Comunidad Foral de', 
+                                                            'País Vasco', 'Rioja, La', 
+                                                            'Comunitat Valenciana'))
+```
+
+
+Pasamos la fecha a formato *Date*
+
+```{r}
+serie_historica_acumulados_isciii$FECHA <- as.Date(serie_historica_acumulados_isciii$FECHA, "%d/%m/%Y")
+```
+
+```{r}
+summary(serie_historica_acumulados_isciii)
+```
+
+
+
+### MoMo ISCIII
+
+Los modelos [MoMo del ISCIII](https://momo.isciii.es/public/momo/dashboard/momo_dashboard.html#nacional).
+
+Los datos están disponibles [aquí](https://momo.isciii.es/public/momo/data) en formato CSV, y se actualizan diariamente. Son las series temporales con los resultados de MoMo para ámbito nacional y de comunidades autónomas, en diferentes grupos poblacionales, durante los últimos dos años. Consta de las siguientes columnas:
+
+    ambito: nacional o ccaa
+    cod_ambito: si es nacional, viene vacío. Si es una comunidad autónoma, trae su código ISO 3166-2.
+    cod_ine_ambito: columna informativa sobre la comunidad autónoma, si aplica. Es su código INE.
+    nombre_ambito: columna informativa sobre la comunidad autónoma, si aplica. Es su nombre.
+    cod_sexo: código INE del sexo. 1 para hombres, 6 para mujeres.
+    nombre_sexo: columna informativa sobre el sexo. Su nombre descriptivo (hombres, mujeres).
+    cod_gedad: código del grupo de edad. Los posibles son: menos_65, 65_74, mas_74.
+    nombre_gedad: columna informativa sobre el grupo de edad. Su nombre descriptivo (p.e. edad < 65).
+    fecha_defuncion: la fecha a la que se refieren los indicadores descritos de aquí en adelante. Es la fecha en la que ocurre la defunción.
+    defunciones_observadas: el número de defunciones observadas (incluye la corrección por retraso).
+    defunciones_observadas_lim_inf: el límite inferior del invervalo de confianza de las defunciones observadas (debido a la corrección).
+    defunciones_observadas_lim_sup: de forma equivalente, el límite superior.
+    defunciones_esperadas: el número de defunciones esperadas, resultantes del modelo.
+    defunciones_esperadas_q01: el límite inferior del intervalo de confianza de las defunciones esperadas, correspondiente al percentil 1 de la distribución.
+    defunciones_esperadas_q99: de forma equivalente, el límite superior, al percentil 99.
+
+Las series vienen agregadas por ámbito, código de ámbito, sexo, grupo de edad y fecha de defunción. Nótese que las series que son agregados del resto vienen en otra serie aparte. P.e., si se quiere elegir la serie de toda la población (nacional, todos los sexos, todas las edades), hay que filtrar por ambito="nacional", cod_sexo="all" y cod_gedad="all".
+
+Los datos aquí descargados se refieren a las defunciones por todas las causas notificadas por los registros civiles informatizados de los municipios correspondientes. Para saber más, consulta las pestañas de “Documentación” y “Notificación”.
+
+Nota: los datos cambian de forma retroactiva, especialmente en los días más recientes. Lo que hoy puedes descargar (o consultar en este portal) mañana puede tener indicadores diferentes en fechas pasadas. El motivo es el retraso en la notificación, detallado en la sección de [Documentación](https://momo.isciii.es/public/momo/dashboard/momo_dashboard.html#documentacion).
+
+
+```{r}
+link_momo <- 'https://momo.isciii.es/public/momo/data'
+```
+
+```{r}
+# Los datos en local
+data <- read_csv("data/data.csv", col_types = cols(cod_ambito = col_character(), 
+    cod_ine_ambito = col_character(), nombre_ambito = col_character()), 
+    locale = locale(date_names = "es", encoding = "ISO-8859-1"))
+```
+
+```{r}
+summary(data)
+```
+
+
+```{r}
+# Directamente de Internet
+# momo_isciii <- read_csv(link_momo, locale = locale(date_names = "es"))
+# momo_isciii <- read_delim(link_momo, ",", escape_double = FALSE, 
+#                           # col_names = FALSE, 
+#                           locale = locale(date_names = "es", 
+#                                           decimal_mark = ",",      
+#                                           grouping_mark = "."),
+#                           trim_ws = TRUE)
+momo_isciii <- read_csv(link_momo, col_types = cols(cod_ambito = col_character(), 
+    cod_ine_ambito = col_character(), nombre_ambito = col_character()), 
+    locale = locale(date_names = "es", encoding = "UTF-8"))
+```
+
+### ETL
+
+Pasamos algunos valores a factor
+
+```{r}
+momo_isciii$ambito          <- as.factor(momo_isciii$ambito)
+momo_isciii$cod_ambito      <- as.factor(momo_isciii$cod_ambito)
+momo_isciii$cod_ine_ambito  <- as.factor(momo_isciii$cod_ine_ambito)
+momo_isciii$nombre_ambito   <- as.factor(momo_isciii$nombre_ambito)
+momo_isciii$cod_sexo        <- as.factor(momo_isciii$cod_sexo)
+momo_isciii$nombre_sexo     <- as.factor(momo_isciii$nombre_sexo)
+momo_isciii$cod_gedad       <- as.factor(momo_isciii$cod_gedad)
+momo_isciii$nombre_gedad    <- as.factor(momo_isciii$nombre_gedad)
+```
+
+```{r}
+summary(momo_isciii)
+```
+
+Esto lo necesitamos para "traducir" los códigos
+
+```{r}
+table(momo_isciii$cod_ambito, momo_isciii$nombre_ambito)
+```
+
+### Nuevas variables
+
+```{r}
+madrid <- serie_historica_acumulados_isciii[serie_historica_acumulados_isciii$CCAA == 'Madrid, Comunidad de', ]
+```
+
+```{r}
+rioja <- serie_historica_acumulados_isciii[serie_historica_acumulados_isciii$CCAA == 'Rioja, La', ]
+```
+
+```{r}
+summary(rioja)
+```
+
+```{r}
+start_point_daily <-  c(1, 1)
+start_point_daily 
+## [1] 1 1
+```
+
+```{r}
+rioja_ts_uci_daily <- 
+  rioja %>%  
+  select(UCI) %>%
+  ts(start = start_point_daily, frequency = 365)
+```
+
+```{r}
+ts_info(rioja_ts_uci_daily)
+```
+
+```{r, eval=FALSE}
+# Tiene que haber al menos dos años
+ts_decompose(rioja_ts_uci_daily, type = 'additive')
+```
+
+```{r, eval=FALSE}
+ts_acf(rioja_ts_uci_daily, lag.max = 365)
+```
+
+```{r}
+summary(rioja_ts)
+```
+
+
+
+```{r}
+rioja_ts <- ts(rioja, frequency = 365, start = as.Date('2020-02-20'))
+```
+
+```{r}
+summary(rioja_ts)
+```
+
+
+
+
+```{r}
+rioja_ts$Hospitalizados_diferencia <- rioja_ts$Hospitalizados_diferencia - lag(rioja_ts$Hospitalizados, 1)
+```
+
+
+# Acceso a los datos de Open Data en La Rioja
+
+
+
+
+
+Terminamos con la información de la sesión
+
+```{r}
+sessionInfo()
+```
+
+## Datos
+
+* [Situación de COVID-19 en España](https://covid19.isciii.es/)
+
+## Referencias
+
+* []()
+
+
+## Licencias

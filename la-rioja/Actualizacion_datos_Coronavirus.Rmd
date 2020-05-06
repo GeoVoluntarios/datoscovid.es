@@ -324,13 +324,581 @@ resumen_diario <- cbind(resumen_diario, diario)
 
 
 
+## Porcentaje de hospitalizados por grupo de edad y sexo
+
+Porcentaje de hospitalizados por grupo de edad y sexo a a fecha actual
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-453](https://web.larioja.org/dato-abierto/datoabierto?n=opd-453)
+
+```{r}
+page_hospitalizados_porcentaje <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-453')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_hospitalizados_porcentaje <- html_nodes(page_hospitalizados_porcentaje, css = '.col-md-6')
+col_md_6_hospitalizados_porcentaje
+```
+
+```{r}
+fecha_campos_hospitalizados_porcentaje <- html_children(col_md_6_hospitalizados_porcentaje[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_hospitalizados_porcentaje
+```
+
+```{r}
+fecha_valores_hospitalizados_porcentaje <- html_children(col_md_6_hospitalizados_porcentaje[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_hospitalizados_porcentaje
+```
+
+Ahora bajamos el fichero
+
+
+```{r}
+link_hospitalizados_porcentaje <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDUzfGNmPTAz'
+```
+
+```{r}
+rioja_hospitalizados_porcentaje <- read_delim(link_hospitalizados_porcentaje, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
+```{r}
+rioja_hospitalizados_porcentaje <- as.data.frame(rioja_hospitalizados_porcentaje)
+```
+
+```{r}
+names(rioja_hospitalizados_porcentaje) <- c("franja_edad", "hombres", 
+                             "mujeres", "x4")
+```
+
+Borramos x4
+
+```{r}
+rioja_hospitalizados_porcentaje <- rioja_hospitalizados_porcentaje[, 1:3]
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_hospitalizados_porcentaje$fecha_publicacion_hospitalizados_porcentaje    = as.Date(fecha_valores_hospitalizados_porcentaje[1], '%d/%m/%Y')
+rioja_hospitalizados_porcentaje$ultima_actualizacion_hospitalizados_porcentaje = as.Date(fecha_valores_hospitalizados_porcentaje[2], '%d/%m/%Y')
+rioja_hospitalizados_porcentaje$ambito_temporal_hospitalizados_porcentaje      = as.Date(fecha_valores_hospitalizados_porcentaje[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_hospitalizados_porcentaje)
+```
+
+```{r}
+str(rioja_hospitalizados_porcentaje)
+```
+
+```{r}
+sum(rioja_hospitalizados_porcentaje$hombres)
+```
+
+```{r}
+sum(rioja_hospitalizados_porcentaje$mujeres)
+```
+
+
+**Revisar que cuadra**
+
+```{r}
+# En esta caso es la última línea
+diario <- data.frame(
+                     # hospitalizados_hombres_00_09       = rioja_hospitalizados_porcentaje$hombres[rioja_hospitalizados_porcentaje$franja_edad == '0-9 '],
+                     # hospitalizados_hombres_10_19       = rioja_hospitalizados_porcentaje$hombres[rioja_hospitalizados_porcentaje$franja_edad == '10-19 '],
+                     # hospitalizados_hombres_20_19       = rioja_hospitalizados_porcentaje$hombres[rioja_hospitalizados_porcentaje$franja_edad == '20-29 '],
+                     # hospitalizados_hombres_30_19       = rioja_hospitalizados_porcentaje$hombres[rioja_hospitalizados_porcentaje$franja_edad == '30-39 '],
+                     # hospitalizados_hombres_40_19       = rioja_hospitalizados_porcentaje$hombres[rioja_hospitalizados_porcentaje$franja_edad == '40-49 '],
+                     # hospitalizados_hombres_50_19       = rioja_hospitalizados_porcentaje$hombres[rioja_hospitalizados_porcentaje$franja_edad == '50-59 '],
+                     # hospitalizados_hombres_60_19       = rioja_hospitalizados_porcentaje$hombres[rioja_hospitalizados_porcentaje$franja_edad == '60-69 '],
+                     # hospitalizados_hombres_70_Mas      = rioja_hospitalizados_porcentaje$hombres[rioja_hospitalizados_porcentaje$franja_edad == '70 y más'],
+                     # 
+                     # hospitalizados_mujeres_00_09       = rioja_hospitalizados_porcentaje$mujeres[rioja_hospitalizados_porcentaje$franja_edad == '0-9 '],
+                     # hospitalizados_mujeres_10_19       = rioja_hospitalizados_porcentaje$mujeres[rioja_hospitalizados_porcentaje$franja_edad == '10-19 '],
+                     # hospitalizados_mujeres_20_19       = rioja_hospitalizados_porcentaje$mujeres[rioja_hospitalizados_porcentaje$franja_edad == '20-29 '],
+                     # hospitalizados_mujeres_30_19       = rioja_hospitalizados_porcentaje$mujeres[rioja_hospitalizados_porcentaje$franja_edad == '30-39 '],
+                     # hospitalizados_mujeres_40_19       = rioja_hospitalizados_porcentaje$mujeres[rioja_hospitalizados_porcentaje$franja_edad == '40-49 '],
+                     # hospitalizados_mujeres_50_19       = rioja_hospitalizados_porcentaje$mujeres[rioja_hospitalizados_porcentaje$franja_edad == '50-59 '],
+                     # hospitalizados_mujeres_60_19       = rioja_hospitalizados_porcentaje$mujeres[rioja_hospitalizados_porcentaje$franja_edad == '60-69 '],
+                     # hospitalizados_mujeres_70_Mas      = rioja_hospitalizados_porcentaje$mujeres[rioja_hospitalizados_porcentaje$franja_edad == '70 y más'],
+                     
+                     hospitalizados_hombres_00_09       = rioja_hospitalizados_porcentaje$hombres[1],
+                     hospitalizados_hombres_10_19       = rioja_hospitalizados_porcentaje$hombres[2],
+                     hospitalizados_hombres_20_19       = rioja_hospitalizados_porcentaje$hombres[3],
+                     hospitalizados_hombres_30_19       = rioja_hospitalizados_porcentaje$hombres[4],
+                     hospitalizados_hombres_40_19       = rioja_hospitalizados_porcentaje$hombres[5],
+                     hospitalizados_hombres_50_19       = rioja_hospitalizados_porcentaje$hombres[6],
+                     hospitalizados_hombres_60_19       = rioja_hospitalizados_porcentaje$hombres[7],
+                     hospitalizados_hombres_70_Mas      = rioja_hospitalizados_porcentaje$hombres[8],
+                     
+                     hospitalizados_mujeres_00_09       = rioja_hospitalizados_porcentaje$mujeres[1],
+                     hospitalizados_mujeres_10_19       = rioja_hospitalizados_porcentaje$mujeres[2],
+                     hospitalizados_mujeres_20_19       = rioja_hospitalizados_porcentaje$mujeres[3],
+                     hospitalizados_mujeres_30_19       = rioja_hospitalizados_porcentaje$mujeres[4],
+                     hospitalizados_mujeres_40_19       = rioja_hospitalizados_porcentaje$mujeres[5],
+                     hospitalizados_mujeres_50_19       = rioja_hospitalizados_porcentaje$mujeres[6],
+                     hospitalizados_mujeres_60_19       = rioja_hospitalizados_porcentaje$mujeres[7],
+                     hospitalizados_mujeres_70_Mas      = rioja_hospitalizados_porcentaje$mujeres[8],
+                     
+                     
+                     fecha_publicacion_hospitalizados_porcentaje       = as.Date(fecha_valores_hospitalizados_porcentaje[1], '%d/%m/%Y'),
+                     ultima_actualizacion_hospitalizados_porcentaje    = as.Date(fecha_valores_hospitalizados_porcentaje[2], '%d/%m/%Y'),
+                     ambito_temporal_hospitalizados_porcentaje         = as.Date(fecha_valores_hospitalizados_porcentaje[3], '%d/%m/%Y')
+                     )
+```
+
+Guardamos
+
+```{r}
+saveRDS(rioja_hospitalizados_porcentaje, file = paste0('./data/rioja_hospitalizados_porcentaje_', Sys.Date(),'.rds'))
+```
+
+Añadimos al diario
+
+```{r}
+# resumen_diario <- data.frame(time_stamp = Sys.time())
+resumen_diario <- cbind(resumen_diario, diario)
+```
 
 
 
 
 
 
+## Porcentaje de hospitalizados en UCI por grupo de edad y sexo
 
+Porcentaje de hospitalizados en UCI por grupo de edad y sexo a fecha actual
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-454](https://web.larioja.org/dato-abierto/datoabierto?n=opd-454)
+
+```{r}
+page_uci_porcentaje <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-454')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_uci_porcentaje <- html_nodes(page_uci_porcentaje, css = '.col-md-6')
+col_md_6_uci_porcentaje
+```
+
+```{r}
+fecha_campos_uci_porcentaje <- html_children(col_md_6_uci_porcentaje[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_uci_porcentaje
+```
+
+```{r}
+fecha_valores_uci_porcentaje <- html_children(col_md_6_uci_porcentaje[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_uci_porcentaje
+```
+
+Ahora bajamos el fichero
+
+
+```{r}
+link_uci_porcentaje <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDU0fGNmPTAz'
+```
+
+```{r}
+rioja_uci_porcentaje <- read_delim(link_uci_porcentaje, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
+```{r}
+rioja_uci_porcentaje <- as.data.frame(rioja_uci_porcentaje)
+```
+
+```{r}
+names(rioja_uci_porcentaje) <- c("franja_edad", "hombres", 
+                             "mujeres", "x4")
+```
+
+Borramos x4
+
+```{r}
+rioja_uci_porcentaje <- rioja_uci_porcentaje[, 1:3]
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_uci_porcentaje$fecha_publicacion_uci_porcentaje    = as.Date(fecha_valores_uci_porcentaje[1], '%d/%m/%Y')
+rioja_uci_porcentaje$ultima_actualizacion_uci_porcentaje = as.Date(fecha_valores_uci_porcentaje[2], '%d/%m/%Y')
+rioja_uci_porcentaje$ambito_temporal_uci_porcentaje      = as.Date(fecha_valores_uci_porcentaje[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_uci_porcentaje)
+```
+
+```{r}
+str(rioja_uci_porcentaje)
+```
+
+```{r}
+sum(rioja_uci_porcentaje$hombres)
+```
+
+```{r}
+sum(rioja_uci_porcentaje$mujeres)
+```
+
+
+**Revisar que cuadra**
+
+```{r}
+# En esta caso es la última línea
+diario <- data.frame(
+                     # uci_hombres_00_09       = rioja_uci_porcentaje$hombres[rioja_uci_porcentaje$franja_edad == '0-9 '],
+                     # uci_hombres_10_19       = rioja_uci_porcentaje$hombres[rioja_uci_porcentaje$franja_edad == '10-19 '],
+                     # uci_hombres_20_19       = rioja_uci_porcentaje$hombres[rioja_uci_porcentaje$franja_edad == '20-29 '],
+                     # uci_hombres_30_19       = rioja_uci_porcentaje$hombres[rioja_uci_porcentaje$franja_edad == '30-39 '],
+                     # uci_hombres_40_19       = rioja_uci_porcentaje$hombres[rioja_uci_porcentaje$franja_edad == '40-49 '],
+                     # uci_hombres_50_19       = rioja_uci_porcentaje$hombres[rioja_uci_porcentaje$franja_edad == '50-59 '],
+                     # uci_hombres_60_19       = rioja_uci_porcentaje$hombres[rioja_uci_porcentaje$franja_edad == '60-69 '],
+                     # uci_hombres_70_Mas      = rioja_uci_porcentaje$hombres[rioja_uci_porcentaje$franja_edad == '70 y más'],
+                     # 
+                     # uci_mujeres_00_09       = rioja_uci_porcentaje$mujeres[rioja_uci_porcentaje$franja_edad == '0-9 '],
+                     # uci_mujeres_10_19       = rioja_uci_porcentaje$mujeres[rioja_uci_porcentaje$franja_edad == '10-19 '],
+                     # uci_mujeres_20_19       = rioja_uci_porcentaje$mujeres[rioja_uci_porcentaje$franja_edad == '20-29 '],
+                     # uci_mujeres_30_19       = rioja_uci_porcentaje$mujeres[rioja_uci_porcentaje$franja_edad == '30-39 '],
+                     # uci_mujeres_40_19       = rioja_uci_porcentaje$mujeres[rioja_uci_porcentaje$franja_edad == '40-49 '],
+                     # uci_mujeres_50_19       = rioja_uci_porcentaje$mujeres[rioja_uci_porcentaje$franja_edad == '50-59 '],
+                     # uci_mujeres_60_19       = rioja_uci_porcentaje$mujeres[rioja_uci_porcentaje$franja_edad == '60-69 '],
+                     # uci_mujeres_70_Mas      = rioja_uci_porcentaje$mujeres[rioja_uci_porcentaje$franja_edad == '70 y más'],
+                     
+                     uci_hombres_00_09       = rioja_uci_porcentaje$hombres[1],
+                     uci_hombres_10_19       = rioja_uci_porcentaje$hombres[2],
+                     uci_hombres_20_19       = rioja_uci_porcentaje$hombres[3],
+                     uci_hombres_30_19       = rioja_uci_porcentaje$hombres[4],
+                     uci_hombres_40_19       = rioja_uci_porcentaje$hombres[5],
+                     uci_hombres_50_19       = rioja_uci_porcentaje$hombres[6],
+                     uci_hombres_60_19       = rioja_uci_porcentaje$hombres[7],
+                     uci_hombres_70_Mas      = rioja_uci_porcentaje$hombres[8],
+                     
+                     uci_mujeres_00_09       = rioja_uci_porcentaje$mujeres[1],
+                     uci_mujeres_10_19       = rioja_uci_porcentaje$mujeres[2],
+                     uci_mujeres_20_19       = rioja_uci_porcentaje$mujeres[3],
+                     uci_mujeres_30_19       = rioja_uci_porcentaje$mujeres[4],
+                     uci_mujeres_40_19       = rioja_uci_porcentaje$mujeres[5],
+                     uci_mujeres_50_19       = rioja_uci_porcentaje$mujeres[6],
+                     uci_mujeres_60_19       = rioja_uci_porcentaje$mujeres[7],
+                     uci_mujeres_70_Mas      = rioja_uci_porcentaje$mujeres[8],
+                     
+                     
+                     fecha_publicacion_uci_porcentaje       = as.Date(fecha_valores_uci_porcentaje[1], '%d/%m/%Y'),
+                     ultima_actualizacion_uci_porcentaje    = as.Date(fecha_valores_uci_porcentaje[2], '%d/%m/%Y'),
+                     ambito_temporal_uci_porcentaje         = as.Date(fecha_valores_uci_porcentaje[3], '%d/%m/%Y')
+                     )
+```
+
+Guardamos
+
+```{r}
+saveRDS(rioja_uci_porcentaje, file = paste0('./data/rioja_uci_porcentaje_', Sys.Date(),'.rds'))
+```
+
+Añadimos al diario
+
+```{r}
+# resumen_diario <- data.frame(time_stamp = Sys.time())
+resumen_diario <- cbind(resumen_diario, diario)
+```
+
+
+
+
+
+## Porcentaje de fallecidos por grupo de edad y sexo
+
+Porcentaje de fallecidos por grupo de edad y sexo a fecha actual
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-455](https://web.larioja.org/dato-abierto/datoabierto?n=opd-455)
+
+
+```{r}
+page_fallecidos_porcentaje <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-455')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_fallecidos_porcentaje <- html_nodes(page_fallecidos_porcentaje, css = '.col-md-6')
+col_md_6_fallecidos_porcentaje
+```
+
+```{r}
+fecha_campos_fallecidos_porcentaje <- html_children(col_md_6_fallecidos_porcentaje[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_fallecidos_porcentaje
+```
+
+```{r}
+fecha_valores_fallecidos_porcentaje <- html_children(col_md_6_fallecidos_porcentaje[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_fallecidos_porcentaje
+```
+
+Ahora bajamos el fichero
+
+
+```{r}
+link_fallecidos_porcentaje <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDU1fGNmPTAz'
+```
+
+```{r}
+rioja_fallecidos_porcentaje <- read_delim(link_fallecidos_porcentaje, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
+```{r}
+rioja_fallecidos_porcentaje <- as.data.frame(rioja_fallecidos_porcentaje)
+```
+
+```{r}
+names(rioja_fallecidos_porcentaje) <- c("franja_edad", "hombres", 
+                             "mujeres", "x4")
+```
+
+Borramos x4
+
+```{r}
+rioja_fallecidos_porcentaje <- rioja_fallecidos_porcentaje[, 1:3]
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_fallecidos_porcentaje$fecha_publicacion_fallecidos_porcentaje    = as.Date(fecha_valores_fallecidos_porcentaje[1], '%d/%m/%Y')
+rioja_fallecidos_porcentaje$ultima_actualizacion_fallecidos_porcentaje = as.Date(fecha_valores_fallecidos_porcentaje[2], '%d/%m/%Y')
+rioja_fallecidos_porcentaje$ambito_temporal_fallecidos_porcentaje      = as.Date(fecha_valores_fallecidos_porcentaje[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_fallecidos_porcentaje)
+```
+
+```{r}
+str(rioja_fallecidos_porcentaje)
+```
+
+```{r}
+sum(rioja_fallecidos_porcentaje$hombres)
+```
+
+```{r}
+sum(rioja_fallecidos_porcentaje$mujeres)
+```
+
+
+**Revisar que cuadra**
+
+```{r}
+# En esta caso es la última línea
+diario <- data.frame(
+                     # fallecidos_hombres_00_09       = rioja_fallecidos_porcentaje$hombres[rioja_fallecidos_porcentaje$franja_edad == '0-9 '],
+                     # fallecidos_hombres_10_19       = rioja_fallecidos_porcentaje$hombres[rioja_fallecidos_porcentaje$franja_edad == '10-19 '],
+                     # fallecidos_hombres_20_19       = rioja_fallecidos_porcentaje$hombres[rioja_fallecidos_porcentaje$franja_edad == '20-29 '],
+                     # fallecidos_hombres_30_19       = rioja_fallecidos_porcentaje$hombres[rioja_fallecidos_porcentaje$franja_edad == '30-39 '],
+                     # fallecidos_hombres_40_19       = rioja_fallecidos_porcentaje$hombres[rioja_fallecidos_porcentaje$franja_edad == '40-49 '],
+                     # fallecidos_hombres_50_19       = rioja_fallecidos_porcentaje$hombres[rioja_fallecidos_porcentaje$franja_edad == '50-59 '],
+                     # fallecidos_hombres_60_19       = rioja_fallecidos_porcentaje$hombres[rioja_fallecidos_porcentaje$franja_edad == '60-69 '],
+                     # fallecidos_hombres_70_Mas      = rioja_fallecidos_porcentaje$hombres[rioja_fallecidos_porcentaje$franja_edad == '70 y más'],
+                     # 
+                     # fallecidos_mujeres_00_09       = rioja_fallecidos_porcentaje$mujeres[rioja_fallecidos_porcentaje$franja_edad == '0-9 '],
+                     # fallecidos_mujeres_10_19       = rioja_fallecidos_porcentaje$mujeres[rioja_fallecidos_porcentaje$franja_edad == '10-19 '],
+                     # fallecidos_mujeres_20_19       = rioja_fallecidos_porcentaje$mujeres[rioja_fallecidos_porcentaje$franja_edad == '20-29 '],
+                     # fallecidos_mujeres_30_19       = rioja_fallecidos_porcentaje$mujeres[rioja_fallecidos_porcentaje$franja_edad == '30-39 '],
+                     # fallecidos_mujeres_40_19       = rioja_fallecidos_porcentaje$mujeres[rioja_fallecidos_porcentaje$franja_edad == '40-49 '],
+                     # fallecidos_mujeres_50_19       = rioja_fallecidos_porcentaje$mujeres[rioja_fallecidos_porcentaje$franja_edad == '50-59 '],
+                     # fallecidos_mujeres_60_19       = rioja_fallecidos_porcentaje$mujeres[rioja_fallecidos_porcentaje$franja_edad == '60-69 '],
+                     # fallecidos_mujeres_70_Mas      = rioja_fallecidos_porcentaje$mujeres[rioja_fallecidos_porcentaje$franja_edad == '70 y más'],
+                     
+                     fallecidos_hombres_00_09       = rioja_fallecidos_porcentaje$hombres[1],
+                     fallecidos_hombres_10_19       = rioja_fallecidos_porcentaje$hombres[2],
+                     fallecidos_hombres_20_19       = rioja_fallecidos_porcentaje$hombres[3],
+                     fallecidos_hombres_30_19       = rioja_fallecidos_porcentaje$hombres[4],
+                     fallecidos_hombres_40_19       = rioja_fallecidos_porcentaje$hombres[5],
+                     fallecidos_hombres_50_19       = rioja_fallecidos_porcentaje$hombres[6],
+                     fallecidos_hombres_60_19       = rioja_fallecidos_porcentaje$hombres[7],
+                     fallecidos_hombres_70_Mas      = rioja_fallecidos_porcentaje$hombres[8],
+                     
+                     fallecidos_mujeres_00_09       = rioja_fallecidos_porcentaje$mujeres[1],
+                     fallecidos_mujeres_10_19       = rioja_fallecidos_porcentaje$mujeres[2],
+                     fallecidos_mujeres_20_19       = rioja_fallecidos_porcentaje$mujeres[3],
+                     fallecidos_mujeres_30_19       = rioja_fallecidos_porcentaje$mujeres[4],
+                     fallecidos_mujeres_40_19       = rioja_fallecidos_porcentaje$mujeres[5],
+                     fallecidos_mujeres_50_19       = rioja_fallecidos_porcentaje$mujeres[6],
+                     fallecidos_mujeres_60_19       = rioja_fallecidos_porcentaje$mujeres[7],
+                     fallecidos_mujeres_70_Mas      = rioja_fallecidos_porcentaje$mujeres[8],
+                     
+                     
+                     fecha_publicacion_fallecidos_porcentaje       = as.Date(fecha_valores_fallecidos_porcentaje[1], '%d/%m/%Y'),
+                     ultima_actualizacion_fallecidos_porcentaje    = as.Date(fecha_valores_fallecidos_porcentaje[2], '%d/%m/%Y'),
+                     ambito_temporal_fallecidos_porcentaje         = as.Date(fecha_valores_fallecidos_porcentaje[3], '%d/%m/%Y')
+                     )
+```
+
+Guardamos
+
+```{r}
+saveRDS(rioja_fallecidos_porcentaje, file = paste0('./data/rioja_fallecidos_porcentaje_', Sys.Date(),'.rds'))
+```
+
+Añadimos al diario
+
+```{r}
+# resumen_diario <- data.frame(time_stamp = Sys.time())
+resumen_diario <- cbind(resumen_diario, diario)
+```
+
+
+## Porcentaje de casos por grupos de edad
+
+Porcentaje de casos por grupo de edad y sexo a fecha actual
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-456](https://web.larioja.org/dato-abierto/datoabierto?n=opd-456)
+
+
+```{r}
+page_casos_porcentaje <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-456')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_casos_porcentaje <- html_nodes(page_casos_porcentaje, css = '.col-md-6')
+col_md_6_casos_porcentaje
+```
+
+```{r}
+fecha_campos_casos_porcentaje <- html_children(col_md_6_casos_porcentaje[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_casos_porcentaje
+```
+
+```{r}
+fecha_valores_casos_porcentaje <- html_children(col_md_6_casos_porcentaje[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_casos_porcentaje
+```
+
+Ahora bajamos el fichero
+
+
+```{r}
+link_casos_porcentaje <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDU2fGNmPTAz'
+```
+
+```{r}
+rioja_casos_porcentaje <- read_delim(link_casos_porcentaje, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
+```{r}
+rioja_casos_porcentaje <- as.data.frame(rioja_casos_porcentaje)
+```
+
+```{r}
+names(rioja_casos_porcentaje) <- c("franja_edad", "hombres", 
+                             "mujeres", "x4")
+```
+
+Borramos x4
+
+```{r}
+rioja_casos_porcentaje <- rioja_casos_porcentaje[, 1:3]
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_casos_porcentaje$fecha_publicacion_casos_porcentaje    = as.Date(fecha_valores_casos_porcentaje[1], '%d/%m/%Y')
+rioja_casos_porcentaje$ultima_actualizacion_casos_porcentaje = as.Date(fecha_valores_casos_porcentaje[2], '%d/%m/%Y')
+rioja_casos_porcentaje$ambito_temporal_casos_porcentaje      = as.Date(fecha_valores_casos_porcentaje[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_casos_porcentaje)
+```
+
+```{r}
+str(rioja_casos_porcentaje)
+```
+
+```{r}
+sum(rioja_casos_porcentaje$hombres)
+```
+
+```{r}
+sum(rioja_casos_porcentaje$mujeres)
+```
+
+
+**Revisar que cuadra**
+
+```{r}
+# En esta caso es la última línea
+diario <- data.frame(
+                     # casos_hombres_00_09       = rioja_casos_porcentaje$hombres[rioja_casos_porcentaje$franja_edad == '0-9 '],
+                     # casos_hombres_10_19       = rioja_casos_porcentaje$hombres[rioja_casos_porcentaje$franja_edad == '10-19 '],
+                     # casos_hombres_20_19       = rioja_casos_porcentaje$hombres[rioja_casos_porcentaje$franja_edad == '20-29 '],
+                     # casos_hombres_30_19       = rioja_casos_porcentaje$hombres[rioja_casos_porcentaje$franja_edad == '30-39 '],
+                     # casos_hombres_40_19       = rioja_casos_porcentaje$hombres[rioja_casos_porcentaje$franja_edad == '40-49 '],
+                     # casos_hombres_50_19       = rioja_casos_porcentaje$hombres[rioja_casos_porcentaje$franja_edad == '50-59 '],
+                     # casos_hombres_60_19       = rioja_casos_porcentaje$hombres[rioja_casos_porcentaje$franja_edad == '60-69 '],
+                     # casos_hombres_70_Mas      = rioja_casos_porcentaje$hombres[rioja_casos_porcentaje$franja_edad == '70 y más'],
+                     # 
+                     # casos_mujeres_00_09       = rioja_casos_porcentaje$mujeres[rioja_casos_porcentaje$franja_edad == '0-9 '],
+                     # casos_mujeres_10_19       = rioja_casos_porcentaje$mujeres[rioja_casos_porcentaje$franja_edad == '10-19 '],
+                     # casos_mujeres_20_19       = rioja_casos_porcentaje$mujeres[rioja_casos_porcentaje$franja_edad == '20-29 '],
+                     # casos_mujeres_30_19       = rioja_casos_porcentaje$mujeres[rioja_casos_porcentaje$franja_edad == '30-39 '],
+                     # casos_mujeres_40_19       = rioja_casos_porcentaje$mujeres[rioja_casos_porcentaje$franja_edad == '40-49 '],
+                     # casos_mujeres_50_19       = rioja_casos_porcentaje$mujeres[rioja_casos_porcentaje$franja_edad == '50-59 '],
+                     # casos_mujeres_60_19       = rioja_casos_porcentaje$mujeres[rioja_casos_porcentaje$franja_edad == '60-69 '],
+                     # casos_mujeres_70_Mas      = rioja_casos_porcentaje$mujeres[rioja_casos_porcentaje$franja_edad == '70 y más'],
+                     
+                     casos_hombres_00_09       = rioja_casos_porcentaje$hombres[1],
+                     casos_hombres_10_19       = rioja_casos_porcentaje$hombres[2],
+                     casos_hombres_20_19       = rioja_casos_porcentaje$hombres[3],
+                     casos_hombres_30_19       = rioja_casos_porcentaje$hombres[4],
+                     casos_hombres_40_19       = rioja_casos_porcentaje$hombres[5],
+                     casos_hombres_50_19       = rioja_casos_porcentaje$hombres[6],
+                     casos_hombres_60_19       = rioja_casos_porcentaje$hombres[7],
+                     casos_hombres_70_Mas      = rioja_casos_porcentaje$hombres[8],
+                     
+                     casos_mujeres_00_09       = rioja_casos_porcentaje$mujeres[1],
+                     casos_mujeres_10_19       = rioja_casos_porcentaje$mujeres[2],
+                     casos_mujeres_20_19       = rioja_casos_porcentaje$mujeres[3],
+                     casos_mujeres_30_19       = rioja_casos_porcentaje$mujeres[4],
+                     casos_mujeres_40_19       = rioja_casos_porcentaje$mujeres[5],
+                     casos_mujeres_50_19       = rioja_casos_porcentaje$mujeres[6],
+                     casos_mujeres_60_19       = rioja_casos_porcentaje$mujeres[7],
+                     casos_mujeres_70_Mas      = rioja_casos_porcentaje$mujeres[8],
+                     
+                     
+                     fecha_publicacion_casos_porcentaje       = as.Date(fecha_valores_casos_porcentaje[1], '%d/%m/%Y'),
+                     ultima_actualizacion_casos_porcentaje    = as.Date(fecha_valores_casos_porcentaje[2], '%d/%m/%Y'),
+                     ambito_temporal_casos_porcentaje         = as.Date(fecha_valores_casos_porcentaje[3], '%d/%m/%Y')
+                     )
+```
+
+Guardamos
+
+```{r}
+saveRDS(rioja_casos_porcentaje, file = paste0('./data/rioja_casos_porcentaje_', Sys.Date(),'.rds'))
+```
+
+Añadimos al diario
+
+```{r}
+# resumen_diario <- data.frame(time_stamp = Sys.time())
+resumen_diario <- cbind(resumen_diario, diario)
+```
 
 
 
@@ -518,7 +1086,6 @@ rioja_fallecidos$ambito_temporal_fallecidos      = as.Date(fecha_valores_falleci
 summary(rioja_fallecidos)
 ```
 
-
 Guardamos
 
 ```{r}
@@ -526,15 +1093,17 @@ saveRDS(rioja_fallecidos, file = paste0('./data/rioja_fallecidos_', Sys.Date(),'
 ```
 
 
+
+
 ## Consultas telefónicas atendidas en La Rioja
 
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-465](https://web.larioja.org/dato-abierto/datoabierto?n=opd-465)
 
 ```{r}
-page_casos_activos_llamadas <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-465')
+page_llamadas <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-465')
 
 # find all nodes with a class of "col_md_6"
-col_md_6_llamadas <- html_nodes(page_casos_activos_llamadas, css = '.col-md-6')
+col_md_6_llamadas <- html_nodes(page_llamadas, css = '.col-md-6')
 col_md_6_llamadas
 ```
 
@@ -597,6 +1166,81 @@ Guardamos
 
 ```{r}
 saveRDS(rioja_llamadas, file = paste0('./data/rioja_llamadas_', Sys.Date(),'.rds'))
+```
+
+
+
+## Ritmo de reproducción (R0)
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-466](https://web.larioja.org/dato-abierto/datoabierto?n=opd-466)
+
+```{r}
+page_ritmo_reproduccion_r0 <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-466')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_ritmo_reproduccion_r0 <- html_nodes(page_ritmo_reproduccion_r0 , css = '.col-md-6')
+col_md_6_ritmo_reproduccion_r0
+```
+
+```{r}
+fecha_campos_ritmo_reproduccion_r0 <- html_children(col_md_6_ritmo_reproduccion_r0[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_ritmo_reproduccion_r0
+```
+
+```{r}
+fecha_valores_ritmo_reproduccion_r0 <- html_children(col_md_6_ritmo_reproduccion_r0[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_ritmo_reproduccion_r0
+```
+
+Ahora bajamos el fichero
+
+```{r}
+link_ritmo_reproduccion_r0 <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDY2fGNmPTAz'
+```
+
+```{r}
+rioja_ritmo_reproduccion_r0 <- read_delim(link_ritmo_reproduccion_r0, ",", escape_double = FALSE, trim_ws = TRUE)
+```
+
+```{r}
+names(rioja_ritmo_reproduccion_r0) <- tolower(names(rioja_ritmo_reproduccion_r0))
+```
+
+```{r}
+rioja_ritmo_reproduccion_r0$fecha <- as.Date(rioja_ritmo_reproduccion_r0$fecha, '%m/%d/%y')
+```
+
+Calculamos los acumulados
+
+```{r, eval=FALSE}
+# Valores diarios
+rioja_ritmo_reproduccion_r0$acumulado_ritmo_reproduccion_r0 <- 0
+
+for (i in 2:dim(rioja_ritmo_reproduccion_r0)[1]) {
+  rioja_ritmo_reproduccion_r0$acumulado_ritmo_reproduccion_r0[i] <- rioja_ritmo_reproduccion_r0$acumulado_ritmo_reproduccion_r0[i-1] + rioja_ritmo_reproduccion_r0$ritmo_reproduccion_r0[i]
+}
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_ritmo_reproduccion_r0$fecha_publicacion_ritmo_reproduccion_r0    = as.Date(fecha_valores_ritmo_reproduccion_r0[1], '%d/%m/%Y')
+rioja_ritmo_reproduccion_r0$ultima_actualizacion_ritmo_reproduccion_r0 = as.Date(fecha_valores_ritmo_reproduccion_r0[2], '%d/%m/%Y')
+rioja_ritmo_reproduccion_r0$ambito_temporal_ritmo_reproduccion_r0      = as.Date(fecha_valores_ritmo_reproduccion_r0[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_ritmo_reproduccion_r0)
+```
+
+Guardamos
+
+```{r}
+saveRDS(rioja_ritmo_reproduccion_r0, file = paste0('./data/rioja_ritmo_reproduccion_r0_', Sys.Date(),'.rds'))
 ```
 
 
@@ -699,7 +1343,7 @@ rioja_casos_activos_zonas_basicas_shp <-  sf::st_as_sf(as.data.frame(rioja_casos
 ```
 
 
-```{r mapa_callejero_chamberi1, fig.align="center", message=FALSE, warning=FALSE}
+```{r mapa_casos_activos_zonas_basicas 1, fig.align="center", message=FALSE, warning=FALSE}
 # tmap object
 mapa_casos_activos_zonas_basicas <- tm_shape(rioja_casos_activos_zonas_basicas_shp) +
     tm_dots("casos_activos")
@@ -708,7 +1352,64 @@ mapa_casos_activos_zonas_basicas <- tm_shape(rioja_casos_activos_zonas_basicas_s
 tmap_leaflet(mapa_casos_activos_zonas_basicas)
 ```
 
+```{r}
+cat(getwd())
 
+rioja_zonas_basicas_shp <- sf::read_sf('./data/maps/ZBS_4258_LARIOJA_ESPAÑA_2017_v1.0.0/laRioja4258.shp',
+                                      stringsAsFactors = TRUE)
+```
+
+Para poder hacer merge, creamos la variable localidad
+
+```{r}
+rioja_zonas_basicas_shp$localidad <- rioja_zonas_basicas_shp$n_zbs
+levels(rioja_zonas_basicas_shp$localidad) <- c("Alberite", "Alfaro", "Arnedo",
+                                               "Calahorra", "Torrecilla en Cameros",
+                                               "San Román de Cameros", 
+                                               "Cervera del Río Alhama",  "Haro",
+                                               "Logroño", "Murillo del Río Leza",
+                                               "Nájera", "Navarrete" ,
+                                               "Santo Domingo de la Calzada")
+```
+
+```{r}
+summary(rioja_zonas_basicas_shp)
+```
+
+```{r, fig.align="center"}
+plot(rioja_zonas_basicas_shp)
+```
+
+```{r mapa_casos_activos_zonas_basicas 2, fig.align="center", message=FALSE, warning=FALSE}
+# Este mapa no parece bien...
+
+# tmap object
+mapa_casos_activos_zonas_basicas2 <- 
+    
+    tm_shape(rioja_zonas_basicas_shp) +
+    tm_polygons(id          = "localidad", 
+                # col         = "numberOfFloorsAboveGround", 
+                border.col  = "blue",
+                # palette     = col.spec.fun(15),
+                alpha       = 0.5, 
+                legend.show = FALSE,
+                textNA      = "Sin datos",
+                title       = "Localidad") +
+  
+    # tm_shape(rioja_casos_activos_zonas_basicas_shp) +
+    # tm_dots("casos_activos")
+
+    tm_shape(rioja_casos_activos_zonas_basicas_shp) +
+    tm_dots(# id   = "localidad",
+            title = "casos activos",
+            size  = "casos_activos", 
+            id    = "casos_activos"
+            )
+  
+
+# dynamic map
+tmap_leaflet(mapa_casos_activos_zonas_basicas2)
+```
 
 
 ## Resumen diario
@@ -721,9 +1422,38 @@ saveRDS(resumen_diario, file = paste0('./data/resumen_diario_', Sys.Date(),'.rds
 
 
 
+# Pendientes
 
 
 
+
+
+## Datos globales
+
+Datos globales de la pandemia de coronavirus: tasa de letalidad; tasa de hospitalización (casos activos y casos acumulados); y porcentaje de altas acumuladas 
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-459](https://web.larioja.org/dato-abierto/datoabierto?n=opd-459)
+
+
+## Pruebas realizadas en La Rioja
+
+Pruebas realizadas en La Rioja (PCR y pruebas rápidas de anticuerpos)
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-462](https://web.larioja.org/dato-abierto/datoabierto?n=opd-462)
+
+
+## Salidas domiciliarias
+
+Datos de salidas domiciliarias por día realizadas en La Rioja. Incluye fecha y número de salidas
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-463](https://web.larioja.org/dato-abierto/datoabierto?n=opd-463)
+
+
+## Autoevaluaciones en el servicio online realizadas en La Rioja
+
+Datos de autoevaluaciones en el servicio online coronavirus.riojasalud.es realizadas por día en La Rioja. Incluye fecha y número de autoevaluaciones
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-464](https://web.larioja.org/dato-abierto/datoabierto?n=opd-464)
 
 
 
@@ -746,13 +1476,13 @@ link_isciii <- 'https://covid19.isciii.es/resources/serie_historica_acumulados.c
 
 En los datos en local se han eliminado las últimas filas que corresponden a comentarios.
 
-```{r}
+```{r, eval=FALSE}
 # Datos en local
 serie_historica_acumulados_isciii <- read_csv("data/serie_historica_acumulados.csv", 
                                               locale = locale(date_names = "es"))
 ```
 
-```{r, eval=FALSE}
+```{r}
 # Directamente de Internet
 serie_historica_acumulados_isciii <- read_csv(link_isciii, 
                                               locale = locale(date_names = "es"))
@@ -856,14 +1586,14 @@ Nota: los datos cambian de forma retroactiva, especialmente en los días más re
 link_momo <- 'https://momo.isciii.es/public/momo/data'
 ```
 
-```{r}
+```{r, eval=FALSE}
 # Los datos en local
 data <- read_csv("data/data.csv", col_types = cols(cod_ambito = col_character(), 
     cod_ine_ambito = col_character(), nombre_ambito = col_character()), 
     locale = locale(date_names = "es", encoding = "ISO-8859-1"))
 ```
 
-```{r}
+```{r, eval=FALSE}
 summary(data)
 ```
 
@@ -992,6 +1722,7 @@ sessionInfo()
 ## Datos
 
 * [Situación de COVID-19 en España](https://covid19.isciii.es/)
+* [ES: Mapa georreferenciado de las zonas básicas de salud de LA RIOJA. Año 2017. España. || EN: Georeferenced map of primary care area of reference in LA RIOJA. Year 2017. Spain.](https://zenodo.org/record/1320339#.XrMCk_lS_RI)
 
 ## Referencias
 
