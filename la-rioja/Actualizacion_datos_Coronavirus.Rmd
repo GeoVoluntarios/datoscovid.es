@@ -146,10 +146,13 @@ rioja_evolucion <- read_csv(link_evolucion, locale = locale(date_names = "es"),
                             col_names = c('fecha', 'confirmados_PCR', 'altas', 'fallecidos'))
 ```
 
+**Revisar esto**
+
+Tienen que coincidir las fechas
+
 ```{r}
 rioja_evolucion$fecha <- as.Date(rioja_evolucion$fecha, '%m/%d/%y')
 ```
-
 
 Calculamos los acumulados
 
@@ -198,6 +201,11 @@ saveRDS(rioja_evolucion, file = paste0('./data/rioja_evolucion_', Sys.Date(),'.r
 ## Porcentaje de casos, hospitalizados, UCI y fallecidos por grupo de edad
 
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?filtros=%7B%22title%22%3A%22coronavirus%2520por%2520grupo%2520de%2520edad%2520y%2520sexo%22%7D&q=&page=1&sort=fecha_publicacion+desc](https://web.larioja.org/dato-abierto/datoabierto?filtros=%7B%22title%22%3A%22coronavirus%2520por%2520grupo%2520de%2520edad%2520y%2520sexo%22%7D&q=&page=1&sort=fecha_publicacion+desc)
+
+
+
+
+
 
 
 ## Situación de los hospitales de La Rioja
@@ -902,6 +910,303 @@ resumen_diario <- cbind(resumen_diario, diario)
 
 
 
+# Pendientes
+
+
+## Datos globales
+
+Datos globales de la pandemia de coronavirus: tasa de letalidad; tasa de hospitalización (casos activos y casos acumulados); y porcentaje de altas acumuladas 
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-459](https://web.larioja.org/dato-abierto/datoabierto?n=opd-459)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Pruebas realizadas en La Rioja
+
+Pruebas realizadas en La Rioja (PCR y pruebas rápidas de anticuerpos)
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-462](https://web.larioja.org/dato-abierto/datoabierto?n=opd-462)
+
+```{r}
+page_pruebas <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-462')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_pruebas <- html_nodes(page_pruebas, css = '.col-md-6')
+col_md_6_pruebas
+```
+
+```{r}
+fecha_campos_pruebas <- html_children(col_md_6_pruebas[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_pruebas
+```
+
+```{r}
+fecha_valores_pruebas <- html_children(col_md_6_pruebas[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_pruebas
+```
+
+Ahora bajamos el fichero
+
+
+```{r}
+link_pruebas <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDYyfGNmPTAz'
+```
+
+```{r}
+rioja_pruebas <- read_delim(link_pruebas, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
+```{r}
+rioja_pruebas <- as.data.frame(rioja_pruebas)
+```
+
+```{r}
+names(rioja_pruebas) <- c("tipo_prueba", "total_pruebas", "pruebas_positivas", 
+                          "Porcentaje_pruebas_positivas")
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_pruebas$fecha_publicacion_pruebas    = as.Date(fecha_valores_pruebas[1], '%d/%m/%Y')
+rioja_pruebas$ultima_actualizacion_pruebas = as.Date(fecha_valores_pruebas[2], '%d/%m/%Y')
+rioja_pruebas$ambito_temporal_pruebas      = as.Date(fecha_valores_pruebas[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_pruebas)
+```
+
+**Revisar que cuadra**
+
+```{r}
+# En esta caso es la última línea
+diario <- data.frame(
+                     pcr_realizadas                  = rioja_pruebas$total_pruebas[1],
+                     pcr_positivos                   = rioja_pruebas$pruebas_positivas[1],
+                     pruebas_rapidas_anticuerpos     = rioja_pruebas$total_pruebas[2],
+                     pruebas_rapidas_positivas       = rioja_pruebas$pruebas_positivas[2],
+
+                     fecha_publicacion_pruebas       = as.Date(fecha_valores_pruebas[1], '%d/%m/%Y'),
+                     ultima_actualizacion_pruebas    = as.Date(fecha_valores_pruebas[2], '%d/%m/%Y'),
+                     ambito_temporal_pruebas         = as.Date(fecha_valores_pruebas[3], '%d/%m/%Y')
+                     )
+```
+
+Guardamos
+
+```{r}
+saveRDS(rioja_pruebas, file = paste0('./data/rioja_pruebas_', Sys.Date(),'.rds'))
+```
+
+Añadimos al diario
+
+```{r}
+# resumen_diario <- data.frame(time_stamp = Sys.time())
+resumen_diario <- cbind(resumen_diario, diario)
+```
+
+
+
+## Salidas domiciliarias
+
+Datos de salidas domiciliarias por día realizadas en La Rioja. Incluye fecha y número de salidas
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-463](https://web.larioja.org/dato-abierto/datoabierto?n=opd-463)
+
+```{r}
+page_salidas_domiciliarias <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-463')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_salidas_domiciliarias <- html_nodes(page_salidas_domiciliarias, css = '.col-md-6')
+col_md_6_salidas_domiciliarias
+```
+
+```{r}
+fecha_campos_salidas_domiciliarias <- html_children(col_md_6_salidas_domiciliarias[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_salidas_domiciliarias
+```
+
+```{r}
+fecha_valores_salidas_domiciliarias <- html_children(col_md_6_salidas_domiciliarias[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_salidas_domiciliarias
+```
+
+Ahora bajamos el fichero
+
+```{r}
+link_salidas_domiciliarias <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDYzfGNmPTAz'
+```
+
+```{r}
+rioja_salidas_domiciliarias <- read_delim(link_salidas_domiciliarias, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
+```{r}
+rioja_salidas_domiciliarias <- as.data.frame(rioja_salidas_domiciliarias)
+```
+
+```{r}
+names(rioja_salidas_domiciliarias) <- c("fecha", "salidas_domiciliarias")
+```
+
+**Revisar esto**
+
+Tienen que coincidir las fechas
+
+```{r}
+rioja_salidas_domiciliarias$fecha = as.Date(rioja_salidas_domiciliarias$fecha, '%m/%d/%Y')
+```
+
+Calculamos los acumulados
+
+```{r}
+# Valores diarios
+rioja_salidas_domiciliarias$acumulado_salidas_domiciliarias <- 0
+
+for (i in 2:dim(rioja_salidas_domiciliarias)[1]) {
+  rioja_salidas_domiciliarias$acumulado_salidas_domiciliarias[i] <- rioja_salidas_domiciliarias$acumulado_salidas_domiciliarias[i-1] + rioja_salidas_domiciliarias$salidas_domiciliarias[i]
+}
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_salidas_domiciliarias$fecha_publicacion_salidas_domiciliarias    = as.Date(fecha_valores_salidas_domiciliarias[1], '%d/%m/%Y')
+rioja_salidas_domiciliarias$ultima_actualizacion_salidas_domiciliarias = as.Date(fecha_valores_salidas_domiciliarias[2], '%d/%m/%Y')
+rioja_salidas_domiciliarias$ambito_temporal_salidas_domiciliarias      = as.Date(fecha_valores_salidas_domiciliarias[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_salidas_domiciliarias)
+```
+
+Guardamos
+
+```{r}
+saveRDS(rioja_salidas_domiciliarias, file = paste0('./data/rioja_salidas_domiciliarias_', Sys.Date(),'.rds'))
+```
+
+
+
+## Autoevaluaciones en el servicio online realizadas en La Rioja
+
+Datos de autoevaluaciones en el servicio online coronavirus.riojasalud.es realizadas por día en La Rioja. Incluye fecha y número de autoevaluaciones
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-464](https://web.larioja.org/dato-abierto/datoabierto?n=opd-464)
+
+```{r}
+page_autoevaluaciones_online <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-464')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_autoevaluaciones_online <- html_nodes(page_autoevaluaciones_online, css = '.col-md-6')
+col_md_6_autoevaluaciones_online
+```
+
+```{r}
+fecha_campos_autoevaluaciones_online <- html_children(col_md_6_autoevaluaciones_online[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_autoevaluaciones_online
+```
+
+```{r}
+fecha_valores_autoevaluaciones_online <- html_children(col_md_6_autoevaluaciones_online[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_autoevaluaciones_online
+```
+
+Ahora bajamos el fichero
+
+```{r}
+link_autoevaluaciones_online <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDY0fGNmPTAz'
+```
+
+```{r}
+rioja_autoevaluaciones_online <- read_delim(link_autoevaluaciones_online, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
+```{r}
+rioja_autoevaluaciones_online <- as.data.frame(rioja_autoevaluaciones_online)
+```
+
+```{r}
+names(rioja_autoevaluaciones_online) <- c("fecha", "autoevaluaciones_online")
+```
+
+**Revisar esto**
+
+Tienen que coincidir las fechas
+
+```{r}
+rioja_autoevaluaciones_online$fecha = as.Date(rioja_autoevaluaciones_online$fecha, '%m/%d/%Y')
+```
+
+Calculamos los acumulados
+
+```{r}
+# Valores diarios
+rioja_autoevaluaciones_online$acumulado_autoevaluaciones_online <- 0
+
+for (i in 2:dim(rioja_autoevaluaciones_online)[1]) {
+  rioja_autoevaluaciones_online$acumulado_autoevaluaciones_online[i] <- rioja_autoevaluaciones_online$acumulado_autoevaluaciones_online[i-1] + rioja_autoevaluaciones_online$autoevaluaciones_online[i]
+}
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_autoevaluaciones_online$fecha_publicacion_autoevaluaciones_online    = as.Date(fecha_valores_autoevaluaciones_online[1], '%d/%m/%Y')
+rioja_autoevaluaciones_online$ultima_actualizacion_autoevaluaciones_online = as.Date(fecha_valores_autoevaluaciones_online[2], '%d/%m/%Y')
+rioja_autoevaluaciones_online$ambito_temporal_autoevaluaciones_online      = as.Date(fecha_valores_autoevaluaciones_online[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_autoevaluaciones_online)
+```
+
+Guardamos
+
+```{r}
+saveRDS(rioja_autoevaluaciones_online, file = paste0('./data/rioja_autoevaluaciones_online_', Sys.Date(),'.rds'))
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1057,6 +1362,10 @@ names(rioja_fallecidos) <- c("fecha", "fallecidos_totales",
                              "fallecidos_residencias")
 ```
 
+**Revisar esto**
+
+Tienen que coincidir las fechas
+
 ```{r}
 rioja_fallecidos$fecha <- as.Date(rioja_fallecidos$fecha, '%m/%d/%y')
 ```
@@ -1135,6 +1444,10 @@ rioja_llamadas <- read_delim(link_llamadas, ",", escape_double = FALSE, trim_ws 
 names(rioja_llamadas) <- tolower(names(rioja_llamadas))
 ```
 
+**Revisar esto**
+
+Tienen que coincidir las fechas
+
 ```{r}
 rioja_llamadas$fecha <- as.Date(rioja_llamadas$fecha, '%m/%d/%y')
 ```
@@ -1209,6 +1522,10 @@ rioja_ritmo_reproduccion_r0 <- read_delim(link_ritmo_reproduccion_r0, ",", escap
 ```{r}
 names(rioja_ritmo_reproduccion_r0) <- tolower(names(rioja_ritmo_reproduccion_r0))
 ```
+
+**Revisar esto**
+
+Tienen que coincidir las fechas
 
 ```{r}
 rioja_ritmo_reproduccion_r0$fecha <- as.Date(rioja_ritmo_reproduccion_r0$fecha, '%m/%d/%y')
@@ -1422,38 +1739,6 @@ saveRDS(resumen_diario, file = paste0('./data/resumen_diario_', Sys.Date(),'.rds
 
 
 
-# Pendientes
-
-
-
-
-
-## Datos globales
-
-Datos globales de la pandemia de coronavirus: tasa de letalidad; tasa de hospitalización (casos activos y casos acumulados); y porcentaje de altas acumuladas 
-
-La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-459](https://web.larioja.org/dato-abierto/datoabierto?n=opd-459)
-
-
-## Pruebas realizadas en La Rioja
-
-Pruebas realizadas en La Rioja (PCR y pruebas rápidas de anticuerpos)
-
-La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-462](https://web.larioja.org/dato-abierto/datoabierto?n=opd-462)
-
-
-## Salidas domiciliarias
-
-Datos de salidas domiciliarias por día realizadas en La Rioja. Incluye fecha y número de salidas
-
-La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-463](https://web.larioja.org/dato-abierto/datoabierto?n=opd-463)
-
-
-## Autoevaluaciones en el servicio online realizadas en La Rioja
-
-Datos de autoevaluaciones en el servicio online coronavirus.riojasalud.es realizadas por día en La Rioja. Incluye fecha y número de autoevaluaciones
-
-La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-464](https://web.larioja.org/dato-abierto/datoabierto?n=opd-464)
 
 
 
