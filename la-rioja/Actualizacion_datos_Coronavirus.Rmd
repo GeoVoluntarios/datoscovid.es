@@ -35,6 +35,9 @@ library(TSstudio)
 library(xml2)
 library(rvest)
 library(tmap)
+library(stringr)
+library(ggplot2)
+library(plotly)
 ```
 
 
@@ -198,9 +201,6 @@ saveRDS(rioja_evolucion, file = paste0('./data/rioja_evolucion_', Sys.Date(),'.r
 ```
 
 
-## Porcentaje de casos, hospitalizados, UCI y fallecidos por grupo de edad
-
-La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?filtros=%7B%22title%22%3A%22coronavirus%2520por%2520grupo%2520de%2520edad%2520y%2520sexo%22%7D&q=&page=1&sort=fecha_publicacion+desc](https://web.larioja.org/dato-abierto/datoabierto?filtros=%7B%22title%22%3A%22coronavirus%2520por%2520grupo%2520de%2520edad%2520y%2520sexo%22%7D&q=&page=1&sort=fecha_publicacion+desc)
 
 
 
@@ -235,7 +235,6 @@ fecha_valores_hospitales
 ```
 
 Ahora bajamos el fichero
-
 
 ```{r}
 link_hospitales <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDYxfGNmPTAz'
@@ -327,11 +326,6 @@ resumen_diario <- cbind(resumen_diario, diario)
 
 
 
-
-
-
-
-
 ## Porcentaje de hospitalizados por grupo de edad y sexo
 
 Porcentaje de hospitalizados por grupo de edad y sexo a a fecha actual
@@ -361,7 +355,6 @@ fecha_valores_hospitalizados_porcentaje
 ```
 
 Ahora bajamos el fichero
-
 
 ```{r}
 link_hospitalizados_porcentaje <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDUzfGNmPTAz'
@@ -909,32 +902,6 @@ resumen_diario <- cbind(resumen_diario, diario)
 ```
 
 
-
-# Pendientes
-
-
-## Datos globales
-
-Datos globales de la pandemia de coronavirus: tasa de letalidad; tasa de hospitalización (casos activos y casos acumulados); y porcentaje de altas acumuladas 
-
-La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-459](https://web.larioja.org/dato-abierto/datoabierto?n=opd-459)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Pruebas realizadas en La Rioja
 
 Pruebas realizadas en La Rioja (PCR y pruebas rápidas de anticuerpos)
@@ -1198,30 +1165,6 @@ saveRDS(rioja_autoevaluaciones_online, file = paste0('./data/rioja_autoevaluacio
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Personal afectado del Servicio Público de Salud de La Rioja
 
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-457](https://web.larioja.org/dato-abierto/datoabierto?n=opd-457)
@@ -1401,6 +1344,37 @@ Guardamos
 saveRDS(rioja_fallecidos, file = paste0('./data/rioja_fallecidos_', Sys.Date(),'.rds'))
 ```
 
+```{r, fig.align="center", message=FALSE, warning=FALSE}
+# Change the width of bars
+ggplot(data = rioja_fallecidos, aes(x = fecha, y = acumulado_fallecidos_totales)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  geom_text(aes(label = acumulado_fallecidos_totales), vjust = -0.3, size = 1.5)+
+  theme_minimal()
+```
+
+```{r, fig.align="center", message=FALSE, warning=FALSE}
+# Change the width of bars
+ggplot(data = rioja_fallecidos, aes(x = fecha, y = fallecidos_totales)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  geom_text(aes(label = fallecidos_totales), vjust = -0.3, size = 1.5)+
+  theme_minimal()
+```
+
+```{r, fig.align="center", message=FALSE, warning=FALSE}
+# Change the width of bars
+ggplot(data = rioja_fallecidos, aes(x = fecha, y = acumulado_fallecidos_residencias)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  geom_text(aes(label = acumulado_fallecidos_totales), vjust = -0.3, size = 1.5)+
+  theme_minimal()
+```
+
+```{r, fig.align="center", message=FALSE, warning=FALSE}
+# Change the width of bars
+ggplot(data = rioja_fallecidos, aes(x = fecha, y = fallecidos_residencias)) +
+  geom_bar(stat = "identity", fill = "steelblue") +
+  geom_text(aes(label = fallecidos_totales), vjust = -0.3, size = 1.5)+
+  theme_minimal()
+```
 
 
 
@@ -1522,6 +1496,17 @@ rioja_ritmo_reproduccion_r0 <- read_delim(link_ritmo_reproduccion_r0, ",", escap
 ```{r}
 names(rioja_ritmo_reproduccion_r0) <- tolower(names(rioja_ritmo_reproduccion_r0))
 ```
+
+```{r}
+rioja_ritmo_reproduccion_r0 <- as.data.frame(rioja_ritmo_reproduccion_r0)
+```
+
+Borramos x3
+
+```{r}
+rioja_hospitalizados_porcentaje <- rioja_hospitalizados_porcentaje[, 1:2]
+```
+
 
 **Revisar esto**
 
@@ -1670,13 +1655,13 @@ tmap_leaflet(mapa_casos_activos_zonas_basicas)
 ```
 
 ```{r}
-cat(getwd())
+# cat(getwd())
 
 rioja_zonas_basicas_shp <- sf::read_sf('./data/maps/ZBS_4258_LARIOJA_ESPAÑA_2017_v1.0.0/laRioja4258.shp',
                                       stringsAsFactors = TRUE)
 ```
 
-Para poder hacer merge, creamos la variable localidad
+Para poder hacer merge, creamos la variable *localidad*
 
 ```{r}
 rioja_zonas_basicas_shp$localidad <- rioja_zonas_basicas_shp$n_zbs
@@ -1693,7 +1678,7 @@ levels(rioja_zonas_basicas_shp$localidad) <- c("Alberite", "Alfaro", "Arnedo",
 summary(rioja_zonas_basicas_shp)
 ```
 
-```{r, fig.align="center"}
+```{r, , fig.align="center", message=FALSE, warning=FALSE}
 plot(rioja_zonas_basicas_shp)
 ```
 
@@ -1741,6 +1726,19 @@ saveRDS(resumen_diario, file = paste0('./data/resumen_diario_', Sys.Date(),'.rds
 
 
 
+# Pendientes
+
+
+## Datos globales
+
+Datos globales de la pandemia de coronavirus: tasa de letalidad; tasa de hospitalización (casos activos y casos acumulados); y porcentaje de altas acumuladas 
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-459](https://web.larioja.org/dato-abierto/datoabierto?n=opd-459)
+
+
+
+
+
 
 
 
@@ -1771,6 +1769,18 @@ serie_historica_acumulados_isciii <- read_csv("data/serie_historica_acumulados.c
 # Directamente de Internet
 serie_historica_acumulados_isciii <- read_csv(link_isciii, 
                                               locale = locale(date_names = "es"))
+```
+
+El csv incluye comentarios al final, vamos a quitarlos
+
+```{r}
+# Donde aparece por primera vez 'NOTA'
+ultima_linea <- min((1:dim(serie_historica_acumulados_isciii)[1])[str_detect(serie_historica_acumulados_isciii$CCAA, 'NOTA')])
+ultima_linea
+```
+
+```{r}
+serie_historica_acumulados_isciii <- serie_historica_acumulados_isciii[(1:(ultima_linea-1)), ]
 ```
 
 Vemos los datos por CC.AA.
@@ -1810,11 +1820,6 @@ Pasamos la fecha a formato *Date*
 serie_historica_acumulados_isciii$FECHA <- as.Date(serie_historica_acumulados_isciii$FECHA, "%d/%m/%Y")
 ```
 
-```{r}
-summary(serie_historica_acumulados_isciii)
-```
-
-
 ### Nuevas columnas
 
 ```{r}
@@ -1829,6 +1834,13 @@ serie_historica_acumulados_isciii <- serie_historica_acumulados_isciii %>%
   )
 ```
 
+**Cantabria está duplicado**
+
+**Revisar**
+
+```{r}
+summary(serie_historica_acumulados_isciii)
+```
 
 Guardamos
 
@@ -1882,7 +1894,6 @@ data <- read_csv("data/data.csv", col_types = cols(cod_ambito = col_character(),
 summary(data)
 ```
 
-
 ```{r}
 # Directamente de Internet
 # momo_isciii <- read_csv(link_momo, locale = locale(date_names = "es"))
@@ -1930,11 +1941,142 @@ saveRDS(momo_isciii, file = paste0('./data/momo_isciii_', Sys.Date(),'.rds'))
 ```
 
 
+### Gráficos MoMo
+
+```{r, eval=FALSE}
+p <- ggplot(momo_isciii, aes(x = log(price), color = clarity)) + 
+    geom_freqpoly()
+ggplotly(p)
+```
 
 
 
+```{r}
+# Un dataset intermedio
+momo_temp <- momo_isciii %>% 
+    dplyr::filter(ambito == 'nacional', cod_sexo == 'all', cod_gedad == 'all')
 
 
+figura2 <- plot_ly(momo_temp, 
+                   x = ~fecha_defuncion, y = ~defunciones_esperadas_q99, 
+                   type = 'scatter', mode = 'lines',
+                   line = list(color = 'transparent'),
+                   showlegend = FALSE, name = 'Esperadas límite superior') 
+figura2 <- figura2 %>% add_trace(y = ~defunciones_esperadas_q01, 
+                                 type = 'scatter', mode = 'lines',                         
+                                 fill = 'tonexty', fillcolor = 'rgba(0, 100, 80, 0.2)', 
+                                 line = list(color = 'transparent'),                         
+                                 showlegend = FALSE, name = 'Esperadas límite inferior') 
+figura2 <- figura2 %>% add_trace(x = ~fecha_defuncion, y = ~defunciones_esperadas, 
+                                 type = 'scatter', mode = 'lines',                         
+                                 line = list(color='rgb(0, 100, 80)'),                         
+                                 name = 'Defunciones Esperadas') 
+figura2 <- figura2 %>% add_trace(x = ~fecha_defuncion, y = ~defunciones_observadas, 
+                                 type = 'scatter', mode = 'lines',                         
+                                 line = list(color='black'),                         
+                                 name = 'Defunciones Observadas') 
+figura2
+```
+
+
+Defunciones observadas (negro) y defunciones estimadas (verde), con el intervalo de confianza al 99% (banda verde). España.
+
+Mortalidad por todas las causas. Comunidades Autónomas
+
+y = ~get(input$Measure)
+
+
+
+```{r}
+# Un dataset intermedio
+momo_temp <- momo_isciii %>% 
+    dplyr::filter(ambito == 'nacional', cod_sexo == 'all', cod_gedad == 'all', 
+                  fecha_defuncion > '2019-12-31')
+
+
+figura3 <- plot_ly(momo_temp, 
+                   x = ~fecha_defuncion, y = ~defunciones_esperadas_q99, 
+                   type = 'scatter', mode = 'lines',
+                   line = list(color = 'transparent'),
+                   showlegend = FALSE, name = 'Esperadas límite superior') 
+figura3 <- figura3 %>% add_trace(y = ~defunciones_esperadas_q01, 
+                                 type = 'scatter', mode = 'lines',                         
+                                 fill = 'tonexty', fillcolor = 'rgba(0, 100, 80, 0.2)', 
+                                 line = list(color = 'transparent'),                         
+                                 showlegend = FALSE, name = 'Esperadas límite inferior') 
+figura3 <- figura3 %>% add_trace(x = ~fecha_defuncion, y = ~defunciones_esperadas, 
+                                 type = 'scatter', mode = 'lines',                         
+                                 line = list(color='rgb(0, 100, 80)'),                         
+                                 name = 'Defunciones Esperadas') 
+figura3 <- figura3 %>% add_trace(x = ~fecha_defuncion, y = ~defunciones_observadas, 
+                                 type = 'scatter', mode = 'lines',                         
+                                 line = list(color='black'),                         
+                                 name = 'Defunciones Observadas') 
+figura3 <- figura3 %>% layout(title = "Mortalidad por todas las causas. España")
+figura3
+```
+
+
+
+```{r}
+# Un dataset intermedio
+momo_temp <- momo_isciii %>% 
+    dplyr::filter(ambito == 'nacional', cod_sexo == 'all', cod_gedad == 'all', 
+                  fecha_defuncion > '2019-12-31')
+
+
+figura4 <- plot_ly(momo_temp, 
+                   x = ~fecha_defuncion, y = ~defunciones_esperadas_q99, 
+                   type = 'scatter', mode = 'lines',
+                   line = list(color = 'transparent'),
+                   showlegend = FALSE, name = 'Esperadas límite superior') 
+figura4 <- figura4 %>% add_trace(y = ~defunciones_esperadas_q01, 
+                                 type = 'scatter', mode = 'lines',                         
+                                 fill = 'tonexty', fillcolor = 'rgba(0, 100, 80, 0.2)', 
+                                 line = list(color = 'transparent'),                         
+                                 showlegend = FALSE, name = 'Esperadas límite inferior') 
+figura4 <- figura4 %>% add_trace(x = ~fecha_defuncion, y = ~defunciones_esperadas, 
+                                 type = 'scatter', mode = 'lines',                         
+                                 line = list(color='rgb(0, 100, 80)'),                         
+                                 name = 'Defunciones Esperadas') 
+figura4 <- figura4 %>% add_trace(x = ~fecha_defuncion, y = ~defunciones_observadas, 
+                                 type = 'scatter', mode = 'lines',                         
+                                 line = list(color='black'),                         
+                                 name = 'Defunciones Observadas') 
+figura4 <- figura4 %>% layout(title = "Mortalidad por todas las causas. España")
+
+figura4
+```
+
+```{r}
+# Un dataset intermedio
+momo_temp <- momo_isciii %>% 
+    dplyr::filter(nombre_ambito == 'Rioja, La', cod_sexo == 'all', cod_gedad == 'all', 
+                  fecha_defuncion > '2019-12-31')
+
+
+figura5 <- plot_ly(momo_temp, 
+                   x = ~fecha_defuncion, y = ~defunciones_esperadas_q99, 
+                   type = 'scatter', mode = 'lines',
+                   line = list(color = 'transparent'),
+                   showlegend = FALSE, name = 'Esperadas límite superior') 
+figura5 <- figura5 %>% add_trace(y = ~defunciones_esperadas_q01, 
+                                 type = 'scatter', mode = 'lines',                         
+                                 fill = 'tonexty', fillcolor = 'rgba(0, 100, 80, 0.2)', 
+                                 line = list(color = 'transparent'),                         
+                                 showlegend = FALSE, name = 'Esperadas límite inferior') 
+figura5 <- figura5 %>% add_trace(x = ~fecha_defuncion, y = ~defunciones_esperadas, 
+                                 type = 'scatter', mode = 'lines',                         
+                                 line = list(color='rgb(0, 100, 80)'),                         
+                                 name = 'Defunciones Esperadas') 
+figura5 <- figura5 %>% add_trace(x = ~fecha_defuncion, y = ~defunciones_observadas, 
+                                 type = 'scatter', mode = 'lines',                         
+                                 line = list(color='black'),                         
+                                 name = 'Defunciones Observadas') 
+figura5 <- figura5 %>% layout(title = "Mortalidad por todas las causas. La Rioja")
+
+figura5
+```
 
 
 
