@@ -23,6 +23,7 @@ _Python 2.7_
 C:\Users\scarrascov>python "D:\Geovoluntarios\GALICIA\scrappingSERGAS_menu.py"
 ```
 _GDB Plantilla:_ "C:\Geovoluntarios\GALICIA\GALICIA.gdb\plantilla_eoxi"
+
 _GDB BBDD histórica:_ 
 * fc = "C:\Geovoluntarios\GALICIA\GALICIA_HIS.gdb\galicia_areasSanitarias"
 * fc_point = "C:\Geovoluntarios\GALICIA\GALICIA_HIS.gdb\galicia_areasSanitarias_P"
