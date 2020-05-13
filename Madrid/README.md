@@ -97,3 +97,17 @@ _Para guardar los datos y construir la bbdd historica, es necesario que:_
 
 * [Python 2.7](https://www.python.org/download/releases/2.7/) - Lenguaje de programación
 * [ArcGis 10.7](https://desktop.arcgis.com/es/arcmap/latest/get-started/installation-guide/installing-on-your-computer.htm) - Plataforma GIS
+
+## Wiki 📖
+
+Puedes encontrar mucho más información de este proyecto en [datoscovid](https://www.datoscovid.es/)
+
+## Licencia 📄
+
+Este proyecto está bajo la Licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
+## Autores ✒️
+
+* **Sheila Carrasco** - *Trabajo Inicial* - [carrasco2](https://github.com/carrasco2)
+
+
