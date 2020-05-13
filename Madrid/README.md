@@ -1,10 +1,10 @@
 # Obtener Casos activos covid-19 GALICIA (SERGAS)
 
 _Mediante este script se puede consultar de la fuente oficial SERGAS, que facilita los datos mediante Notas de Prensa por EOXI, 
-los casos activos por fecha desagregados en provincias (A Coruña, pontevedra, Ourense y Lugo): 
+los casos activos por fecha desagregados en provincias (A Coruña, pontevedra, Ourense y Lugo):_ 
 https://saladecomunicacion.sergas.gal/Paginas/Buscar.aspx?k=coronavirus
-También puede guardar los datos de esa fecha en una GDB, ya generada, construyendo una base de datos histórica.
-Geometria **polygon y point**_
+_También puede guardar los datos de esa fecha en una GDB, ya generada, construyendo una base de datos histórica._
+_Geometria **polygon y point**_
 
 ## Comenzando 🚀
 
@@ -20,9 +20,10 @@ _Python 2.7_
 ```
 C:\Users\scarrascov>python "D:\Geovoluntarios\GALICIA\scrappingSERGAS_menu.py"
 ```
-_GDB Plantilla: "C:\Geovoluntarios\GALICIA\GALICIA.gdb\plantilla_eoxi"_
-_GDB BBDD histórica: fc = "C:\Geovoluntarios\GALICIA\GALICIA_HIS.gdb\galicia_areasSanitarias"
-                     fc_point = "C:\Geovoluntarios\GALICIA\GALICIA_HIS.gdb\galicia_areasSanitarias_P"_
+_GDB Plantilla:_ "C:\Geovoluntarios\GALICIA\GALICIA.gdb\plantilla_eoxi"
+_GDB BBDD histórica:_ 
+* fc = "C:\Geovoluntarios\GALICIA\GALICIA_HIS.gdb\galicia_areasSanitarias"
+* fc_point = "C:\Geovoluntarios\GALICIA\GALICIA_HIS.gdb\galicia_areasSanitarias_P"
                      
 
 ### Ejecución 🔧
@@ -85,9 +86,9 @@ Datos guardados correctamente
 
 ## Despliegue 📦
 
-_Para guardar los datos y construir la bbdd historica, es necesario que:
+_Para guardar los datos y construir la bbdd historica, es necesario que:_
 * Las GDBs se encuentren en el mismo directorio al que apunta el script
-* Tengan la misma estructura de features y campos que se adjunta_
+* Tengan la misma estructura de features y campos que se adjunta
 
 ## Construido con 🛠️
 
