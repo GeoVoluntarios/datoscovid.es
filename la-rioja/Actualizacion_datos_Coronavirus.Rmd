@@ -38,6 +38,11 @@ library(tmap)
 library(stringr)
 library(ggplot2)
 library(plotly)
+library(tidyverse)
+library(reshape2)
+library(purrrlyr)
+library(gganimate)
+library(gifski)
 ```
 
 
@@ -47,6 +52,8 @@ La base del acceso se hace en [https://actualidad.larioja.org/coronavirus/datos]
 
 
 ## Evolución
+
+Evolución por días de casos confirmados (PCR), altas y fallecidos
 
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-452](https://web.larioja.org/dato-abierto/datoabierto?n=opd-452)
 
@@ -209,6 +216,8 @@ saveRDS(rioja_evolucion, file = paste0('./data/rioja_evolucion_', Sys.Date(),'.r
 
 
 ## Situación de los hospitales de La Rioja
+
+Número de hospitalizados en planta y UCI, por hospitales, a fecha actual
 
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-461](https://web.larioja.org/dato-abierto/datoabierto?n=opd-461)
 
@@ -1167,6 +1176,8 @@ saveRDS(rioja_autoevaluaciones_online, file = paste0('./data/rioja_autoevaluacio
 
 ## Personal afectado del Servicio Público de Salud de La Rioja
 
+Casos activos y porcentaje sobre el total de trabajadores sanitarios a fecha actual
+
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-457](https://web.larioja.org/dato-abierto/datoabierto?n=opd-457)
 
 
@@ -1261,6 +1272,8 @@ resumen_diario <- cbind(resumen_diario, diario)
 
 
 ## Fallecimientos por días
+
+Evolución diaria del número de fallecimientos, con indicación de los ocurridos en residencias
 
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-458](https://web.larioja.org/dato-abierto/datoabierto?n=opd-458)
 
@@ -1380,6 +1393,8 @@ ggplot(data = rioja_fallecidos, aes(x = fecha, y = fallecidos_residencias)) +
 
 ## Consultas telefónicas atendidas en La Rioja
 
+Llamadas al teléfono 941 298 333 para atender consultas sobre COVID-19. Incluye fecha y número de llamadas atendidas
+
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-465](https://web.larioja.org/dato-abierto/datoabierto?n=opd-465)
 
 ```{r}
@@ -1458,6 +1473,8 @@ saveRDS(rioja_llamadas, file = paste0('./data/rioja_llamadas_', Sys.Date(),'.rds
 
 
 ## Ritmo de reproducción (R0)
+
+Ritmo de reproducción de la pandemia en La Rioja. Incluye fecha y valor R0 (Número personas que contagia cada caso confirmado)
 
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-466](https://web.larioja.org/dato-abierto/datoabierto?n=opd-466)
 
@@ -1547,6 +1564,8 @@ saveRDS(rioja_ritmo_reproduccion_r0, file = paste0('./data/rioja_ritmo_reproducc
 
 
 ## Situación por Zonas Básicas de Salud
+
+Casos activos de coronavirus, a fecha actual, por zonas básicas de salud (geolocalizadas: coordenadas de latitud y longitud)
 
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-460](https://web.larioja.org/dato-abierto/datoabierto?n=opd-460)
 
@@ -1736,9 +1755,18 @@ Datos globales de la pandemia de coronavirus: tasa de letalidad; tasa de hospita
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-459](https://web.larioja.org/dato-abierto/datoabierto?n=opd-459)
 
 
+## Donaciones económicas
+
+Movimientos en la cuenta de donaciones económicas recibidas por el Gobierno de La Rioja durante la pandemia del coronavirus Covid-19
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-467](https://web.larioja.org/dato-abierto/datoabierto?n=opd-467)
 
 
+## Situación de las residencias de personas mayores de La Rioja
 
+Situación a fecha actual de las residencias de personas mayores de La Rioja
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-468](https://web.larioja.org/dato-abierto/datoabierto?n=opd-468)
 
 
 
@@ -2186,6 +2214,383 @@ summary(rioja_ts)
 ```
 
 
+# Datos por países
+
+Una copia descarada de [Worldwide COVID-19 spread visualization with R](https://analyzecore.com/2020/05/04/the-spread-of-covid-19-across-countries-visualization-with-r/). Vamos, copiar y pegar...
+
+```{r}
+# normalization function
+fun.normalize <- function(x) {
+    return ((x - min(x)) / (max(x) - min(x)))
+}
+```
+
+```{r}
+# download dataset
+df <- read_csv(url('https://covid.ourworldindata.org/data/ecdc/full_data.csv'))
+```
+
+```{r}
+# preprocess data
+df_prep <- df %>%
+    filter(location != 'World') %>%
+    
+    group_by(location) %>%
+    # remove earlier dates
+    filter(date > as.Date('2020-01-15', format = '%Y-%m-%d')) %>%
+    # remove coutries with less than 1000 total cases
+    filter(max(total_cases) > 1000) %>%
+    # replace negative values with the mean 
+    mutate(new_cases = ifelse(new_cases < 0,
+                              round((lag(new_cases, default = 0) + lead(new_cases, default = 0)) / 2),
+                              new_cases)) %>%
+    ungroup() %>%
+    select(location, date, new_cases) %>%
+    # prepare data for normalization
+    dcast(., date ~ location, value.var = 'new_cases') %>%
+    # replace NAs with 0
+    dmap_at(c(2:ncol(.)), function(x) ifelse(is.na(x), 0, x)) %>%
+    # normalization
+    dmap_at(c(2:ncol(.)), function(x) fun.normalize(x)) %>%
+    melt(., id.vars = c('date'), variable.name = 'country') %>%
+    mutate(value = round(value, 6))
+```
+
+```{r}
+# define countries order for plots
+country_ord_1 <- df_prep %>%
+    group_by(country) %>%
+    filter(value == 1) %>%
+    ungroup() %>%
+    arrange(date, country) %>%
+    distinct(country) %>%
+    mutate(is_odd = ifelse((row_number() - 1) %% 2 == 0, TRUE, FALSE))
+
+country_ord_anim <- bind_rows(country_ord_1 %>%
+                                  filter(is_odd == TRUE) %>%
+                                  arrange(desc(row_number())),
+                              country_ord_1 %>%
+                                  filter(is_odd == FALSE))
+```
+
+```{r}
+# data for animated plot
+df_plot_anim <- df_prep %>%
+    mutate(country = factor(country, levels = c(as.character(country_ord_anim$country)))) %>%
+    group_by(country) %>%
+    mutate(first_date = min(date[value >= 0.03])) %>%
+    mutate(cust_label = ifelse(date >= first_date, as.character(country), '')) %>%
+    ungroup()
+```
+
+```{r}
+# Animated Heatmap plot
+p <- ggplot(df_plot_anim, aes(y = country, x = date, fill = value)) +
+    theme_minimal() +
+    geom_tile(color = 'white', width = .9, height = .9) +
+    scale_fill_gradientn(colours = cols, limits = c(0, 1),
+                         breaks = c(0, 1),
+                         labels = c('0', 'max'),
+                         guide = guide_colourbar(ticks = T, nbin = 50, barheight = .5, label = T, barwidth = 10)) +
+    
+    geom_text(aes(x = first_date, label = cust_label), size = 3, color = '#797D7F') +
+    scale_y_discrete(position = 'right') +
+    coord_equal() +
+    
+    theme(legend.position = 'bottom',
+          legend.direction = 'horizontal',
+          plot.title = element_text(size = 20, face = 'bold', vjust = 2, hjust = 0.5),
+          axis.text.x = element_text(size = 8, hjust = .5, vjust = .5, face = 'plain'),
+          axis.text.y = element_blank(),
+          axis.title.y = element_blank(),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank()
+    ) +
+    ggtitle('The spread of COVID-19 across countries: new daily cases normalized to location maximum')
+```
+
+```{r, eval=FALSE}
+# Heatmap plot 1
+df_plot_1 <- df_prep %>%
+    mutate(country = factor(country, levels = c(as.character(country_ord_1$country)))) %>%
+    group_by(country) %>%
+    mutate(first_date = min(date[value >= 0.03])) %>%
+    ungroup()
+
+ggplot(df_plot_1, aes(y = country, x = date, fill = value)) +
+    theme_minimal() +
+    geom_tile(color = 'white', width = .9, height = .9) +
+    scale_fill_gradientn(colours = cols, limits = c(0, 1),
+                         breaks = c(0, 1),
+                         labels = c('0', 'max'),
+                         guide = guide_colourbar(ticks = T, nbin = 50, barheight = .5, label = T, barwidth = 10)) +
+    
+    geom_text(aes(x = first_date, label = country), size = 3, color = '#797D7F') +
+    scale_y_discrete(position = 'right') +
+    coord_equal() +
+    
+    theme(legend.position = 'bottom',
+          legend.direction = 'horizontal',
+          plot.title = element_text(size = 20, face = 'bold', vjust = 2, hjust = 0.5),
+          axis.text.x = element_text(size = 8, hjust = .5, vjust = .5, face = 'plain'),
+          axis.text.y = element_text(size = 6, hjust = .5, vjust = .5, face = 'plain'),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank()
+    ) +
+    ggtitle('The spread of COVID-19 across countries: new daily cases normalized to location maximum')
+```
+
+```{r, eval=FALSE}
+# Heatmap plot 2
+df_plot_2 <- df_prep %>%
+    group_by(country) %>%
+    filter(date >= min(date[value > 0])) %>%
+    arrange(date, .by_group = TRUE) %>%
+    mutate(centr_day = min(row_number()[value == 1]),
+           n_day = row_number() - centr_day) %>%
+    ungroup()
+
+country_ord_2 <- df_plot_2 %>%
+    group_by(country) %>%
+    filter(date >= min(date[value == 1])) %>%
+    summarise(value = sum(value)) %>%
+    ungroup() %>%
+    arrange(value, country) %>%
+    distinct(country)
+
+df_plot_2 <- df_plot_2 %>%
+    mutate(country = factor(country, levels = c(as.character(country_ord_2$country)))) %>%
+    group_by(country) %>%
+    mutate(first_date = min(n_day[value >= 0.01])) %>%
+    ungroup()
+
+
+
+# Heatmap plot 2
+ggplot(df_plot_2, aes(y = country, x = n_day, fill = value)) +
+    theme_minimal() +
+    geom_tile(color = 'white', width = .9, height = .9) +
+    scale_fill_gradientn(colours = cols, limits = c(0, 1),
+                         breaks = c(0, 1),
+                         labels = c('0', 'max'),
+                         guide = guide_colourbar(ticks = T, nbin = 50, barheight = .5, label = T, barwidth = 10)) +
+    
+    geom_text(aes(x = first_date, label = country), size = 3, color = '#797D7F') +
+    coord_equal() +
+    
+    theme(legend.position = 'bottom',
+          legend.direction = 'horizontal',
+          plot.title = element_text(size = 20, face = 'bold', vjust = 2, hjust = 0.5),
+          axis.text.x = element_text(size = 8, hjust = .5, vjust = .5, face = 'plain'),
+          #axis.text.y = element_text(size = 6, hjust = .5, vjust = .5, face = 'plain'),
+          axis.text.y = element_blank(),
+          axis.title.y = element_blank(),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank()
+    ) +
+    ggtitle('Comparison of different countries effectiveness against COVID-19 
+                (new daily cases normalized to location maximum and data centered on a day with maximum new cases)')
+```
+
+
+... Así que alguien con poca imaginación y datos parecidos, sólo tiene que cambiar un poco el código
+
+```{r}
+serie_isciii_tuneada <- serie_historica_acumulados_isciii %>%
+    # filter(CCAA != 'World') %>%
+    
+    group_by(CCAA) %>%
+    
+    # remove earlier dates
+    # filter(FECHA > as.Date('2020-01-15', format = '%Y-%m-%d')) %>%
+    # remove coutries with less than 1000 total cases
+    # filter(max(CASOS) > 1000) %>%
+    # replace negative values with the mean 
+    mutate(casos_nuevos = `PCR+` - lag(`PCR+`, default = 0)) %>%
+    ungroup()
+```
+
+```{r, eval=FALSE}
+# preprocess data
+serie_isciii_tuneada <- serie_historica_acumulados_isciii %>%
+    # filter(CCAA != 'World') %>%
+    
+    group_by(CCAA) %>%
+    
+    # remove earlier dates
+    # filter(FECHA > as.Date('2020-01-15', format = '%Y-%m-%d')) %>%
+    # remove coutries with less than 1000 total cases
+    # filter(max(CASOS) > 1000) %>%
+    # replace negative values with the mean 
+    # mutate(casos_nuevos = ifelse(casos_nuevos < 0,
+    #                           round((lag(casos_nuevos, default = 0) + lead(casos_nuevos, default = 0)) / 2),
+    #                           casos_nuevos)) %>%
+    # ungroup() %>%
+    select(CCAA, FECHA, casos_nuevos) %>%
+    # prepare data for normalization
+    dcast(., FECHA ~ CCAA, value.var = 'casos_nuevos') %>%
+    # replace NAs with 0
+    dmap_at(c(2:ncol(.)), function(x) ifelse(is.na(x), 0, x)) %>%
+    # normalization
+    dmap_at(c(2:ncol(.)), function(x) fun.normalize(x)) %>%
+    melt(., id.vars = c('FECHA'), variable.name = 'CCAA') %>%
+    mutate(value = round(value, 6))
+```
+
+```{r, eval=FALSE}
+# define countries order for plots
+CCAA_ord_1 <- serie_isciii_tuneada %>%
+    group_by(CCAA) %>%
+    # filter(value == 1) %>%
+    ungroup() %>%
+    arrange(FECHA, CCAA) %>%
+    distinct(CCAA) %>%
+    mutate(is_odd = ifelse((row_number() - 1) %% 2 == 0, TRUE, FALSE))
+
+CCAA_ord_anim <- bind_rows(CCAA_ord_1 %>%
+                                  filter(is_odd == TRUE) %>%
+                                  arrange(desc(row_number())),
+                              CCAA_ord_1 %>%
+                                  filter(is_odd == FALSE))
+```
+
+```{r, eval=FALSE}
+# data for animated plot
+df_plot_anim <- serie_isciii_tuneada %>%
+    mutate(CCAA = factor(CCAA, levels = c(as.character(CCAA_ord_anim$CCAA)))) %>%
+    group_by(CCAA) %>%
+    mutate(first_FECHA = min(FECHA[value >= 0.03])) %>%
+    mutate(cust_label = ifelse(FECHA >= first_FECHA, as.character(CCAA), '')) %>%
+    ungroup()
+```
+
+```{r, eval=FALSE}
+# Animated Heatmap plot
+p <- ggplot(df_plot_anim, aes(y = CCAA, x = FECHA, fill = value)) +
+    theme_minimal() +
+    geom_tile(color = 'white', width = .9, height = .9) +
+    scale_fill_gradientn(colours = cols, limits = c(0, 1),
+                         breaks = c(0, 1),
+                         labels = c('0', 'max'),
+                         guide = guide_colourbar(ticks = T, nbin = 50, barheight = .5, label = T, barwidth = 10)) +
+    
+    geom_text(aes(x = first_FECHA, label = cust_label), size = 3, color = '#797D7F') +
+    scale_y_discrete(position = 'right') +
+    coord_equal() +
+    
+    theme(legend.position = 'bottom',
+          legend.direction = 'horizontal',
+          plot.title = element_text(size = 20, face = 'bold', vjust = 2, hjust = 0.5),
+          axis.text.x = element_text(size = 8, hjust = .5, vjust = .5, face = 'plain'),
+          axis.text.y = element_blank(),
+          axis.title.y = element_blank(),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank()
+    ) +
+    ggtitle('The spread of COVID-19 across countries: new daily cases normalized to CCAA maximum')
+
+
+anim <- p + 
+    transition_components(FECHA) +
+    ggtitle('The spread of COVID-19 across countries: new daily cases normalized to CCAA maximum',
+            subtitle = 'FECHA {frame_time}') +
+    shadow_mark()
+
+animate(anim,
+        nframes = as.numeric(difftime(max(df_plot_anim$FECHA), min(df_plot_anim$FECHA), units = 'days')) + 1,
+        duration = 12,
+        fps = 12,
+        width = 1000,
+        height = 840,
+        start_pause = 5,
+        end_pause = 25,
+        renderer = gifski_renderer())
+anim_save('covid19_CCAA.gif')
+```
+
+```{r, eval=FALSE}
+# Heatmap plot 1
+df_plot_1 <- serie_isciii_tuneada %>%
+    mutate(CCAA = factor(CCAA, levels = c(as.character(CCAA_ord_1$CCAA)))) %>%
+    group_by(CCAA) %>%
+    mutate(first_FECHA = min(FECHA[value >= 0.03])) %>%
+    ungroup()
+
+ggplot(df_plot_1, aes(y = CCAA, x = FECHA, fill = value)) +
+    theme_minimal() +
+    geom_tile(color = 'white', width = .9, height = .9) +
+    scale_fill_gradientn(colours = cols, limits = c(0, 1),
+                         breaks = c(0, 1),
+                         labels = c('0', 'max'),
+                         guide = guide_colourbar(ticks = T, nbin = 50, barheight = .5, label = T, barwidth = 10)) +
+    
+    geom_text(aes(x = first_FECHA, label = CCAA), size = 3, color = '#797D7F') +
+    scale_y_discrete(position = 'right') +
+    coord_equal() +
+    
+    theme(legend.position = 'bottom',
+          legend.direction = 'horizontal',
+          plot.title = element_text(size = 20, face = 'bold', vjust = 2, hjust = 0.5),
+          axis.text.x = element_text(size = 8, hjust = .5, vjust = .5, face = 'plain'),
+          axis.text.y = element_text(size = 6, hjust = .5, vjust = .5, face = 'plain'),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank()
+    ) +
+    ggtitle('The spread of COVID-19 across countries: new daily cases normalized to CCAA maximum')
+```
+
+```{r, eval=FALSE}
+# Heatmap plot 2
+df_plot_2 <- serie_isciii_tuneada %>%
+    group_by(CCAA) %>%
+    filter(FECHA >= min(FECHA[value > 0])) %>%
+    arrange(FECHA, .by_group = TRUE) %>%
+    mutate(centr_day = min(row_number()[value == 1]),
+           n_day = row_number() - centr_day) %>%
+    ungroup()
+
+CCAA_ord_2 <- df_plot_2 %>%
+    group_by(CCAA) %>%
+    filter(FECHA >= min(FECHA[value == 1])) %>%
+    summarise(value = sum(value)) %>%
+    ungroup() %>%
+    arrange(value, CCAA) %>%
+    distinct(CCAA)
+
+df_plot_2 <- df_plot_2 %>%
+    mutate(CCAA = factor(CCAA, levels = c(as.character(CCAA_ord_2$CCAA)))) %>%
+    group_by(CCAA) %>%
+    mutate(first_FECHA = min(n_day[value >= 0.01])) %>%
+    ungroup()
+
+
+
+# Heatmap plot 2
+ggplot(df_plot_2, aes(y = CCAA, x = n_day, fill = value)) +
+    theme_minimal() +
+    geom_tile(color = 'white', width = .9, height = .9) +
+    scale_fill_gradientn(colours = cols, limits = c(0, 1),
+                         breaks = c(0, 1),
+                         labels = c('0', 'max'),
+                         guide = guide_colourbar(ticks = T, nbin = 50, barheight = .5, label = T, barwidth = 10)) +
+    
+    geom_text(aes(x = first_FECHA, label = CCAA), size = 3, color = '#797D7F') +
+    coord_equal() +
+    
+    theme(legend.position = 'bottom',
+          legend.direction = 'horizontal',
+          plot.title = element_text(size = 20, face = 'bold', vjust = 2, hjust = 0.5),
+          axis.text.x = element_text(size = 8, hjust = .5, vjust = .5, face = 'plain'),
+          #axis.text.y = element_text(size = 6, hjust = .5, vjust = .5, face = 'plain'),
+          axis.text.y = element_blank(),
+          axis.title.y = element_blank(),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank()
+    ) +
+    ggtitle('Comparison of different countries effectiveness against COVID-19 
+                (new daily cases normalized to CCAA maximum and data centered on a day with maximum new cases)')
+```
+
 
 
 
@@ -2200,9 +2605,10 @@ sessionInfo()
 * [Situación de COVID-19 en España](https://covid19.isciii.es/)
 * [ES: Mapa georreferenciado de las zonas básicas de salud de LA RIOJA. Año 2017. España. || EN: Georeferenced map of primary care area of reference in LA RIOJA. Year 2017. Spain.](https://zenodo.org/record/1320339#.XrMCk_lS_RI)
 
+
 ## Referencias
 
-* []()
+* [Worldwide COVID-19 spread visualization with R](https://analyzecore.com/2020/05/04/the-spread-of-covid-19-across-countries-visualization-with-r/)
 
 
 ## Licencias
