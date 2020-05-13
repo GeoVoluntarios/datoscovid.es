@@ -1,9 +1,11 @@
 # Obtener Casos activos covid-19 GALICIA (SERGAS)
 
 _Mediante este script se puede consultar de la fuente oficial SERGAS, que facilita los datos mediante Notas de Prensa por EOXI, 
-los casos activos por fecha desagregados en provincias (A Coruña, pontevedra, Ourense y Lugo):_ 
+los casos activos por fecha desagregados en provincias (A Coruña, Pontevedra, Ourense y Lugo):_ 
 https://saladecomunicacion.sergas.gal/Paginas/Buscar.aspx?k=coronavirus
+
 _También puede guardar los datos de esa fecha en una GDB, ya generada, construyendo una base de datos histórica._
+
 _Geometria **polygon y point**_
 
 ## Comenzando 🚀
