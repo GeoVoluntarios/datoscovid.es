@@ -1742,6 +1742,13 @@ saveRDS(resumen_diario, file = paste0('./data/resumen_diario_', Sys.Date(),'.rds
 ```
 
 
+```{r}
+# ZBS Madrid
+
+madrid_zonas_basicas_shp <- sf::read_sf('./data/maps/ZBS_Madrid/200001380.shp',
+                                      stringsAsFactors = TRUE)
+```
+
 
 
 
