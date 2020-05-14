@@ -12,9 +12,9 @@ https://cnecovid.isciii.es/covid19/
 
  _Los parámetros de entrada son:_ 
  
-* _Un menu para seleccionar CCAA (AN/AR/AS/IB/CN/CB/CM/CL/CT/CE/VC/EX/GA/MD/ML/MC/NC/PV/RI)
-* _Otro menu por si se quiere filtar por fecha o no_ (Y/N)
-* _Si en el menu anterior se seleccione filtrar por fecha, la fecha de consulta (D/M/YYYY)_
+* _String para seleccionar CCAA (AN/AR/AS/IB/CN/CB/CM/CL/CT/CE/VC/EX/GA/MD/ML/MC/NC/PV/RI)_
+* _Otro string por si se quiere filtar por fecha o no (Y/N)_
+* _Si queremos filtrar por fecha, un string con formato D/M/YYYY con la fecha de consulta_
 
 
 ### Pre-requisitos 📋
