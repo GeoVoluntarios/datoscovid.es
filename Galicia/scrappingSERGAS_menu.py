@@ -52,7 +52,6 @@ def consultaDatos():
 
     print ("------------------------------------------")
     print ("FECHA INFORME: " + fechaInforme.text)
-    print ("NOTA DE PRENSA: " + texto.get_text())
     print ("------------------------------------------")
 
     ## tratamos el parrafo
@@ -90,7 +89,6 @@ def consultaDatos():
     provinciaPontevedra = int(pontevedraDatoN) + int(vigoDatoN)
 
     print ("CASOS POR EOXI")
-    print ("------------------------------------------")
     print ("A Coruna = " + str(provinciaCoruna))
     print ("Pontevedra = " + str(provinciaPontevedra))
     print ("Ourense = " + str(ourenseDatoN))
