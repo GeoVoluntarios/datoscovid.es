@@ -33,7 +33,7 @@ C:\Users\scarrascov>pip install tabulate
 
 ### Ejecución 🔧
 
-_Ejecuta el script desde la consola_
+_Ejecuta el script desde el CMD_
 
 ```
 C:\Users\scarrascov>python "D:\Geovoluntarios\CCAA\getDatos_IISCI_csv.py"
