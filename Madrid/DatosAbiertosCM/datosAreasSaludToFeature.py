@@ -49,6 +49,7 @@ if (result == 0 ):
 
     arcpy.CalculateField_management(plantilla, "fecha_informe", "'" + fecha + "'", "PYTHON_9.3", "")
     arcpy.CalculateField_management(plantilla, "FECHA", "!fecha_informe!", "PYTHON_9.3", "")
+    arcpy.CalculateField_management(plantilla, "FECHA", "datetime.datetime.strptime( !FECHA! , '%d/%m/%Y %H:%M:%S') - datetime.timedelta(days=1)", "PYTHON_9.3", "")
     arcpy.Append_management(plantilla, fc, "NO_TEST", "", "")
 
     with arcpy.da.UpdateCursor(fc, fields, where_clause=expression) as cursor:
