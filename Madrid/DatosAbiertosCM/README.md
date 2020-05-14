@@ -1,32 +1,40 @@
-# Obtener Casos activos covid-19 GALICIA (SERGAS)
+# Obtener datos covid-19 Comunidad de Madrid (Datos Abiertos de la Comunidad de Madrid)
 
-_Mediante este script se puede consultar de la fuente oficial SERGAS, que facilita los datos mediante Notas de Prensa por EOXI, 
-los casos activos por fecha desagregados en provincias (A Coruña, Pontevedra, Ourense y Lugo):_ 
-https://saladecomunicacion.sergas.gal/Paginas/Buscar.aspx?k=coronavirus
+_Información epidemiológica Covid-19: Casos confirmados y tasa de incidencia acumulada (TIA) por áreas sanitarias y municipios/distritos de Madrid.
+Informe diario con datos de casos confirmados y tasas de incidencia acumulada de los últimos 14 días y desde el inicio de la epidemia (25/02/2020).
+La fuente de los datos es la Red de Vigilancia Epidemiológica de la Comunidad de Madrid. Cuando se utilicen los datos se debe indicar en qué fecha se ha accedido a los mismos, dada su actualización continua.
+El conjuntos de datos añade diariamente los registros de datos correspondientes a cada fecha de informe._ 
 
-_También puede guardar los datos de esa fecha en una GDB, ya generada, construyendo una base de datos histórica._
+https://datos.comunidad.madrid/catalogo/dataset/covid19_tia_muni_y_distritos
+https://datos.comunidad.madrid/catalogo/dataset/covid19_tia_zonas_basicas_salud
 
-_Geometria **polygon y point**_
+_El script guarda los datos de cada fecha del JSON en una GDB, ya generada, construyendo una base de datos histórica._
+
+_Geometria **polygon**_
 
 ## Comenzando 🚀
 
-* _Los parámetros de entrada son: la fecha de consulta/inserción de datos y un menu donde se selecciona si solo se quiere
-consultar los datos o consultar los datos y además añadirlos a la base de datos_
-* _La fecha se debe introducir segun el formato indicado_
-* _El menu para consultar datos se indica C y para consultar y guardar datos S_ 
+* _El parámetro de entrada es la fecha del informe_
+* _La fecha se debe introducir segun el formato indicado (YYYY/MM/DD)_
 
 ### Pre-requisitos 📋
 
 _Python 2.7_
 
 ```
-C:\Users\scarrascov>python "D:\Geovoluntarios\GALICIA\scrappingSERGAS_menu.py"
+C:\Users\scarrascov>python "D:\Geovoluntarios\MADRID\datosMunicipiosToFeature.py"
 ```
-_GDB Plantilla:_ "C:\Geovoluntarios\GALICIA\GALICIA.gdb\plantilla_eoxi"
+```
+C:\Users\scarrascov>python "D:\Geovoluntarios\MADRID\datosAreasSaludToFeature.py"
+```
+
+_GDB Plantilla:_ 
+* "C:\Geovoluntarios\MADRID\MADRID.gdb\plantilla_municipios"
+* "C:\Geovoluntarios\MADRID\MADRID.gdb\plantilla_areaSalud"
 
 _GDB BBDD histórica:_ 
-* fc = "C:\Geovoluntarios\GALICIA\GALICIA_HIS.gdb\galicia_areasSanitarias"
-* fc_point = "C:\Geovoluntarios\GALICIA\GALICIA_HIS.gdb\galicia_areasSanitarias_P"
+* "C:\Geovoluntarios\MADRID\MADRID_HIS.gdb\municipios_y_distritos_madrid"
+* "C:\Geovoluntarios\MADRID\MADRID_HIS.gdb\zonas_basicas_salud"
                      
 
 ### Ejecución 🔧
@@ -34,57 +42,31 @@ _GDB BBDD histórica:_
 _Ejecuta el script desde la consola_
 
 ```
-C:\Users\scarrascov>python "D:\Geovoluntarios\GALICIA\scrappingSERGAS_menu.py"
+C:\Users\scarrascov>python ""D:\Geovoluntarios\MADRID\datosMunicipiosToFeature.py""
+```
+```
+C:\Users\scarrascov>python """D:\Geovoluntarios\MADRID\datosAreasSaludToFeature.py"""
 ```
 
-_Introduce la fecha de consulta o inserción_
+_Introduce la fecha con los datos que quieres añadir a la base de datos_
 
 ```
-Introduce fecha(dd MM YYYY): 13 05 2020
+Introduce Fecha (YYYY/MM/DD): 2020/05/13
 ```
 
-_Selecciona la opcion de solo consulta o consulta e insercion de datos_
+_Si todo ha ido bien, se mostrara un mensaje por pantalla_
 
 ```
-Selecciona Solo Consulta(C) / Consulta y Grabar Datos(S): C
+Datos por municipios actualizados
+```
+```
+Datos por areas sanitarias actualizados
 ```
 
-_Opción C: Se obtienen un informe por pantalla con los datos_
+_Si los datos con esa fecha de informe ya estuvieran en la bbdd tambien te avisara_
 
 ```
-------------------------------------------
-FECHA INFORME:                  13 05 2020
-NOTA DE PRENSA: A Direcci¢n Xeral de Sa£de P£blica da Conseller¡a de Sanidade informa que, na £ltima actualizaci¢n, 
-o n£mero de casos activos de coronavirus en Galicia ascende a 2.179 deles 532 son da  rea da Coru¤a, 124 da de Lugo, 
-333 da de Ourense, 110 da de Pontevedra, 565 da  rea de Vigo, 436 da de Santiago, e 79 da de Ferrol.
-------------------------------------------
-CASOS POR EOXI
-------------------------------------------
-A Coruna = 1047
-Pontevedra = 675
-Ourense = 333
-Lugo = 124
-------------------------------------------
-```
-
-_Opción S: Se obtienen un informe por pantalla con los datos y se guarda en BBDD_
-
-```
-------------------------------------------
-FECHA INFORME:                  13 05 2020
-NOTA DE PRENSA: A Direcci¢n Xeral de Sa£de P£blica da Conseller¡a de Sanidade informa que, na £ltima actualizaci¢n, 
-o n£mero de casos activos de coronavirus en Galicia ascende a 2.179 deles 532 son da  rea da Coru¤a, 124 da de Lugo, 
-333 da de Ourense, 110 da de Pontevedra, 565 da  rea de Vigo, 436 da de Santiago, e 79 da de Ferrol.
-------------------------------------------
-CASOS POR EOXI
-------------------------------------------
-A Coruna = 1047
-Pontevedra = 675
-Ourense = 333
-Lugo = 124
-------------------------------------------
-Guardando en bbdd...
-Datos guardados correctamente
+Los datos para esta fecha ya existen en BBDD
 ```
 
 ## Despliegue 📦
