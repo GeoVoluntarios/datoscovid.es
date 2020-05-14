@@ -22,7 +22,7 @@ https://cnecovid.isciii.es/covid19/
 _Python 2.7_
 
 ```
-C:\Users\scarrascov>python "D:\Geovoluntarios\GALICIA\scrappingSERGAS_menu.py"
+C:\Users\scarrascov>python "D:\Geovoluntarios\MADRID\getDatos_IISCI_csv.py"
 ```   
 
 _Tener instalado el modulo python-tabulate_
