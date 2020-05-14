@@ -1,33 +1,35 @@
-# Obtener Casos activos covid-19 GALICIA (SERGAS)
+# Obtener Datos covid-19 CCAA Madrid (ISCII)
 
-_Mediante este script se puede consultar de la fuente oficial SERGAS, que facilita los datos mediante Notas de Prensa por EOXI, 
-los casos activos por fecha desagregados en provincias (A Coruña, Pontevedra, Ourense y Lugo):_ 
-https://saladecomunicacion.sergas.gal/Paginas/Buscar.aspx?k=coronavirus
+_Mediante este script se puede consultar de la fuente oficial del Ministerio de Sanidad_
 
-_También puede guardar los datos de esa fecha en una GDB, ya generada, construyendo una base de datos histórica._
+_Actualización diaria de la situación de COVID-19 en España, con información geográfica y características epidemiológicas de los casos de COVID-19 (referidos siempre a casos con confirmación virológica por PCR), así como de indicadores de evolución de la pandemia. Resultados obtenidos a partir de la notificación agregada diaria de las CCAA al Ministerio de Sanidad (datos agregados Min. Sanidad), y de la información individualizada de las CCAA a la Red Nacional de Vigilancia Epidemiológica (RENAVE) (datos individualizados RENAVE)._
 
-_Geometria **polygon y point**_
+https://cnecovid.isciii.es/covid19/
+
+
 
 ## Comenzando 🚀
 
-* _Los parámetros de entrada son: la fecha de consulta/inserción de datos y un menu donde se selecciona si solo se quiere
-consultar los datos o consultar los datos y además añadirlos a la base de datos_
-* _La fecha se debe introducir segun el formato indicado_
-* _El menu para consultar datos se indica C y para consultar y guardar datos S_ 
+ _Los parámetros de entrada son:_ 
+* _Un menu para seleccionar CCAA (puede ser ampliable a otras)
+* _Otro menu por si se quiere filtar por fecha o no_
+* _La fecha de consulta, si en el menu anterior se seleccione filtrar por fecha_
+
 
 ### Pre-requisitos 📋
+
+_Descargar el .csv en https://cnecovid.isciii.es/covid19/#documentaci%C3%B3n-y-datos
+
+```
+Los datos agregados notificados por las CCAA al Ministerio de Sanidad están disponibles aquí.
+```
+
 
 _Python 2.7_
 
 ```
 C:\Users\scarrascov>python "D:\Geovoluntarios\GALICIA\scrappingSERGAS_menu.py"
-```
-_GDB Plantilla:_ "C:\Geovoluntarios\GALICIA\GALICIA.gdb\plantilla_eoxi"
-
-_GDB BBDD histórica:_ 
-* fc = "C:\Geovoluntarios\GALICIA\GALICIA_HIS.gdb\galicia_areasSanitarias"
-* fc_point = "C:\Geovoluntarios\GALICIA\GALICIA_HIS.gdb\galicia_areasSanitarias_P"
-                     
+```                  
 
 ### Ejecución 🔧
 
