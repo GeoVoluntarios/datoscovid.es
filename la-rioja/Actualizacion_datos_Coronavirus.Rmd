@@ -1521,7 +1521,7 @@ rioja_ritmo_reproduccion_r0 <- as.data.frame(rioja_ritmo_reproduccion_r0)
 Borramos x3
 
 ```{r}
-rioja_hospitalizados_porcentaje <- rioja_hospitalizados_porcentaje[, 1:2]
+rioja_ritmo_reproduccion_r0 <- rioja_ritmo_reproduccion_r0[, 1:2]
 ```
 
 
@@ -1561,6 +1561,153 @@ Guardamos
 ```{r}
 saveRDS(rioja_ritmo_reproduccion_r0, file = paste0('./data/rioja_ritmo_reproduccion_r0_', Sys.Date(),'.rds'))
 ```
+
+
+
+
+
+
+## Situación de las residencias de personas mayores de La Rioja
+
+Situación a fecha actual de las residencias de personas mayores de La Rioja
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-468](https://web.larioja.org/dato-abierto/datoabierto?n=opd-468)
+
+```{r}
+page_situacion_personas_mayores <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-468')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_situacion_personas_mayores <- html_nodes(page_situacion_personas_mayores, css = '.col-md-6')
+col_md_6_situacion_personas_mayores
+```
+
+```{r}
+fecha_campos_situacion_personas_mayores <- html_children(col_md_6_situacion_personas_mayores[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_situacion_personas_mayores
+```
+
+```{r}
+fecha_valores_situacion_personas_mayores <- html_children(col_md_6_situacion_personas_mayores[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_situacion_personas_mayores
+```
+
+Ahora bajamos el fichero
+
+```{r}
+link_situacion_personas_mayores <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDY4fGNmPTAz'
+```
+
+```{r}
+rioja_situacion_personas_mayores <- read_delim(link_situacion_personas_mayores, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), col_names = FALSE, trim_ws = TRUE)      # OJO con el col_names ************************************
+```
+
+```{r}
+rioja_situacion_personas_mayores <- as.data.frame(rioja_situacion_personas_mayores)
+```
+
+```{r, eval=FALSE}
+names(rioja_situacion_personas_mayores) <- c("franja_edad", "hombres", 
+                             "mujeres", "x4")
+```
+
+Borramos x4
+
+```{r, eval=FALSE}
+rioja_situacion_personas_mayores <- rioja_situacion_personas_mayores[, 1:3]
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_situacion_personas_mayores$fecha_publicacion_situacion_personas_mayores    = as.Date(fecha_valores_situacion_personas_mayores[1], '%d/%m/%Y')
+rioja_situacion_personas_mayores$ultima_actualizacion_situacion_personas_mayores = as.Date(fecha_valores_situacion_personas_mayores[2], '%d/%m/%Y')
+rioja_situacion_personas_mayores$ambito_temporal_situacion_personas_mayores      = as.Date(fecha_valores_situacion_personas_mayores[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_situacion_personas_mayores)
+```
+
+```{r}
+str(rioja_situacion_personas_mayores)
+```
+
+
+**Revisar que cuadra**
+
+```{r}
+# En esta caso es la última línea
+diario <- data.frame(
+                     
+                     mayores_confirmados_PCR       = as.numeric(rioja_situacion_personas_mayores$X2[1]),
+                     mayores_altas_acumulado       = as.numeric(rioja_situacion_personas_mayores$X2[2]),
+                     mayores_fallecidos_acumulado  = as.numeric(rioja_situacion_personas_mayores$X2[3]),
+                     residentes_sin_coronavirus    = rioja_situacion_personas_mayores$X2[4],
+                     residencias_sin_positivos     = as.numeric(rioja_situacion_personas_mayores$X2[5]),
+                     
+                     fecha_publicacion_situacion_personas_mayores       = as.Date(fecha_valores_situacion_personas_mayores[1], '%d/%m/%Y'),
+                     ultima_actualizacion_situacion_personas_mayores    = as.Date(fecha_valores_situacion_personas_mayores[2], '%d/%m/%Y'),
+                     ambito_temporal_situacion_personas_mayores         = as.Date(fecha_valores_situacion_personas_mayores[3], '%d/%m/%Y')
+                     )
+```
+
+Guardamos
+
+```{r}
+saveRDS(rioja_situacion_personas_mayores, file = paste0('./data/rioja_situacion_personas_mayores_', Sys.Date(),'.rds'))
+```
+
+Añadimos al diario
+
+```{r}
+# resumen_diario <- data.frame(time_stamp = Sys.time())
+resumen_diario <- cbind(resumen_diario, diario)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Situación por Zonas Básicas de Salud
@@ -1769,14 +1916,11 @@ Movimientos en la cuenta de donaciones económicas recibidas por el Gobierno de 
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-467](https://web.larioja.org/dato-abierto/datoabierto?n=opd-467)
 
 
-## Situación de las residencias de personas mayores de La Rioja
+## Contratos de emergencia
 
-Situación a fecha actual de las residencias de personas mayores de La Rioja
+Contratos de emergencia realizados durante la pandemia del coronavirus Covid-19 debidos a situaciones excepcionales. Incluye organismo, expediente, descripción, fecha, lotes, empresa, contenido, unidades e importe
 
-La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-468](https://web.larioja.org/dato-abierto/datoabierto?n=opd-468)
-
-
-
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-469](https://web.larioja.org/dato-abierto/datoabierto?n=opd-469)
 
 
 
