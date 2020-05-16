@@ -42,7 +42,7 @@ C:\Users\scarrascov>python "D:\Geovoluntarios\CCAA\getDatos_IISCI_csv.py"
 _Introduce la CCAA_
 
 ```
-Introduce CCAA (AN/AR/AS/IB/CN/CB/CM/CL/CT/CE/VC/EX/GA/MD/ML/MC/NC/PV/RI): #MD
+Introduce CCAA (AN/AR/AS/IB/CN/CB/CM/CL/CT/CE/VC/EX/GA/MD/ML/MC/NC/PV/RI): MD
 ```
 
 _Elige si quieres filtar los datos por fecha o no_
