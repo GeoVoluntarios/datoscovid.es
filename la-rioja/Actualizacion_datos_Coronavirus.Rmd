@@ -1915,7 +1915,7 @@ Movimientos en la cuenta de donaciones económicas recibidas por el Gobierno de 
 
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-467](https://web.larioja.org/dato-abierto/datoabierto?n=opd-467)
 
-
+  
 ## Contratos de emergencia
 
 Contratos de emergencia realizados durante la pandemia del coronavirus Covid-19 debidos a situaciones excepcionales. Incluye organismo, expediente, descripción, fecha, lotes, empresa, contenido, unidades e importe
