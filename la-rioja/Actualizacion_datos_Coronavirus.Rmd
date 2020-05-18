@@ -917,6 +917,99 @@ Pruebas realizadas en La Rioja (PCR y pruebas rápidas de anticuerpos)
 
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-462](https://web.larioja.org/dato-abierto/datoabierto?n=opd-462)
 
+```{r, eval=FALSE}
+page_pruebas <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-462')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_pruebas <- html_nodes(page_pruebas, css = '.col-md-6')
+col_md_6_pruebas
+```
+
+```{r, eval=FALSE}
+fecha_campos_pruebas <- html_children(col_md_6_pruebas[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_pruebas
+```
+
+```{r, eval=FALSE}
+fecha_valores_pruebas <- html_children(col_md_6_pruebas[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_pruebas
+```
+
+Ahora bajamos el fichero
+
+```{r, eval=FALSE}
+link_pruebas <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDYyfGNmPTAz'
+```
+
+```{r, eval=FALSE}
+rioja_pruebas <- read_delim(link_pruebas, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
+```{r, eval=FALSE}
+rioja_pruebas <- as.data.frame(rioja_pruebas)
+```
+
+```{r, eval=FALSE}
+names(rioja_pruebas) <- c("tipo_prueba", "total_pruebas", "pruebas_positivas", 
+                          "Porcentaje_pruebas_positivas")
+```
+
+Incorporamos la fecha del dato
+
+```{r, eval=FALSE}
+rioja_pruebas$fecha_publicacion_pruebas    = as.Date(fecha_valores_pruebas[1], '%d/%m/%Y')
+rioja_pruebas$ultima_actualizacion_pruebas = as.Date(fecha_valores_pruebas[2], '%d/%m/%Y')
+rioja_pruebas$ambito_temporal_pruebas      = as.Date(fecha_valores_pruebas[3], '%d/%m/%Y')
+```
+
+```{r, eval=FALSE}
+summary(rioja_pruebas)
+```
+
+**Revisar que cuadra**
+
+```{r, eval=FALSE}
+# En esta caso es la última línea
+diario <- data.frame(
+                     pcr_realizadas                  = rioja_pruebas$total_pruebas[1],
+                     pcr_positivos                   = rioja_pruebas$pruebas_positivas[1],
+                     pruebas_rapidas_anticuerpos     = rioja_pruebas$total_pruebas[2],
+                     pruebas_rapidas_positivas       = rioja_pruebas$pruebas_positivas[2],
+
+                     fecha_publicacion_pruebas       = as.Date(fecha_valores_pruebas[1], '%d/%m/%Y'),
+                     ultima_actualizacion_pruebas    = as.Date(fecha_valores_pruebas[2], '%d/%m/%Y'),
+                     ambito_temporal_pruebas         = as.Date(fecha_valores_pruebas[3], '%d/%m/%Y')
+                     )
+```
+
+Guardamos
+
+```{r, eval=FALSE}
+saveRDS(rioja_pruebas, file = paste0('./data/rioja_pruebas_', Sys.Date(),'.rds'))
+```
+
+Añadimos al diario
+
+```{r, eval=FALSE}
+# resumen_diario <- data.frame(time_stamp = Sys.time())
+resumen_diario <- cbind(resumen_diario, diario)
+```
+
+
+
+## Pruebas realizadas en La Rioja
+
+**Cambia el formato de la web. A partir de 2020-05-18 no se dan datos de positivos**
+
+Pruebas realizadas en La Rioja (PCR y pruebas rápidas de anticuerpos)
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-462](https://web.larioja.org/dato-abierto/datoabierto?n=opd-462)
+
 ```{r}
 page_pruebas <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-462')
 
@@ -956,8 +1049,7 @@ rioja_pruebas <- as.data.frame(rioja_pruebas)
 ```
 
 ```{r}
-names(rioja_pruebas) <- c("tipo_prueba", "total_pruebas", "pruebas_positivas", 
-                          "Porcentaje_pruebas_positivas")
+names(rioja_pruebas) <- c("pruebas", "total_pruebas", "pruebas_por_1000_hab")
 ```
 
 Incorporamos la fecha del dato
@@ -978,9 +1070,11 @@ summary(rioja_pruebas)
 # En esta caso es la última línea
 diario <- data.frame(
                      pcr_realizadas                  = rioja_pruebas$total_pruebas[1],
-                     pcr_positivos                   = rioja_pruebas$pruebas_positivas[1],
+                     # pcr_positivos                   = rioja_pruebas$pruebas_positivas[1],
                      pruebas_rapidas_anticuerpos     = rioja_pruebas$total_pruebas[2],
-                     pruebas_rapidas_positivas       = rioja_pruebas$pruebas_positivas[2],
+                     # pruebas_rapidas_positivas       = rioja_pruebas$pruebas_positivas[2],
+                     pruebas_pcr_por_1000_hab        = rioja_pruebas$pruebas_por_1000_hab[1],
+                     pruebas_rapidas_por_1000_hab    = rioja_pruebas$pruebas_por_1000_hab[2],   
 
                      fecha_publicacion_pruebas       = as.Date(fecha_valores_pruebas[1], '%d/%m/%Y'),
                      ultima_actualizacion_pruebas    = as.Date(fecha_valores_pruebas[2], '%d/%m/%Y'),
@@ -1000,6 +1094,19 @@ Añadimos al diario
 # resumen_diario <- data.frame(time_stamp = Sys.time())
 resumen_diario <- cbind(resumen_diario, diario)
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1668,33 +1775,6 @@ Añadimos al diario
 # resumen_diario <- data.frame(time_stamp = Sys.time())
 resumen_diario <- cbind(resumen_diario, diario)
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
