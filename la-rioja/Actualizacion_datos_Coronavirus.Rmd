@@ -1790,6 +1790,126 @@ resumen_diario <- cbind(resumen_diario, diario)
 
 
 
+## Casos confirmados acumulados por localidades
+
+Casos confirmados de coronavirus acumulados a fecha actual, por localidades
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-470](https://web.larioja.org/dato-abierto/datoabierto?n=opd-470)
+
+```{r}
+page_casos_acumulados_localidades <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-470')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_casos_acumulados_localidades <- html_nodes(page_casos_acumulados_localidades, css = '.col-md-6')
+col_md_6_casos_acumulados_localidades
+```
+
+```{r}
+fecha_campos_casos_acumulados_localidades <- html_children(col_md_6_casos_acumulados_localidades[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_casos_acumulados_localidades
+```
+
+```{r}
+fecha_valores_casos_acumulados_localidades <- html_children(col_md_6_casos_acumulados_localidades[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_casos_acumulados_localidades
+```
+
+Ahora bajamos el fichero
+
+```{r}
+link_casos_acumulados_localidades <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDcwfGNmPTAz'
+```
+
+```{r}
+rioja_casos_acumulados_localidades <- read_delim(link_casos_acumulados_localidades, ";", escape_double = FALSE, 
+                               na = c("", "NA", "-"), col_names = TRUE, trim_ws = TRUE)      # OJO con el col_names ************************************
+```
+
+```{r}
+rioja_casos_acumulados_localidades <- as.data.frame(rioja_casos_acumulados_localidades)
+```
+
+```{r, eval=FALSE}
+names(rioja_casos_acumulados_localidades) <- c("franja_edad", "hombres", 
+                             "mujeres", "x4")
+```
+
+```{r, eval=FALSE}
+rioja_casos_acumulados_localidades <- rioja_casos_acumulados_localidades[, 1:3]
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_casos_acumulados_localidades$fecha_publicacion_casos_acumulados_localidades    = as.Date(fecha_valores_casos_acumulados_localidades[1], '%d/%m/%Y')
+rioja_casos_acumulados_localidades$ultima_actualizacion_casos_acumulados_localidades = as.Date(fecha_valores_casos_acumulados_localidades[2], '%d/%m/%Y')
+rioja_casos_acumulados_localidades$ambito_temporal_casos_acumulados_localidades      = as.Date(fecha_valores_casos_acumulados_localidades[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_casos_acumulados_localidades)
+```
+
+```{r}
+str(rioja_casos_acumulados_localidades)
+```
+
+
+**Revisar que cuadra**
+
+```{r, eval=FALSE}
+# En esta caso es la última línea
+diario <- data.frame(
+                     
+                     mayores_confirmados_PCR       = as.numeric(rioja_casos_acumulados_localidades$X2[1]),
+                     mayores_altas_acumulado       = as.numeric(rioja_casos_acumulados_localidades$X2[2]),
+                     mayores_fallecidos_acumulado  = as.numeric(rioja_casos_acumulados_localidades$X2[3]),
+                     residentes_sin_coronavirus    = rioja_casos_acumulados_localidades$X2[4],
+                     residencias_sin_positivos     = as.numeric(rioja_casos_acumulados_localidades$X2[5]),
+                     
+                     fecha_publicacion_casos_acumulados_localidades       = as.Date(fecha_valores_casos_acumulados_localidades[1], '%d/%m/%Y'),
+                     ultima_actualizacion_casos_acumulados_localidades    = as.Date(fecha_valores_casos_acumulados_localidades[2], '%d/%m/%Y'),
+                     ambito_temporal_casos_acumulados_localidades         = as.Date(fecha_valores_casos_acumulados_localidades[3], '%d/%m/%Y')
+                     )
+```
+
+Guardamos
+
+```{r}
+saveRDS(rioja_casos_acumulados_localidades, file = paste0('./data/rioja_casos_acumulados_localidades_', Sys.Date(),'.rds'))
+```
+
+Añadimos al diario
+
+```{r, eval=FALSE}
+# resumen_diario <- data.frame(time_stamp = Sys.time())
+resumen_diario <- cbind(resumen_diario, diario)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Situación por Zonas Básicas de Salud
 
 Casos activos de coronavirus, a fecha actual, por zonas básicas de salud (geolocalizadas: coordenadas de latitud y longitud)
