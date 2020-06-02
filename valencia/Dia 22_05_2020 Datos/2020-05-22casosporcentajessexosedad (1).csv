@@ -1,0 +1,21 @@
+Grupo de edad;Sexo;Porcentaje;Casos acumulados desde el 31-01-2020
+g0-9;Hombre;0,9;58
+g10-19;Hombre;1,1;76
+g20-29;Hombre;5,1;350
+g30-39;Hombre;10,5;715
+g40-49;Hombre;15,4;1051
+g50-59;Hombre;17,5;1190
+g60-69;Hombre;17,9;1215
+g70-79;Hombre;16,4;1118
+g80-89;Hombre;11,9;810
+g90 o más;Hombre;3,2;221
+g0-9;Mujer;0,6;50
+g10-19;Mujer;1;88
+g20-29;Mujer;7,5;642
+g30-39;Mujer;12;1034
+g40-49;Mujer;16;1373
+g50-59;Mujer;18,3;1573
+g60-69;Mujer;13,3;1144
+g70-79;Mujer;11;946
+g80-89;Mujer;13,4;1154
+g90 o más;Mujer;6,9;593

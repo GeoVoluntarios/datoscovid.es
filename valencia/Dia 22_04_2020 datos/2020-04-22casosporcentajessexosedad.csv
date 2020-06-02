@@ -1,0 +1,22 @@
+G.Edad;Sexo;Porc;NCasos;
+g0-9;Hombre;0,6;31;
+g10-19;Hombre;0,6;31;
+g20-29;Hombre;4;203;
+g30-39;Hombre;9,3;471;
+g40-49;Hombre;13,5;679;
+g50-59;Hombre;17,4;876;
+g60-69;Hombre;18,5;934;
+g70-79;Hombre;18,8;951;
+g80-89;Hombre;13,5;683;
+g90 o más;Hombre;3,7;188;
+g0-9;Mujer;0,4;23;
+g10-19;Mujer;0,8;47;
+g20-29;Mujer;6,2;352;
+g30-39;Mujer;10,7;610;
+g40-49;Mujer;14,9;846;
+g50-59;Mujer;17;965;
+g60-69;Mujer;13,8;784;
+g70-79;Mujer;13,1;747;
+g80-89;Mujer;15,5;880;
+g90 o más;Mujer;7,6;434;
+
