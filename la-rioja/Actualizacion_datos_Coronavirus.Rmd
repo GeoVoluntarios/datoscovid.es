@@ -150,11 +150,20 @@ fecha_valores_evolucion
 link_evolucion <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDUyfGNmPTAz'
 ```
 
-```{r}
+```{r, eval=FALSE}
 rioja_evolucion <- read_csv(link_evolucion, locale = locale(date_names = "es"),
                             skip = 1, 
                             col_names = c('fecha', 'confirmados_PCR', 'altas', 'fallecidos'))
 ```
+
+```{r}
+httr::GET(link_evolucion, httr::write_disk(tf_evolucion <- tempfile(fileext = ".csv")))
+
+rioja_evolucion <- read_csv(tf_evolucion, locale = locale(date_names = "es"),
+                            skip = 1, 
+                            col_names = c('fecha', 'confirmados_PCR', 'altas', 'fallecidos'))
+```
+
 
 **Revisar esto**
 
@@ -249,8 +258,15 @@ Ahora bajamos el fichero
 link_hospitales <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDYxfGNmPTAz'
 ```
 
-```{r}
+```{r, eval=FALSE}
 rioja_hospitales <- read_delim(link_hospitales, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
+```{r}
+httr::GET(link_hospitales, httr::write_disk(tf_hospitales <- tempfile(fileext = ".csv")))
+
+rioja_hospitales <- read_delim(tf_hospitales, ",", escape_double = FALSE, 
                                na = c("", "NA", "-"), trim_ws = TRUE)
 ```
 
@@ -369,10 +385,18 @@ Ahora bajamos el fichero
 link_hospitalizados_porcentaje <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDUzfGNmPTAz'
 ```
 
-```{r}
+```{r, eval=FALSE}
 rioja_hospitalizados_porcentaje <- read_delim(link_hospitalizados_porcentaje, ",", escape_double = FALSE, 
                                na = c("", "NA", "-"), trim_ws = TRUE)
 ```
+
+```{r}
+httr::GET(link_hospitalizados_porcentaje, httr::write_disk(tf_hospitalizados_porcentaje <- tempfile(fileext = ".csv")))
+
+rioja_hospitalizados_porcentaje <- read_delim(tf_hospitalizados_porcentaje, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
 
 ```{r}
 rioja_hospitalizados_porcentaje <- as.data.frame(rioja_hospitalizados_porcentaje)
@@ -515,8 +539,15 @@ Ahora bajamos el fichero
 link_uci_porcentaje <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDU0fGNmPTAz'
 ```
 
-```{r}
+```{r, eval=FALSE}
 rioja_uci_porcentaje <- read_delim(link_uci_porcentaje, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
+```{r}
+httr::GET(link_uci_porcentaje, httr::write_disk(tf_uci_porcentaje <- tempfile(fileext = ".csv")))
+
+rioja_uci_porcentaje <- read_delim(tf_uci_porcentaje, ",", escape_double = FALSE, 
                                na = c("", "NA", "-"), trim_ws = TRUE)
 ```
 
@@ -661,8 +692,15 @@ Ahora bajamos el fichero
 link_fallecidos_porcentaje <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDU1fGNmPTAz'
 ```
 
-```{r}
+```{r, eval=FALSE}
 rioja_fallecidos_porcentaje <- read_delim(link_fallecidos_porcentaje, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
+```{r}
+httr::GET(link_fallecidos_porcentaje, httr::write_disk(tf_fallecidos_porcentaje <- tempfile(fileext = ".csv")))
+
+rioja_fallecidos_porcentaje <- read_delim(tf_fallecidos_porcentaje, ",", escape_double = FALSE, 
                                na = c("", "NA", "-"), trim_ws = TRUE)
 ```
 
@@ -804,10 +842,18 @@ Ahora bajamos el fichero
 link_casos_porcentaje <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDU2fGNmPTAz'
 ```
 
-```{r}
+```{r, eval=FALSE}
 rioja_casos_porcentaje <- read_delim(link_casos_porcentaje, ",", escape_double = FALSE, 
                                na = c("", "NA", "-"), trim_ws = TRUE)
 ```
+
+```{r}
+httr::GET(link_casos_porcentaje, httr::write_disk(tf_casos_porcentaje <- tempfile(fileext = ".csv")))
+
+rioja_casos_porcentaje <- read_delim(tf_casos_porcentaje, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
 
 ```{r}
 rioja_casos_porcentaje <- as.data.frame(rioja_casos_porcentaje)
@@ -1039,8 +1085,15 @@ Ahora bajamos el fichero
 link_pruebas <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDYyfGNmPTAz'
 ```
 
-```{r}
+```{r, eval=FALSE}
 rioja_pruebas <- read_delim(link_pruebas, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
+```{r}
+httr::GET(link_pruebas, httr::write_disk(tf_pruebas <- tempfile(fileext = ".csv")))
+
+rioja_pruebas <- read_delim(tf_pruebas, ",", escape_double = FALSE, 
                                na = c("", "NA", "-"), trim_ws = TRUE)
 ```
 
@@ -1144,8 +1197,15 @@ Ahora bajamos el fichero
 link_salidas_domiciliarias <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDYzfGNmPTAz'
 ```
 
-```{r}
+```{r, eval=FALSE}
 rioja_salidas_domiciliarias <- read_delim(link_salidas_domiciliarias, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
+```{r}
+httr::GET(link_salidas_domiciliarias, httr::write_disk(tf_salidas_domiciliarias <- tempfile(fileext = ".csv")))
+
+rioja_salidas_domiciliarias <- read_delim(tf_salidas_domiciliarias, ",", escape_double = FALSE, 
                                na = c("", "NA", "-"), trim_ws = TRUE)
 ```
 
@@ -1230,10 +1290,19 @@ Ahora bajamos el fichero
 link_autoevaluaciones_online <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDY0fGNmPTAz'
 ```
 
-```{r}
+```{r, eval=FALSE}
 rioja_autoevaluaciones_online <- read_delim(link_autoevaluaciones_online, ",", escape_double = FALSE, 
                                na = c("", "NA", "-"), trim_ws = TRUE)
 ```
+
+
+```{r}
+httr::GET(link_autoevaluaciones_online, httr::write_disk(tf_autoevaluaciones_online <- tempfile(fileext = ".csv")))
+
+rioja_autoevaluaciones_online <- read_delim(tf_autoevaluaciones_online, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
 
 ```{r}
 rioja_autoevaluaciones_online <- as.data.frame(rioja_autoevaluaciones_online)
@@ -1317,9 +1386,19 @@ Ahora bajamos el fichero
 link_personal_sanitario <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDU3fGNmPTAz'
 ```
 
-```{r}
-rioja_personal_sanitario <- read_delim(link_personal_sanitario, ",", escape_double = FALSE, trim_ws = TRUE)
+```{r, eval=FALSE}
+rioja_personal_sanitario <- read_delim(link_personal_sanitario, ",", 
+                                       escape_double = FALSE, trim_ws = TRUE)
 ```
+
+
+```{r}
+httr::GET(link_personal_sanitario, httr::write_disk(tf_personal_sanitario <- tempfile(fileext = ".csv")))
+
+rioja_personal_sanitario <- read_delim(tf_personal_sanitario, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
 
 ```{r}
 rioja_personal_sanitario <- as.data.frame(rioja_personal_sanitario)
@@ -1412,9 +1491,19 @@ Ahora bajamos el fichero
 link_fallecidos <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDU4fGNmPTAz'
 ```
 
-```{r}
+```{r, eval=FALSE}
 rioja_fallecidos <- read_delim(link_fallecidos, ",", escape_double = FALSE, trim_ws = TRUE)
 ```
+
+
+
+```{r}
+httr::GET(link_fallecidos, httr::write_disk(tf_fallecidos <- tempfile(fileext = ".csv")))
+
+rioja_fallecidos <- read_delim(tf_fallecidos, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
 
 ```{r}
 rioja_fallecidos <- as.data.frame(rioja_fallecidos)
@@ -1532,9 +1621,18 @@ Ahora bajamos el fichero
 link_llamadas <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDY1fGNmPTAz'
 ```
 
-```{r}
+```{r, eval=FALSE}
 rioja_llamadas <- read_delim(link_llamadas, ",", escape_double = FALSE, trim_ws = TRUE)
 ```
+
+
+```{r}
+httr::GET(link_llamadas, httr::write_disk(tf_llamadas <- tempfile(fileext = ".csv")))
+
+rioja_llamadas <- read_delim(tf_llamadas, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
 
 ```{r}
 names(rioja_llamadas) <- tolower(names(rioja_llamadas))
@@ -1613,9 +1711,18 @@ Ahora bajamos el fichero
 link_ritmo_reproduccion_r0 <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDY2fGNmPTAz'
 ```
 
-```{r}
+```{r, eval=FALSE}
 rioja_ritmo_reproduccion_r0 <- read_delim(link_ritmo_reproduccion_r0, ",", escape_double = FALSE, trim_ws = TRUE)
 ```
+
+
+```{r}
+httr::GET(link_ritmo_reproduccion_r0, httr::write_disk(tf_ritmo_reproduccion_r0 <- tempfile(fileext = ".csv")))
+
+rioja_ritmo_reproduccion_r0 <- read_delim(tf_ritmo_reproduccion_r0, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
 
 ```{r}
 names(rioja_ritmo_reproduccion_r0) <- tolower(names(rioja_ritmo_reproduccion_r0))
@@ -1708,10 +1815,22 @@ Ahora bajamos el fichero
 link_situacion_personas_mayores <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDY4fGNmPTAz'
 ```
 
-```{r}
+```{r, eval=FALSE}
 rioja_situacion_personas_mayores <- read_delim(link_situacion_personas_mayores, ",", escape_double = FALSE, 
                                na = c("", "NA", "-"), col_names = FALSE, trim_ws = TRUE)      # OJO con el col_names ************************************
 ```
+
+
+
+
+```{r}
+httr::GET(link_situacion_personas_mayores, httr::write_disk(tf_situacion_personas_mayores <- tempfile(fileext = ".csv")))
+
+rioja_situacion_personas_mayores <- read_delim(tf_situacion_personas_mayores, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), col_names = FALSE, trim_ws = TRUE)
+```
+
+
 
 ```{r}
 rioja_situacion_personas_mayores <- as.data.frame(rioja_situacion_personas_mayores)
@@ -1828,6 +1947,15 @@ link_casos_acumulados_localidades <- 'https://ias1.larioja.org/opendata/download
 rioja_casos_acumulados_localidades <- read_delim(link_casos_acumulados_localidades, ";", escape_double = FALSE, 
                                na = c("", "NA", "-"), col_names = TRUE, trim_ws = TRUE)      # OJO con el col_names ************************************
 ```
+
+
+```{r}
+httr::GET(link_casos_acumulados_localidades, httr::write_disk(tf_casos_acumulados_localidades <- tempfile(fileext = ".csv")))
+
+rioja_casos_acumulados_localidades <- read_delim(tf_casos_acumulados_localidades, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), col_names = TRUE, trim_ws = TRUE)
+```
+
 
 ```{r}
 rioja_casos_acumulados_localidades <- as.data.frame(rioja_casos_acumulados_localidades)
@@ -1948,6 +2076,15 @@ link_casos_activos_zonas_basicas <- 'https://ias1.larioja.org/opendata/download?
 rioja_casos_activos_zonas_basicas <- read_delim(link_casos_activos_zonas_basicas, 
                                               ";", escape_double = FALSE, trim_ws = TRUE)
 ```
+
+
+```{r, eval=FALSE}
+httr::GET(link_casos_activos_zonas_basicas, httr::write_disk(tf_casos_activos_zonas_basicas <- tempfile(fileext = ".csv")))
+
+rioja_casos_activos_zonas_basicas <- read_delim(tf_casos_activos_zonas_basicas, ",", escape_double = FALSE, 
+                               na = c("", "NA", "-"), trim_ws = TRUE)
+```
+
 
 ```{r}
 names(rioja_casos_activos_zonas_basicas) <- c("latitud", "longitud", "localidad",
