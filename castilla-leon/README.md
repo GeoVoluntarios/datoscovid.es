@@ -3,6 +3,10 @@
 ## Fuente: 
 Todos los datos son oficiales, facilitados por la Consejería de Sanidad de la Junta de Castilla y León a través del Portal de Análisis de Datos Abiertos. https://analisis.datosabiertos.jcyl.es/pages/coronavirus/
 
+## Actualización de datos:
+- Del 13 de marzo de 2020 al 12 de junio de 2020: actualización diaria, datos de todos los días.
+- Del 12 de junio de 2020 en adelanta: actualización únicamente los días laborables, datos únicamente de los días laborables.
+
 ## Contenido:
 - **Fases desescalada por zonas básicas de salud.**
   - **Información:** Conjunto de datos con el estado de la desescalada por zonas básicas de salud. Actualización semanal.
@@ -29,3 +33,5 @@ Todos los datos son oficiales, facilitados por la Consejería de Sanidad de la J
 - **Tasa mortalidad covid por zonas básicas de salud.**
 - **Tasa mortalidad por zonas básicas de salud.**
 - **Test PCR en profesionales por edad y sexo.**
+- **Límites provinciales de Castilla y León recintos.**
+- **Mapa de Zonas Básicas de Salud de Castilla y León.**
