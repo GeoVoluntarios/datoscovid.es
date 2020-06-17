@@ -8,6 +8,7 @@
 - Del 12 de junio de 2020 en adelanta: actualización únicamente los días laborables, datos únicamente de los días laborables.
 
 ## Contenido:
+Los datos facilitados se encuentran agrupados en conjuntos de datos. A continuación, se incluye la información de cada uno de los conjuntos de datos extraída del Portal de Análisis de Datos Abiertos de la Junta de Castilla y León y los formatos de archivo plano y/o geográfico disponibles.
 - **Fases desescalada por zonas básicas de salud.**
   - **Información:** 
     - Conjunto de datos con el estado de la desescalada por zonas básicas de salud. Actualización semanal.
