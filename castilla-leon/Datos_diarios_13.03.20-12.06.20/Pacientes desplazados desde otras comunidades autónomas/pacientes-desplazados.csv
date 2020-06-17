@@ -1,0 +1,2593 @@
+año;mes;valor;sigla;provincia;CCAA;Pacientes desplazados;mes_numero;mes_ano
+2020;Enero;altas;AV;Ávila;MELILLA;0;01;2020-01
+2020;Enero;altas;AV;Ávila;MADRID;1036;01;2020-01
+2020;Enero;altas;AV;Ávila;LA RIOJA;1;01;2020-01
+2020;Enero;altas;AV;Ávila;CEUTA;0;01;2020-01
+2020;Enero;altas;AV;Ávila;MURCIA;7;01;2020-01
+2020;Enero;altas;AV;Ávila;GALICIA;14;01;2020-01
+2020;Enero;altas;AV;Ávila;CASTILLA-LA MANCHA;94;01;2020-01
+2020;Enero;altas;AV;Ávila;ARAGON;7;01;2020-01
+2020;Enero;altas;BU;Burgos;GALICIA;32;01;2020-01
+2020;Enero;altas;BU;Burgos;CASTILLA-LA MANCHA;15;01;2020-01
+2020;Enero;altas;BU;Burgos;C. VALENCIANA;63;01;2020-01
+2020;Enero;altas;BU;Burgos;PAIS VASCO;477;01;2020-01
+2020;Enero;altas;BU;Burgos;EXTREMADURA;32;01;2020-01
+2020;Enero;altas;BU;Burgos;NAVARRA;27;01;2020-01
+2020;Enero;altas;LE;León;CANARIAS;38;01;2020-01
+2020;Enero;altas;LE;León;CATALUÑA;132;01;2020-01
+2020;Enero;altas;LE;León;CANTABRIA;49;01;2020-01
+2020;Enero;altas;LE;León;PAIS VASCO;132;01;2020-01
+2020;Enero;altas;PA;Palencia;CANARIAS;10;01;2020-01
+2020;Enero;altas;PA;Palencia;MELILLA;0;01;2020-01
+2020;Enero;altas;PA;Palencia;CATALUÑA;29;01;2020-01
+2020;Enero;altas;PA;Palencia;MADRID;107;01;2020-01
+2020;Enero;altas;PA;Palencia;GALICIA;11;01;2020-01
+2020;Enero;altas;PA;Palencia;EXTREMADURA;14;01;2020-01
+2020;Enero;altas;SA;Salamanca;CANARIAS;29;01;2020-01
+2020;Enero;altas;SA;Salamanca;MADRID;254;01;2020-01
+2020;Enero;altas;SA;Salamanca;ANDALUCIA;54;01;2020-01
+2020;Enero;altas;SE;Segovia;ASTURIAS;6;01;2020-01
+2020;Enero;altas;SE;Segovia;CANTABRIA;5;01;2020-01
+2020;Enero;altas;SE;Segovia;PAIS VASCO;23;01;2020-01
+2020;Enero;altas;SE;Segovia;EXTREMADURA;12;01;2020-01
+2020;Enero;altas;SO;Soria;MELILLA;0;01;2020-01
+2020;Enero;altas;SO;Soria;LA RIOJA;18;01;2020-01
+2020;Enero;altas;SO;Soria;ASTURIAS;8;01;2020-01
+2020;Enero;altas;SO;Soria;CANTABRIA;8;01;2020-01
+2020;Enero;altas;SO;Soria;EXTREMADURA;14;01;2020-01
+2020;Enero;altas;VA;Valladolid;CANARIAS;23;01;2020-01
+2020;Enero;altas;VA;Valladolid;MELILLA;0;01;2020-01
+2020;Enero;altas;VA;Valladolid;CATALUÑA;40;01;2020-01
+2020;Enero;altas;VA;Valladolid;ANDALUCIA;43;01;2020-01
+2020;Enero;altas;VA;Valladolid;CASTILLA-LA MANCHA;23;01;2020-01
+2020;Enero;altas;VA;Valladolid;CANTABRIA;19;01;2020-01
+2020;Enero;altas;ZA;Zamora;ANDALUCIA;24;01;2020-01
+2020;Enero;altas;ZA;Zamora;ASTURIAS;45;01;2020-01
+2020;Enero;altas;ZA;Zamora;BALEARES;10;01;2020-01
+2020;Enero;altas;ZA;Zamora;CEUTA;0;01;2020-01
+2020;Enero;altas;ZA;Zamora;C. VALENCIANA;16;01;2020-01
+2020;Enero;altas;ZA;Zamora;PAIS VASCO;95;01;2020-01
+2020;Enero;altas;ZA;Zamora;ARAGON;3;01;2020-01
+2020;Febrero;altas;AV;Ávila;ANDALUCIA;35;02;2020-02
+2020;Febrero;altas;AV;Ávila;MURCIA;0;02;2020-02
+2020;Febrero;altas;AV;Ávila;CASTILLA-LA MANCHA;52;02;2020-02
+2020;Febrero;altas;AV;Ávila;C. VALENCIANA;20;02;2020-02
+2020;Febrero;altas;BU;Burgos;MELILLA;0;02;2020-02
+2020;Febrero;altas;BU;Burgos;MURCIA;4;02;2020-02
+2020;Febrero;altas;BU;Burgos;GALICIA;32;02;2020-02
+2020;Febrero;altas;BU;Burgos;CANTABRIA;47;02;2020-02
+2020;Febrero;altas;BU;Burgos;NAVARRA;33;02;2020-02
+2020;Febrero;altas;LE;León;MELILLA;1;02;2020-02
+2020;Febrero;altas;LE;León;ASTURIAS;276;02;2020-02
+2020;Febrero;altas;LE;León;CANTABRIA;48;02;2020-02
+2020;Febrero;altas;LE;León;C. VALENCIANA;38;02;2020-02
+2020;Febrero;altas;LE;León;NAVARRA;23;02;2020-02
+2020;Febrero;altas;PA;Palencia;ASTURIAS;29;02;2020-02
+2020;Febrero;altas;PA;Palencia;BALEARES;3;02;2020-02
+2020;Febrero;altas;PA;Palencia;CASTILLA-LA MANCHA;7;02;2020-02
+2020;Febrero;altas;SA;Salamanca;MELILLA;0;02;2020-02
+2020;Febrero;altas;SA;Salamanca;CATALUÑA;59;02;2020-02
+2020;Febrero;altas;SA;Salamanca;LA RIOJA;16;02;2020-02
+2020;Febrero;altas;SA;Salamanca;CASTILLA-LA MANCHA;47;02;2020-02
+2020;Febrero;altas;SA;Salamanca;CANTABRIA;42;02;2020-02
+2020;Febrero;altas;SA;Salamanca;EXTREMADURA;195;02;2020-02
+2020;Febrero;altas;SE;Segovia;CANTABRIA;3;02;2020-02
+2020;Febrero;altas;SE;Segovia;C. VALENCIANA;7;02;2020-02
+2020;Febrero;altas;SE;Segovia;NAVARRA;3;02;2020-02
+2020;Febrero;altas;SO;Soria;CATALUÑA;33;02;2020-02
+2020;Febrero;altas;SO;Soria;ANDALUCIA;18;02;2020-02
+2020;Febrero;altas;SO;Soria;ASTURIAS;4;02;2020-02
+2020;Febrero;altas;SO;Soria;MURCIA;1;02;2020-02
+2020;Febrero;altas;SO;Soria;GALICIA;9;02;2020-02
+2020;Febrero;altas;SO;Soria;C. VALENCIANA;14;02;2020-02
+2020;Febrero;altas;SO;Soria;ARAGON;65;02;2020-02
+2020;Febrero;altas;SO;Soria;NAVARRA;15;02;2020-02
+2020;Febrero;altas;VA;Valladolid;CANARIAS;11;02;2020-02
+2020;Febrero;altas;VA;Valladolid;CATALUÑA;16;02;2020-02
+2020;Febrero;altas;VA;Valladolid;CEUTA;0;02;2020-02
+2020;Febrero;altas;VA;Valladolid;CANTABRIA;25;02;2020-02
+2020;Febrero;altas;VA;Valladolid;C. VALENCIANA;25;02;2020-02
+2020;Febrero;altas;VA;Valladolid;PAIS VASCO;47;02;2020-02
+2020;Febrero;altas;VA;Valladolid;EXTREMADURA;29;02;2020-02
+2020;Febrero;altas;ZA;Zamora;MADRID;166;02;2020-02
+2020;Febrero;altas;ZA;Zamora;MURCIA;2;02;2020-02
+2020;Febrero;altas;ZA;Zamora;GALICIA;34;02;2020-02
+2020;Febrero;altas;ZA;Zamora;CASTILLA-LA MANCHA;7;02;2020-02
+2020;Febrero;altas;ZA;Zamora;C. VALENCIANA;19;02;2020-02
+2020;Marzo;altas;AV;Ávila;CANARIAS;7;03;2020-03
+2020;Marzo;altas;AV;Ávila;MELILLA;0;03;2020-03
+2020;Marzo;altas;AV;Ávila;ANDALUCIA;17;03;2020-03
+2020;Marzo;altas;AV;Ávila;BALEARES;7;03;2020-03
+2020;Marzo;altas;AV;Ávila;CEUTA;0;03;2020-03
+2020;Marzo;altas;AV;Ávila;MURCIA;5;03;2020-03
+2020;Marzo;altas;AV;Ávila;GALICIA;11;03;2020-03
+2020;Marzo;altas;AV;Ávila;ARAGON;6;03;2020-03
+2020;Marzo;altas;AV;Ávila;NAVARRA;6;03;2020-03
+2020;Marzo;altas;BU;Burgos;MADRID;260;03;2020-03
+2020;Marzo;altas;BU;Burgos;LA RIOJA;30;03;2020-03
+2020;Marzo;altas;BU;Burgos;BALEARES;4;03;2020-03
+2020;Marzo;altas;BU;Burgos;GALICIA;19;03;2020-03
+2020;Marzo;altas;BU;Burgos;C. VALENCIANA;21;03;2020-03
+2020;Marzo;altas;BU;Burgos;PAIS VASCO;543;03;2020-03
+2020;Marzo;altas;LE;León;MELILLA;0;03;2020-03
+2020;Marzo;altas;LE;León;MURCIA;7;03;2020-03
+2020;Marzo;altas;LE;León;CANTABRIA;32;03;2020-03
+2020;Marzo;altas;LE;León;EXTREMADURA;22;03;2020-03
+2020;Marzo;altas;PA;Palencia;CATALUÑA;17;03;2020-03
+2020;Marzo;altas;PA;Palencia;CASTILLA-LA MANCHA;8;03;2020-03
+2020;Marzo;altas;SA;Salamanca;CATALUÑA;51;03;2020-03
+2020;Marzo;altas;SA;Salamanca;LA RIOJA;12;03;2020-03
+2020;Marzo;altas;SA;Salamanca;ASTURIAS;30;03;2020-03
+2020;Marzo;altas;SA;Salamanca;BALEARES;10;03;2020-03
+2020;Marzo;altas;SA;Salamanca;CASTILLA-LA MANCHA;23;03;2020-03
+2020;Marzo;altas;SA;Salamanca;CANTABRIA;15;03;2020-03
+2020;Marzo;altas;SE;Segovia;ANDALUCIA;10;03;2020-03
+2020;Marzo;altas;SE;Segovia;PAIS VASCO;19;03;2020-03
+2020;Marzo;altas;SE;Segovia;ARAGON;6;03;2020-03
+2020;Marzo;altas;SO;Soria;ASTURIAS;3;03;2020-03
+2020;Marzo;altas;SO;Soria;CANTABRIA;4;03;2020-03
+2020;Marzo;altas;SO;Soria;C. VALENCIANA;3;03;2020-03
+2020;Marzo;altas;SO;Soria;EXTREMADURA;6;03;2020-03
+2020;Marzo;altas;SO;Soria;NAVARRA;11;03;2020-03
+2020;Marzo;altas;VA;Valladolid;ANDALUCIA;25;03;2020-03
+2020;Marzo;altas;VA;Valladolid;ASTURIAS;22;03;2020-03
+2020;Marzo;altas;VA;Valladolid;CANTABRIA;19;03;2020-03
+2020;Marzo;altas;VA;Valladolid;C. VALENCIANA;20;03;2020-03
+2020;Marzo;altas;VA;Valladolid;EXTREMADURA;14;03;2020-03
+2020;Marzo;altas;ZA;Zamora;CANARIAS;2;03;2020-03
+2020;Marzo;altas;ZA;Zamora;MADRID;331;03;2020-03
+2020;Marzo;altas;ZA;Zamora;ANDALUCIA;15;03;2020-03
+2020;Marzo;altas;ZA;Zamora;LA RIOJA;5;03;2020-03
+2020;Marzo;altas;ZA;Zamora;BALEARES;1;03;2020-03
+2020;Marzo;altas;ZA;Zamora;CEUTA;0;03;2020-03
+2020;Marzo;altas;ZA;Zamora;CANTABRIA;6;03;2020-03
+2020;Marzo;altas;ZA;Zamora;ARAGON;4;03;2020-03
+2020;Marzo;altas;ZA;Zamora;NAVARRA;6;03;2020-03
+2020;Abril;altas;AV;Ávila;MELILLA;0;04;2020-04
+2020;Abril;altas;AV;Ávila;CATALUÑA;8;04;2020-04
+2020;Abril;altas;AV;Ávila;MADRID;1021;04;2020-04
+2020;Abril;altas;AV;Ávila;GALICIA;5;04;2020-04
+2020;Abril;altas;AV;Ávila;C. VALENCIANA;9;04;2020-04
+2020;Abril;altas;AV;Ávila;ARAGON;0;04;2020-04
+2020;Abril;altas;BU;Burgos;CATALUÑA;23;04;2020-04
+2020;Abril;altas;BU;Burgos;ANDALUCIA;9;04;2020-04
+2020;Abril;altas;BU;Burgos;ASTURIAS;7;04;2020-04
+2020;Abril;altas;BU;Burgos;BALEARES;4;04;2020-04
+2020;Abril;altas;BU;Burgos;MURCIA;8;04;2020-04
+2020;Abril;altas;BU;Burgos;GALICIA;8;04;2020-04
+2020;Abril;altas;BU;Burgos;EXTREMADURA;9;04;2020-04
+2020;Abril;altas;BU;Burgos;NAVARRA;8;04;2020-04
+2020;Abril;altas;LE;León;CANARIAS;10;04;2020-04
+2020;Abril;altas;LE;León;ANDALUCIA;22;04;2020-04
+2020;Abril;altas;LE;León;MURCIA;1;04;2020-04
+2020;Abril;altas;LE;León;CANTABRIA;10;04;2020-04
+2020;Abril;altas;LE;León;NAVARRA;8;04;2020-04
+2020;Abril;altas;PA;Palencia;ANDALUCIA;12;04;2020-04
+2020;Abril;altas;PA;Palencia;MURCIA;0;04;2020-04
+2020;Abril;altas;PA;Palencia;GALICIA;5;04;2020-04
+2020;Abril;altas;PA;Palencia;CASTILLA-LA MANCHA;6;04;2020-04
+2020;Abril;altas;PA;Palencia;EXTREMADURA;9;04;2020-04
+2020;Abril;altas;SA;Salamanca;CATALUÑA;31;04;2020-04
+2020;Abril;altas;SA;Salamanca;MADRID;197;04;2020-04
+2020;Abril;altas;SA;Salamanca;LA RIOJA;1;04;2020-04
+2020;Abril;altas;SA;Salamanca;CASTILLA-LA MANCHA;12;04;2020-04
+2020;Abril;altas;SA;Salamanca;CANTABRIA;5;04;2020-04
+2020;Abril;altas;SA;Salamanca;NAVARRA;5;04;2020-04
+2020;Abril;altas;SE;Segovia;MELILLA;0;04;2020-04
+2020;Abril;altas;SE;Segovia;CATALUÑA;8;04;2020-04
+2020;Abril;altas;SE;Segovia;MADRID;450;04;2020-04
+2020;Abril;altas;SE;Segovia;ASTURIAS;4;04;2020-04
+2020;Abril;altas;SE;Segovia;CASTILLA-LA MANCHA;5;04;2020-04
+2020;Abril;altas;SO;Soria;BALEARES;1;04;2020-04
+2020;Abril;altas;SO;Soria;MURCIA;1;04;2020-04
+2020;Abril;altas;SO;Soria;NAVARRA;10;04;2020-04
+2020;Abril;altas;VA;Valladolid;CANARIAS;3;04;2020-04
+2020;Abril;altas;VA;Valladolid;ANDALUCIA;15;04;2020-04
+2020;Abril;altas;VA;Valladolid;BALEARES;1;04;2020-04
+2020;Abril;altas;VA;Valladolid;CEUTA;0;04;2020-04
+2020;Abril;altas;VA;Valladolid;MURCIA;0;04;2020-04
+2020;Abril;altas;VA;Valladolid;CASTILLA-LA MANCHA;6;04;2020-04
+2020;Abril;altas;ZA;Zamora;CANARIAS;4;04;2020-04
+2020;Abril;altas;ZA;Zamora;ANDALUCIA;7;04;2020-04
+2020;Abril;altas;ZA;Zamora;BALEARES;1;04;2020-04
+2020;Abril;altas;ZA;Zamora;GALICIA;15;04;2020-04
+2020;Abril;altas;ZA;Zamora;CASTILLA-LA MANCHA;5;04;2020-04
+2020;Abril;altas;ZA;Zamora;PAIS VASCO;68;04;2020-04
+2020;Abril;altas;ZA;Zamora;ARAGON;0;04;2020-04
+2020;Abril;altas;ZA;Zamora;EXTREMADURA;5;04;2020-04
+2020;Mayo;altas;AV;Ávila;ANDALUCIA;21;05;2020-05
+2020;Mayo;altas;AV;Ávila;BALEARES;4;05;2020-05
+2020;Mayo;altas;AV;Ávila;CEUTA;0;05;2020-05
+2020;Mayo;altas;AV;Ávila;CANTABRIA;1;05;2020-05
+2020;Mayo;altas;AV;Ávila;C. VALENCIANA;10;05;2020-05
+2020;Mayo;altas;AV;Ávila;ARAGON;2;05;2020-05
+2020;Mayo;altas;AV;Ávila;EXTREMADURA;19;05;2020-05
+2020;Mayo;altas;BU;Burgos;CANARIAS;6;05;2020-05
+2020;Mayo;altas;BU;Burgos;CEUTA;0;05;2020-05
+2020;Mayo;altas;BU;Burgos;MURCIA;2;05;2020-05
+2020;Mayo;altas;BU;Burgos;CANTABRIA;46;05;2020-05
+2020;Mayo;altas;BU;Burgos;PAIS VASCO;471;05;2020-05
+2020;Mayo;altas;BU;Burgos;EXTREMADURA;6;05;2020-05
+2020;Mayo;altas;LE;León;ANDALUCIA;22;05;2020-05
+2020;Mayo;altas;LE;León;BALEARES;14;05;2020-05
+2020;Mayo;altas;LE;León;MURCIA;6;05;2020-05
+2020;Mayo;altas;LE;León;GALICIA;90;05;2020-05
+2020;Mayo;altas;PA;Palencia;CATALUÑA;11;05;2020-05
+2020;Mayo;altas;PA;Palencia;BALEARES;3;05;2020-05
+2020;Mayo;altas;PA;Palencia;MURCIA;1;05;2020-05
+2020;Mayo;altas;PA;Palencia;GALICIA;6;05;2020-05
+2020;Mayo;altas;PA;Palencia;CANTABRIA;54;05;2020-05
+2020;Mayo;altas;SA;Salamanca;CANARIAS;6;05;2020-05
+2020;Mayo;altas;SA;Salamanca;MELILLA;0;05;2020-05
+2020;Mayo;altas;SA;Salamanca;LA RIOJA;4;05;2020-05
+2020;Mayo;altas;SA;Salamanca;ASTURIAS;23;05;2020-05
+2020;Mayo;altas;SA;Salamanca;CEUTA;1;05;2020-05
+2020;Mayo;altas;SA;Salamanca;MURCIA;4;05;2020-05
+2020;Mayo;altas;SA;Salamanca;GALICIA;8;05;2020-05
+2020;Mayo;altas;SA;Salamanca;C. VALENCIANA;24;05;2020-05
+2020;Mayo;altas;SA;Salamanca;PAIS VASCO;97;05;2020-05
+2020;Mayo;altas;SA;Salamanca;ARAGON;2;05;2020-05
+2020;Mayo;altas;SE;Segovia;CANARIAS;3;05;2020-05
+2020;Mayo;altas;SE;Segovia;MELILLA;0;05;2020-05
+2020;Mayo;altas;SE;Segovia;MADRID;559;05;2020-05
+2020;Mayo;altas;SE;Segovia;LA RIOJA;1;05;2020-05
+2020;Mayo;altas;SE;Segovia;CEUTA;0;05;2020-05
+2020;Mayo;altas;SE;Segovia;MURCIA;2;05;2020-05
+2020;Mayo;altas;SE;Segovia;CANTABRIA;0;05;2020-05
+2020;Mayo;altas;SE;Segovia;C. VALENCIANA;5;05;2020-05
+2020;Mayo;altas;SE;Segovia;PAIS VASCO;8;05;2020-05
+2020;Mayo;altas;SE;Segovia;NAVARRA;7;05;2020-05
+2020;Mayo;altas;SO;Soria;CANARIAS;0;05;2020-05
+2020;Mayo;altas;SO;Soria;BALEARES;2;05;2020-05
+2020;Mayo;altas;SO;Soria;GALICIA;0;05;2020-05
+2020;Mayo;altas;SO;Soria;CASTILLA-LA MANCHA;16;05;2020-05
+2020;Mayo;altas;VA;Valladolid;CATALUÑA;10;05;2020-05
+2020;Mayo;altas;VA;Valladolid;ASTURIAS;14;05;2020-05
+2020;Mayo;altas;VA;Valladolid;BALEARES;2;05;2020-05
+2020;Mayo;altas;VA;Valladolid;CEUTA;0;05;2020-05
+2020;Mayo;altas;VA;Valladolid;CASTILLA-LA MANCHA;6;05;2020-05
+2020;Mayo;altas;VA;Valladolid;C. VALENCIANA;13;05;2020-05
+2020;Mayo;altas;VA;Valladolid;ARAGON;4;05;2020-05
+2020;Mayo;altas;ZA;Zamora;BALEARES;1;05;2020-05
+2020;Mayo;altas;ZA;Zamora;GALICIA;17;05;2020-05
+2020;Mayo;altas;ZA;Zamora;CANTABRIA;12;05;2020-05
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;CANARIAS;4;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;LA RIOJA;-1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;CEUTA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;MURCIA;5;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;CASTILLA-LA MANCHA;-5;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;ARAGON;4;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;ANDALUCIA;-1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;LA RIOJA;-6;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;MURCIA;1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;GALICIA;-13;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;CANTABRIA;7;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;ANDALUCIA;2;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;PAIS VASCO;-4;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;EXTREMADURA;1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;CASTILLA-LA MANCHA;1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;MADRID;164;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;ANDALUCIA;-29;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;BALEARES;-19;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;MURCIA;-8;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;PAIS VASCO;-2;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;ARAGON;-2;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;GALICIA;-7;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;ARAGON;3;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;CATALUÑA;13;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;MADRID;95;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;CEUTA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;PAIS VASCO;-11;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;ARAGON;5;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;CATALUÑA;8;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;MADRID;68;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;MURCIA;3;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;CANTABRIA;-6;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;PAIS VASCO;13;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;EXTREMADURA;-15;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;ANDALUCIA;-6;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;ASTURIAS;23;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;CANTABRIA;-4;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;PAIS VASCO;56;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;EXTREMADURA;1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;NAVARRA;2;03;2020-03
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;CANARIAS;-4;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;MURCIA;-4;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;EXTREMADURA;-8;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;CANARIAS;-3;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;ANDALUCIA;-36;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;LA RIOJA;-13;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;ASTURIAS;-16;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;BALEARES;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;CEUTA;1;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;GALICIA;-11;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;CANARIAS;-6;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;CANTABRIA;-22;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;C. VALENCIANA;-23;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;PAIS VASCO;-61;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;ARAGON;-3;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;CANARIAS;-1;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;CATALUÑA;-9;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;BALEARES;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;MURCIA;-2;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;C. VALENCIANA;-9;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;ARAGON;1;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;CANARIAS;-6;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;CATALUÑA;-20;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;MADRID;-169;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;GALICIA;-15;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;PAIS VASCO;-64;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;ARAGON;-2;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;NAVARRA;-14;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;MELILLA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;ANDALUCIA;-3;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;BALEARES;-4;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;MURCIA;-2;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;CASTILLA-LA MANCHA;-15;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;CANTABRIA;-2;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;PAIS VASCO;-17;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;ARAGON;-5;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;ANDALUCIA;-6;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;LA RIOJA;-13;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;BALEARES;-6;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;MURCIA;-3;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;CASTILLA-LA MANCHA;-5;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;C. VALENCIANA;3;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;EXTREMADURA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;MELILLA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;LA RIOJA;-11;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;ASTURIAS;-8;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;C. VALENCIANA;-10;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;ARAGON;-7;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;EXTREMADURA;-7;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;NAVARRA;-3;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;GALICIA;-7;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;CASTILLA-LA MANCHA;-9;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;PAIS VASCO;-104;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;EXTREMADURA;-6;04;2020-04
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;MELILLA;4;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;CATALUÑA;2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;BALEARES;3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;MURCIA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;GALICIA;4;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;CASTILLA-LA MANCHA;18;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;CANTABRIA;-1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;CANARIAS;4;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;LA RIOJA;11;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;CANTABRIA;16;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;C. VALENCIANA;3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;PAIS VASCO;43;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;ARAGON;8;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;EXTREMADURA;-3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;CATALUÑA;34;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;LA RIOJA;2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;ASTURIAS;-12;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;BALEARES;6;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;CEUTA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;CANTABRIA;11;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;PAIS VASCO;12;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;NAVARRA;4;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;MURCIA;1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;CANTABRIA;13;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;CANARIAS;-5;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;MELILLA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;ANDALUCIA;21;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;CEUTA;-1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;MURCIA;3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;C. VALENCIANA;17;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;NAVARRA;2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;MELILLA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;MADRID;109;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;LA RIOJA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;ASTURIAS;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;BALEARES;1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;CEUTA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;GALICIA;1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;CASTILLA-LA MANCHA;8;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;CATALUÑA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;CANTABRIA;7;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;NAVARRA;2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;CANARIAS;2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;ANDALUCIA;12;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;GALICIA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;CANTABRIA;3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;EXTREMADURA;4;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;NAVARRA;-5;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;CANARIAS;-3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;ANDALUCIA;8;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;LA RIOJA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;ASTURIAS;12;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;BALEARES;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;CEUTA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;CANTABRIA;7;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;C. VALENCIANA;-1;05;2020-05
+2020;Enero;activos;AV;Ávila;MELILLA;1;01;2020-01
+2020;Enero;activos;AV;Ávila;BALEARES;17;01;2020-01
+2020;Enero;activos;AV;Ávila;GALICIA;44;01;2020-01
+2020;Enero;activos;AV;Ávila;CANTABRIA;19;01;2020-01
+2020;Enero;activos;AV;Ávila;PAIS VASCO;99;01;2020-01
+2020;Enero;activos;AV;Ávila;ARAGON;22;01;2020-01
+2020;Enero;activos;AV;Ávila;NAVARRA;15;01;2020-01
+2020;Enero;activos;BU;Burgos;MURCIA;40;01;2020-01
+2020;Enero;activos;BU;Burgos;CANTABRIA;163;01;2020-01
+2020;Enero;activos;BU;Burgos;EXTREMADURA;73;01;2020-01
+2020;Enero;activos;BU;Burgos;NAVARRA;86;01;2020-01
+2020;Enero;activos;LE;León;CATALUÑA;520;01;2020-01
+2020;Enero;activos;LE;León;MADRID;1083;01;2020-01
+2020;Enero;activos;LE;León;EXTREMADURA;58;01;2020-01
+2020;Enero;activos;PA;Palencia;CANARIAS;30;01;2020-01
+2020;Enero;activos;PA;Palencia;LA RIOJA;14;01;2020-01
+2020;Enero;activos;PA;Palencia;BALEARES;37;01;2020-01
+2020;Enero;activos;PA;Palencia;CEUTA;1;01;2020-01
+2020;Enero;activos;PA;Palencia;C. VALENCIANA;51;01;2020-01
+2020;Enero;activos;PA;Palencia;PAIS VASCO;536;01;2020-01
+2020;Enero;activos;PA;Palencia;ARAGON;20;01;2020-01
+2020;Enero;activos;SA;Salamanca;CANARIAS;89;01;2020-01
+2020;Enero;activos;SA;Salamanca;CATALUÑA;240;01;2020-01
+2020;Enero;activos;SA;Salamanca;LA RIOJA;48;01;2020-01
+2020;Enero;activos;SA;Salamanca;ASTURIAS;129;01;2020-01
+2020;Enero;activos;SA;Salamanca;MURCIA;35;01;2020-01
+2020;Enero;activos;SA;Salamanca;CASTILLA-LA MANCHA;102;01;2020-01
+2020;Enero;activos;SA;Salamanca;PAIS VASCO;469;01;2020-01
+2020;Enero;activos;SE;Segovia;ASTURIAS;21;01;2020-01
+2020;Enero;activos;SE;Segovia;CEUTA;2;01;2020-01
+2020;Enero;activos;SE;Segovia;MURCIA;9;01;2020-01
+2020;Enero;activos;SE;Segovia;GALICIA;37;01;2020-01
+2020;Enero;activos;SE;Segovia;C. VALENCIANA;60;01;2020-01
+2020;Enero;activos;SE;Segovia;NAVARRA;9;01;2020-01
+2020;Enero;activos;SO;Soria;ASTURIAS;18;01;2020-01
+2020;Enero;activos;SO;Soria;MURCIA;12;01;2020-01
+2020;Enero;activos;SO;Soria;CANTABRIA;25;01;2020-01
+2020;Enero;activos;SO;Soria;C. VALENCIANA;50;01;2020-01
+2020;Enero;activos;SO;Soria;PAIS VASCO;108;01;2020-01
+2020;Enero;activos;VA;Valladolid;CEUTA;1;01;2020-01
+2020;Enero;activos;VA;Valladolid;PAIS VASCO;220;01;2020-01
+2020;Enero;activos;VA;Valladolid;ARAGON;41;01;2020-01
+2020;Enero;activos;ZA;Zamora;MELILLA;1;01;2020-01
+2020;Enero;activos;ZA;Zamora;MADRID;839;01;2020-01
+2020;Enero;activos;ZA;Zamora;ASTURIAS;160;01;2020-01
+2020;Enero;activos;ZA;Zamora;MURCIA;11;01;2020-01
+2020;Enero;activos;ZA;Zamora;GALICIA;85;01;2020-01
+2020;Enero;activos;ZA;Zamora;CASTILLA-LA MANCHA;49;01;2020-01
+2020;Enero;activos;ZA;Zamora;CANTABRIA;29;01;2020-01
+2020;Febrero;activos;AV;Ávila;CANARIAS;20;02;2020-02
+2020;Febrero;activos;AV;Ávila;MADRID;2620;02;2020-02
+2020;Febrero;activos;AV;Ávila;ANDALUCIA;83;02;2020-02
+2020;Febrero;activos;AV;Ávila;MURCIA;8;02;2020-02
+2020;Febrero;activos;AV;Ávila;C. VALENCIANA;70;02;2020-02
+2020;Febrero;activos;BU;Burgos;MELILLA;2;02;2020-02
+2020;Febrero;activos;BU;Burgos;ANDALUCIA;151;02;2020-02
+2020;Febrero;activos;BU;Burgos;BALEARES;36;02;2020-02
+2020;Febrero;activos;BU;Burgos;EXTREMADURA;64;02;2020-02
+2020;Febrero;activos;LE;León;CANARIAS;74;02;2020-02
+2020;Febrero;activos;LE;León;MELILLA;2;02;2020-02
+2020;Febrero;activos;LE;León;ASTURIAS;811;02;2020-02
+2020;Febrero;activos;LE;León;GALICIA;440;02;2020-02
+2020;Febrero;activos;LE;León;PAIS VASCO;362;02;2020-02
+2020;Febrero;activos;PA;Palencia;MELILLA;1;02;2020-02
+2020;Febrero;activos;SA;Salamanca;LA RIOJA;40;02;2020-02
+2020;Febrero;activos;SA;Salamanca;CEUTA;5;02;2020-02
+2020;Febrero;activos;SA;Salamanca;CASTILLA-LA MANCHA;109;02;2020-02
+2020;Febrero;activos;SE;Segovia;CANARIAS;18;02;2020-02
+2020;Febrero;activos;SE;Segovia;ASTURIAS;19;02;2020-02
+2020;Febrero;activos;SE;Segovia;BALEARES;16;02;2020-02
+2020;Febrero;activos;SE;Segovia;GALICIA;42;02;2020-02
+2020;Febrero;activos;SE;Segovia;CANTABRIA;11;02;2020-02
+2020;Febrero;activos;SE;Segovia;ARAGON;8;02;2020-02
+2020;Febrero;activos;SE;Segovia;NAVARRA;9;02;2020-02
+2020;Febrero;activos;SO;Soria;MELILLA;0;02;2020-02
+2020;Febrero;activos;SO;Soria;MADRID;318;02;2020-02
+2020;Febrero;activos;SO;Soria;ANDALUCIA;65;02;2020-02
+2020;Febrero;activos;SO;Soria;LA RIOJA;58;02;2020-02
+2020;Febrero;activos;SO;Soria;BALEARES;14;02;2020-02
+2020;Febrero;activos;SO;Soria;CEUTA;0;02;2020-02
+2020;Febrero;activos;SO;Soria;EXTREMADURA;20;02;2020-02
+2020;Febrero;activos;VA;Valladolid;MELILLA;1;02;2020-02
+2020;Febrero;activos;VA;Valladolid;LA RIOJA;21;02;2020-02
+2020;Febrero;activos;VA;Valladolid;ASTURIAS;86;02;2020-02
+2020;Febrero;activos;VA;Valladolid;MURCIA;31;02;2020-02
+2020;Febrero;activos;VA;Valladolid;CASTILLA-LA MANCHA;67;02;2020-02
+2020;Febrero;activos;VA;Valladolid;ARAGON;34;02;2020-02
+2020;Febrero;activos;VA;Valladolid;NAVARRA;15;02;2020-02
+2020;Febrero;activos;ZA;Zamora;CANARIAS;20;02;2020-02
+2020;Febrero;activos;ZA;Zamora;MELILLA;0;02;2020-02
+2020;Febrero;activos;ZA;Zamora;CATALUÑA;171;02;2020-02
+2020;Febrero;activos;ZA;Zamora;ASTURIAS;107;02;2020-02
+2020;Febrero;activos;ZA;Zamora;CEUTA;0;02;2020-02
+2020;Febrero;activos;ZA;Zamora;PAIS VASCO;361;02;2020-02
+2020;Febrero;activos;ZA;Zamora;ARAGON;15;02;2020-02
+2020;Febrero;activos;ZA;Zamora;EXTREMADURA;38;02;2020-02
+2020;Marzo;activos;AV;Ávila;CATALUÑA;61;03;2020-03
+2020;Marzo;activos;AV;Ávila;MADRID;3216;03;2020-03
+2020;Marzo;activos;AV;Ávila;ARAGON;13;03;2020-03
+2020;Marzo;activos;AV;Ávila;EXTREMADURA;90;03;2020-03
+2020;Marzo;activos;BU;Burgos;CATALUÑA;160;03;2020-03
+2020;Marzo;activos;BU;Burgos;BALEARES;29;03;2020-03
+2020;Marzo;activos;BU;Burgos;CANTABRIA;149;03;2020-03
+2020;Marzo;activos;BU;Burgos;C. VALENCIANA;112;03;2020-03
+2020;Marzo;activos;BU;Burgos;PAIS VASCO;1503;03;2020-03
+2020;Marzo;activos;BU;Burgos;EXTREMADURA;66;03;2020-03
+2020;Marzo;activos;LE;León;CANARIAS;66;03;2020-03
+2020;Marzo;activos;LE;León;LA RIOJA;42;03;2020-03
+2020;Marzo;activos;LE;León;NAVARRA;48;03;2020-03
+2020;Marzo;activos;PA;Palencia;MELILLA;2;03;2020-03
+2020;Marzo;activos;PA;Palencia;LA RIOJA;12;03;2020-03
+2020;Marzo;activos;PA;Palencia;ASTURIAS;83;03;2020-03
+2020;Marzo;activos;PA;Palencia;CEUTA;0;03;2020-03
+2020;Marzo;activos;PA;Palencia;ARAGON;9;03;2020-03
+2020;Marzo;activos;SA;Salamanca;CATALUÑA;168;03;2020-03
+2020;Marzo;activos;SA;Salamanca;ANDALUCIA;140;03;2020-03
+2020;Marzo;activos;SA;Salamanca;MURCIA;45;03;2020-03
+2020;Marzo;activos;SA;Salamanca;CASTILLA-LA MANCHA;96;03;2020-03
+2020;Marzo;activos;SA;Salamanca;ARAGON;27;03;2020-03
+2020;Marzo;activos;SE;Segovia;CATALUÑA;44;03;2020-03
+2020;Marzo;activos;SE;Segovia;ASTURIAS;20;03;2020-03
+2020;Marzo;activos;SE;Segovia;BALEARES;13;03;2020-03
+2020;Marzo;activos;SE;Segovia;CANTABRIA;11;03;2020-03
+2020;Marzo;activos;SO;Soria;CANARIAS;15;03;2020-03
+2020;Marzo;activos;SO;Soria;MELILLA;0;03;2020-03
+2020;Marzo;activos;SO;Soria;CATALUÑA;163;03;2020-03
+2020;Marzo;activos;SO;Soria;MADRID;398;03;2020-03
+2020;Marzo;activos;SO;Soria;LA RIOJA;59;03;2020-03
+2020;Marzo;activos;SO;Soria;BALEARES;18;03;2020-03
+2020;Marzo;activos;SO;Soria;GALICIA;17;03;2020-03
+2020;Marzo;activos;SO;Soria;CASTILLA-LA MANCHA;41;03;2020-03
+2020;Marzo;activos;SO;Soria;PAIS VASCO;75;03;2020-03
+2020;Marzo;activos;SO;Soria;EXTREMADURA;20;03;2020-03
+2020;Marzo;activos;SO;Soria;NAVARRA;43;03;2020-03
+2020;Marzo;activos;VA;Valladolid;CANARIAS;39;03;2020-03
+2020;Marzo;activos;VA;Valladolid;ANDALUCIA;95;03;2020-03
+2020;Marzo;activos;VA;Valladolid;ASTURIAS;77;03;2020-03
+2020;Marzo;activos;VA;Valladolid;CEUTA;0;03;2020-03
+2020;Marzo;activos;VA;Valladolid;MURCIA;31;03;2020-03
+2020;Marzo;activos;VA;Valladolid;GALICIA;72;03;2020-03
+2020;Marzo;activos;VA;Valladolid;CASTILLA-LA MANCHA;59;03;2020-03
+2020;Marzo;activos;VA;Valladolid;NAVARRA;18;03;2020-03
+2020;Marzo;activos;ZA;Zamora;MADRID;679;03;2020-03
+2020;Marzo;activos;ZA;Zamora;EXTREMADURA;37;03;2020-03
+2020;Abril;activos;AV;Ávila;MURCIA;9;04;2020-04
+2020;Abril;activos;AV;Ávila;GALICIA;24;04;2020-04
+2020;Abril;activos;AV;Ávila;CANTABRIA;6;04;2020-04
+2020;Abril;activos;AV;Ávila;PAIS VASCO;58;04;2020-04
+2020;Abril;activos;AV;Ávila;EXTREMADURA;87;04;2020-04
+2020;Abril;activos;BU;Burgos;CATALUÑA;127;04;2020-04
+2020;Abril;activos;BU;Burgos;MADRID;576;04;2020-04
+2020;Abril;activos;BU;Burgos;LA RIOJA;79;04;2020-04
+2020;Abril;activos;BU;Burgos;ASTURIAS;50;04;2020-04
+2020;Abril;activos;BU;Burgos;CEUTA;1;04;2020-04
+2020;Abril;activos;BU;Burgos;MURCIA;21;04;2020-04
+2020;Abril;activos;BU;Burgos;CASTILLA-LA MANCHA;35;04;2020-04
+2020;Abril;activos;BU;Burgos;C. VALENCIANA;82;04;2020-04
+2020;Abril;activos;BU;Burgos;PAIS VASCO;1485;04;2020-04
+2020;Abril;activos;BU;Burgos;ARAGON;39;04;2020-04
+2020;Abril;activos;BU;Burgos;EXTREMADURA;55;04;2020-04
+2020;Abril;activos;LE;León;MADRID;750;04;2020-04
+2020;Abril;activos;LE;León;GALICIA;325;04;2020-04
+2020;Abril;activos;LE;León;C. VALENCIANA;110;04;2020-04
+2020;Abril;activos;LE;León;PAIS VASCO;310;04;2020-04
+2020;Abril;activos;LE;León;NAVARRA;39;04;2020-04
+2020;Abril;activos;PA;Palencia;CATALUÑA;51;04;2020-04
+2020;Abril;activos;PA;Palencia;BALEARES;14;04;2020-04
+2020;Abril;activos;PA;Palencia;MURCIA;9;04;2020-04
+2020;Abril;activos;PA;Palencia;CASTILLA-LA MANCHA;25;04;2020-04
+2020;Abril;activos;PA;Palencia;C. VALENCIANA;31;04;2020-04
+2020;Abril;activos;PA;Palencia;ARAGON;10;04;2020-04
+2020;Abril;activos;PA;Palencia;EXTREMADURA;26;04;2020-04
+2020;Abril;activos;SA;Salamanca;CATALUÑA;150;04;2020-04
+2020;Abril;activos;SA;Salamanca;MADRID;759;04;2020-04
+2020;Abril;activos;SA;Salamanca;ASTURIAS;83;04;2020-04
+2020;Abril;activos;SA;Salamanca;BALEARES;45;04;2020-04
+2020;Abril;activos;SA;Salamanca;MURCIA;26;04;2020-04
+2020;Abril;activos;SA;Salamanca;NAVARRA;48;04;2020-04
+2020;Abril;activos;SE;Segovia;LA RIOJA;12;04;2020-04
+2020;Abril;activos;SE;Segovia;ASTURIAS;20;04;2020-04
+2020;Abril;activos;SE;Segovia;C. VALENCIANA;25;04;2020-04
+2020;Abril;activos;SO;Soria;MELILLA;0;04;2020-04
+2020;Abril;activos;SO;Soria;ASTURIAS;12;04;2020-04
+2020;Abril;activos;SO;Soria;BALEARES;18;04;2020-04
+2020;Abril;activos;SO;Soria;CASTILLA-LA MANCHA;33;04;2020-04
+2020;Abril;activos;SO;Soria;CANTABRIA;10;04;2020-04
+2020;Abril;activos;VA;Valladolid;MELILLA;0;04;2020-04
+2020;Abril;activos;VA;Valladolid;MADRID;423;04;2020-04
+2020;Abril;activos;VA;Valladolid;CANTABRIA;47;04;2020-04
+2020;Abril;activos;VA;Valladolid;C. VALENCIANA;61;04;2020-04
+2020;Abril;activos;VA;Valladolid;ARAGON;25;04;2020-04
+2020;Abril;activos;ZA;Zamora;MADRID;672;04;2020-04
+2020;Abril;activos;ZA;Zamora;CEUTA;0;04;2020-04
+2020;Abril;activos;ZA;Zamora;C. VALENCIANA;51;04;2020-04
+2020;Mayo;activos;AV;Ávila;CANARIAS;15;05;2020-05
+2020;Mayo;activos;AV;Ávila;CATALUÑA;39;05;2020-05
+2020;Mayo;activos;AV;Ávila;MADRID;3463;05;2020-05
+2020;Mayo;activos;AV;Ávila;ASTURIAS;21;05;2020-05
+2020;Mayo;activos;AV;Ávila;CEUTA;0;05;2020-05
+2020;Mayo;activos;AV;Ávila;MURCIA;6;05;2020-05
+2020;Mayo;activos;AV;Ávila;GALICIA;24;05;2020-05
+2020;Mayo;activos;AV;Ávila;CANTABRIA;5;05;2020-05
+2020;Mayo;activos;AV;Ávila;C. VALENCIANA;35;05;2020-05
+2020;Mayo;activos;BU;Burgos;MADRID;595;05;2020-05
+2020;Mayo;activos;BU;Burgos;ANDALUCIA;110;05;2020-05
+2020;Mayo;activos;BU;Burgos;CEUTA;1;05;2020-05
+2020;Mayo;activos;BU;Burgos;MURCIA;15;05;2020-05
+2020;Mayo;activos;BU;Burgos;GALICIA;49;05;2020-05
+2020;Mayo;activos;BU;Burgos;CANTABRIA;136;05;2020-05
+2020;Mayo;activos;BU;Burgos;C. VALENCIANA;55;05;2020-05
+2020;Mayo;activos;LE;León;MADRID;769;05;2020-05
+2020;Mayo;activos;LE;León;LA RIOJA;22;05;2020-05
+2020;Mayo;activos;LE;León;ASTURIAS;654;05;2020-05
+2020;Mayo;activos;PA;Palencia;CANARIAS;5;05;2020-05
+2020;Mayo;activos;PA;Palencia;ANDALUCIA;45;05;2020-05
+2020;Mayo;activos;PA;Palencia;LA RIOJA;10;05;2020-05
+2020;Mayo;activos;PA;Palencia;GALICIA;22;05;2020-05
+2020;Mayo;activos;PA;Palencia;CASTILLA-LA MANCHA;14;05;2020-05
+2020;Mayo;activos;PA;Palencia;EXTREMADURA;19;05;2020-05
+2020;Mayo;activos;SA;Salamanca;CATALUÑA;143;05;2020-05
+2020;Mayo;activos;SA;Salamanca;MADRID;814;05;2020-05
+2020;Mayo;activos;SA;Salamanca;BALEARES;43;05;2020-05
+2020;Mayo;activos;SA;Salamanca;GALICIA;73;05;2020-05
+2020;Mayo;activos;SA;Salamanca;PAIS VASCO;339;05;2020-05
+2020;Mayo;activos;SE;Segovia;MELILLA;0;05;2020-05
+2020;Mayo;activos;SE;Segovia;CATALUÑA;32;05;2020-05
+2020;Mayo;activos;SE;Segovia;BALEARES;6;05;2020-05
+2020;Mayo;activos;SE;Segovia;CANTABRIA;6;05;2020-05
+2020;Mayo;activos;SE;Segovia;EXTREMADURA;15;05;2020-05
+2020;Mayo;activos;SE;Segovia;NAVARRA;9;05;2020-05
+2020;Mayo;activos;SO;Soria;MELILLA;0;05;2020-05
+2020;Mayo;activos;SO;Soria;ANDALUCIA;31;05;2020-05
+2020;Mayo;activos;SO;Soria;CEUTA;0;05;2020-05
+2020;Mayo;activos;SO;Soria;CANTABRIA;13;05;2020-05
+2020;Mayo;activos;SO;Soria;C. VALENCIANA;29;05;2020-05
+2020;Mayo;activos;VA;Valladolid;MADRID;425;05;2020-05
+2020;Mayo;activos;VA;Valladolid;ANDALUCIA;80;05;2020-05
+2020;Mayo;activos;VA;Valladolid;CEUTA;0;05;2020-05
+2020;Mayo;activos;VA;Valladolid;MURCIA;7;05;2020-05
+2020;Mayo;activos;VA;Valladolid;CASTILLA-LA MANCHA;34;05;2020-05
+2020;Mayo;activos;VA;Valladolid;ARAGON;18;05;2020-05
+2020;Mayo;activos;ZA;Zamora;ANDALUCIA;41;05;2020-05
+2020;Mayo;activos;ZA;Zamora;LA RIOJA;6;05;2020-05
+2020;Mayo;activos;ZA;Zamora;MURCIA;7;05;2020-05
+2020;Mayo;activos;ZA;Zamora;CASTILLA-LA MANCHA;26;05;2020-05
+2020;Mayo;activos;ZA;Zamora;CANTABRIA;28;05;2020-05
+2020;Mayo;activos;ZA;Zamora;C. VALENCIANA;44;05;2020-05
+2020;Mayo;activos;ZA;Zamora;PAIS VASCO;394;05;2020-05
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;MELILLA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;ANDALUCIA;-5;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;BALEARES;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;MURCIA;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;CANTABRIA;-6;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;C. VALENCIANA;-9;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;ARAGON;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;MELILLA;-1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;LA RIOJA;-11;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;ASTURIAS;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;GALICIA;-2;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;CASTILLA-LA MANCHA;-1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;C. VALENCIANA;-18;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;ARAGON;-18;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;NAVARRA;-20;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;CANARIAS;-8;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;CATALUÑA;-40;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;ANDALUCIA;-6;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;CASTILLA-LA MANCHA;-16;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;EXTREMADURA;-2;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;ANDALUCIA;-7;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;CEUTA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;CASTILLA-LA MANCHA;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;C. VALENCIANA;3;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;EXTREMADURA;-3;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;CANARIAS;-10;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;MURCIA;2;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;CANTABRIA;-7;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;ARAGON;-11;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;CANARIAS;-7;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;CATALUÑA;5;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;MADRID;356;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;BALEARES;-3;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;PAIS VASCO;-8;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;CANARIAS;-1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;BALEARES;4;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;MURCIA;3;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;NAVARRA;-5;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;CEUTA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;CANARIAS;-4;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;LA RIOJA;-1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;MURCIA;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;CASTILLA-LA MANCHA;-4;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;C. VALENCIANA;8;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;PAIS VASCO;25;03;2020-03
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;CANARIAS;-3;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;MADRID;139;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;MURCIA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;GALICIA;-7;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;CASTILLA-LA MANCHA;-16;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;PAIS VASCO;-6;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;ARAGON;-2;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;NAVARRA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;CANARIAS;-8;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;MELILLA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;ANDALUCIA;-43;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;LA RIOJA;-17;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;CEUTA;1;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;MURCIA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;EXTREMADURA;-11;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;CANARIAS;-15;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;MADRID;-18;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;ANDALUCIA;-37;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;ASTURIAS;-28;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;CASTILLA-LA MANCHA;-13;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;C. VALENCIANA;-20;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;MELILLA;-1;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;ASTURIAS;-15;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;CASTILLA-LA MANCHA;-5;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;PAIS VASCO;-55;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;ARAGON;1;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;MELILLA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;ARAGON;-3;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;NAVARRA;-15;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;BALEARES;-5;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;CEUTA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;GALICIA;-10;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;CASTILLA-LA MANCHA;-13;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;CANTABRIA;-1;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;CEUTA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;CANTABRIA;-10;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;NAVARRA;-11;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;MELILLA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;MURCIA;-14;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;CASTILLA-LA MANCHA;-15;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;CANARIAS;-1;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;BALEARES;-4;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;CEUTA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;C. VALENCIANA;-7;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;EXTREMADURA;-9;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;NAVARRA;1;04;2020-04
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;MELILLA;4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;MADRID;108;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;LA RIOJA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;ASTURIAS;1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;GALICIA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;CANTABRIA;-1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;MELILLA;-1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;LA RIOJA;1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;ASTURIAS;3;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;BALEARES;-5;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;CEUTA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;MURCIA;-6;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;PAIS VASCO;28;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;ARAGON;-1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;EXTREMADURA;-17;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;MELILLA;-1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;CATALUÑA;-6;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;BALEARES;-6;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;CEUTA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;MURCIA;-4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;ARAGON;1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;NAVARRA;-4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;MADRID;7;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;C. VALENCIANA;-2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;CANARIAS;-16;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;MELILLA;-1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;MADRID;55;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;ANDALUCIA;-11;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;ASTURIAS;-6;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;CEUTA;-2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;MURCIA;-9;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;CASTILLA-LA MANCHA;-9;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;ARAGON;-7;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;LA RIOJA;-2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;CEUTA;-2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;MURCIA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;NAVARRA;1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;ANDALUCIA;-17;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;LA RIOJA;-2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;BALEARES;-4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;CANTABRIA;3;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;C. VALENCIANA;4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;PAIS VASCO;-1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;MELILLA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;ASTURIAS;-6;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;PAIS VASCO;1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;EXTREMADURA;-3;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;NAVARRA;-8;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;MELILLA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;MURCIA;-2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;GALICIA;-3;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;CASTILLA-LA MANCHA;-3;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;ARAGON;1;05;2020-05
+2020;Enero;altas;AV;Ávila;CANARIAS;7;01;2020-01
+2020;Enero;altas;AV;Ávila;ANDALUCIA;34;01;2020-01
+2020;Enero;altas;AV;Ávila;ASTURIAS;7;01;2020-01
+2020;Enero;altas;AV;Ávila;CANTABRIA;3;01;2020-01
+2020;Enero;altas;AV;Ávila;C. VALENCIANA;30;01;2020-01
+2020;Enero;altas;AV;Ávila;PAIS VASCO;22;01;2020-01
+2020;Enero;altas;BU;Burgos;CANARIAS;10;01;2020-01
+2020;Enero;altas;BU;Burgos;MELILLA;1;01;2020-01
+2020;Enero;altas;BU;Burgos;CATALUÑA;48;01;2020-01
+2020;Enero;altas;BU;Burgos;MADRID;198;01;2020-01
+2020;Enero;altas;BU;Burgos;ANDALUCIA;56;01;2020-01
+2020;Enero;altas;BU;Burgos;LA RIOJA;38;01;2020-01
+2020;Enero;altas;BU;Burgos;ASTURIAS;27;01;2020-01
+2020;Enero;altas;BU;Burgos;CEUTA;0;01;2020-01
+2020;Enero;altas;BU;Burgos;ARAGON;29;01;2020-01
+2020;Enero;altas;LE;León;MELILLA;1;01;2020-01
+2020;Enero;altas;LE;León;MADRID;294;01;2020-01
+2020;Enero;altas;LE;León;LA RIOJA;15;01;2020-01
+2020;Enero;altas;LE;León;BALEARES;41;01;2020-01
+2020;Enero;altas;LE;León;CEUTA;0;01;2020-01
+2020;Enero;altas;LE;León;EXTREMADURA;19;01;2020-01
+2020;Enero;altas;PA;Palencia;ANDALUCIA;30;01;2020-01
+2020;Enero;altas;PA;Palencia;ASTURIAS;27;01;2020-01
+2020;Enero;altas;PA;Palencia;CASTILLA-LA MANCHA;14;01;2020-01
+2020;Enero;altas;PA;Palencia;PAIS VASCO;116;01;2020-01
+2020;Enero;altas;PA;Palencia;ARAGON;6;01;2020-01
+2020;Enero;altas;SA;Salamanca;BALEARES;24;01;2020-01
+2020;Enero;altas;SA;Salamanca;MURCIA;19;01;2020-01
+2020;Enero;altas;SA;Salamanca;CANTABRIA;23;01;2020-01
+2020;Enero;altas;SA;Salamanca;PAIS VASCO;126;01;2020-01
+2020;Enero;altas;SA;Salamanca;ARAGON;18;01;2020-01
+2020;Enero;altas;SE;Segovia;MELILLA;0;01;2020-01
+2020;Enero;altas;SE;Segovia;LA RIOJA;4;01;2020-01
+2020;Enero;altas;SE;Segovia;MURCIA;4;01;2020-01
+2020;Enero;altas;SE;Segovia;GALICIA;14;01;2020-01
+2020;Enero;altas;SE;Segovia;CASTILLA-LA MANCHA;23;01;2020-01
+2020;Enero;altas;SE;Segovia;ARAGON;4;01;2020-01
+2020;Enero;altas;SO;Soria;CANARIAS;4;01;2020-01
+2020;Enero;altas;SO;Soria;MADRID;93;01;2020-01
+2020;Enero;altas;SO;Soria;ANDALUCIA;30;01;2020-01
+2020;Enero;altas;SO;Soria;BALEARES;11;01;2020-01
+2020;Enero;altas;SO;Soria;CEUTA;0;01;2020-01
+2020;Enero;altas;SO;Soria;MURCIA;3;01;2020-01
+2020;Enero;altas;SO;Soria;GALICIA;7;01;2020-01
+2020;Enero;altas;SO;Soria;PAIS VASCO;26;01;2020-01
+2020;Enero;altas;SO;Soria;ARAGON;76;01;2020-01
+2020;Enero;altas;VA;Valladolid;MADRID;159;01;2020-01
+2020;Enero;altas;VA;Valladolid;LA RIOJA;8;01;2020-01
+2020;Enero;altas;VA;Valladolid;ASTURIAS;40;01;2020-01
+2020;Enero;altas;VA;Valladolid;BALEARES;27;01;2020-01
+2020;Enero;altas;VA;Valladolid;MURCIA;10;01;2020-01
+2020;Enero;altas;VA;Valladolid;PAIS VASCO;54;01;2020-01
+2020;Enero;altas;VA;Valladolid;ARAGON;12;01;2020-01
+2020;Enero;altas;VA;Valladolid;NAVARRA;5;01;2020-01
+2020;Enero;altas;ZA;Zamora;LA RIOJA;5;01;2020-01
+2020;Enero;altas;ZA;Zamora;GALICIA;20;01;2020-01
+2020;Febrero;altas;AV;Ávila;MADRID;892;02;2020-02
+2020;Febrero;altas;AV;Ávila;LA RIOJA;1;02;2020-02
+2020;Febrero;altas;AV;Ávila;ASTURIAS;12;02;2020-02
+2020;Febrero;altas;AV;Ávila;CANTABRIA;2;02;2020-02
+2020;Febrero;altas;AV;Ávila;ARAGON;2;02;2020-02
+2020;Febrero;altas;AV;Ávila;EXTREMADURA;26;02;2020-02
+2020;Febrero;altas;BU;Burgos;MADRID;155;02;2020-02
+2020;Febrero;altas;BU;Burgos;LA RIOJA;36;02;2020-02
+2020;Febrero;altas;BU;Burgos;CASTILLA-LA MANCHA;16;02;2020-02
+2020;Febrero;altas;BU;Burgos;PAIS VASCO;428;02;2020-02
+2020;Febrero;altas;BU;Burgos;EXTREMADURA;12;02;2020-02
+2020;Febrero;altas;LE;León;CANARIAS;22;02;2020-02
+2020;Febrero;altas;LE;León;CATALUÑA;87;02;2020-02
+2020;Febrero;altas;LE;León;MADRID;229;02;2020-02
+2020;Febrero;altas;LE;León;ANDALUCIA;44;02;2020-02
+2020;Febrero;altas;LE;León;BALEARES;35;02;2020-02
+2020;Febrero;altas;LE;León;MURCIA;4;02;2020-02
+2020;Febrero;altas;LE;León;CASTILLA-LA MANCHA;27;02;2020-02
+2020;Febrero;altas;LE;León;PAIS VASCO;128;02;2020-02
+2020;Febrero;altas;LE;León;ARAGON;16;02;2020-02
+2020;Febrero;altas;LE;León;EXTREMADURA;21;02;2020-02
+2020;Febrero;altas;PA;Palencia;CANARIAS;8;02;2020-02
+2020;Febrero;altas;PA;Palencia;MELILLA;0;02;2020-02
+2020;Febrero;altas;PA;Palencia;CATALUÑA;18;02;2020-02
+2020;Febrero;altas;PA;Palencia;MADRID;62;02;2020-02
+2020;Febrero;altas;PA;Palencia;LA RIOJA;7;02;2020-02
+2020;Febrero;altas;PA;Palencia;MURCIA;5;02;2020-02
+2020;Febrero;altas;PA;Palencia;CANTABRIA;59;02;2020-02
+2020;Febrero;altas;PA;Palencia;C. VALENCIANA;10;02;2020-02
+2020;Febrero;altas;PA;Palencia;ARAGON;2;02;2020-02
+2020;Febrero;altas;SA;Salamanca;MADRID;202;02;2020-02
+2020;Febrero;altas;SA;Salamanca;ANDALUCIA;62;02;2020-02
+2020;Febrero;altas;SA;Salamanca;CEUTA;2;02;2020-02
+2020;Febrero;altas;SA;Salamanca;ARAGON;9;02;2020-02
+2020;Febrero;altas;SA;Salamanca;NAVARRA;24;02;2020-02
+2020;Febrero;altas;SE;Segovia;MELILLA;0;02;2020-02
+2020;Febrero;altas;SE;Segovia;CATALUÑA;13;02;2020-02
+2020;Febrero;altas;SE;Segovia;LA RIOJA;6;02;2020-02
+2020;Febrero;altas;SE;Segovia;MURCIA;2;02;2020-02
+2020;Febrero;altas;SO;Soria;CANARIAS;7;02;2020-02
+2020;Febrero;altas;SO;Soria;MELILLA;0;02;2020-02
+2020;Febrero;altas;SO;Soria;MADRID;94;02;2020-02
+2020;Febrero;altas;SO;Soria;LA RIOJA;20;02;2020-02
+2020;Febrero;altas;VA;Valladolid;MADRID;87;02;2020-02
+2020;Febrero;altas;VA;Valladolid;BALEARES;5;02;2020-02
+2020;Febrero;altas;VA;Valladolid;GALICIA;26;02;2020-02
+2020;Febrero;altas;VA;Valladolid;CASTILLA-LA MANCHA;16;02;2020-02
+2020;Febrero;altas;VA;Valladolid;ARAGON;11;02;2020-02
+2020;Febrero;altas;ZA;Zamora;CATALUÑA;26;02;2020-02
+2020;Febrero;altas;ZA;Zamora;ANDALUCIA;21;02;2020-02
+2020;Febrero;altas;ZA;Zamora;CEUTA;0;02;2020-02
+2020;Febrero;altas;ZA;Zamora;PAIS VASCO;116;02;2020-02
+2020;Febrero;altas;ZA;Zamora;EXTREMADURA;10;02;2020-02
+2020;Febrero;altas;ZA;Zamora;NAVARRA;4;02;2020-02
+2020;Marzo;altas;AV;Ávila;CANTABRIA;2;03;2020-03
+2020;Marzo;altas;AV;Ávila;C. VALENCIANA;12;03;2020-03
+2020;Marzo;altas;AV;Ávila;PAIS VASCO;20;03;2020-03
+2020;Marzo;altas;BU;Burgos;CANARIAS;5;03;2020-03
+2020;Marzo;altas;BU;Burgos;ANDALUCIA;45;03;2020-03
+2020;Marzo;altas;BU;Burgos;ASTURIAS;23;03;2020-03
+2020;Marzo;altas;BU;Burgos;CANTABRIA;54;03;2020-03
+2020;Marzo;altas;BU;Burgos;ARAGON;11;03;2020-03
+2020;Marzo;altas;LE;León;CANARIAS;16;03;2020-03
+2020;Marzo;altas;LE;León;CATALUÑA;93;03;2020-03
+2020;Marzo;altas;LE;León;MADRID;330;03;2020-03
+2020;Marzo;altas;LE;León;LA RIOJA;12;03;2020-03
+2020;Marzo;altas;LE;León;ASTURIAS;246;03;2020-03
+2020;Marzo;altas;LE;León;BALEARES;16;03;2020-03
+2020;Marzo;altas;LE;León;CASTILLA-LA MANCHA;14;03;2020-03
+2020;Marzo;altas;LE;León;PAIS VASCO;124;03;2020-03
+2020;Marzo;altas;LE;León;ARAGON;6;03;2020-03
+2020;Marzo;altas;LE;León;NAVARRA;13;03;2020-03
+2020;Marzo;altas;PA;Palencia;CANARIAS;2;03;2020-03
+2020;Marzo;altas;PA;Palencia;ASTURIAS;24;03;2020-03
+2020;Marzo;altas;PA;Palencia;BALEARES;4;03;2020-03
+2020;Marzo;altas;PA;Palencia;CEUTA;0;03;2020-03
+2020;Marzo;altas;PA;Palencia;MURCIA;2;03;2020-03
+2020;Marzo;altas;PA;Palencia;GALICIA;5;03;2020-03
+2020;Marzo;altas;PA;Palencia;CANTABRIA;56;03;2020-03
+2020;Marzo;altas;PA;Palencia;NAVARRA;4;03;2020-03
+2020;Marzo;altas;SA;Salamanca;CANARIAS;17;03;2020-03
+2020;Marzo;altas;SA;Salamanca;ANDALUCIA;33;03;2020-03
+2020;Marzo;altas;SA;Salamanca;CEUTA;1;03;2020-03
+2020;Marzo;altas;SA;Salamanca;MURCIA;9;03;2020-03
+2020;Marzo;altas;SA;Salamanca;GALICIA;28;03;2020-03
+2020;Marzo;altas;SE;Segovia;CANARIAS;3;03;2020-03
+2020;Marzo;altas;SE;Segovia;MELILLA;0;03;2020-03
+2020;Marzo;altas;SE;Segovia;ASTURIAS;6;03;2020-03
+2020;Marzo;altas;SE;Segovia;CEUTA;0;03;2020-03
+2020;Marzo;altas;SE;Segovia;GALICIA;11;03;2020-03
+2020;Marzo;altas;SE;Segovia;CASTILLA-LA MANCHA;20;03;2020-03
+2020;Marzo;altas;SE;Segovia;CANTABRIA;3;03;2020-03
+2020;Marzo;altas;SE;Segovia;C. VALENCIANA;5;03;2020-03
+2020;Marzo;altas;SE;Segovia;NAVARRA;4;03;2020-03
+2020;Marzo;altas;SO;Soria;MELILLA;0;03;2020-03
+2020;Marzo;altas;SO;Soria;ANDALUCIA;14;03;2020-03
+2020;Marzo;altas;SO;Soria;LA RIOJA;20;03;2020-03
+2020;Marzo;altas;SO;Soria;BALEARES;7;03;2020-03
+2020;Marzo;altas;SO;Soria;CEUTA;0;03;2020-03
+2020;Marzo;altas;SO;Soria;MURCIA;4;03;2020-03
+2020;Marzo;altas;SO;Soria;GALICIA;4;03;2020-03
+2020;Marzo;altas;SO;Soria;ARAGON;70;03;2020-03
+2020;Marzo;altas;VA;Valladolid;MELILLA;0;03;2020-03
+2020;Marzo;altas;VA;Valladolid;MADRID;155;03;2020-03
+2020;Marzo;altas;VA;Valladolid;LA RIOJA;15;03;2020-03
+2020;Marzo;altas;VA;Valladolid;GALICIA;17;03;2020-03
+2020;Marzo;altas;VA;Valladolid;CASTILLA-LA MANCHA;19;03;2020-03
+2020;Marzo;altas;VA;Valladolid;NAVARRA;9;03;2020-03
+2020;Marzo;altas;ZA;Zamora;ASTURIAS;53;03;2020-03
+2020;Marzo;altas;ZA;Zamora;MURCIA;3;03;2020-03
+2020;Marzo;altas;ZA;Zamora;CASTILLA-LA MANCHA;14;03;2020-03
+2020;Marzo;altas;ZA;Zamora;C. VALENCIANA;24;03;2020-03
+2020;Marzo;altas;ZA;Zamora;PAIS VASCO;172;03;2020-03
+2020;Marzo;altas;ZA;Zamora;EXTREMADURA;11;03;2020-03
+2020;Abril;altas;AV;Ávila;ANDALUCIA;9;04;2020-04
+2020;Abril;altas;AV;Ávila;ASTURIAS;7;04;2020-04
+2020;Abril;altas;AV;Ávila;BALEARES;1;04;2020-04
+2020;Abril;altas;AV;Ávila;CEUTA;0;04;2020-04
+2020;Abril;altas;AV;Ávila;MURCIA;1;04;2020-04
+2020;Abril;altas;AV;Ávila;CASTILLA-LA MANCHA;41;04;2020-04
+2020;Abril;altas;AV;Ávila;CANTABRIA;2;04;2020-04
+2020;Abril;altas;AV;Ávila;EXTREMADURA;19;04;2020-04
+2020;Abril;altas;AV;Ávila;NAVARRA;1;04;2020-04
+2020;Abril;altas;BU;Burgos;CANARIAS;2;04;2020-04
+2020;Abril;altas;BU;Burgos;MELILLA;0;04;2020-04
+2020;Abril;altas;BU;Burgos;LA RIOJA;17;04;2020-04
+2020;Abril;altas;BU;Burgos;CEUTA;1;04;2020-04
+2020;Abril;altas;BU;Burgos;C. VALENCIANA;11;04;2020-04
+2020;Abril;altas;BU;Burgos;ARAGON;5;04;2020-04
+2020;Abril;altas;LE;León;MELILLA;2;04;2020-04
+2020;Abril;altas;LE;León;CATALUÑA;58;04;2020-04
+2020;Abril;altas;LE;León;MADRID;200;04;2020-04
+2020;Abril;altas;LE;León;LA RIOJA;3;04;2020-04
+2020;Abril;altas;LE;León;BALEARES;8;04;2020-04
+2020;Abril;altas;LE;León;EXTREMADURA;4;04;2020-04
+2020;Abril;altas;PA;Palencia;MELILLA;0;04;2020-04
+2020;Abril;altas;PA;Palencia;CATALUÑA;8;04;2020-04
+2020;Abril;altas;PA;Palencia;MADRID;74;04;2020-04
+2020;Abril;altas;PA;Palencia;LA RIOJA;2;04;2020-04
+2020;Abril;altas;PA;Palencia;ASTURIAS;13;04;2020-04
+2020;Abril;altas;PA;Palencia;C. VALENCIANA;5;04;2020-04
+2020;Abril;altas;PA;Palencia;ARAGON;4;04;2020-04
+2020;Abril;altas;PA;Palencia;NAVARRA;1;04;2020-04
+2020;Abril;altas;SA;Salamanca;ANDALUCIA;6;04;2020-04
+2020;Abril;altas;SA;Salamanca;ASTURIAS;16;04;2020-04
+2020;Abril;altas;SA;Salamanca;CEUTA;2;04;2020-04
+2020;Abril;altas;SA;Salamanca;GALICIA;13;04;2020-04
+2020;Abril;altas;SA;Salamanca;ARAGON;5;04;2020-04
+2020;Abril;altas;SE;Segovia;CANARIAS;1;04;2020-04
+2020;Abril;altas;SE;Segovia;GALICIA;4;04;2020-04
+2020;Abril;altas;SE;Segovia;PAIS VASCO;2;04;2020-04
+2020;Abril;altas;SE;Segovia;EXTREMADURA;3;04;2020-04
+2020;Abril;altas;SE;Segovia;NAVARRA;1;04;2020-04
+2020;Abril;altas;SO;Soria;MELILLA;0;04;2020-04
+2020;Abril;altas;SO;Soria;MADRID;90;04;2020-04
+2020;Abril;altas;SO;Soria;CEUTA;0;04;2020-04
+2020;Abril;altas;SO;Soria;GALICIA;6;04;2020-04
+2020;Abril;altas;SO;Soria;C. VALENCIANA;6;04;2020-04
+2020;Abril;altas;SO;Soria;EXTREMADURA;6;04;2020-04
+2020;Abril;altas;VA;Valladolid;ASTURIAS;14;04;2020-04
+2020;Abril;altas;VA;Valladolid;C. VALENCIANA;10;04;2020-04
+2020;Abril;altas;VA;Valladolid;PAIS VASCO;23;04;2020-04
+2020;Abril;altas;ZA;Zamora;CATALUÑA;20;04;2020-04
+2020;Abril;altas;ZA;Zamora;LA RIOJA;1;04;2020-04
+2020;Abril;altas;ZA;Zamora;CEUTA;0;04;2020-04
+2020;Abril;altas;ZA;Zamora;CANTABRIA;5;04;2020-04
+2020;Mayo;altas;AV;Ávila;CATALUÑA;10;05;2020-05
+2020;Mayo;altas;AV;Ávila;MADRID;1170;05;2020-05
+2020;Mayo;altas;AV;Ávila;LA RIOJA;0;05;2020-05
+2020;Mayo;altas;BU;Burgos;MELILLA;0;05;2020-05
+2020;Mayo;altas;BU;Burgos;CATALUÑA;32;05;2020-05
+2020;Mayo;altas;BU;Burgos;MADRID;181;05;2020-05
+2020;Mayo;altas;BU;Burgos;ANDALUCIA;42;05;2020-05
+2020;Mayo;altas;BU;Burgos;ASTURIAS;22;05;2020-05
+2020;Mayo;altas;BU;Burgos;GALICIA;13;05;2020-05
+2020;Mayo;altas;BU;Burgos;CASTILLA-LA MANCHA;5;05;2020-05
+2020;Mayo;altas;LE;León;CANARIAS;15;05;2020-05
+2020;Mayo;altas;LE;León;CATALUÑA;92;05;2020-05
+2020;Mayo;altas;LE;León;LA RIOJA;5;05;2020-05
+2020;Mayo;altas;LE;León;ASTURIAS;181;05;2020-05
+2020;Mayo;altas;LE;León;CEUTA;0;05;2020-05
+2020;Mayo;altas;LE;León;PAIS VASCO;75;05;2020-05
+2020;Mayo;altas;LE;León;ARAGON;9;05;2020-05
+2020;Mayo;altas;LE;León;EXTREMADURA;17;05;2020-05
+2020;Mayo;altas;PA;Palencia;MELILLA;0;05;2020-05
+2020;Mayo;altas;PA;Palencia;MADRID;85;05;2020-05
+2020;Mayo;altas;PA;Palencia;ANDALUCIA;14;05;2020-05
+2020;Mayo;altas;PA;Palencia;ASTURIAS;20;05;2020-05
+2020;Mayo;altas;PA;Palencia;CEUTA;0;05;2020-05
+2020;Mayo;altas;PA;Palencia;C. VALENCIANA;7;05;2020-05
+2020;Mayo;altas;PA;Palencia;NAVARRA;4;05;2020-05
+2020;Mayo;altas;SA;Salamanca;BALEARES;15;05;2020-05
+2020;Mayo;altas;SA;Salamanca;EXTREMADURA;81;05;2020-05
+2020;Mayo;altas;SE;Segovia;CATALUÑA;4;05;2020-05
+2020;Mayo;altas;SE;Segovia;ANDALUCIA;14;05;2020-05
+2020;Mayo;altas;SE;Segovia;CASTILLA-LA MANCHA;13;05;2020-05
+2020;Mayo;altas;SE;Segovia;ARAGON;2;05;2020-05
+2020;Mayo;altas;SE;Segovia;EXTREMADURA;1;05;2020-05
+2020;Mayo;altas;SO;Soria;CATALUÑA;18;05;2020-05
+2020;Mayo;altas;SO;Soria;MADRID;123;05;2020-05
+2020;Mayo;altas;SO;Soria;ASTURIAS;0;05;2020-05
+2020;Mayo;altas;SO;Soria;CEUTA;0;05;2020-05
+2020;Mayo;altas;SO;Soria;MURCIA;0;05;2020-05
+2020;Mayo;altas;SO;Soria;CANTABRIA;8;05;2020-05
+2020;Mayo;altas;SO;Soria;C. VALENCIANA;11;05;2020-05
+2020;Mayo;altas;VA;Valladolid;MADRID;136;05;2020-05
+2020;Mayo;altas;VA;Valladolid;ANDALUCIA;27;05;2020-05
+2020;Mayo;altas;VA;Valladolid;CANTABRIA;11;05;2020-05
+2020;Mayo;altas;VA;Valladolid;PAIS VASCO;39;05;2020-05
+2020;Mayo;altas;VA;Valladolid;EXTREMADURA;11;05;2020-05
+2020;Mayo;altas;VA;Valladolid;NAVARRA;1;05;2020-05
+2020;Mayo;altas;ZA;Zamora;CANARIAS;1;05;2020-05
+2020;Mayo;altas;ZA;Zamora;CATALUÑA;21;05;2020-05
+2020;Mayo;altas;ZA;Zamora;MADRID;219;05;2020-05
+2020;Mayo;altas;ZA;Zamora;ANDALUCIA;15;05;2020-05
+2020;Mayo;altas;ZA;Zamora;ASTURIAS;38;05;2020-05
+2020;Mayo;altas;ZA;Zamora;CEUTA;0;05;2020-05
+2020;Mayo;altas;ZA;Zamora;MURCIA;0;05;2020-05
+2020;Mayo;altas;ZA;Zamora;PAIS VASCO;83;05;2020-05
+2020;Mayo;altas;ZA;Zamora;ARAGON;2;05;2020-05
+2020;Mayo;altas;ZA;Zamora;EXTREMADURA;3;05;2020-05
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;CATALUÑA;-11;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;MADRID;529;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;BALEARES;-2;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;GALICIA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;CANTABRIA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;C. VALENCIANA;-8;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;EXTREMADURA;1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;CANARIAS;-10;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;CATALUÑA;-3;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;ASTURIAS;6;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;CASTILLA-LA MANCHA;-5;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;EXTREMADURA;6;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;CANARIAS;-6;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;MADRID;101;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;ASTURIAS;-30;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;BALEARES;-19;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;GALICIA;-45;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;CANTABRIA;-16;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;C. VALENCIANA;3;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;NAVARRA;-10;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;MELILLA;1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;MADRID;67;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;ANDALUCIA;3;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;LA RIOJA;-3;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;ASTURIAS;-5;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;CEUTA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;C. VALENCIANA;4;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;EXTREMADURA;-11;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;LA RIOJA;-4;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;CEUTA;-1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;CANTABRIA;-27;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;MADRID;422;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;LA RIOJA;-3;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;MURCIA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;C. VALENCIANA;-2;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;NAVARRA;1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;CANARIAS;-4;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;MELILLA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;LA RIOJA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;ASTURIAS;-1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;GALICIA;-5;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;CASTILLA-LA MANCHA;-4;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;C. VALENCIANA;-11;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;EXTREMADURA;2;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;NAVARRA;-4;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;CANARIAS;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;MELILLA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;ANDALUCIA;-12;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;LA RIOJA;7;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;CEUTA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;CASTILLA-LA MANCHA;3;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;ARAGON;-1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;NAVARRA;4;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;CANARIAS;-2;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;MADRID;165;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;CEUTA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;MURCIA;1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;GALICIA;-12;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;CASTILLA-LA MANCHA;7;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;C. VALENCIANA;5;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;ARAGON;0;03;2020-03
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;MADRID;-400;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;ANDALUCIA;-8;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;CASTILLA-LA MANCHA;-6;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;CANTABRIA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;C. VALENCIANA;-3;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;PAIS VASCO;-5;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;ARAGON;-6;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;NAVARRA;-5;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;MELILLA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;CATALUÑA;-22;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;MADRID;-109;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;MURCIA;3;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;CASTILLA-LA MANCHA;-3;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;CANTABRIA;-24;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;C. VALENCIANA;-10;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;NAVARRA;-8;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;MELILLA;2;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;CATALUÑA;-35;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;MADRID;-130;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;ANDALUCIA;-24;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;LA RIOJA;-9;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;ASTURIAS;-53;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;BALEARES;-8;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;CEUTA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;MURCIA;-6;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;CASTILLA-LA MANCHA;-3;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;MELILLA;-1;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;MADRID;-55;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;ANDALUCIA;-6;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;CEUTA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;CASTILLA-LA MANCHA;-2;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;CANTABRIA;-15;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;PAIS VASCO;-54;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;NAVARRA;-3;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;MELILLA;-1;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;ANDALUCIA;-27;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;LA RIOJA;-11;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;ASTURIAS;-14;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;CEUTA;1;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;CANTABRIA;-10;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;EXTREMADURA;-57;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;CANARIAS;-2;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;CATALUÑA;-7;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;GALICIA;-7;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;NAVARRA;-3;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;CANARIAS;-3;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;MADRID;-99;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;CANTABRIA;-3;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;ARAGON;-43;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;CANARIAS;-8;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;ANDALUCIA;-10;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;BALEARES;-7;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;CANTABRIA;-11;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;CATALUÑA;-48;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;ANDALUCIA;-8;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;LA RIOJA;-4;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;CEUTA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;CANTABRIA;-1;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;ARAGON;-4;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;NAVARRA;0;04;2020-04
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;CANARIAS;7;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;ASTURIAS;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;CEUTA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;ARAGON;2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;MADRID;30;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;ANDALUCIA;33;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;ASTURIAS;15;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;BALEARES;-2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;CEUTA;-1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;GALICIA;5;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;CASTILLA-LA MANCHA;-3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;NAVARRA;2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;ANDALUCIA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;GALICIA;8;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;C. VALENCIANA;-6;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;EXTREMADURA;13;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;MADRID;11;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;ANDALUCIA;2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;BALEARES;-1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;GALICIA;1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;CASTILLA-LA MANCHA;-3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;C. VALENCIANA;2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;PAIS VASCO;30;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;ARAGON;-4;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;NAVARRA;3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;LA RIOJA;3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;ASTURIAS;7;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;CASTILLA-LA MANCHA;4;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;CANTABRIA;2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;PAIS VASCO;36;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;ARAGON;-3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;EXTREMADURA;34;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;CATALUÑA;-4;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;ANDALUCIA;7;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;MURCIA;2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;CANTABRIA;-1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;C. VALENCIANA;-1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;ARAGON;1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;CANARIAS;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;MELILLA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;MADRID;33;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;ANDALUCIA;-2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;BALEARES;1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;MURCIA;-1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;GALICIA;-6;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;CASTILLA-LA MANCHA;10;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;ARAGON;23;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;MELILLA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;CATALUÑA;-4;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;MADRID;-12;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;LA RIOJA;3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;BALEARES;1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;CEUTA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;CASTILLA-LA MANCHA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;PAIS VASCO;16;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;MELILLA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;CATALUÑA;1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;MADRID;81;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;MURCIA;-3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;CASTILLA-LA MANCHA;1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;PAIS VASCO;15;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;EXTREMADURA;-2;05;2020-05
+2020;Enero;activos;AV;Ávila;CANARIAS;31;01;2020-01
+2020;Enero;activos;AV;Ávila;CATALUÑA;88;01;2020-01
+2020;Enero;activos;AV;Ávila;MADRID;3123;01;2020-01
+2020;Enero;activos;AV;Ávila;ANDALUCIA;85;01;2020-01
+2020;Enero;activos;AV;Ávila;LA RIOJA;4;01;2020-01
+2020;Enero;activos;AV;Ávila;ASTURIAS;25;01;2020-01
+2020;Enero;activos;AV;Ávila;CEUTA;1;01;2020-01
+2020;Enero;activos;AV;Ávila;MURCIA;15;01;2020-01
+2020;Enero;activos;AV;Ávila;CASTILLA-LA MANCHA;230;01;2020-01
+2020;Enero;activos;AV;Ávila;C. VALENCIANA;88;01;2020-01
+2020;Enero;activos;AV;Ávila;EXTREMADURA;106;01;2020-01
+2020;Enero;activos;BU;Burgos;CATALUÑA;242;01;2020-01
+2020;Enero;activos;BU;Burgos;ANDALUCIA;166;01;2020-01
+2020;Enero;activos;BU;Burgos;LA RIOJA;120;01;2020-01
+2020;Enero;activos;BU;Burgos;ASTURIAS;75;01;2020-01
+2020;Enero;activos;BU;Burgos;CEUTA;0;01;2020-01
+2020;Enero;activos;LE;León;MURCIA;44;01;2020-01
+2020;Enero;activos;LE;León;PAIS VASCO;489;01;2020-01
+2020;Enero;activos;LE;León;ARAGON;67;01;2020-01
+2020;Enero;activos;LE;León;NAVARRA;54;01;2020-01
+2020;Enero;activos;PA;Palencia;GALICIA;45;01;2020-01
+2020;Enero;activos;PA;Palencia;CASTILLA-LA MANCHA;34;01;2020-01
+2020;Enero;activos;PA;Palencia;CANTABRIA;250;01;2020-01
+2020;Enero;activos;PA;Palencia;EXTREMADURA;22;01;2020-01
+2020;Enero;activos;SA;Salamanca;MELILLA;0;01;2020-01
+2020;Enero;activos;SA;Salamanca;ANDALUCIA;172;01;2020-01
+2020;Enero;activos;SA;Salamanca;BALEARES;71;01;2020-01
+2020;Enero;activos;SA;Salamanca;CEUTA;4;01;2020-01
+2020;Enero;activos;SA;Salamanca;GALICIA;108;01;2020-01
+2020;Enero;activos;SA;Salamanca;C. VALENCIANA;109;01;2020-01
+2020;Enero;activos;SA;Salamanca;ARAGON;45;01;2020-01
+2020;Enero;activos;SA;Salamanca;EXTREMADURA;462;01;2020-01
+2020;Enero;activos;SA;Salamanca;NAVARRA;76;01;2020-01
+2020;Enero;activos;SE;Segovia;CANARIAS;21;01;2020-01
+2020;Enero;activos;SE;Segovia;MELILLA;1;01;2020-01
+2020;Enero;activos;SE;Segovia;CANTABRIA;20;01;2020-01
+2020;Enero;activos;SO;Soria;MELILLA;0;01;2020-01
+2020;Enero;activos;SO;Soria;LA RIOJA;67;01;2020-01
+2020;Enero;activos;SO;Soria;BALEARES;15;01;2020-01
+2020;Enero;activos;SO;Soria;CEUTA;1;01;2020-01
+2020;Enero;activos;SO;Soria;ARAGON;267;01;2020-01
+2020;Enero;activos;SO;Soria;EXTREMADURA;25;01;2020-01
+2020;Enero;activos;SO;Soria;NAVARRA;57;01;2020-01
+2020;Enero;activos;VA;Valladolid;CANARIAS;60;01;2020-01
+2020;Enero;activos;VA;Valladolid;MELILLA;1;01;2020-01
+2020;Enero;activos;VA;Valladolid;CATALUÑA;128;01;2020-01
+2020;Enero;activos;VA;Valladolid;ANDALUCIA;127;01;2020-01
+2020;Enero;activos;VA;Valladolid;ASTURIAS;105;01;2020-01
+2020;Enero;activos;VA;Valladolid;BALEARES;67;01;2020-01
+2020;Enero;activos;VA;Valladolid;GALICIA;93;01;2020-01
+2020;Enero;activos;VA;Valladolid;EXTREMADURA;85;01;2020-01
+2020;Enero;activos;VA;Valladolid;NAVARRA;22;01;2020-01
+2020;Enero;activos;ZA;Zamora;LA RIOJA;13;01;2020-01
+2020;Enero;activos;ZA;Zamora;BALEARES;32;01;2020-01
+2020;Enero;activos;ZA;Zamora;CEUTA;0;01;2020-01
+2020;Enero;activos;ZA;Zamora;C. VALENCIANA;66;01;2020-01
+2020;Enero;activos;ZA;Zamora;ARAGON;27;01;2020-01
+2020;Enero;activos;ZA;Zamora;EXTREMADURA;45;01;2020-01
+2020;Febrero;activos;AV;Ávila;MELILLA;0;02;2020-02
+2020;Febrero;activos;AV;Ávila;CATALUÑA;65;02;2020-02
+2020;Febrero;activos;AV;Ávila;CEUTA;0;02;2020-02
+2020;Febrero;activos;AV;Ávila;CASTILLA-LA MANCHA;196;02;2020-02
+2020;Febrero;activos;AV;Ávila;PAIS VASCO;62;02;2020-02
+2020;Febrero;activos;AV;Ávila;ARAGON;12;02;2020-02
+2020;Febrero;activos;AV;Ávila;EXTREMADURA;92;02;2020-02
+2020;Febrero;activos;AV;Ávila;NAVARRA;11;02;2020-02
+2020;Febrero;activos;BU;Burgos;CANARIAS;34;02;2020-02
+2020;Febrero;activos;BU;Burgos;LA RIOJA;107;02;2020-02
+2020;Febrero;activos;BU;Burgos;ASTURIAS;61;02;2020-02
+2020;Febrero;activos;BU;Burgos;MURCIA;27;02;2020-02
+2020;Febrero;activos;BU;Burgos;GALICIA;72;02;2020-02
+2020;Febrero;activos;BU;Burgos;CANTABRIA;151;02;2020-02
+2020;Febrero;activos;BU;Burgos;C. VALENCIANA;130;02;2020-02
+2020;Febrero;activos;BU;Burgos;PAIS VASCO;1460;02;2020-02
+2020;Febrero;activos;BU;Burgos;ARAGON;75;02;2020-02
+2020;Febrero;activos;LE;León;LA RIOJA;38;02;2020-02
+2020;Febrero;activos;LE;León;CASTILLA-LA MANCHA;79;02;2020-02
+2020;Febrero;activos;LE;León;CANTABRIA;143;02;2020-02
+2020;Febrero;activos;PA;Palencia;CANARIAS;28;02;2020-02
+2020;Febrero;activos;PA;Palencia;CATALUÑA;65;02;2020-02
+2020;Febrero;activos;PA;Palencia;MADRID;231;02;2020-02
+2020;Febrero;activos;PA;Palencia;ANDALUCIA;65;02;2020-02
+2020;Febrero;activos;PA;Palencia;LA RIOJA;13;02;2020-02
+2020;Febrero;activos;PA;Palencia;ASTURIAS;78;02;2020-02
+2020;Febrero;activos;PA;Palencia;GALICIA;37;02;2020-02
+2020;Febrero;activos;PA;Palencia;CANTABRIA;199;02;2020-02
+2020;Febrero;activos;PA;Palencia;PAIS VASCO;382;02;2020-02
+2020;Febrero;activos;PA;Palencia;ARAGON;15;02;2020-02
+2020;Febrero;activos;PA;Palencia;NAVARRA;24;02;2020-02
+2020;Febrero;activos;SA;Salamanca;CANARIAS;78;02;2020-02
+2020;Febrero;activos;SA;Salamanca;CATALUÑA;175;02;2020-02
+2020;Febrero;activos;SA;Salamanca;GALICIA;113;02;2020-02
+2020;Febrero;activos;SA;Salamanca;C. VALENCIANA;107;02;2020-02
+2020;Febrero;activos;SA;Salamanca;ARAGON;38;02;2020-02
+2020;Febrero;activos;SE;Segovia;MELILLA;0;02;2020-02
+2020;Febrero;activos;SE;Segovia;CATALUÑA;39;02;2020-02
+2020;Febrero;activos;SE;Segovia;MADRID;1182;02;2020-02
+2020;Febrero;activos;SE;Segovia;CEUTA;2;02;2020-02
+2020;Febrero;activos;SE;Segovia;C. VALENCIANA;35;02;2020-02
+2020;Febrero;activos;SO;Soria;CANARIAS;16;02;2020-02
+2020;Febrero;activos;SO;Soria;CATALUÑA;179;02;2020-02
+2020;Febrero;activos;SO;Soria;MURCIA;7;02;2020-02
+2020;Febrero;activos;SO;Soria;GALICIA;20;02;2020-02
+2020;Febrero;activos;SO;Soria;CANTABRIA;19;02;2020-02
+2020;Febrero;activos;VA;Valladolid;CANARIAS;44;02;2020-02
+2020;Febrero;activos;VA;Valladolid;CATALUÑA;98;02;2020-02
+2020;Febrero;activos;VA;Valladolid;MADRID;358;02;2020-02
+2020;Febrero;activos;VA;Valladolid;ANDALUCIA;109;02;2020-02
+2020;Febrero;activos;VA;Valladolid;CEUTA;0;02;2020-02
+2020;Febrero;activos;VA;Valladolid;GALICIA;90;02;2020-02
+2020;Febrero;activos;VA;Valladolid;CANTABRIA;67;02;2020-02
+2020;Febrero;activos;VA;Valladolid;EXTREMADURA;84;02;2020-02
+2020;Febrero;activos;ZA;Zamora;MADRID;527;02;2020-02
+2020;Febrero;activos;ZA;Zamora;BALEARES;17;02;2020-02
+2020;Febrero;activos;ZA;Zamora;MURCIA;7;02;2020-02
+2020;Febrero;activos;ZA;Zamora;GALICIA;83;02;2020-02
+2020;Febrero;activos;ZA;Zamora;CASTILLA-LA MANCHA;37;02;2020-02
+2020;Febrero;activos;ZA;Zamora;NAVARRA;15;02;2020-02
+2020;Marzo;activos;AV;Ávila;CANARIAS;21;03;2020-03
+2020;Marzo;activos;AV;Ávila;ANDALUCIA;78;03;2020-03
+2020;Marzo;activos;AV;Ávila;LA RIOJA;1;03;2020-03
+2020;Marzo;activos;AV;Ávila;ASTURIAS;30;03;2020-03
+2020;Marzo;activos;AV;Ávila;BALEARES;22;03;2020-03
+2020;Marzo;activos;AV;Ávila;CEUTA;0;03;2020-03
+2020;Marzo;activos;AV;Ávila;MURCIA;9;03;2020-03
+2020;Marzo;activos;AV;Ávila;GALICIA;31;03;2020-03
+2020;Marzo;activos;AV;Ávila;PAIS VASCO;64;03;2020-03
+2020;Marzo;activos;BU;Burgos;MELILLA;1;03;2020-03
+2020;Marzo;activos;BU;Burgos;MADRID;605;03;2020-03
+2020;Marzo;activos;BU;Burgos;ANDALUCIA;151;03;2020-03
+2020;Marzo;activos;BU;Burgos;LA RIOJA;96;03;2020-03
+2020;Marzo;activos;BU;Burgos;MURCIA;21;03;2020-03
+2020;Marzo;activos;BU;Burgos;GALICIA;70;03;2020-03
+2020;Marzo;activos;LE;León;MELILLA;2;03;2020-03
+2020;Marzo;activos;LE;León;CATALUÑA;305;03;2020-03
+2020;Marzo;activos;LE;León;MADRID;768;03;2020-03
+2020;Marzo;activos;LE;León;ASTURIAS;747;03;2020-03
+2020;Marzo;activos;LE;León;MURCIA;23;03;2020-03
+2020;Marzo;activos;LE;León;CASTILLA-LA MANCHA;63;03;2020-03
+2020;Marzo;activos;LE;León;CANTABRIA;124;03;2020-03
+2020;Marzo;activos;LE;León;EXTREMADURA;55;03;2020-03
+2020;Marzo;activos;PA;Palencia;CANARIAS;18;03;2020-03
+2020;Marzo;activos;PA;Palencia;MURCIA;9;03;2020-03
+2020;Marzo;activos;PA;Palencia;GALICIA;32;03;2020-03
+2020;Marzo;activos;PA;Palencia;CASTILLA-LA MANCHA;30;03;2020-03
+2020;Marzo;activos;PA;Palencia;C. VALENCIANA;38;03;2020-03
+2020;Marzo;activos;PA;Palencia;EXTREMADURA;27;03;2020-03
+2020;Marzo;activos;PA;Palencia;NAVARRA;21;03;2020-03
+2020;Marzo;activos;SA;Salamanca;CANARIAS;68;03;2020-03
+2020;Marzo;activos;SA;Salamanca;MELILLA;1;03;2020-03
+2020;Marzo;activos;SA;Salamanca;MADRID;765;03;2020-03
+2020;Marzo;activos;SA;Salamanca;ASTURIAS;102;03;2020-03
+2020;Marzo;activos;SA;Salamanca;BALEARES;64;03;2020-03
+2020;Marzo;activos;SA;Salamanca;CEUTA;6;03;2020-03
+2020;Marzo;activos;SA;Salamanca;GALICIA;114;03;2020-03
+2020;Marzo;activos;SA;Salamanca;C. VALENCIANA;97;03;2020-03
+2020;Marzo;activos;SA;Salamanca;PAIS VASCO;377;03;2020-03
+2020;Marzo;activos;SA;Salamanca;NAVARRA;63;03;2020-03
+2020;Marzo;activos;SE;Segovia;LA RIOJA;12;03;2020-03
+2020;Marzo;activos;SE;Segovia;MURCIA;7;03;2020-03
+2020;Marzo;activos;SE;Segovia;CASTILLA-LA MANCHA;59;03;2020-03
+2020;Marzo;activos;SE;Segovia;EXTREMADURA;26;03;2020-03
+2020;Marzo;activos;SO;Soria;ASTURIAS;15;03;2020-03
+2020;Marzo;activos;SO;Soria;MURCIA;10;03;2020-03
+2020;Marzo;activos;VA;Valladolid;CATALUÑA;87;03;2020-03
+2020;Marzo;activos;VA;Valladolid;MADRID;396;03;2020-03
+2020;Marzo;activos;VA;Valladolid;LA RIOJA;32;03;2020-03
+2020;Marzo;activos;VA;Valladolid;CANTABRIA;60;03;2020-03
+2020;Marzo;activos;ZA;Zamora;CATALUÑA;155;03;2020-03
+2020;Marzo;activos;ZA;Zamora;BALEARES;9;03;2020-03
+2020;Marzo;activos;ZA;Zamora;CEUTA;0;03;2020-03
+2020;Marzo;activos;ZA;Zamora;GALICIA;76;03;2020-03
+2020;Marzo;activos;ZA;Zamora;CASTILLA-LA MANCHA;33;03;2020-03
+2020;Marzo;activos;ZA;Zamora;CANTABRIA;18;03;2020-03
+2020;Marzo;activos;ZA;Zamora;C. VALENCIANA;58;03;2020-03
+2020;Marzo;activos;ZA;Zamora;NAVARRA;19;03;2020-03
+2020;Abril;activos;AV;Ávila;ANDALUCIA;58;04;2020-04
+2020;Abril;activos;AV;Ávila;BALEARES;16;04;2020-04
+2020;Abril;activos;AV;Ávila;NAVARRA;10;04;2020-04
+2020;Abril;activos;BU;Burgos;MELILLA;1;04;2020-04
+2020;Abril;activos;BU;Burgos;GALICIA;53;04;2020-04
+2020;Abril;activos;BU;Burgos;CANTABRIA;132;04;2020-04
+2020;Abril;activos;LE;León;MELILLA;4;04;2020-04
+2020;Abril;activos;LE;León;BALEARES;57;04;2020-04
+2020;Abril;activos;LE;León;CEUTA;0;04;2020-04
+2020;Abril;activos;LE;León;MURCIA;17;04;2020-04
+2020;Abril;activos;LE;León;CASTILLA-LA MANCHA;50;04;2020-04
+2020;Abril;activos;LE;León;ARAGON;23;04;2020-04
+2020;Abril;activos;LE;León;EXTREMADURA;43;04;2020-04
+2020;Abril;activos;PA;Palencia;MADRID;280;04;2020-04
+2020;Abril;activos;PA;Palencia;ANDALUCIA;53;04;2020-04
+2020;Abril;activos;PA;Palencia;LA RIOJA;12;04;2020-04
+2020;Abril;activos;PA;Palencia;CANTABRIA;163;04;2020-04
+2020;Abril;activos;SA;Salamanca;CANARIAS;60;04;2020-04
+2020;Abril;activos;SA;Salamanca;MELILLA;1;04;2020-04
+2020;Abril;activos;SA;Salamanca;ANDALUCIA;87;04;2020-04
+2020;Abril;activos;SA;Salamanca;LA RIOJA;26;04;2020-04
+2020;Abril;activos;SA;Salamanca;CEUTA;7;04;2020-04
+2020;Abril;activos;SA;Salamanca;GALICIA;94;04;2020-04
+2020;Abril;activos;SA;Salamanca;CANTABRIA;58;04;2020-04
+2020;Abril;activos;SA;Salamanca;PAIS VASCO;343;04;2020-04
+2020;Abril;activos;SA;Salamanca;ARAGON;24;04;2020-04
+2020;Abril;activos;SA;Salamanca;EXTREMADURA;351;04;2020-04
+2020;Abril;activos;SE;Segovia;CANARIAS;12;04;2020-04
+2020;Abril;activos;SE;Segovia;MADRID;1613;04;2020-04
+2020;Abril;activos;SE;Segovia;ANDALUCIA;35;04;2020-04
+2020;Abril;activos;SE;Segovia;CEUTA;2;04;2020-04
+2020;Abril;activos;SE;Segovia;MURCIA;6;04;2020-04
+2020;Abril;activos;SE;Segovia;GALICIA;32;04;2020-04
+2020;Abril;activos;SE;Segovia;CANTABRIA;10;04;2020-04
+2020;Abril;activos;SE;Segovia;ARAGON;11;04;2020-04
+2020;Abril;activos;SE;Segovia;NAVARRA;8;04;2020-04
+2020;Abril;activos;SO;Soria;CATALUÑA;117;04;2020-04
+2020;Abril;activos;SO;Soria;ANDALUCIA;48;04;2020-04
+2020;Abril;activos;SO;Soria;GALICIA;22;04;2020-04
+2020;Abril;activos;SO;Soria;C. VALENCIANA;25;04;2020-04
+2020;Abril;activos;SO;Soria;ARAGON;166;04;2020-04
+2020;Abril;activos;SO;Soria;EXTREMADURA;22;04;2020-04
+2020;Abril;activos;SO;Soria;NAVARRA;32;04;2020-04
+2020;Abril;activos;VA;Valladolid;CATALUÑA;54;04;2020-04
+2020;Abril;activos;VA;Valladolid;ANDALUCIA;80;04;2020-04
+2020;Abril;activos;VA;Valladolid;NAVARRA;17;04;2020-04
+2020;Abril;activos;ZA;Zamora;LA RIOJA;9;04;2020-04
+2020;Abril;activos;ZA;Zamora;ASTURIAS;127;04;2020-04
+2020;Abril;activos;ZA;Zamora;BALEARES;5;04;2020-04
+2020;Abril;activos;ZA;Zamora;CASTILLA-LA MANCHA;29;04;2020-04
+2020;Mayo;activos;AV;Ávila;MELILLA;4;05;2020-05
+2020;Mayo;activos;AV;Ávila;ANDALUCIA;52;05;2020-05
+2020;Mayo;activos;AV;Ávila;LA RIOJA;1;05;2020-05
+2020;Mayo;activos;AV;Ávila;CASTILLA-LA MANCHA;135;05;2020-05
+2020;Mayo;activos;AV;Ávila;ARAGON;8;05;2020-05
+2020;Mayo;activos;AV;Ávila;EXTREMADURA;73;05;2020-05
+2020;Mayo;activos;BU;Burgos;CANARIAS;19;05;2020-05
+2020;Mayo;activos;BU;Burgos;MELILLA;0;05;2020-05
+2020;Mayo;activos;BU;Burgos;CATALUÑA;120;05;2020-05
+2020;Mayo;activos;BU;Burgos;LA RIOJA;80;05;2020-05
+2020;Mayo;activos;BU;Burgos;BALEARES;13;05;2020-05
+2020;Mayo;activos;BU;Burgos;CASTILLA-LA MANCHA;28;05;2020-05
+2020;Mayo;activos;BU;Burgos;PAIS VASCO;1513;05;2020-05
+2020;Mayo;activos;BU;Burgos;EXTREMADURA;38;05;2020-05
+2020;Mayo;activos;LE;León;MELILLA;3;05;2020-05
+2020;Mayo;activos;LE;León;CATALUÑA;262;05;2020-05
+2020;Mayo;activos;LE;León;CASTILLA-LA MANCHA;52;05;2020-05
+2020;Mayo;activos;LE;León;CANTABRIA;65;05;2020-05
+2020;Mayo;activos;LE;León;PAIS VASCO;283;05;2020-05
+2020;Mayo;activos;LE;León;ARAGON;24;05;2020-05
+2020;Mayo;activos;LE;León;EXTREMADURA;43;05;2020-05
+2020;Mayo;activos;PA;Palencia;CATALUÑA;47;05;2020-05
+2020;Mayo;activos;PA;Palencia;MURCIA;6;05;2020-05
+2020;Mayo;activos;PA;Palencia;CANTABRIA;158;05;2020-05
+2020;Mayo;activos;PA;Palencia;PAIS VASCO;307;05;2020-05
+2020;Mayo;activos;SA;Salamanca;ANDALUCIA;76;05;2020-05
+2020;Mayo;activos;SA;Salamanca;LA RIOJA;19;05;2020-05
+2020;Mayo;activos;SA;Salamanca;CEUTA;5;05;2020-05
+2020;Mayo;activos;SA;Salamanca;C. VALENCIANA;73;05;2020-05
+2020;Mayo;activos;SA;Salamanca;ARAGON;17;05;2020-05
+2020;Mayo;activos;SA;Salamanca;EXTREMADURA;301;05;2020-05
+2020;Mayo;activos;SA;Salamanca;NAVARRA;39;05;2020-05
+2020;Mayo;activos;SE;Segovia;CEUTA;0;05;2020-05
+2020;Mayo;activos;SE;Segovia;MURCIA;6;05;2020-05
+2020;Mayo;activos;SE;Segovia;GALICIA;27;05;2020-05
+2020;Mayo;activos;SE;Segovia;CASTILLA-LA MANCHA;47;05;2020-05
+2020;Mayo;activos;SE;Segovia;C. VALENCIANA;21;05;2020-05
+2020;Mayo;activos;SE;Segovia;PAIS VASCO;35;05;2020-05
+2020;Mayo;activos;SO;Soria;CANARIAS;3;05;2020-05
+2020;Mayo;activos;SO;Soria;LA RIOJA;44;05;2020-05
+2020;Mayo;activos;SO;Soria;BALEARES;14;05;2020-05
+2020;Mayo;activos;SO;Soria;MURCIA;5;05;2020-05
+2020;Mayo;activos;SO;Soria;CASTILLA-LA MANCHA;35;05;2020-05
+2020;Mayo;activos;SO;Soria;PAIS VASCO;65;05;2020-05
+2020;Mayo;activos;SO;Soria;ARAGON;158;05;2020-05
+2020;Mayo;activos;SO;Soria;NAVARRA;32;05;2020-05
+2020;Mayo;activos;VA;Valladolid;MELILLA;0;05;2020-05
+2020;Mayo;activos;VA;Valladolid;CATALUÑA;46;05;2020-05
+2020;Mayo;activos;VA;Valladolid;BALEARES;15;05;2020-05
+2020;Mayo;activos;VA;Valladolid;GALICIA;48;05;2020-05
+2020;Mayo;activos;VA;Valladolid;PAIS VASCO;141;05;2020-05
+2020;Mayo;activos;ZA;Zamora;CANARIAS;9;05;2020-05
+2020;Mayo;activos;ZA;Zamora;CEUTA;0;05;2020-05
+2020;Mayo;activos;ZA;Zamora;ARAGON;9;05;2020-05
+2020;Mayo;activos;ZA;Zamora;NAVARRA;24;05;2020-05
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;CANARIAS;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;LA RIOJA;-1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;ASTURIAS;3;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;GALICIA;-5;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;CASTILLA-LA MANCHA;-37;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;PAIS VASCO;2;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;EXTREMADURA;-2;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;CANARIAS;-7;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;MADRID;64;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;ANDALUCIA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;BALEARES;-7;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;PAIS VASCO;43;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;EXTREMADURA;2;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;MELILLA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;BALEARES;-25;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;MURCIA;-7;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;GALICIA;-56;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;CANTABRIA;-19;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;C. VALENCIANA;-9;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;PAIS VASCO;-13;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;ARAGON;-7;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;NAVARRA;-1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;MADRID;55;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;BALEARES;-3;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;CANTABRIA;-25;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;MADRID;174;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;ANDALUCIA;-12;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;ASTURIAS;-8;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;BALEARES;-5;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;GALICIA;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;C. VALENCIANA;-10;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;PAIS VASCO;19;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;EXTREMADURA;-36;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;MELILLA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;ANDALUCIA;-11;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;LA RIOJA;-2;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;MURCIA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;GALICIA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;CASTILLA-LA MANCHA;6;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;ARAGON;4;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;LA RIOJA;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;ASTURIAS;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;CEUTA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;CASTILLA-LA MANCHA;2;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;CANTABRIA;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;PAIS VASCO;-5;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;EXTREMADURA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;CATALUÑA;-11;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;MADRID;38;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;ANDALUCIA;-14;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;LA RIOJA;11;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;GALICIA;-18;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;CANTABRIA;-7;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;C. VALENCIANA;-11;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;NAVARRA;3;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;CATALUÑA;-16;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;MADRID;152;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;BALEARES;-8;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;CEUTA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;CANTABRIA;-1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;EXTREMADURA;-1;03;2020-03
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;MELILLA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;ANDALUCIA;-20;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;LA RIOJA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;ASTURIAS;-10;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;CANTABRIA;-2;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;C. VALENCIANA;-18;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;CATALUÑA;-33;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;ASTURIAS;-12;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;BALEARES;-11;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;C. VALENCIANA;-30;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;ARAGON;-18;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;MELILLA;2;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;BALEARES;-31;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;PAIS VASCO;-39;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;EXTREMADURA;-12;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;NAVARRA;-9;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;CANARIAS;-9;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;CATALUÑA;-12;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;GALICIA;-11;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;C. VALENCIANA;-7;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;EXTREMADURA;-1;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;NAVARRA;-7;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;CANARIAS;-8;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;CATALUÑA;-18;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;LA RIOJA;-11;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;ASTURIAS;-19;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;MURCIA;-19;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;CASTILLA-LA MANCHA;-20;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;CANTABRIA;-20;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;PAIS VASCO;-34;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;CANARIAS;1;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;MELILLA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;MADRID;75;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;ANDALUCIA;-22;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;EXTREMADURA;-3;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;CATALUÑA;-46;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;ANDALUCIA;-12;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;ASTURIAS;-3;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;MURCIA;-1;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;GALICIA;5;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;CASTILLA-LA MANCHA;-8;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;C. VALENCIANA;-3;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;PAIS VASCO;-9;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;CANARIAS;-6;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;LA RIOJA;-4;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;BALEARES;-10;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;CEUTA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;CANTABRIA;-13;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;C. VALENCIANA;-24;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;PAIS VASCO;-22;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;EXTREMADURA;-19;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;MADRID;-7;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;ANDALUCIA;-8;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;MURCIA;1;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;CASTILLA-LA MANCHA;-4;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;CANTABRIA;1;04;2020-04
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;BALEARES;-1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;CEUTA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;MURCIA;-3;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;CASTILLA-LA MANCHA;-8;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;C. VALENCIANA;-8;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;CANARIAS;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;MADRID;19;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;ANDALUCIA;2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;GALICIA;-4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;CANTABRIA;4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;C. VALENCIANA;-27;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;ANDALUCIA;-24;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;LA RIOJA;-10;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;GALICIA;-28;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;CASTILLA-LA MANCHA;2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;PAIS VASCO;-27;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;EXTREMADURA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;ANDALUCIA;-8;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;LA RIOJA;-2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;BALEARES;-1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;CEUTA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;MURCIA;-3;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;GALICIA;1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;PAIS VASCO;-5;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;ARAGON;-4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;EXTREMADURA;-7;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;LA RIOJA;-7;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;BALEARES;-2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;CANTABRIA;-8;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;C. VALENCIANA;2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;CATALUÑA;-3;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;ASTURIAS;-1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;BALEARES;-2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;GALICIA;-5;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;CASTILLA-LA MANCHA;1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;CANTABRIA;-4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;ARAGON;-6;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;CANARIAS;-5;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;MELILLA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;CATALUÑA;-26;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;MADRID;45;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;CEUTA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;MURCIA;-4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;GALICIA;-6;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;CASTILLA-LA MANCHA;2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;ARAGON;-8;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;NAVARRA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;LA RIOJA;-3;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;BALEARES;-7;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;CANTABRIA;-2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;C. VALENCIANA;-15;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;ARAGON;-7;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;CANARIAS;-6;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;ANDALUCIA;-2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;ASTURIAS;5;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;CEUTA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;C. VALENCIANA;-7;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;PAIS VASCO;17;05;2020-05
+2020;Enero;altas;AV;Ávila;CATALUÑA;25;01;2020-01
+2020;Enero;altas;AV;Ávila;BALEARES;7;01;2020-01
+2020;Enero;altas;AV;Ávila;EXTREMADURA;36;01;2020-01
+2020;Enero;altas;AV;Ávila;NAVARRA;3;01;2020-01
+2020;Enero;altas;BU;Burgos;BALEARES;12;01;2020-01
+2020;Enero;altas;BU;Burgos;MURCIA;14;01;2020-01
+2020;Enero;altas;BU;Burgos;CANTABRIA;55;01;2020-01
+2020;Enero;altas;LE;León;ANDALUCIA;73;01;2020-01
+2020;Enero;altas;LE;León;ASTURIAS;330;01;2020-01
+2020;Enero;altas;LE;León;MURCIA;14;01;2020-01
+2020;Enero;altas;LE;León;GALICIA;162;01;2020-01
+2020;Enero;altas;LE;León;CASTILLA-LA MANCHA;35;01;2020-01
+2020;Enero;altas;LE;León;C. VALENCIANA;70;01;2020-01
+2020;Enero;altas;LE;León;ARAGON;15;01;2020-01
+2020;Enero;altas;LE;León;NAVARRA;15;01;2020-01
+2020;Enero;altas;PA;Palencia;LA RIOJA;2;01;2020-01
+2020;Enero;altas;PA;Palencia;BALEARES;7;01;2020-01
+2020;Enero;altas;PA;Palencia;CEUTA;0;01;2020-01
+2020;Enero;altas;PA;Palencia;MURCIA;4;01;2020-01
+2020;Enero;altas;PA;Palencia;CANTABRIA;83;01;2020-01
+2020;Enero;altas;PA;Palencia;C. VALENCIANA;9;01;2020-01
+2020;Enero;altas;PA;Palencia;NAVARRA;10;01;2020-01
+2020;Enero;altas;SA;Salamanca;MELILLA;0;01;2020-01
+2020;Enero;altas;SA;Salamanca;CATALUÑA;58;01;2020-01
+2020;Enero;altas;SA;Salamanca;LA RIOJA;10;01;2020-01
+2020;Enero;altas;SA;Salamanca;ASTURIAS;36;01;2020-01
+2020;Enero;altas;SA;Salamanca;CEUTA;2;01;2020-01
+2020;Enero;altas;SA;Salamanca;GALICIA;41;01;2020-01
+2020;Enero;altas;SA;Salamanca;CASTILLA-LA MANCHA;39;01;2020-01
+2020;Enero;altas;SA;Salamanca;C. VALENCIANA;33;01;2020-01
+2020;Enero;altas;SA;Salamanca;EXTREMADURA;160;01;2020-01
+2020;Enero;altas;SA;Salamanca;NAVARRA;17;01;2020-01
+2020;Enero;altas;SE;Segovia;CANARIAS;6;01;2020-01
+2020;Enero;altas;SE;Segovia;CATALUÑA;11;01;2020-01
+2020;Enero;altas;SE;Segovia;MADRID;428;01;2020-01
+2020;Enero;altas;SE;Segovia;ANDALUCIA;28;01;2020-01
+2020;Enero;altas;SE;Segovia;BALEARES;4;01;2020-01
+2020;Enero;altas;SE;Segovia;CEUTA;2;01;2020-01
+2020;Enero;altas;SE;Segovia;C. VALENCIANA;17;01;2020-01
+2020;Enero;altas;SE;Segovia;NAVARRA;0;01;2020-01
+2020;Enero;altas;SO;Soria;CATALUÑA;57;01;2020-01
+2020;Enero;altas;SO;Soria;CASTILLA-LA MANCHA;16;01;2020-01
+2020;Enero;altas;SO;Soria;C. VALENCIANA;16;01;2020-01
+2020;Enero;altas;SO;Soria;NAVARRA;23;01;2020-01
+2020;Enero;altas;VA;Valladolid;CEUTA;1;01;2020-01
+2020;Enero;altas;VA;Valladolid;GALICIA;42;01;2020-01
+2020;Enero;altas;VA;Valladolid;C. VALENCIANA;42;01;2020-01
+2020;Enero;altas;VA;Valladolid;EXTREMADURA;23;01;2020-01
+2020;Enero;altas;ZA;Zamora;CANARIAS;11;01;2020-01
+2020;Enero;altas;ZA;Zamora;MELILLA;0;01;2020-01
+2020;Enero;altas;ZA;Zamora;CATALUÑA;47;01;2020-01
+2020;Enero;altas;ZA;Zamora;MADRID;176;01;2020-01
+2020;Enero;altas;ZA;Zamora;MURCIA;4;01;2020-01
+2020;Enero;altas;ZA;Zamora;CASTILLA-LA MANCHA;17;01;2020-01
+2020;Enero;altas;ZA;Zamora;CANTABRIA;2;01;2020-01
+2020;Enero;altas;ZA;Zamora;EXTREMADURA;8;01;2020-01
+2020;Enero;altas;ZA;Zamora;NAVARRA;7;01;2020-01
+2020;Febrero;altas;AV;Ávila;CANARIAS;3;02;2020-02
+2020;Febrero;altas;AV;Ávila;MELILLA;0;02;2020-02
+2020;Febrero;altas;AV;Ávila;CATALUÑA;24;02;2020-02
+2020;Febrero;altas;AV;Ávila;BALEARES;9;02;2020-02
+2020;Febrero;altas;AV;Ávila;CEUTA;0;02;2020-02
+2020;Febrero;altas;AV;Ávila;GALICIA;11;02;2020-02
+2020;Febrero;altas;AV;Ávila;PAIS VASCO;19;02;2020-02
+2020;Febrero;altas;AV;Ávila;NAVARRA;2;02;2020-02
+2020;Febrero;altas;BU;Burgos;CANARIAS;15;02;2020-02
+2020;Febrero;altas;BU;Burgos;CATALUÑA;48;02;2020-02
+2020;Febrero;altas;BU;Burgos;ANDALUCIA;46;02;2020-02
+2020;Febrero;altas;BU;Burgos;ASTURIAS;17;02;2020-02
+2020;Febrero;altas;BU;Burgos;BALEARES;6;02;2020-02
+2020;Febrero;altas;BU;Burgos;CEUTA;0;02;2020-02
+2020;Febrero;altas;BU;Burgos;C. VALENCIANA;22;02;2020-02
+2020;Febrero;altas;BU;Burgos;ARAGON;25;02;2020-02
+2020;Febrero;altas;LE;León;LA RIOJA;14;02;2020-02
+2020;Febrero;altas;LE;León;CEUTA;0;02;2020-02
+2020;Febrero;altas;LE;León;GALICIA;158;02;2020-02
+2020;Febrero;altas;PA;Palencia;ANDALUCIA;15;02;2020-02
+2020;Febrero;altas;PA;Palencia;CEUTA;0;02;2020-02
+2020;Febrero;altas;PA;Palencia;GALICIA;12;02;2020-02
+2020;Febrero;altas;PA;Palencia;PAIS VASCO;122;02;2020-02
+2020;Febrero;altas;PA;Palencia;EXTREMADURA;12;02;2020-02
+2020;Febrero;altas;PA;Palencia;NAVARRA;10;02;2020-02
+2020;Febrero;altas;SA;Salamanca;CANARIAS;23;02;2020-02
+2020;Febrero;altas;SA;Salamanca;ASTURIAS;40;02;2020-02
+2020;Febrero;altas;SA;Salamanca;BALEARES;29;02;2020-02
+2020;Febrero;altas;SA;Salamanca;MURCIA;17;02;2020-02
+2020;Febrero;altas;SA;Salamanca;GALICIA;52;02;2020-02
+2020;Febrero;altas;SA;Salamanca;C. VALENCIANA;39;02;2020-02
+2020;Febrero;altas;SA;Salamanca;PAIS VASCO;127;02;2020-02
+2020;Febrero;altas;SE;Segovia;CANARIAS;5;02;2020-02
+2020;Febrero;altas;SE;Segovia;MADRID;353;02;2020-02
+2020;Febrero;altas;SE;Segovia;ANDALUCIA;15;02;2020-02
+2020;Febrero;altas;SE;Segovia;ASTURIAS;6;02;2020-02
+2020;Febrero;altas;SE;Segovia;BALEARES;4;02;2020-02
+2020;Febrero;altas;SE;Segovia;CEUTA;0;02;2020-02
+2020;Febrero;altas;SE;Segovia;GALICIA;18;02;2020-02
+2020;Febrero;altas;SE;Segovia;CASTILLA-LA MANCHA;20;02;2020-02
+2020;Febrero;altas;SE;Segovia;PAIS VASCO;14;02;2020-02
+2020;Febrero;altas;SE;Segovia;ARAGON;3;02;2020-02
+2020;Febrero;altas;SE;Segovia;EXTREMADURA;10;02;2020-02
+2020;Febrero;altas;SO;Soria;BALEARES;4;02;2020-02
+2020;Febrero;altas;SO;Soria;CEUTA;0;02;2020-02
+2020;Febrero;altas;SO;Soria;CASTILLA-LA MANCHA;15;02;2020-02
+2020;Febrero;altas;SO;Soria;CANTABRIA;5;02;2020-02
+2020;Febrero;altas;SO;Soria;PAIS VASCO;34;02;2020-02
+2020;Febrero;altas;SO;Soria;EXTREMADURA;4;02;2020-02
+2020;Febrero;altas;VA;Valladolid;MELILLA;0;02;2020-02
+2020;Febrero;altas;VA;Valladolid;ANDALUCIA;37;02;2020-02
+2020;Febrero;altas;VA;Valladolid;LA RIOJA;8;02;2020-02
+2020;Febrero;altas;VA;Valladolid;ASTURIAS;27;02;2020-02
+2020;Febrero;altas;VA;Valladolid;MURCIA;4;02;2020-02
+2020;Febrero;altas;VA;Valladolid;NAVARRA;5;02;2020-02
+2020;Febrero;altas;ZA;Zamora;CANARIAS;4;02;2020-02
+2020;Febrero;altas;ZA;Zamora;MELILLA;0;02;2020-02
+2020;Febrero;altas;ZA;Zamora;LA RIOJA;2;02;2020-02
+2020;Febrero;altas;ZA;Zamora;ASTURIAS;30;02;2020-02
+2020;Febrero;altas;ZA;Zamora;BALEARES;0;02;2020-02
+2020;Febrero;altas;ZA;Zamora;CANTABRIA;10;02;2020-02
+2020;Febrero;altas;ZA;Zamora;ARAGON;4;02;2020-02
+2020;Marzo;altas;AV;Ávila;CATALUÑA;13;03;2020-03
+2020;Marzo;altas;AV;Ávila;MADRID;1421;03;2020-03
+2020;Marzo;altas;AV;Ávila;LA RIOJA;0;03;2020-03
+2020;Marzo;altas;AV;Ávila;ASTURIAS;5;03;2020-03
+2020;Marzo;altas;AV;Ávila;CASTILLA-LA MANCHA;47;03;2020-03
+2020;Marzo;altas;AV;Ávila;EXTREMADURA;27;03;2020-03
+2020;Marzo;altas;BU;Burgos;MELILLA;0;03;2020-03
+2020;Marzo;altas;BU;Burgos;CATALUÑA;45;03;2020-03
+2020;Marzo;altas;BU;Burgos;CEUTA;0;03;2020-03
+2020;Marzo;altas;BU;Burgos;MURCIA;5;03;2020-03
+2020;Marzo;altas;BU;Burgos;CASTILLA-LA MANCHA;11;03;2020-03
+2020;Marzo;altas;BU;Burgos;EXTREMADURA;18;03;2020-03
+2020;Marzo;altas;BU;Burgos;NAVARRA;16;03;2020-03
+2020;Marzo;altas;LE;León;ANDALUCIA;46;03;2020-03
+2020;Marzo;altas;LE;León;CEUTA;0;03;2020-03
+2020;Marzo;altas;LE;León;GALICIA;113;03;2020-03
+2020;Marzo;altas;LE;León;C. VALENCIANA;41;03;2020-03
+2020;Marzo;altas;PA;Palencia;MELILLA;1;03;2020-03
+2020;Marzo;altas;PA;Palencia;MADRID;129;03;2020-03
+2020;Marzo;altas;PA;Palencia;ANDALUCIA;18;03;2020-03
+2020;Marzo;altas;PA;Palencia;LA RIOJA;4;03;2020-03
+2020;Marzo;altas;PA;Palencia;C. VALENCIANA;14;03;2020-03
+2020;Marzo;altas;PA;Palencia;PAIS VASCO;109;03;2020-03
+2020;Marzo;altas;PA;Palencia;ARAGON;3;03;2020-03
+2020;Marzo;altas;PA;Palencia;EXTREMADURA;1;03;2020-03
+2020;Marzo;altas;SA;Salamanca;MELILLA;1;03;2020-03
+2020;Marzo;altas;SA;Salamanca;MADRID;366;03;2020-03
+2020;Marzo;altas;SA;Salamanca;C. VALENCIANA;22;03;2020-03
+2020;Marzo;altas;SA;Salamanca;PAIS VASCO;125;03;2020-03
+2020;Marzo;altas;SA;Salamanca;ARAGON;7;03;2020-03
+2020;Marzo;altas;SA;Salamanca;EXTREMADURA;104;03;2020-03
+2020;Marzo;altas;SA;Salamanca;NAVARRA;19;03;2020-03
+2020;Marzo;altas;SE;Segovia;CATALUÑA;15;03;2020-03
+2020;Marzo;altas;SE;Segovia;MADRID;775;03;2020-03
+2020;Marzo;altas;SE;Segovia;LA RIOJA;3;03;2020-03
+2020;Marzo;altas;SE;Segovia;BALEARES;4;03;2020-03
+2020;Marzo;altas;SE;Segovia;MURCIA;2;03;2020-03
+2020;Marzo;altas;SE;Segovia;EXTREMADURA;5;03;2020-03
+2020;Marzo;altas;SO;Soria;CANARIAS;3;03;2020-03
+2020;Marzo;altas;SO;Soria;CATALUÑA;46;03;2020-03
+2020;Marzo;altas;SO;Soria;MADRID;189;03;2020-03
+2020;Marzo;altas;SO;Soria;CASTILLA-LA MANCHA;11;03;2020-03
+2020;Marzo;altas;SO;Soria;PAIS VASCO;23;03;2020-03
+2020;Marzo;altas;VA;Valladolid;CANARIAS;11;03;2020-03
+2020;Marzo;altas;VA;Valladolid;CATALUÑA;24;03;2020-03
+2020;Marzo;altas;VA;Valladolid;BALEARES;8;03;2020-03
+2020;Marzo;altas;VA;Valladolid;CEUTA;0;03;2020-03
+2020;Marzo;altas;VA;Valladolid;MURCIA;7;03;2020-03
+2020;Marzo;altas;VA;Valladolid;PAIS VASCO;60;03;2020-03
+2020;Marzo;altas;VA;Valladolid;ARAGON;10;03;2020-03
+2020;Marzo;altas;ZA;Zamora;MELILLA;0;03;2020-03
+2020;Marzo;altas;ZA;Zamora;CATALUÑA;68;03;2020-03
+2020;Marzo;altas;ZA;Zamora;GALICIA;22;03;2020-03
+2020;Abril;altas;AV;Ávila;CANARIAS;3;04;2020-04
+2020;Abril;altas;AV;Ávila;LA RIOJA;0;04;2020-04
+2020;Abril;altas;AV;Ávila;PAIS VASCO;15;04;2020-04
+2020;Abril;altas;BU;Burgos;MADRID;151;04;2020-04
+2020;Abril;altas;BU;Burgos;CASTILLA-LA MANCHA;8;04;2020-04
+2020;Abril;altas;BU;Burgos;CANTABRIA;30;04;2020-04
+2020;Abril;altas;BU;Burgos;PAIS VASCO;428;04;2020-04
+2020;Abril;altas;LE;León;ASTURIAS;193;04;2020-04
+2020;Abril;altas;LE;León;CEUTA;0;04;2020-04
+2020;Abril;altas;LE;León;GALICIA;82;04;2020-04
+2020;Abril;altas;LE;León;CASTILLA-LA MANCHA;11;04;2020-04
+2020;Abril;altas;LE;León;C. VALENCIANA;18;04;2020-04
+2020;Abril;altas;LE;León;PAIS VASCO;63;04;2020-04
+2020;Abril;altas;LE;León;ARAGON;3;04;2020-04
+2020;Abril;altas;PA;Palencia;CANARIAS;1;04;2020-04
+2020;Abril;altas;PA;Palencia;BALEARES;4;04;2020-04
+2020;Abril;altas;PA;Palencia;CEUTA;0;04;2020-04
+2020;Abril;altas;PA;Palencia;CANTABRIA;41;04;2020-04
+2020;Abril;altas;PA;Palencia;PAIS VASCO;55;04;2020-04
+2020;Abril;altas;SA;Salamanca;CANARIAS;11;04;2020-04
+2020;Abril;altas;SA;Salamanca;MELILLA;0;04;2020-04
+2020;Abril;altas;SA;Salamanca;BALEARES;7;04;2020-04
+2020;Abril;altas;SA;Salamanca;MURCIA;1;04;2020-04
+2020;Abril;altas;SA;Salamanca;C. VALENCIANA;7;04;2020-04
+2020;Abril;altas;SA;Salamanca;PAIS VASCO;61;04;2020-04
+2020;Abril;altas;SA;Salamanca;EXTREMADURA;47;04;2020-04
+2020;Abril;altas;SE;Segovia;ANDALUCIA;7;04;2020-04
+2020;Abril;altas;SE;Segovia;LA RIOJA;1;04;2020-04
+2020;Abril;altas;SE;Segovia;BALEARES;0;04;2020-04
+2020;Abril;altas;SE;Segovia;CEUTA;0;04;2020-04
+2020;Abril;altas;SE;Segovia;MURCIA;0;04;2020-04
+2020;Abril;altas;SE;Segovia;CANTABRIA;1;04;2020-04
+2020;Abril;altas;SE;Segovia;C. VALENCIANA;6;04;2020-04
+2020;Abril;altas;SE;Segovia;ARAGON;1;04;2020-04
+2020;Abril;altas;SO;Soria;CANARIAS;0;04;2020-04
+2020;Abril;altas;SO;Soria;CATALUÑA;18;04;2020-04
+2020;Abril;altas;SO;Soria;ANDALUCIA;8;04;2020-04
+2020;Abril;altas;SO;Soria;LA RIOJA;7;04;2020-04
+2020;Abril;altas;SO;Soria;ASTURIAS;1;04;2020-04
+2020;Abril;altas;SO;Soria;CASTILLA-LA MANCHA;6;04;2020-04
+2020;Abril;altas;SO;Soria;CANTABRIA;1;04;2020-04
+2020;Abril;altas;SO;Soria;PAIS VASCO;13;04;2020-04
+2020;Abril;altas;SO;Soria;ARAGON;27;04;2020-04
+2020;Abril;altas;VA;Valladolid;MELILLA;0;04;2020-04
+2020;Abril;altas;VA;Valladolid;CATALUÑA;14;04;2020-04
+2020;Abril;altas;VA;Valladolid;MADRID;148;04;2020-04
+2020;Abril;altas;VA;Valladolid;LA RIOJA;4;04;2020-04
+2020;Abril;altas;VA;Valladolid;GALICIA;8;04;2020-04
+2020;Abril;altas;VA;Valladolid;CANTABRIA;8;04;2020-04
+2020;Abril;altas;VA;Valladolid;ARAGON;3;04;2020-04
+2020;Abril;altas;VA;Valladolid;EXTREMADURA;7;04;2020-04
+2020;Abril;altas;VA;Valladolid;NAVARRA;6;04;2020-04
+2020;Abril;altas;ZA;Zamora;MELILLA;0;04;2020-04
+2020;Abril;altas;ZA;Zamora;MADRID;138;04;2020-04
+2020;Abril;altas;ZA;Zamora;ASTURIAS;26;04;2020-04
+2020;Abril;altas;ZA;Zamora;MURCIA;3;04;2020-04
+2020;Abril;altas;ZA;Zamora;C. VALENCIANA;8;04;2020-04
+2020;Abril;altas;ZA;Zamora;NAVARRA;6;04;2020-04
+2020;Mayo;altas;AV;Ávila;CANARIAS;10;05;2020-05
+2020;Mayo;altas;AV;Ávila;MELILLA;4;05;2020-05
+2020;Mayo;altas;AV;Ávila;ASTURIAS;7;05;2020-05
+2020;Mayo;altas;AV;Ávila;MURCIA;1;05;2020-05
+2020;Mayo;altas;AV;Ávila;GALICIA;9;05;2020-05
+2020;Mayo;altas;AV;Ávila;CASTILLA-LA MANCHA;59;05;2020-05
+2020;Mayo;altas;AV;Ávila;PAIS VASCO;14;05;2020-05
+2020;Mayo;altas;AV;Ávila;NAVARRA;0;05;2020-05
+2020;Mayo;altas;BU;Burgos;LA RIOJA;28;05;2020-05
+2020;Mayo;altas;BU;Burgos;BALEARES;2;05;2020-05
+2020;Mayo;altas;BU;Burgos;C. VALENCIANA;14;05;2020-05
+2020;Mayo;altas;BU;Burgos;ARAGON;13;05;2020-05
+2020;Mayo;altas;BU;Burgos;NAVARRA;10;05;2020-05
+2020;Mayo;altas;LE;León;MELILLA;0;05;2020-05
+2020;Mayo;altas;LE;León;MADRID;244;05;2020-05
+2020;Mayo;altas;LE;León;CASTILLA-LA MANCHA;19;05;2020-05
+2020;Mayo;altas;LE;León;CANTABRIA;21;05;2020-05
+2020;Mayo;altas;LE;León;C. VALENCIANA;12;05;2020-05
+2020;Mayo;altas;LE;León;NAVARRA;12;05;2020-05
+2020;Mayo;altas;PA;Palencia;CANARIAS;0;05;2020-05
+2020;Mayo;altas;PA;Palencia;LA RIOJA;2;05;2020-05
+2020;Mayo;altas;PA;Palencia;CASTILLA-LA MANCHA;3;05;2020-05
+2020;Mayo;altas;PA;Palencia;PAIS VASCO;85;05;2020-05
+2020;Mayo;altas;PA;Palencia;ARAGON;0;05;2020-05
+2020;Mayo;altas;PA;Palencia;EXTREMADURA;4;05;2020-05
+2020;Mayo;altas;SA;Salamanca;CATALUÑA;34;05;2020-05
+2020;Mayo;altas;SA;Salamanca;MADRID;241;05;2020-05
+2020;Mayo;altas;SA;Salamanca;ANDALUCIA;27;05;2020-05
+2020;Mayo;altas;SA;Salamanca;CASTILLA-LA MANCHA;16;05;2020-05
+2020;Mayo;altas;SA;Salamanca;CANTABRIA;7;05;2020-05
+2020;Mayo;altas;SA;Salamanca;NAVARRA;7;05;2020-05
+2020;Mayo;altas;SE;Segovia;ASTURIAS;4;05;2020-05
+2020;Mayo;altas;SE;Segovia;BALEARES;1;05;2020-05
+2020;Mayo;altas;SE;Segovia;GALICIA;5;05;2020-05
+2020;Mayo;altas;SO;Soria;MELILLA;0;05;2020-05
+2020;Mayo;altas;SO;Soria;ANDALUCIA;6;05;2020-05
+2020;Mayo;altas;SO;Soria;LA RIOJA;10;05;2020-05
+2020;Mayo;altas;SO;Soria;PAIS VASCO;10;05;2020-05
+2020;Mayo;altas;SO;Soria;ARAGON;50;05;2020-05
+2020;Mayo;altas;SO;Soria;EXTREMADURA;3;05;2020-05
+2020;Mayo;altas;SO;Soria;NAVARRA;12;05;2020-05
+2020;Mayo;altas;VA;Valladolid;CANARIAS;5;05;2020-05
+2020;Mayo;altas;VA;Valladolid;MELILLA;0;05;2020-05
+2020;Mayo;altas;VA;Valladolid;LA RIOJA;7;05;2020-05
+2020;Mayo;altas;VA;Valladolid;MURCIA;1;05;2020-05
+2020;Mayo;altas;VA;Valladolid;GALICIA;8;05;2020-05
+2020;Mayo;altas;ZA;Zamora;MELILLA;0;05;2020-05
+2020;Mayo;altas;ZA;Zamora;LA RIOJA;1;05;2020-05
+2020;Mayo;altas;ZA;Zamora;CASTILLA-LA MANCHA;6;05;2020-05
+2020;Mayo;altas;ZA;Zamora;C. VALENCIANA;7;05;2020-05
+2020;Mayo;altas;ZA;Zamora;NAVARRA;8;05;2020-05
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;MELILLA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;ANDALUCIA;-18;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;ASTURIAS;-7;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;PAIS VASCO;1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;AV;Ávila;NAVARRA;4;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;MELILLA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;MADRID;105;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;BALEARES;-2;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;CEUTA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;C. VALENCIANA;-1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;PAIS VASCO;115;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;ARAGON;-14;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;BU;Burgos;NAVARRA;-17;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;MELILLA;-1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;CATALUÑA;6;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;LA RIOJA;-2;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;CEUTA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;MURCIA;3;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;CASTILLA-LA MANCHA;-13;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;LE;León;ARAGON;-10;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;CANARIAS;-6;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;CATALUÑA;-1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;BALEARES;1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;MURCIA;-3;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;GALICIA;-7;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;CANTABRIA;-3;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;PAIS VASCO;-13;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;ARAGON;1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;PA;Palencia;NAVARRA;-6;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;CANARIAS;-6;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;MELILLA;1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;CATALUÑA;-8;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;ASTURIAS;-10;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;GALICIA;-24;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;CASTILLA-LA MANCHA;-24;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;C. VALENCIANA;-17;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;EXTREMADURA;-91;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SA;Salamanca;NAVARRA;-5;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;CANARIAS;-2;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;MELILLA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;CATALUÑA;2;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;ANDALUCIA;-5;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;ASTURIAS;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;BALEARES;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;CEUTA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;CASTILLA-LA MANCHA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;CANTABRIA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;PAIS VASCO;5;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SE;Segovia;EXTREMADURA;-5;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;ANDALUCIA;-4;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;BALEARES;3;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;MURCIA;3;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;SO;Soria;CANTABRIA;-1;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;ASTURIAS;-5;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;BALEARES;3;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;GALICIA;-9;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;VA;Valladolid;C. VALENCIANA;-5;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;MELILLA;0;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;CATALUÑA;42;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;LA RIOJA;3;03;2020-03
+2020;Marzo;variación altas respecto a mes anterior;ZA;Zamora;BALEARES;1;03;2020-03
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;MELILLA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;CATALUÑA;-5;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;LA RIOJA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;ASTURIAS;2;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;BALEARES;-6;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;CEUTA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;AV;Ávila;GALICIA;-6;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;PAIS VASCO;-115;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;ARAGON;-6;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;BU;Burgos;EXTREMADURA;-9;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;GALICIA;-31;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;EXTREMADURA;-18;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;LE;León;NAVARRA;-5;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;LA RIOJA;-2;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;ASTURIAS;-11;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;GALICIA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;PA;Palencia;EXTREMADURA;8;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;BALEARES;-3;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;MURCIA;-8;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;CASTILLA-LA MANCHA;-11;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SA;Salamanca;C. VALENCIANA;-15;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;MADRID;-325;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;LA RIOJA;-2;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;ASTURIAS;-2;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;CEUTA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;C. VALENCIANA;1;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SE;Segovia;EXTREMADURA;-2;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;MELILLA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;CATALUÑA;-28;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;ASTURIAS;-2;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;CEUTA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;GALICIA;2;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;PAIS VASCO;-10;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;SO;Soria;NAVARRA;-1;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;CATALUÑA;-10;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;MADRID;-7;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;CEUTA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;MURCIA;-7;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;GALICIA;-9;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;CASTILLA-LA MANCHA;-13;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;VA;Valladolid;PAIS VASCO;-37;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;CANARIAS;2;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;MELILLA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;MADRID;-193;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;ASTURIAS;-27;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;BALEARES;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;MURCIA;0;04;2020-04
+2020;Abril;variación altas respecto a mes anterior;ZA;Zamora;C. VALENCIANA;-16;04;2020-04
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;MADRID;149;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;ANDALUCIA;12;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;LA RIOJA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;C. VALENCIANA;1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;PAIS VASCO;-1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;EXTREMADURA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;AV;Ávila;NAVARRA;-1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;MELILLA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;CATALUÑA;9;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;BU;Burgos;MURCIA;-6;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;CANARIAS;5;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;MELILLA;-2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;MADRID;44;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;MURCIA;5;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;CASTILLA-LA MANCHA;8;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;LE;León;ARAGON;6;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;CANARIAS;-1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;MELILLA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;CATALUÑA;3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;LA RIOJA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;ASTURIAS;7;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;CEUTA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;PA;Palencia;EXTREMADURA;-5;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;CATALUÑA;3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;MADRID;44;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;BALEARES;8;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SA;Salamanca;GALICIA;-5;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;CANARIAS;2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;PAIS VASCO;6;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;EXTREMADURA;-2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SE;Segovia;NAVARRA;6;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;LA RIOJA;3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;ASTURIAS;-1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;CEUTA;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;C. VALENCIANA;5;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;PAIS VASCO;-3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;SO;Soria;EXTREMADURA;-3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;ASTURIAS;0;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;MURCIA;1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;C. VALENCIANA;3;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;VA;Valladolid;ARAGON;1;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;GALICIA;2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;ARAGON;2;05;2020-05
+2020;Mayo;variación altas respecto a mes anterior;ZA;Zamora;NAVARRA;2;05;2020-05
+2020;Enero;activos;BU;Burgos;CANARIAS;28;01;2020-01
+2020;Enero;activos;BU;Burgos;MELILLA;2;01;2020-01
+2020;Enero;activos;BU;Burgos;MADRID;759;01;2020-01
+2020;Enero;activos;BU;Burgos;BALEARES;38;01;2020-01
+2020;Enero;activos;BU;Burgos;GALICIA;77;01;2020-01
+2020;Enero;activos;BU;Burgos;CASTILLA-LA MANCHA;47;01;2020-01
+2020;Enero;activos;BU;Burgos;C. VALENCIANA;160;01;2020-01
+2020;Enero;activos;BU;Burgos;PAIS VASCO;1865;01;2020-01
+2020;Enero;activos;BU;Burgos;ARAGON;90;01;2020-01
+2020;Enero;activos;LE;León;CANARIAS;96;01;2020-01
+2020;Enero;activos;LE;León;MELILLA;3;01;2020-01
+2020;Enero;activos;LE;León;ANDALUCIA;224;01;2020-01
+2020;Enero;activos;LE;León;LA RIOJA;41;01;2020-01
+2020;Enero;activos;LE;León;ASTURIAS;1008;01;2020-01
+2020;Enero;activos;LE;León;BALEARES;140;01;2020-01
+2020;Enero;activos;LE;León;CEUTA;0;01;2020-01
+2020;Enero;activos;LE;León;GALICIA;508;01;2020-01
+2020;Enero;activos;LE;León;CASTILLA-LA MANCHA;90;01;2020-01
+2020;Enero;activos;LE;León;CANTABRIA;157;01;2020-01
+2020;Enero;activos;LE;León;C. VALENCIANA;206;01;2020-01
+2020;Enero;activos;PA;Palencia;MELILLA;1;01;2020-01
+2020;Enero;activos;PA;Palencia;CATALUÑA;109;01;2020-01
+2020;Enero;activos;PA;Palencia;MADRID;346;01;2020-01
+2020;Enero;activos;PA;Palencia;ANDALUCIA;76;01;2020-01
+2020;Enero;activos;PA;Palencia;ASTURIAS;71;01;2020-01
+2020;Enero;activos;PA;Palencia;MURCIA;7;01;2020-01
+2020;Enero;activos;PA;Palencia;NAVARRA;33;01;2020-01
+2020;Enero;activos;SA;Salamanca;MADRID;825;01;2020-01
+2020;Enero;activos;SA;Salamanca;CANTABRIA;69;01;2020-01
+2020;Enero;activos;SE;Segovia;CATALUÑA;65;01;2020-01
+2020;Enero;activos;SE;Segovia;MADRID;1561;01;2020-01
+2020;Enero;activos;SE;Segovia;ANDALUCIA;90;01;2020-01
+2020;Enero;activos;SE;Segovia;LA RIOJA;16;01;2020-01
+2020;Enero;activos;SE;Segovia;BALEARES;16;01;2020-01
+2020;Enero;activos;SE;Segovia;CASTILLA-LA MANCHA;54;01;2020-01
+2020;Enero;activos;SE;Segovia;PAIS VASCO;77;01;2020-01
+2020;Enero;activos;SE;Segovia;ARAGON;16;01;2020-01
+2020;Enero;activos;SE;Segovia;EXTREMADURA;36;01;2020-01
+2020;Enero;activos;SO;Soria;CANARIAS;11;01;2020-01
+2020;Enero;activos;SO;Soria;CATALUÑA;304;01;2020-01
+2020;Enero;activos;SO;Soria;MADRID;414;01;2020-01
+2020;Enero;activos;SO;Soria;ANDALUCIA;75;01;2020-01
+2020;Enero;activos;SO;Soria;GALICIA;18;01;2020-01
+2020;Enero;activos;SO;Soria;CASTILLA-LA MANCHA;46;01;2020-01
+2020;Enero;activos;VA;Valladolid;MADRID;518;01;2020-01
+2020;Enero;activos;VA;Valladolid;LA RIOJA;25;01;2020-01
+2020;Enero;activos;VA;Valladolid;MURCIA;29;01;2020-01
+2020;Enero;activos;VA;Valladolid;CASTILLA-LA MANCHA;74;01;2020-01
+2020;Enero;activos;VA;Valladolid;CANTABRIA;73;01;2020-01
+2020;Enero;activos;VA;Valladolid;C. VALENCIANA;129;01;2020-01
+2020;Enero;activos;ZA;Zamora;CANARIAS;26;01;2020-01
+2020;Enero;activos;ZA;Zamora;CATALUÑA;247;01;2020-01
+2020;Enero;activos;ZA;Zamora;ANDALUCIA;78;01;2020-01
+2020;Enero;activos;ZA;Zamora;PAIS VASCO;501;01;2020-01
+2020;Enero;activos;ZA;Zamora;NAVARRA;39;01;2020-01
+2020;Febrero;activos;AV;Ávila;LA RIOJA;2;02;2020-02
+2020;Febrero;activos;AV;Ávila;ASTURIAS;27;02;2020-02
+2020;Febrero;activos;AV;Ávila;BALEARES;21;02;2020-02
+2020;Febrero;activos;AV;Ávila;GALICIA;36;02;2020-02
+2020;Febrero;activos;AV;Ávila;CANTABRIA;14;02;2020-02
+2020;Febrero;activos;BU;Burgos;CATALUÑA;164;02;2020-02
+2020;Febrero;activos;BU;Burgos;MADRID;541;02;2020-02
+2020;Febrero;activos;BU;Burgos;CEUTA;0;02;2020-02
+2020;Febrero;activos;BU;Burgos;CASTILLA-LA MANCHA;42;02;2020-02
+2020;Febrero;activos;BU;Burgos;NAVARRA;91;02;2020-02
+2020;Febrero;activos;LE;León;CATALUÑA;345;02;2020-02
+2020;Febrero;activos;LE;León;MADRID;692;02;2020-02
+2020;Febrero;activos;LE;León;ANDALUCIA;160;02;2020-02
+2020;Febrero;activos;LE;León;BALEARES;113;02;2020-02
+2020;Febrero;activos;LE;León;CEUTA;0;02;2020-02
+2020;Febrero;activos;LE;León;MURCIA;30;02;2020-02
+2020;Febrero;activos;LE;León;C. VALENCIANA;139;02;2020-02
+2020;Febrero;activos;LE;León;ARAGON;45;02;2020-02
+2020;Febrero;activos;LE;León;EXTREMADURA;57;02;2020-02
+2020;Febrero;activos;LE;León;NAVARRA;49;02;2020-02
+2020;Febrero;activos;PA;Palencia;BALEARES;28;02;2020-02
+2020;Febrero;activos;PA;Palencia;CEUTA;0;02;2020-02
+2020;Febrero;activos;PA;Palencia;MURCIA;12;02;2020-02
+2020;Febrero;activos;PA;Palencia;CASTILLA-LA MANCHA;29;02;2020-02
+2020;Febrero;activos;PA;Palencia;C. VALENCIANA;35;02;2020-02
+2020;Febrero;activos;PA;Palencia;EXTREMADURA;30;02;2020-02
+2020;Febrero;activos;SA;Salamanca;MELILLA;0;02;2020-02
+2020;Febrero;activos;SA;Salamanca;MADRID;591;02;2020-02
+2020;Febrero;activos;SA;Salamanca;ANDALUCIA;152;02;2020-02
+2020;Febrero;activos;SA;Salamanca;ASTURIAS;110;02;2020-02
+2020;Febrero;activos;SA;Salamanca;BALEARES;69;02;2020-02
+2020;Febrero;activos;SA;Salamanca;MURCIA;43;02;2020-02
+2020;Febrero;activos;SA;Salamanca;CANTABRIA;85;02;2020-02
+2020;Febrero;activos;SA;Salamanca;PAIS VASCO;358;02;2020-02
+2020;Febrero;activos;SA;Salamanca;EXTREMADURA;471;02;2020-02
+2020;Febrero;activos;SA;Salamanca;NAVARRA;64;02;2020-02
+2020;Febrero;activos;SE;Segovia;ANDALUCIA;68;02;2020-02
+2020;Febrero;activos;SE;Segovia;LA RIOJA;14;02;2020-02
+2020;Febrero;activos;SE;Segovia;MURCIA;7;02;2020-02
+2020;Febrero;activos;SE;Segovia;CASTILLA-LA MANCHA;53;02;2020-02
+2020;Febrero;activos;SE;Segovia;PAIS VASCO;53;02;2020-02
+2020;Febrero;activos;SE;Segovia;EXTREMADURA;31;02;2020-02
+2020;Febrero;activos;SO;Soria;ASTURIAS;14;02;2020-02
+2020;Febrero;activos;SO;Soria;CASTILLA-LA MANCHA;39;02;2020-02
+2020;Febrero;activos;SO;Soria;C. VALENCIANA;44;02;2020-02
+2020;Febrero;activos;SO;Soria;PAIS VASCO;80;02;2020-02
+2020;Febrero;activos;SO;Soria;ARAGON;197;02;2020-02
+2020;Febrero;activos;SO;Soria;NAVARRA;48;02;2020-02
+2020;Febrero;activos;VA;Valladolid;BALEARES;55;02;2020-02
+2020;Febrero;activos;VA;Valladolid;C. VALENCIANA;96;02;2020-02
+2020;Febrero;activos;VA;Valladolid;PAIS VASCO;167;02;2020-02
+2020;Febrero;activos;ZA;Zamora;ANDALUCIA;62;02;2020-02
+2020;Febrero;activos;ZA;Zamora;LA RIOJA;10;02;2020-02
+2020;Febrero;activos;ZA;Zamora;CANTABRIA;19;02;2020-02
+2020;Febrero;activos;ZA;Zamora;C. VALENCIANA;50;02;2020-02
+2020;Marzo;activos;AV;Ávila;MELILLA;0;03;2020-03
+2020;Marzo;activos;AV;Ávila;CASTILLA-LA MANCHA;159;03;2020-03
+2020;Marzo;activos;AV;Ávila;CANTABRIA;8;03;2020-03
+2020;Marzo;activos;AV;Ávila;C. VALENCIANA;61;03;2020-03
+2020;Marzo;activos;AV;Ávila;NAVARRA;10;03;2020-03
+2020;Marzo;activos;BU;Burgos;CANARIAS;27;03;2020-03
+2020;Marzo;activos;BU;Burgos;ASTURIAS;62;03;2020-03
+2020;Marzo;activos;BU;Burgos;CEUTA;0;03;2020-03
+2020;Marzo;activos;BU;Burgos;CASTILLA-LA MANCHA;41;03;2020-03
+2020;Marzo;activos;BU;Burgos;ARAGON;57;03;2020-03
+2020;Marzo;activos;BU;Burgos;NAVARRA;71;03;2020-03
+2020;Marzo;activos;LE;León;ANDALUCIA;154;03;2020-03
+2020;Marzo;activos;LE;León;BALEARES;88;03;2020-03
+2020;Marzo;activos;LE;León;CEUTA;0;03;2020-03
+2020;Marzo;activos;LE;León;GALICIA;384;03;2020-03
+2020;Marzo;activos;LE;León;C. VALENCIANA;130;03;2020-03
+2020;Marzo;activos;LE;León;PAIS VASCO;349;03;2020-03
+2020;Marzo;activos;LE;León;ARAGON;38;03;2020-03
+2020;Marzo;activos;PA;Palencia;CATALUÑA;63;03;2020-03
+2020;Marzo;activos;PA;Palencia;MADRID;286;03;2020-03
+2020;Marzo;activos;PA;Palencia;ANDALUCIA;58;03;2020-03
+2020;Marzo;activos;PA;Palencia;BALEARES;25;03;2020-03
+2020;Marzo;activos;PA;Palencia;CANTABRIA;174;03;2020-03
+2020;Marzo;activos;PA;Palencia;PAIS VASCO;367;03;2020-03
+2020;Marzo;activos;SA;Salamanca;LA RIOJA;37;03;2020-03
+2020;Marzo;activos;SA;Salamanca;CANTABRIA;78;03;2020-03
+2020;Marzo;activos;SA;Salamanca;EXTREMADURA;435;03;2020-03
+2020;Marzo;activos;SE;Segovia;CANARIAS;11;03;2020-03
+2020;Marzo;activos;SE;Segovia;MELILLA;0;03;2020-03
+2020;Marzo;activos;SE;Segovia;MADRID;1538;03;2020-03
+2020;Marzo;activos;SE;Segovia;ANDALUCIA;57;03;2020-03
+2020;Marzo;activos;SE;Segovia;CEUTA;2;03;2020-03
+2020;Marzo;activos;SE;Segovia;GALICIA;42;03;2020-03
+2020;Marzo;activos;SE;Segovia;C. VALENCIANA;27;03;2020-03
+2020;Marzo;activos;SE;Segovia;PAIS VASCO;45;03;2020-03
+2020;Marzo;activos;SE;Segovia;ARAGON;12;03;2020-03
+2020;Marzo;activos;SE;Segovia;NAVARRA;10;03;2020-03
+2020;Marzo;activos;SO;Soria;ANDALUCIA;60;03;2020-03
+2020;Marzo;activos;SO;Soria;CEUTA;0;03;2020-03
+2020;Marzo;activos;SO;Soria;CANTABRIA;20;03;2020-03
+2020;Marzo;activos;SO;Soria;C. VALENCIANA;28;03;2020-03
+2020;Marzo;activos;SO;Soria;ARAGON;200;03;2020-03
+2020;Marzo;activos;VA;Valladolid;MELILLA;0;03;2020-03
+2020;Marzo;activos;VA;Valladolid;BALEARES;32;03;2020-03
+2020;Marzo;activos;VA;Valladolid;C. VALENCIANA;85;03;2020-03
+2020;Marzo;activos;VA;Valladolid;PAIS VASCO;162;03;2020-03
+2020;Marzo;activos;VA;Valladolid;ARAGON;35;03;2020-03
+2020;Marzo;activos;VA;Valladolid;EXTREMADURA;70;03;2020-03
+2020;Marzo;activos;ZA;Zamora;CANARIAS;16;03;2020-03
+2020;Marzo;activos;ZA;Zamora;MELILLA;0;03;2020-03
+2020;Marzo;activos;ZA;Zamora;ANDALUCIA;51;03;2020-03
+2020;Marzo;activos;ZA;Zamora;LA RIOJA;9;03;2020-03
+2020;Marzo;activos;ZA;Zamora;ASTURIAS;129;03;2020-03
+2020;Marzo;activos;ZA;Zamora;MURCIA;8;03;2020-03
+2020;Marzo;activos;ZA;Zamora;PAIS VASCO;386;03;2020-03
+2020;Marzo;activos;ZA;Zamora;ARAGON;18;03;2020-03
+2020;Abril;activos;AV;Ávila;CANARIAS;18;04;2020-04
+2020;Abril;activos;AV;Ávila;MELILLA;0;04;2020-04
+2020;Abril;activos;AV;Ávila;CATALUÑA;42;04;2020-04
+2020;Abril;activos;AV;Ávila;MADRID;3355;04;2020-04
+2020;Abril;activos;AV;Ávila;LA RIOJA;1;04;2020-04
+2020;Abril;activos;AV;Ávila;ASTURIAS;20;04;2020-04
+2020;Abril;activos;AV;Ávila;CEUTA;0;04;2020-04
+2020;Abril;activos;AV;Ávila;CASTILLA-LA MANCHA;143;04;2020-04
+2020;Abril;activos;AV;Ávila;C. VALENCIANA;43;04;2020-04
+2020;Abril;activos;AV;Ávila;ARAGON;11;04;2020-04
+2020;Abril;activos;BU;Burgos;CANARIAS;19;04;2020-04
+2020;Abril;activos;BU;Burgos;ANDALUCIA;108;04;2020-04
+2020;Abril;activos;BU;Burgos;BALEARES;18;04;2020-04
+2020;Abril;activos;BU;Burgos;NAVARRA;54;04;2020-04
+2020;Abril;activos;LE;León;CANARIAS;51;04;2020-04
+2020;Abril;activos;LE;León;CATALUÑA;268;04;2020-04
+2020;Abril;activos;LE;León;ANDALUCIA;117;04;2020-04
+2020;Abril;activos;LE;León;LA RIOJA;32;04;2020-04
+2020;Abril;activos;LE;León;ASTURIAS;719;04;2020-04
+2020;Abril;activos;LE;León;CANTABRIA;88;04;2020-04
+2020;Abril;activos;PA;Palencia;CANARIAS;9;04;2020-04
+2020;Abril;activos;PA;Palencia;MELILLA;1;04;2020-04
+2020;Abril;activos;PA;Palencia;ASTURIAS;68;04;2020-04
+2020;Abril;activos;PA;Palencia;CEUTA;0;04;2020-04
+2020;Abril;activos;PA;Palencia;GALICIA;21;04;2020-04
+2020;Abril;activos;PA;Palencia;PAIS VASCO;312;04;2020-04
+2020;Abril;activos;PA;Palencia;NAVARRA;14;04;2020-04
+2020;Abril;activos;SA;Salamanca;CASTILLA-LA MANCHA;76;04;2020-04
+2020;Abril;activos;SA;Salamanca;C. VALENCIANA;71;04;2020-04
+2020;Abril;activos;SE;Segovia;MELILLA;0;04;2020-04
+2020;Abril;activos;SE;Segovia;CATALUÑA;35;04;2020-04
+2020;Abril;activos;SE;Segovia;BALEARES;8;04;2020-04
+2020;Abril;activos;SE;Segovia;CASTILLA-LA MANCHA;46;04;2020-04
+2020;Abril;activos;SE;Segovia;PAIS VASCO;39;04;2020-04
+2020;Abril;activos;SE;Segovia;EXTREMADURA;23;04;2020-04
+2020;Abril;activos;SO;Soria;CANARIAS;8;04;2020-04
+2020;Abril;activos;SO;Soria;MADRID;387;04;2020-04
+2020;Abril;activos;SO;Soria;LA RIOJA;46;04;2020-04
+2020;Abril;activos;SO;Soria;CEUTA;0;04;2020-04
+2020;Abril;activos;SO;Soria;MURCIA;9;04;2020-04
+2020;Abril;activos;SO;Soria;PAIS VASCO;66;04;2020-04
+2020;Abril;activos;VA;Valladolid;CANARIAS;33;04;2020-04
+2020;Abril;activos;VA;Valladolid;LA RIOJA;28;04;2020-04
+2020;Abril;activos;VA;Valladolid;ASTURIAS;61;04;2020-04
+2020;Abril;activos;VA;Valladolid;BALEARES;22;04;2020-04
+2020;Abril;activos;VA;Valladolid;CEUTA;0;04;2020-04
+2020;Abril;activos;VA;Valladolid;MURCIA;17;04;2020-04
+2020;Abril;activos;VA;Valladolid;GALICIA;63;04;2020-04
+2020;Abril;activos;VA;Valladolid;CASTILLA-LA MANCHA;44;04;2020-04
+2020;Abril;activos;VA;Valladolid;PAIS VASCO;140;04;2020-04
+2020;Abril;activos;VA;Valladolid;EXTREMADURA;51;04;2020-04
+2020;Abril;activos;ZA;Zamora;CANARIAS;15;04;2020-04
+2020;Abril;activos;ZA;Zamora;MELILLA;0;04;2020-04
+2020;Abril;activos;ZA;Zamora;CATALUÑA;127;04;2020-04
+2020;Abril;activos;ZA;Zamora;ANDALUCIA;43;04;2020-04
+2020;Abril;activos;ZA;Zamora;MURCIA;9;04;2020-04
+2020;Abril;activos;ZA;Zamora;GALICIA;55;04;2020-04
+2020;Abril;activos;ZA;Zamora;CANTABRIA;19;04;2020-04
+2020;Abril;activos;ZA;Zamora;PAIS VASCO;377;04;2020-04
+2020;Abril;activos;ZA;Zamora;ARAGON;8;04;2020-04
+2020;Abril;activos;ZA;Zamora;EXTREMADURA;28;04;2020-04
+2020;Abril;activos;ZA;Zamora;NAVARRA;20;04;2020-04
+2020;Mayo;activos;AV;Ávila;BALEARES;15;05;2020-05
+2020;Mayo;activos;AV;Ávila;PAIS VASCO;52;05;2020-05
+2020;Mayo;activos;AV;Ávila;NAVARRA;8;05;2020-05
+2020;Mayo;activos;BU;Burgos;ASTURIAS;53;05;2020-05
+2020;Mayo;activos;BU;Burgos;ARAGON;38;05;2020-05
+2020;Mayo;activos;BU;Burgos;NAVARRA;51;05;2020-05
+2020;Mayo;activos;LE;León;CANARIAS;41;05;2020-05
+2020;Mayo;activos;LE;León;ANDALUCIA;93;05;2020-05
+2020;Mayo;activos;LE;León;BALEARES;51;05;2020-05
+2020;Mayo;activos;LE;León;CEUTA;0;05;2020-05
+2020;Mayo;activos;LE;León;MURCIA;13;05;2020-05
+2020;Mayo;activos;LE;León;GALICIA;297;05;2020-05
+2020;Mayo;activos;LE;León;C. VALENCIANA;79;05;2020-05
+2020;Mayo;activos;LE;León;NAVARRA;35;05;2020-05
+2020;Mayo;activos;PA;Palencia;MELILLA;0;05;2020-05
+2020;Mayo;activos;PA;Palencia;MADRID;287;05;2020-05
+2020;Mayo;activos;PA;Palencia;ASTURIAS;69;05;2020-05
+2020;Mayo;activos;PA;Palencia;BALEARES;13;05;2020-05
+2020;Mayo;activos;PA;Palencia;CEUTA;0;05;2020-05
+2020;Mayo;activos;PA;Palencia;C. VALENCIANA;29;05;2020-05
+2020;Mayo;activos;PA;Palencia;ARAGON;6;05;2020-05
+2020;Mayo;activos;PA;Palencia;NAVARRA;14;05;2020-05
+2020;Mayo;activos;SA;Salamanca;CANARIAS;44;05;2020-05
+2020;Mayo;activos;SA;Salamanca;MELILLA;0;05;2020-05
+2020;Mayo;activos;SA;Salamanca;ASTURIAS;77;05;2020-05
+2020;Mayo;activos;SA;Salamanca;MURCIA;17;05;2020-05
+2020;Mayo;activos;SA;Salamanca;CASTILLA-LA MANCHA;67;05;2020-05
+2020;Mayo;activos;SA;Salamanca;CANTABRIA;50;05;2020-05
+2020;Mayo;activos;SE;Segovia;CANARIAS;11;05;2020-05
+2020;Mayo;activos;SE;Segovia;MADRID;1745;05;2020-05
+2020;Mayo;activos;SE;Segovia;ANDALUCIA;31;05;2020-05
+2020;Mayo;activos;SE;Segovia;LA RIOJA;10;05;2020-05
+2020;Mayo;activos;SE;Segovia;ASTURIAS;19;05;2020-05
+2020;Mayo;activos;SE;Segovia;ARAGON;5;05;2020-05
+2020;Mayo;activos;SO;Soria;CATALUÑA;91;05;2020-05
+2020;Mayo;activos;SO;Soria;MADRID;432;05;2020-05
+2020;Mayo;activos;SO;Soria;ASTURIAS;6;05;2020-05
+2020;Mayo;activos;SO;Soria;GALICIA;16;05;2020-05
+2020;Mayo;activos;SO;Soria;EXTREMADURA;14;05;2020-05
+2020;Mayo;activos;VA;Valladolid;CANARIAS;23;05;2020-05
+2020;Mayo;activos;VA;Valladolid;LA RIOJA;25;05;2020-05
+2020;Mayo;activos;VA;Valladolid;ASTURIAS;55;05;2020-05
+2020;Mayo;activos;VA;Valladolid;CANTABRIA;45;05;2020-05
+2020;Mayo;activos;VA;Valladolid;C. VALENCIANA;46;05;2020-05
+2020;Mayo;activos;VA;Valladolid;EXTREMADURA;48;05;2020-05
+2020;Mayo;activos;VA;Valladolid;NAVARRA;9;05;2020-05
+2020;Mayo;activos;ZA;Zamora;MELILLA;0;05;2020-05
+2020;Mayo;activos;ZA;Zamora;CATALUÑA;110;05;2020-05
+2020;Mayo;activos;ZA;Zamora;MADRID;744;05;2020-05
+2020;Mayo;activos;ZA;Zamora;ASTURIAS;132;05;2020-05
+2020;Mayo;activos;ZA;Zamora;BALEARES;3;05;2020-05
+2020;Mayo;activos;ZA;Zamora;GALICIA;52;05;2020-05
+2020;Mayo;activos;ZA;Zamora;EXTREMADURA;22;05;2020-05
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;CATALUÑA;-4;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;MADRID;596;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;CEUTA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;AV;Ávila;NAVARRA;-1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;CATALUÑA;-4;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;CEUTA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;MURCIA;-6;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;BU;Burgos;CANTABRIA;-2;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;MADRID;76;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;LA RIOJA;4;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;ASTURIAS;-64;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;LE;León;CEUTA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;CANARIAS;-10;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;MELILLA;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;CATALUÑA;-2;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;LA RIOJA;-1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;ASTURIAS;5;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;MURCIA;-3;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;GALICIA;-5;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;PAIS VASCO;-15;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;ARAGON;-6;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;PA;Palencia;NAVARRA;-3;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;MELILLA;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;CATALUÑA;-7;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;LA RIOJA;-3;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;CEUTA;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;CASTILLA-LA MANCHA;-13;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SA;Salamanca;NAVARRA;-1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;ASTURIAS;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;CEUTA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;CANTABRIA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;C. VALENCIANA;-8;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;EXTREMADURA;-5;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SE;Segovia;NAVARRA;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;MELILLA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;CATALUÑA;-16;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;MADRID;80;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;ANDALUCIA;-5;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;GALICIA;-3;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;C. VALENCIANA;-16;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;SO;Soria;ARAGON;3;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;CANARIAS;-5;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;MELILLA;-1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;ASTURIAS;-9;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;BALEARES;-23;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;MURCIA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;CASTILLA-LA MANCHA;-8;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;PAIS VASCO;-5;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;ARAGON;1;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;VA;Valladolid;EXTREMADURA;-14;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;MELILLA;0;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;ANDALUCIA;-11;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;ASTURIAS;22;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;GALICIA;-7;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;ARAGON;3;03;2020-03
+2020;Marzo;variación activos respecto a mes anterior;ZA;Zamora;NAVARRA;4;03;2020-03
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;CATALUÑA;-19;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;BALEARES;-6;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;CEUTA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;AV;Ávila;EXTREMADURA;-3;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;MADRID;-29;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;GALICIA;-17;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;CASTILLA-LA MANCHA;-6;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;CANTABRIA;-17;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;PAIS VASCO;-18;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;BU;Burgos;NAVARRA;-17;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;CATALUÑA;-37;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;LA RIOJA;-10;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;CEUTA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;MURCIA;-6;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;GALICIA;-59;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;CANTABRIA;-36;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;LE;León;ARAGON;-15;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;MADRID;-6;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;ANDALUCIA;-5;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;LA RIOJA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;BALEARES;-11;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;CEUTA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;MURCIA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;PA;Palencia;CANTABRIA;-11;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;MADRID;-6;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;ANDALUCIA;-53;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;BALEARES;-19;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;CEUTA;1;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;GALICIA;-20;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;C. VALENCIANA;-26;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SA;Salamanca;EXTREMADURA;-84;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;CATALUÑA;-9;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;LA RIOJA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;ASTURIAS;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;MURCIA;-1;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;C. VALENCIANA;-2;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;PAIS VASCO;-6;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;ARAGON;-1;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SE;Segovia;NAVARRA;-2;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;CANARIAS;-7;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;MELILLA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;MADRID;-11;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;LA RIOJA;-13;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;BALEARES;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;ARAGON;-34;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;SO;Soria;EXTREMADURA;2;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;CATALUÑA;-33;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;MADRID;27;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;ANDALUCIA;-15;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;ASTURIAS;-16;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;GALICIA;-9;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;ARAGON;-10;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;VA;Valladolid;NAVARRA;-1;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;MELILLA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;CATALUÑA;-28;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;LA RIOJA;0;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;ASTURIAS;-2;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;GALICIA;-21;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;PAIS VASCO;-9;04;2020-04
+2020;Abril;variación activos respecto a mes anterior;ZA;Zamora;ARAGON;-10;04;2020-04
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;CANARIAS;-3;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;CATALUÑA;-3;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;ANDALUCIA;-6;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;PAIS VASCO;-6;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;ARAGON;-3;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;EXTREMADURA;-14;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;AV;Ávila;NAVARRA;-2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;CATALUÑA;-7;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;CASTILLA-LA MANCHA;-7;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;BU;Burgos;NAVARRA;-3;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;CANARIAS;-10;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;MADRID;19;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;ASTURIAS;-65;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;CANTABRIA;-23;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;LE;León;C. VALENCIANA;-31;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;CANARIAS;-4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;MELILLA;-1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;CATALUÑA;-4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;ASTURIAS;1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;CASTILLA-LA MANCHA;-11;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;CANTABRIA;-5;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;PA;Palencia;NAVARRA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;CATALUÑA;-7;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;GALICIA;-21;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;PAIS VASCO;-4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;EXTREMADURA;-50;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SA;Salamanca;NAVARRA;-9;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;CANARIAS;-1;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;MELILLA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;MADRID;132;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;ANDALUCIA;-4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;C. VALENCIANA;-4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;PAIS VASCO;-4;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SE;Segovia;EXTREMADURA;-8;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;ASTURIAS;-6;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;SO;Soria;EXTREMADURA;-8;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;CANARIAS;-10;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;CATALUÑA;-8;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;MADRID;2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;ANDALUCIA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;CEUTA;0;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;MURCIA;-10;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;GALICIA;-15;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;VA;Valladolid;CASTILLA-LA MANCHA;-10;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;CATALUÑA;-17;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;MADRID;72;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;LA RIOJA;-3;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;BALEARES;-2;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;CANTABRIA;9;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;EXTREMADURA;-6;05;2020-05
+2020;Mayo;variación activos respecto a mes anterior;ZA;Zamora;NAVARRA;4;05;2020-05
