@@ -156,19 +156,53 @@
       - PCR con resultado positivo: número de profesionales que tienen, al menos, una prueba diagnóstica positiva.
       - Profesionales en seguimiento: profesionales que han tenido una PCR positiva y que no tienen aún una PCR posterior negativa.
       - Altas: profesionales con PCR negativa tras PCR positiva.
+  - **Formatos:**
+    - Formatos de archivo plano: CSV / JSON / Excel
 
+- **Tasa de enfermos por zonas básicas de salud.**
+  - **Información:** 
+    - Datos diarios en cada zona básica de salud. El dataset se actualiza los días laborables. 
+    - Incidencia diaria de pacientes enfermos y de porcentaje de personas enfermas por número de tarjetas sanitarias en cada zona básica de salud. También se indican los enfermos y los porcentajes para los últimos 7 y 14 días.
+    - El cálculo de la incidencia de la enfermedad se ha efectuado teniendo en cuenta el número de afectados en relación con el número de tarjetas por zona básica de salud. No se contabilizan aquellas personas que han dejado de tener síntomas compatibles con COVID19. Los datos se recogen desde el 29 de febrero de 2020.
+    - El dato de pacientes enfermos incluye todos los diagnósticos compatibles con coronavirus (neumonía por COVID-19 y enfermedad por COVID-19).
+    - El registro de Medora (historia clínica de atención primaria) incluyó hasta el 14 de marzo únicamente pacientes diagnosticados por prueba de PCR (prueba de detección molecular). Desde el 14 de marzo y tras la modiﬁcación de la deﬁnición de enfermedad por el Ministerio de Sanidad, se incluyen pacientes con sospecha clínica de enfermedad.
+    - Asimismo se informa de las PCR realizadas y sus porcetajes así como los dato de PCR positivas y la tasa por 10000 tarjetas sanitarias, tanto de cada día como de los últimos 7 y 14 días.
   - **Formatos:**
     - Formatos de archivo plano: CSV / JSON / Excel
     - Formatos de archivo geográfico: GeoJSON / Shapefile / KML
 
-- **Tasa de enfermos por zonas básicas de salud.**
-
 - **Tasa mortalidad covid por zonas básicas de salud.**
+  - **Información:** 
+    - Porcentaje de personas fallecidas COVID-19 (confirmados y compatibles con la enfermedad) por número de tarjetas sanitarias en cada zona básica de salud. Datos acumulados desde el 1 de marzo de 2020. Desde el 13/06/2020 los datos se actualizan los días laborables.
+  - **Formatos:**
+    - Formatos de archivo plano: CSV / JSON / Excel
+    - Formatos de archivo geográfico: GeoJSON / Shapefile / KML
 
 - **Tasa mortalidad por zonas básicas de salud.**
+  - **Información:** 
+    - Porcentaje de personas fallecidas total (no solo por COVID-19) por número de tarjetas sanitarias en cada zona básica de salud. Datos acumulados desde el 1 de marzo de 2020. Desde el 13/06/2020 los datos se actualizan los días laborables.
+  - **Formatos:**
+    - Formatos de archivo plano: CSV / JSON / Excel
+    - Formatos de archivo geográfico: GeoJSON / Shapefile / KML
 
 - **Test PCR en profesionales por edad y sexo.**
+  - **Información:** 
+    - Relación de test PCR realizados a profesionales sanitarios por tramos de edad y sexo. Actualización diaria. Desde el 13/06/2020 los datos se actualizan los días laborables.
+  - **Formatos:**
+    - Formatos de archivo plano: CSV / JSON / Excel
 
 - **Límites provinciales de Castilla y León recintos.**
+  - **Información:** 
+    - Representación cartográfica de las unidades administrativas provinciales oficiales de Castilla y León.
+    - Delimitación administrativa de las provincias de Castilla y León generada a partir de las líneas-límite municipales oficiales del Instituto Geográfico Nacional (IGN).
+    - Constituye una de las cartografías básicas de referencia de la Comunidad Autónoma de Castilla y León.
+  - **Formatos:**
+    - Formatos de archivo plano: CSV / JSON / Excel
+    - Formatos de archivo geográfico: GeoJSON / Shapefile / KML
 
 - **Mapa de Zonas Básicas de Salud de Castilla y León.**
+  - **Información:** 
+    - Capa de Áreas de Salud de Castilla y León.Representación cartográfica de las Áreas de Salud en que se organiza el sistema sanitario de Atención Primaria de Castilla y León, cuya regulación se establece por el Decreto 108/1991 y posteriores modificaciones.Mapa elaborado a partir de la integración de los ambitos municipales de acuerdo con la organización y distribución existente de los recursos sanitarios sobre el territorio de la Comunidad.Resultan 11 Áreas de Salud (dos áreas en León y Valladolid y una por provincia en el resto).
+  - **Formatos:**
+    - Formatos de archivo plano: CSV / JSON / Excel
+    - Formatos de archivo geográfico: GeoJSON / Shapefile / KML
