@@ -263,6 +263,7 @@ rioja_hospitales <- read_delim(link_hospitales, ",", escape_double = FALSE,
                                na = c("", "NA", "-"), trim_ws = TRUE)
 ```
 
+
 ```{r}
 httr::GET(link_hospitales, httr::write_disk(tf_hospitales <- tempfile(fileext = ".csv")))
 
@@ -543,6 +544,7 @@ link_uci_porcentaje <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDU0fGN
 rioja_uci_porcentaje <- read_delim(link_uci_porcentaje, ",", escape_double = FALSE, 
                                na = c("", "NA", "-"), trim_ws = TRUE)
 ```
+
 
 ```{r}
 httr::GET(link_uci_porcentaje, httr::write_disk(tf_uci_porcentaje <- tempfile(fileext = ".csv")))
@@ -847,6 +849,7 @@ rioja_casos_porcentaje <- read_delim(link_casos_porcentaje, ",", escape_double =
                                na = c("", "NA", "-"), trim_ws = TRUE)
 ```
 
+
 ```{r}
 httr::GET(link_casos_porcentaje, httr::write_disk(tf_casos_porcentaje <- tempfile(fileext = ".csv")))
 
@@ -1090,6 +1093,7 @@ rioja_pruebas <- read_delim(link_pruebas, ",", escape_double = FALSE,
                                na = c("", "NA", "-"), trim_ws = TRUE)
 ```
 
+
 ```{r}
 httr::GET(link_pruebas, httr::write_disk(tf_pruebas <- tempfile(fileext = ".csv")))
 
@@ -1202,12 +1206,14 @@ rioja_salidas_domiciliarias <- read_delim(link_salidas_domiciliarias, ",", escap
                                na = c("", "NA", "-"), trim_ws = TRUE)
 ```
 
+
 ```{r}
 httr::GET(link_salidas_domiciliarias, httr::write_disk(tf_salidas_domiciliarias <- tempfile(fileext = ".csv")))
 
 rioja_salidas_domiciliarias <- read_delim(tf_salidas_domiciliarias, ",", escape_double = FALSE, 
                                na = c("", "NA", "-"), trim_ws = TRUE)
 ```
+
 
 ```{r}
 rioja_salidas_domiciliarias <- as.data.frame(rioja_salidas_domiciliarias)
@@ -1494,7 +1500,6 @@ link_fallecidos <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDU4fGNmPTA
 ```{r, eval=FALSE}
 rioja_fallecidos <- read_delim(link_fallecidos, ",", escape_double = FALSE, trim_ws = TRUE)
 ```
-
 
 
 ```{r}
@@ -1821,8 +1826,6 @@ rioja_situacion_personas_mayores <- read_delim(link_situacion_personas_mayores, 
 ```
 
 
-
-
 ```{r}
 httr::GET(link_situacion_personas_mayores, httr::write_disk(tf_situacion_personas_mayores <- tempfile(fileext = ".csv")))
 
@@ -1899,16 +1902,6 @@ resumen_diario <- cbind(resumen_diario, diario)
 
 
 
-
-
-
-
-
-
-
-
-
-
 ## Casos confirmados acumulados por localidades
 
 Casos confirmados de coronavirus acumulados a fecha actual, por localidades
@@ -1943,7 +1936,7 @@ Ahora bajamos el fichero
 link_casos_acumulados_localidades <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDcwfGNmPTAz'
 ```
 
-```{r}
+```{r, eval=FALSE}
 rioja_casos_acumulados_localidades <- read_delim(link_casos_acumulados_localidades, ";", escape_double = FALSE, 
                                na = c("", "NA", "-"), col_names = TRUE, trim_ws = TRUE)      # OJO con el col_names ************************************
 ```
@@ -2017,6 +2010,131 @@ Añadimos al diario
 # resumen_diario <- data.frame(time_stamp = Sys.time())
 resumen_diario <- cbind(resumen_diario, diario)
 ```
+
+
+
+
+
+
+
+
+
+
+## Casos confirmados por PCR en las residencias de personas mayores de La Rioja
+
+Casos de COVID-19 confirmados mediante prueba PCR en las residencias de personas mayores de La Rioja
+
+La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-471](https://web.larioja.org/dato-abierto/datoabierto?n=opd-471)
+
+```{r}
+page_confirmados_pcr_residencias <- read_html('https://web.larioja.org/dato-abierto/datoabierto?n=opd-471')
+
+# find all nodes with a class of "col_md_6"
+col_md_6_confirmados_pcr_residencias <- html_nodes(page_confirmados_pcr_residencias, css = '.col-md-6')
+col_md_6_confirmados_pcr_residencias
+```
+
+```{r}
+fecha_campos_confirmados_pcr_residencias <- html_children(col_md_6_confirmados_pcr_residencias[8]) %>% 
+    html_nodes("dt") %>% 
+    html_text(trim = TRUE)
+fecha_campos_confirmados_pcr_residencias
+```
+
+```{r}
+fecha_valores_confirmados_pcr_residencias <- html_children(col_md_6_confirmados_pcr_residencias[8]) %>% 
+    html_nodes("dd") %>% 
+    html_text(trim = TRUE)
+fecha_valores_confirmados_pcr_residencias
+```
+
+Ahora bajamos el fichero
+
+```{r}
+link_confirmados_pcr_residencias <- 'https://ias1.larioja.org/opendata/download?r=Y2Q9NDcxfGNmPTAz'
+```
+
+
+```{r}
+rioja_confirmados_pcr_residencias <- read_delim(link_confirmados_pcr_residencias, 
+                                                ",", escape_double = FALSE,                                
+                                                na = c("", "NA", "-"), 
+                                                col_names = TRUE, trim_ws = TRUE)      # OJO con el col_names ************************************
+```
+
+
+```{r, eval=FALSE}
+httr::GET(link_confirmados_pcr_residencias, httr::write_disk(tf_confirmados_pcr_residencias <- tempfile(fileext = ".csv")))
+
+rioja_confirmados_pcr_residencias <- read_delim(tf_confirmados_pcr_residencias, 
+                                                ",", escape_double = FALSE,                                
+                                                na = c("", "NA", "-"), 
+                                                col_names = TRUE, trim_ws = TRUE)
+```
+
+
+```{r}
+rioja_confirmados_pcr_residencias <- as.data.frame(rioja_confirmados_pcr_residencias)
+```
+
+```{r}
+names(rioja_confirmados_pcr_residencias) <- c("residencias", "municipio", 
+                                              "confirmados_pcr")
+```
+
+```{r, eval=FALSE}
+rioja_confirmados_pcr_residencias <- rioja_confirmados_pcr_residencias[, 1:3]
+```
+
+Incorporamos la fecha del dato
+
+```{r}
+rioja_confirmados_pcr_residencias$fecha_publicacion_confirmados_pcr_residencias    = as.Date(fecha_valores_confirmados_pcr_residencias[1], '%d/%m/%Y')
+rioja_confirmados_pcr_residencias$ultima_actualizacion_confirmados_pcr_residencias = as.Date(fecha_valores_confirmados_pcr_residencias[2], '%d/%m/%Y')
+rioja_confirmados_pcr_residencias$ambito_temporal_confirmados_pcr_residencias      = as.Date(fecha_valores_confirmados_pcr_residencias[3], '%d/%m/%Y')
+```
+
+```{r}
+summary(rioja_confirmados_pcr_residencias)
+```
+
+```{r}
+str(rioja_confirmados_pcr_residencias)
+```
+
+
+**Revisar que cuadra**
+
+```{r, eval=FALSE}
+# En esta caso es la última línea
+diario <- data.frame(
+                     
+                     mayores_confirmados_PCR       = as.numeric(rioja_confirmados_pcr_residencias$X2[1]),
+                     mayores_altas_acumulado       = as.numeric(rioja_confirmados_pcr_residencias$X2[2]),
+                     mayores_fallecidos_acumulado  = as.numeric(rioja_confirmados_pcr_residencias$X2[3]),
+                     residentes_sin_coronavirus    = rioja_confirmados_pcr_residencias$X2[4],
+                     residencias_sin_positivos     = as.numeric(rioja_confirmados_pcr_residencias$X2[5]),
+                     
+                     fecha_publicacion_confirmados_pcr_residencias       = as.Date(fecha_valores_confirmados_pcr_residencias[1], '%d/%m/%Y'),
+                     ultima_actualizacion_confirmados_pcr_residencias    = as.Date(fecha_valores_confirmados_pcr_residencias[2], '%d/%m/%Y'),
+                     ambito_temporal_confirmados_pcr_residencias         = as.Date(fecha_valores_confirmados_pcr_residencias[3], '%d/%m/%Y')
+                     )
+```
+
+Guardamos
+
+```{r}
+saveRDS(rioja_confirmados_pcr_residencias, file = paste0('./data/rioja_confirmados_pcr_residencias_', Sys.Date(),'.rds'))
+```
+
+Añadimos al diario
+
+```{r, eval=FALSE}
+# resumen_diario <- data.frame(time_stamp = Sys.time())
+resumen_diario <- cbind(resumen_diario, diario)
+```
+
+
 
 
 
@@ -2258,6 +2376,11 @@ La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/dato
 Contratos de emergencia realizados durante la pandemia del coronavirus Covid-19 debidos a situaciones excepcionales. Incluye organismo, expediente, descripción, fecha, lotes, empresa, contenido, unidades e importe
 
 La página de datos abiertos es esta: [https://web.larioja.org/dato-abierto/datoabierto?n=opd-469](https://web.larioja.org/dato-abierto/datoabierto?n=opd-469)
+
+
+
+
+
 
 
 
