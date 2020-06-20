@@ -7,6 +7,10 @@
 - Del 13 de marzo de 2020 al 12 de junio de 2020: actualización diaria, datos de todos los días.
 - Del 12 de junio de 2020 en adelanta: actualización únicamente los días laborables, datos únicamente de los días laborables.
 
+## Carpetas:
+- Carpeta _Datos_diarios_13.03.20-12.06.20_: Datos diarios desde el 13 de marzo de 2020 al 12 de junio de 2020 (inclusive).
+- Carpeta _Datos_diarios_13.03.20-12.06.20_Datos_solo_dias_laborables_13.06.20-19.06.20_: Datos diarios desde el 13 de marzo de 2020 al 12 de junio de 2020 (inclusive) y datos facilitados únicamente para los días laborables del 13 de junio de 2020 al 19 de junio de 2020.
+
 ## Contenido:
 Los datos facilitados se encuentran agrupados en conjuntos de datos. A continuación, se incluye la información de cada uno de los conjuntos de datos extraída del Portal de Análisis de Datos Abiertos de la Junta de Castilla y León y los formatos de archivo plano y/o geográfico disponibles.
 - **Fases desescalada por zonas básicas de salud.**
