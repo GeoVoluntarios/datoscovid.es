@@ -1,0 +1,793 @@
+FECHA;PROVINCIA;CATEGORIA;PROFESIONALES_TOTAL;PORCENTAJE_TEST_REALIZADOS;PORCENTAJE_TEST_POSITIVO;orden
+2020-04-12;Castilla y León;Otros sanitarios;364;16.75824176;5.769230769;8
+2020-04-12;Castilla y León;Técnicos sanitarios;2014;8.937437934;3.277060576;11
+2020-04-13;Castilla y León;Celador;3221;9.903756597;3.16671841;3
+2020-04-13;Castilla y León;Médicos;8623;23.05462136;6.575437783;6
+2020-04-13;Castilla y León;Otros sanitarios;364;18.13186813;5.769230769;8
+2020-04-14;Castilla y León;Celador;3221;10.86619062;3.352995964;3
+2020-04-14;Castilla y León;Enfermero/a;13176;19.52034001;5.631451123;4
+2020-04-14;Castilla y León;Médicos;8623;25.60593761;6.679809811;6
+2020-04-15;Castilla y León;Médicos;8623;27.05554911;6.795778731;6
+2020-04-15;Castilla y León;Otros;381;3.149606299;0.787401575;7
+2020-04-15;Castilla y León;Personal en formación;1711;20.63120982;4.967855056;9
+2020-04-16;Castilla y León;Administrativo;3972;13.44410876;2.945619335;1
+2020-04-16;Castilla y León;Fisioterapeuta;447;18.79194631;2.684563758;5
+2020-04-16;Castilla y León;Otros sanitarios;364;22.8021978;5.769230769;8
+2020-04-16;Castilla y León;Total;43351;18.9430463;4.943369242;12
+2020-04-17;Castilla y León;Auxiliares sanitarios;7056;15.57539683;4.634353741;2
+2020-04-17;Castilla y León;Celador;3221;12.79105868;3.446134741;3
+2020-04-17;Castilla y León;Enfermero/a;13176;23.04189435;5.912264724;4
+2020-04-17;Castilla y León;Médicos;8623;29.95477212;6.992925896;6
+2020-04-17;Castilla y León;Otros;381;4.98687664;0.787401575;7
+2020-04-17;Castilla y León;Otros sanitarios;364;23.62637363;5.769230769;8
+2020-04-17;Castilla y León;Técnicos sanitarios;2014;11.27110228;3.326713009;11
+2020-04-17;Castilla y León;Total;43351;19.96493737;5.017185301;12
+2020-04-18;Castilla y León;Celador;3221;12.79105868;3.446134741;3
+2020-04-18;Castilla y León;Enfermero/a;13176;23.17091682;5.919854281;4
+2020-04-18;Castilla y León;Fisioterapeuta;447;20.35794183;2.684563758;5
+2020-04-18;Castilla y León;Médicos;8623;30.17511307;7.004522788;6
+2020-04-19;Castilla y León;Celador;3221;12.88419745;3.508227259;3
+2020-04-19;Castilla y León;Médicos;8623;30.30267888;7.085701032;6
+2020-04-20;Castilla y León;Administrativo;3972;15.55891239;3.021148036;1
+2020-04-20;Castilla y León;Servicios de apoyo no sanitario;2386;6.370494552;2.05364627;10
+2020-04-20;Castilla y León;Técnicos sanitarios;2014;11.81727905;3.376365442;11
+2020-04-21;Castilla y León;Celador;3221;13.97081652;3.601366035;3
+2020-04-21;Castilla y León;Personal en formación;1711;25.42372881;5.318527177;9
+2020-04-21;Castilla y León;Técnicos sanitarios;2014;12.46276068;3.376365442;11
+2020-04-22;Castilla y León;Administrativo;3972;17.74924471;3.247734139;1
+2020-04-22;Castilla y León;Celador;3221;15.18162061;3.818689848;3
+2020-04-22;Castilla y León;Otros sanitarios;364;25.54945055;5.769230769;8
+2020-04-22;Castilla y León;Servicios de apoyo no sanitario;2386;6.957250629;2.137468567;10
+2020-04-23;Castilla y León;Médicos;8623;35.06900151;7.422010901;6
+2020-04-23;Castilla y León;Otros;381;6.56167979;1.049868766;7
+2020-04-23;Castilla y León;Otros sanitarios;364;25.54945055;5.769230769;8
+2020-04-23;Castilla y León;Personal en formación;1711;29.04734074;5.610753945;9
+2020-04-24;Castilla y León;Administrativo;3972;18.75629406;3.298086606;1
+2020-04-24;Castilla y León;Auxiliares sanitarios;7056;21.78287982;5.130385488;2
+2020-04-24;Castilla y León;Técnicos sanitarios;2014;13.95233366;3.426017875;11
+2020-04-24;Castilla y León;Total;43351;25.49422159;5.413946622;12
+2020-04-25;Castilla y León;Otros;381;6.824146982;1.57480315;7
+2020-04-25;Castilla y León;Personal en formación;1711;31.26826417;5.844535359;9
+2020-04-26;Castilla y León;Administrativo;3972;18.98288016;3.298086606;1
+2020-04-26;Castilla y León;Otros;381;7.086614173;1.837270341;7
+2020-04-26;Castilla y León;Personal en formación;1711;31.67738165;5.844535359;9
+2020-04-26;Castilla y León;Servicios de apoyo no sanitario;2386;7.837384744;2.221290863;10
+2020-04-27;Castilla y León;Administrativo;3972;19.66263847;3.32326284;1
+2020-04-27;Castilla y León;Auxiliares sanitarios;7056;24.34807256;5.385487528;2
+2020-04-27;Castilla y León;Médicos;8623;38.09579033;7.58436739;6
+2020-04-27;Castilla y León;Técnicos sanitarios;2014;15.64051639;3.426017875;11
+2020-04-28;Castilla y León;Administrativo;3972;20.99697885;3.398791541;1
+2020-04-28;Castilla y León;Auxiliares sanitarios;7056;25.82199546;5.484693878;2
+2020-04-28;Castilla y León;Médicos;8623;40.20642468;7.677142526;6
+2020-04-28;Castilla y León;Personal en formación;1711;34.77498539;6.01987142;9
+2020-04-28;Castilla y León;Total;43351;29.27960139;5.68383659;12
+2020-04-29;Castilla y León;Médicos;8623;43.36077931;7.932274151;6
+2020-04-29;Castilla y León;Otros;381;7.611548556;1.837270341;7
+2020-04-29;Castilla y León;Otros sanitarios;364;33.79120879;7.142857143;8
+2020-04-29;Castilla y León;Técnicos sanitarios;2014;17.82522344;3.475670308;11
+2020-04-30;Castilla y León;Enfermero/a;13176;38.63084396;6.914086217;4
+2020-04-30;Castilla y León;Otros;381;7.611548556;1.57480315;7
+2020-05-01;Castilla y León;Celador;3221;28.59360447;4.843216392;3
+2020-05-01;Castilla y León;Otros sanitarios;364;34.61538462;7.142857143;8
+2020-05-01;Castilla y León;Servicios de apoyo no sanitario;2386;9.178541492;2.221290863;10
+2020-05-02;Castilla y León;Administrativo;3972;24.6978852;3.474320242;1
+2020-05-02;Castilla y León;Celador;3221;28.74883577;4.843216392;3
+2020-05-02;Castilla y León;Enfermero/a;13176;39.69338191;7.012750455;4
+2020-05-02;Castilla y León;Médicos;8623;46.99060652;8.141018207;6
+2020-05-02;Castilla y León;Servicios de apoyo no sanitario;2386;9.22045264;2.221290863;10
+2020-05-03;Castilla y León;Administrativo;3972;24.7734139;3.474320242;1
+2020-05-03;Castilla y León;Auxiliares sanitarios;7056;30.62641723;5.89569161;2
+2020-05-03;Castilla y León;Otros sanitarios;364;34.89010989;7.142857143;8
+2020-05-03;Castilla y León;Técnicos sanitarios;2014;19.71201589;3.574975174;11
+2020-05-03;Castilla y León;Total;43351;34.64741298;6.059837143;12
+2020-05-04;Castilla y León;Otros sanitarios;364;36.26373626;6.868131868;8
+2020-05-04;Castilla y León;Total;43351;35.70390533;6.182094992;12
+2020-05-05;Castilla y León;Administrativo;3972;27.41691843;3.700906344;1
+2020-05-05;Castilla y León;Auxiliares sanitarios;7056;33.97108844;6.462585034;2
+2020-05-05;Castilla y León;Celador;3221;30.58056504;5.029493946;3
+2020-05-05;Castilla y León;Enfermero/a;13176;43.28324226;7.263205829;4
+2020-05-05;Castilla y León;Fisioterapeuta;447;37.80760626;4.697986577;5
+2020-05-05;Castilla y León;Otros;381;8.13648294;1.57480315;7
+2020-05-05;Castilla y León;Servicios de apoyo no sanitario;2386;10.77116513;2.347024308;10
+2020-05-05;Castilla y León;Total;43351;37.28864386;6.313579848;12
+2020-05-06;Castilla y León;Auxiliares sanitarios;7056;35.37414966;6.618480726;2
+2020-05-06;Castilla y León;Celador;3221;32.59857187;5.091586464;3
+2020-05-06;Castilla y León;Enfermero/a;13176;44.60382514;7.33151184;4
+2020-05-06;Castilla y León;Fisioterapeuta;447;38.03131991;4.697986577;5
+2020-05-06;Castilla y León;Otros;381;8.398950131;1.837270341;7
+2020-05-06;Castilla y León;Otros sanitarios;364;37.91208791;6.868131868;8
+2020-05-06;Castilla y León;Técnicos sanitarios;2014;21.79741807;3.823237339;11
+2020-05-07;Castilla y León;Auxiliares sanitarios;7056;37.27324263;7.001133787;2
+2020-05-07;Castilla y León;Personal en formación;1711;45.4704851;6.896551724;9
+2020-05-08;Castilla y León;Fisioterapeuta;447;40.04474273;4.697986577;5
+2020-05-08;Castilla y León;Otros sanitarios;364;39.83516484;7.142857143;8
+2020-05-08;Castilla y León;Servicios de apoyo no sanitario;2386;12.44761106;2.514668902;10
+2020-05-08;Castilla y León;Técnicos sanitarios;2014;24.23038729;4.121151936;11
+2020-05-08;Castilla y León;Total;43351;41.35544739;6.793384236;12
+2020-05-09;Castilla y León;Fisioterapeuta;447;18.12080537;4.474272931;5
+2020-05-09;Castilla y León;Médicos;8623;30.26788821;8.593296996;6
+2020-05-10;Castilla y León;Administrativo;3972;12.66364552;3.977844914;1
+2020-05-10;Castilla y León;Auxiliares sanitarios;7056;28.42970522;6.972789116;2
+2020-05-10;Castilla y León;Otros sanitarios;364;23.35164835;6.868131868;8
+2020-05-11;Castilla y León;Enfermero/a;13176;28.81754706;7.483302975;4
+2020-05-11;Castilla y León;Otros;381;5.249343832;1.57480315;7
+2020-05-11;Castilla y León;Servicios de apoyo no sanitario;2386;10.10058676;2.766135792;10
+2020-05-12;Castilla y León;Administrativo;3972;14.32527694;4.405840886;1
+2020-05-12;Castilla y León;Celador;3221;22.50853772;5.712511642;3
+2020-05-12;Castilla y León;Médicos;8623;31.03328308;8.778847269;6
+2020-05-12;Castilla y León;Servicios de apoyo no sanitario;2386;10.39396479;2.849958089;10
+2020-05-12;Castilla y León;Total;43351;25.91635718;6.827985514;12
+2020-05-13;Castilla y León;Administrativo;3972;14.90433031;2.693856999;1
+2020-05-13;Castilla y León;Celador;3221;22.97423161;4.03601366;3
+2020-05-13;Castilla y León;Otros;381;5.511811024;1.312335958;7
+2020-05-13;Castilla y León;Personal en formación;1711;29.3395675;5.435417884;9
+2020-05-14;Castilla y León;Fisioterapeuta;447;20.13422819;3.579418345;5
+2020-05-14;Castilla y León;Médicos;8623;32.00742201;6.911747652;6
+2020-05-14;Castilla y León;Otros;381;6.036745407;1.312335958;7
+2020-05-14;Castilla y León;Otros sanitarios;364;25.27472527;5.769230769;8
+2020-05-14;Castilla y León;Personal en formación;1711;29.57334892;5.435417884;9
+2020-05-14;Castilla y León;Técnicos sanitarios;2014;17.9245283;3.227408143;11
+2020-05-14;Castilla y León;Total;43351;27.04897234;5.247860488;12
+2020-05-15;Castilla y León;Administrativo;3972;15.50855992;2.744209466;1
+2020-05-15;Castilla y León;Enfermero/a;13176;31.0564663;6.071645416;4
+2020-05-15;Castilla y León;Médicos;8623;32.42491012;6.934941436;6
+2020-05-15;Castilla y León;Otros;381;6.56167979;1.312335958;7
+2020-05-15;Castilla y León;Personal en formación;1711;29.86557569;5.435417884;9
+2020-05-15;Castilla y León;Servicios de apoyo no sanitario;2386;13.74685666;2.095557418;10
+2020-05-16;Castilla y León;Fisioterapeuta;447;21.47651007;3.579418345;5
+2020-05-16;Castilla y León;Otros sanitarios;364;25.82417582;5.769230769;8
+2020-05-16;Castilla y León;Personal en formación;1711;29.92402104;5.435417884;9
+2020-05-16;Castilla y León;Servicios de apoyo no sanitario;2386;13.78876781;2.095557418;10
+2020-05-17;Castilla y León;Enfermero/a;13176;31.23861566;6.079234973;4
+2020-05-17;Castilla y León;Otros sanitarios;364;25.82417582;5.769230769;8
+2020-05-17;Castilla y León;Técnicos sanitarios;2014;18.47070506;3.227408143;11
+2020-05-18;Castilla y León;Auxiliares sanitarios;7056;32.66723356;5.626417234;2
+2020-05-18;Castilla y León;Celador;3221;24.68177585;4.067059919;3
+2020-05-18;Castilla y León;Otros sanitarios;364;25.82417582;5.769230769;8
+2020-05-18;Castilla y León;Total;43351;28.38458167;5.289382021;12
+2020-05-19;Castilla y León;Administrativo;3972;16.44008056;2.744209466;1
+2020-05-19;Castilla y León;Médicos;8623;33.94410298;6.969732112;6
+2020-05-19;Castilla y León;Otros;381;7.086614173;1.312335958;7
+2020-05-19;Castilla y León;Otros sanitarios;364;26.37362637;5.769230769;8
+2020-05-19;Castilla y León;Servicios de apoyo no sanitario;2386;14.33361274;2.095557418;10
+2020-05-20;Castilla y León;Administrativo;3972;16.86807654;2.744209466;1
+2020-05-20;Castilla y León;Celador;3221;26.63769016;4.129152437;3
+2020-05-20;Castilla y León;Fisioterapeuta;447;23.93736018;3.579418345;5
+2020-05-20;Castilla y León;Personal en formación;1711;31.50204559;5.435417884;9
+2020-05-20;Castilla y León;Total;43351;29.99700122;5.307836036;12
+2020-05-21;Castilla y León;Auxiliares sanitarios;7056;35.40249433;5.683106576;2
+2020-05-21;Castilla y León;Médicos;8623;34.98782326;6.969732112;6
+2020-05-21;Castilla y León;Otros;381;7.086614173;1.312335958;7
+2020-05-21;Castilla y León;Servicios de apoyo no sanitario;2386;14.92036882;2.137468567;10
+2020-05-21;Castilla y León;Técnicos sanitarios;2014;25.86891758;3.277060576;11
+2020-05-22;Castilla y León;Enfermero/a;13176;34.71463267;6.147540984;4
+2020-05-22;Castilla y León;Médicos;8623;35.26614867;6.969732112;6
+2020-05-22;Castilla y León;Otros;381;7.086614173;1.312335958;7
+2020-05-22;Castilla y León;Otros sanitarios;364;26.92307692;5.769230769;8
+2020-05-22;Castilla y León;Servicios de apoyo no sanitario;2386;15.25565801;2.137468567;10
+2020-05-22;Castilla y León;Técnicos sanitarios;2014;26.26613704;3.277060576;11
+2020-05-23;Castilla y León;Administrativo;3972;17.57301108;2.7693857;1
+2020-05-23;Castilla y León;Fisioterapeuta;447;25.27964206;3.579418345;5
+2020-05-23;Castilla y León;Otros sanitarios;364;27.1978022;5.769230769;8
+2020-05-23;Castilla y León;Servicios de apoyo no sanitario;2386;15.29756915;2.137468567;10
+2020-05-23;Castilla y León;Total;43351;31.15960416;5.323983299;12
+2020-05-24;Castilla y León;Fisioterapeuta;447;25.27964206;3.579418345;5
+2020-05-24;Castilla y León;Otros;381;7.349081365;1.312335958;7
+2020-05-24;Castilla y León;Otros sanitarios;364;27.1978022;5.769230769;8
+2020-05-24;Castilla y León;Total;43351;31.20804595;5.323983299;12
+2020-05-25;Castilla y León;Administrativo;3972;18.02618328;2.7693857;1
+2020-05-25;Castilla y León;Auxiliares sanitarios;7056;36.96145125;5.697278912;2
+2020-05-25;Castilla y León;Otros;381;7.349081365;1.312335958;7
+2020-05-25;Castilla y León;Otros sanitarios;364;27.74725275;5.769230769;8
+2020-05-25;Castilla y León;Personal en formación;1711;33.43074226;5.435417884;9
+2020-05-25;Castilla y León;Total;43351;31.69246384;5.328596803;12
+2020-05-26;Castilla y León;Administrativo;3972;18.15206445;2.7693857;1
+2020-05-26;Castilla y León;Auxiliares sanitarios;7056;37.72675737;5.697278912;2
+2020-05-26;Castilla y León;Fisioterapeuta;447;26.17449664;3.579418345;5
+2020-05-26;Castilla y León;Médicos;8623;35.92717152;6.969732112;6
+2020-05-26;Castilla y León;Otros;381;7.349081365;1.312335958;7
+2020-05-26;Castilla y León;Otros sanitarios;364;27.74725275;5.769230769;8
+2020-05-26;Castilla y León;Personal en formación;1711;33.95675044;5.435417884;9
+2020-05-26;Castilla y León;Servicios de apoyo no sanitario;2386;15.75859179;2.137468567;10
+2020-05-27;Castilla y León;Enfermero/a;13176;36.8852459;6.170309654;4
+2020-05-27;Castilla y León;Fisioterapeuta;447;26.84563758;3.579418345;5
+2020-05-27;Castilla y León;Médicos;8623;36.41424098;6.981329004;6
+2020-05-27;Castilla y León;Otros sanitarios;364;28.02197802;6.043956044;8
+2020-05-27;Castilla y León;Técnicos sanitarios;2014;26.8123138;3.277060576;11
+2020-05-27;Castilla y León;Total;43351;32.68206039;5.340130562;12
+2020-05-28;Castilla y León;Auxiliares sanitarios;7056;38.88888889;5.711451247;2
+2020-05-28;Castilla y León;Celador;3221;30.02173238;4.160198696;3
+2020-05-28;Castilla y León;Fisioterapeuta;447;26.84563758;3.579418345;5
+2020-05-28;Castilla y León;Otros sanitarios;364;28.02197802;6.043956044;8
+2020-05-28;Castilla y León;Personal en formación;1711;34.42431327;5.435417884;9
+2020-05-28;Castilla y León;Técnicos sanitarios;2014;26.8123138;3.277060576;11
+2020-05-29;Castilla y León;Auxiliares sanitarios;7056;40.05102041;5.725623583;2
+2020-05-29;Castilla y León;Enfermero/a;13176;38.14511233;6.185488767;4
+2020-05-29;Castilla y León;Fisioterapeuta;447;27.06935123;3.579418345;5
+2020-05-29;Castilla y León;Otros;381;8.13648294;1.312335958;7
+2020-05-29;Castilla y León;Otros sanitarios;364;28.2967033;6.043956044;8
+2020-05-30;Castilla y León;Fisioterapeuta;447;27.06935123;3.579418345;5
+2020-05-30;Castilla y León;Personal en formación;1711;34.8918761;5.435417884;9
+2020-05-31;Castilla y León;Otros sanitarios;364;28.2967033;6.043956044;8
+2020-05-31;Castilla y León;Técnicos sanitarios;2014;28.15292949;3.277060576;11
+2020-05-31;Castilla y León;Total;43351;33.66473668;5.34935757;12
+2020-06-01;Castilla y León;Celador;3221;30.58056504;4.160198696;3
+2020-06-01;Castilla y León;Fisioterapeuta;447;27.29306488;3.579418345;5
+2020-06-01;Castilla y León;Otros;381;8.398950131;1.312335958;7
+2020-06-01;Castilla y León;Otros sanitarios;364;28.84615385;6.043956044;8
+2020-06-01;Castilla y León;Técnicos sanitarios;2014;28.55014896;3.277060576;11
+2020-06-01;Castilla y León;Total;43351;34.33600148;5.353971073;12
+2020-06-02;Castilla y León;Administrativo;3972;19.78851964;2.7693857;1
+2020-06-02;Castilla y León;Enfermero/a;13176;39.97419551;6.193078324;4
+2020-06-02;Castilla y León;Fisioterapeuta;447;27.74049217;3.579418345;5
+2020-06-02;Castilla y León;Personal en formación;1711;37.22969024;5.435417884;9
+2020-06-02;Castilla y León;Servicios de apoyo no sanitario;2386;17.43503772;2.179379715;10
+2020-06-02;Castilla y León;Técnicos sanitarios;2014;28.79841112;3.277060576;11
+2020-06-02;Castilla y León;Total;43351;35.15259164;5.353971073;12
+2020-06-03;Castilla y León;Fisioterapeuta;447;28.18791946;3.579418345;5
+2020-06-03;Castilla y León;Otros;381;8.661417323;1.312335958;7
+2020-06-04;Castilla y León;Auxiliares sanitarios;7056;43.63662132;5.725623583;2
+2020-06-04;Castilla y León;Celador;3221;32.56752561;4.129152437;3
+2020-06-04;Castilla y León;Fisioterapeuta;447;28.18791946;3.579418345;5
+2020-06-05;Castilla y León;Enfermero/a;13176;41.63630844;6.215846995;4
+2020-06-06;Castilla y León;Personal en formación;1711;39.97662186;5.493863238;9
+2020-06-06;Castilla y León;Servicios de apoyo no sanitario;2386;20.95557418;2.221290863;10
+2020-06-07;Castilla y León;Administrativo;3972;22.5327291;2.794561934;1
+2020-06-07;Castilla y León;Otros;381;9.186351706;1.312335958;7
+2020-06-07;Castilla y León;Personal en formación;1711;39.97662186;5.493863238;9
+2020-06-07;Castilla y León;Servicios de apoyo no sanitario;2386;21.08130763;2.221290863;10
+2020-06-07;Castilla y León;Técnicos sanitarios;2014;30.98311817;3.277060576;11
+2020-06-08;Castilla y León;Administrativo;3972;23.51460222;2.794561934;1
+2020-06-08;Castilla y León;Enfermero/a;13176;42.34213722;6.215846995;4
+2020-06-09;Castilla y León;Administrativo;3972;24.37059416;2.819738167;1
+2020-06-09;Castilla y León;Médicos;8623;41.60964861;7.01611968;6
+2020-06-09;Castilla y León;Otros;381;9.448818898;1.312335958;7
+2020-06-09;Castilla y León;Otros sanitarios;364;33.24175824;6.043956044;8
+2020-06-09;Castilla y León;Personal en formación;1711;40.38573933;5.493863238;9
+2020-06-10;Castilla y León;Administrativo;3972;25.65458207;2.819738167;1
+2020-06-10;Castilla y León;Celador;3221;38.86991618;4.191244955;3
+2020-06-10;Castilla y León;Fisioterapeuta;447;29.3064877;3.579418345;5
+2020-06-10;Castilla y León;Servicios de apoyo no sanitario;2386;21.29086337;2.221290863;10
+2020-06-10;Castilla y León;Técnicos sanitarios;2014;34.90566038;3.277060576;11
+2020-06-10;Castilla y León;Total;43351;39.46391087;5.390879103;12
+2020-06-11;Castilla y León;Enfermero/a;13176;44.00425015;6.223436551;4
+2020-06-11;Castilla y León;Fisioterapeuta;447;29.97762864;3.579418345;5
+2020-06-11;Castilla y León;Otros sanitarios;364;34.89010989;6.318681319;8
+2020-06-11;Castilla y León;Total;43351;40.28742128;5.393185855;12
+2020-06-14;Castilla y León;Otros;381;9.448818898;1.312335958;7
+2020-06-14;Castilla y León;Personal en formación;1711;43.71712449;5.493863238;9
+2020-06-14;Castilla y León;Servicios de apoyo no sanitario;2386;24.47611065;2.221290863;10
+2020-06-15;Castilla y León;Enfermero/a;13176;44.94535519;6.231026108;4
+2020-06-15;Castilla y León;Personal en formación;1711;43.89246055;5.493863238;9
+2020-06-15;Castilla y León;Técnicos sanitarios;2014;38.18272095;3.326713009;11
+2020-06-16;Castilla y León;Auxiliares sanitarios;7056;48.75283447;5.796485261;2
+2020-06-16;Castilla y León;Técnicos sanitarios;2014;38.38133069;3.326713009;11
+2020-06-16;Castilla y León;Total;43351;41.65532514;5.413946622;12
+2020-06-17;Castilla y León;Celador;3221;40.14281279;4.222291214;3
+2020-06-17;Castilla y León;Fisioterapeuta;447;36.91275168;3.579418345;5
+2020-06-17;Castilla y León;Personal en formación;1711;44.30157802;5.493863238;9
+2020-06-18;Castilla y León;Enfermero/a;13176;45.28688525;6.238615665;4
+2020-06-18;Castilla y León;Fisioterapeuta;447;37.13646532;3.579418345;5
+2020-06-18;Castilla y León;Técnicos sanitarios;2014;38.38133069;3.376365442;11
+2020-04-12;Castilla y León;Administrativo;3972;7.527693857;2.668680765;1
+2020-04-12;Castilla y León;Auxiliares sanitarios;7056;11.55045351;4.195011338;2
+2020-04-12;Castilla y León;Médicos;8623;21.30349066;6.459468862;6
+2020-04-12;Castilla y León;Total;43351;13.78053563;4.597356462;12
+2020-04-13;Castilla y León;Administrativo;3972;9.13897281;2.744209466;1
+2020-04-13;Castilla y León;Auxiliares sanitarios;7056;12.65589569;4.336734694;2
+2020-04-13;Castilla y León;Servicios de apoyo no sanitario;2386;5.238893546;2.011735122;10
+2020-04-13;Castilla y León;Técnicos sanitarios;2014;9.53326713;3.326713009;11
+2020-04-14;Castilla y León;Fisioterapeuta;447;16.77852349;2.684563758;5
+2020-04-14;Castilla y León;Otros sanitarios;364;19.78021978;5.769230769;8
+2020-04-15;Castilla y León;Celador;3221;11.45606954;3.352995964;3
+2020-04-15;Castilla y León;Enfermero/a;13176;20.6815422;5.669398907;4
+2020-04-15;Castilla y León;Fisioterapeuta;447;17.00223714;2.684563758;5
+2020-04-15;Castilla y León;Servicios de apoyo no sanitario;2386;5.532271584;2.011735122;10
+2020-04-15;Castilla y León;Total;43351;17.97190376;4.862632927;12
+2020-04-16;Castilla y León;Auxiliares sanitarios;7056;14.65419501;4.549319728;2
+2020-04-16;Castilla y León;Médicos;8623;28.66751711;6.923344544;6
+2020-04-16;Castilla y León;Personal en formación;1711;21.56633548;4.967855056;9
+2020-04-16;Castilla y León;Servicios de apoyo no sanitario;2386;5.825649623;2.05364627;10
+2020-04-17;Castilla y León;Administrativo;3972;14.45115811;2.945619335;1
+2020-04-17;Castilla y León;Fisioterapeuta;447;19.91051454;2.684563758;5
+2020-04-18;Castilla y León;Administrativo;3972;14.50151057;2.945619335;1
+2020-04-18;Castilla y León;Auxiliares sanitarios;7056;15.83049887;4.662698413;2
+2020-04-18;Castilla y León;Otros;381;5.249343832;0.787401575;7
+2020-04-18;Castilla y León;Servicios de apoyo no sanitario;2386;6.035205365;2.05364627;10
+2020-04-18;Castilla y León;Total;43351;20.11487624;5.028719061;12
+2020-04-19;Castilla y León;Administrativo;3972;14.57703927;2.945619335;1
+2020-04-19;Castilla y León;Fisioterapeuta;447;20.80536913;2.684563758;5
+2020-04-19;Castilla y León;Otros sanitarios;364;23.62637363;5.769230769;8
+2020-04-19;Castilla y León;Personal en formación;1711;22.73524255;5.084745763;9
+2020-04-19;Castilla y León;Servicios de apoyo no sanitario;2386;6.119027661;2.05364627;10
+2020-04-19;Castilla y León;Total;43351;20.2509746;5.067933842;12
+2020-04-20;Castilla y León;Enfermero/a;13176;24.58257438;6.041287189;4
+2020-04-20;Castilla y León;Médicos;8623;31.85666241;7.213266844;6
+2020-04-21;Castilla y León;Médicos;8623;33.20190189;7.306041981;6
+2020-04-22;Castilla y León;Auxiliares sanitarios;7056;19.43027211;4.96031746;2
+2020-04-22;Castilla y León;Enfermero/a;13176;26.97328476;6.215846995;4
+2020-04-22;Castilla y León;Fisioterapeuta;447;24.16107383;3.579418345;5
+2020-04-22;Castilla y León;Médicos;8623;34.45436623;7.387220225;6
+2020-04-22;Castilla y León;Otros;381;6.036745407;1.049868766;7
+2020-04-22;Castilla y León;Personal en formación;1711;28.4628872;5.552308591;9
+2020-04-22;Castilla y León;Técnicos sanitarios;2014;13.1082423;3.426017875;11
+2020-04-23;Castilla y León;Auxiliares sanitarios;7056;20.16723356;5.017006803;2
+2020-04-23;Castilla y León;Celador;3221;15.77149953;3.849736107;3
+2020-04-23;Castilla y León;Enfermero/a;13176;27.42106861;6.246205222;4
+2020-04-23;Castilla y León;Técnicos sanitarios;2014;13.2571996;3.426017875;11
+2020-04-23;Castilla y León;Total;43351;24.08248945;5.367811585;12
+2020-04-24;Castilla y León;Enfermero/a;13176;28.77959927;6.246205222;4
+2020-04-24;Castilla y León;Otros sanitarios;364;26.92307692;5.769230769;8
+2020-04-24;Castilla y León;Servicios de apoyo no sanitario;2386;7.502095557;2.179379715;10
+2020-04-25;Castilla y León;Administrativo;3972;18.90735146;3.298086606;1
+2020-04-25;Castilla y León;Auxiliares sanitarios;7056;22.30725624;5.172902494;2
+2020-04-25;Castilla y León;Celador;3221;20.05588327;4.098106178;3
+2020-04-25;Castilla y León;Médicos;8623;36.5418068;7.479995361;6
+2020-04-25;Castilla y León;Otros sanitarios;364;27.1978022;6.043956044;8
+2020-04-26;Castilla y León;Enfermero/a;13176;29.59168185;6.329690346;4
+2020-04-26;Castilla y León;Médicos;8623;36.79693842;7.503189145;6
+2020-04-26;Castilla y León;Técnicos sanitarios;2014;14.59781529;3.376365442;11
+2020-04-27;Castilla y León;Enfermero/a;13176;30.96539162;6.473891925;4
+2020-04-27;Castilla y León;Fisioterapeuta;447;25.72706935;3.579418345;5
+2020-04-27;Castilla y León;Personal en formación;1711;33.2554062;5.844535359;9
+2020-04-27;Castilla y León;Servicios de apoyo no sanitario;2386;8.005029338;2.221290863;10
+2020-04-28;Castilla y León;Fisioterapeuta;447;28.8590604;3.579418345;5
+2020-04-28;Castilla y León;Otros sanitarios;364;30.21978022;6.593406593;8
+2020-04-28;Castilla y León;Servicios de apoyo no sanitario;2386;8.298407376;2.221290863;10
+2020-04-28;Castilla y León;Técnicos sanitarios;2014;17.22939424;3.426017875;11
+2020-04-29;Castilla y León;Administrativo;3972;22.73413897;3.474320242;1
+2020-04-29;Castilla y León;Celador;3221;26.66873642;4.532753803;3
+2020-04-29;Castilla y León;Enfermero/a;13176;36.40710383;6.747115968;4
+2020-04-29;Castilla y León;Fisioterapeuta;447;30.64876957;3.803131991;5
+2020-04-29;Castilla y León;Personal en formación;1711;37.4050263;6.370543542;9
+2020-04-30;Castilla y León;Auxiliares sanitarios;7056;29.23752834;5.76814059;2
+2020-04-30;Castilla y León;Fisioterapeuta;447;33.55704698;4.026845638;5
+2020-04-30;Castilla y León;Médicos;8623;46.294793;8.025049287;6
+2020-04-30;Castilla y León;Técnicos sanitarios;2014;18.5203575;3.525322741;11
+2020-05-01;Castilla y León;Auxiliares sanitarios;7056;30.13038549;5.76814059;2
+2020-05-02;Castilla y León;Fisioterapeuta;447;35.79418345;4.250559284;5
+2020-05-02;Castilla y León;Otros;381;7.611548556;1.57480315;7
+2020-05-02;Castilla y León;Otros sanitarios;364;34.89010989;7.142857143;8
+2020-05-02;Castilla y León;Técnicos sanitarios;2014;19.41410129;3.574975174;11
+2020-05-02;Castilla y León;Total;43351;34.47440659;6.048303384;12
+2020-05-03;Castilla y León;Médicos;8623;47.08338165;8.152615099;6
+2020-05-03;Castilla y León;Servicios de apoyo no sanitario;2386;9.346186085;2.221290863;10
+2020-05-04;Castilla y León;Administrativo;3972;26.10775428;3.524672709;1
+2020-05-04;Castilla y León;Celador;3221;29.24557591;4.998447687;3
+2020-05-04;Castilla y León;Médicos;8623;47.82558274;8.233793343;6
+2020-05-04;Castilla y León;Técnicos sanitarios;2014;20.25819265;3.624627607;11
+2020-05-05;Castilla y León;Médicos;8623;49.07804708;8.338165372;6
+2020-05-05;Castilla y León;Técnicos sanitarios;2014;20.95332671;3.67428004;11
+2020-05-06;Castilla y León;Administrativo;3972;28.09667674;3.952668681;1
+2020-05-06;Castilla y León;Médicos;8623;49.91302331;8.454134292;6
+2020-05-06;Castilla y León;Personal en formación;1711;44.7106955;6.721215663;9
+2020-05-07;Castilla y León;Administrativo;3972;29.63242699;4.078549849;1
+2020-05-07;Castilla y León;Enfermero/a;13176;46.42531876;7.559198543;4
+2020-05-07;Castilla y León;Fisioterapeuta;447;39.82102908;4.697986577;5
+2020-05-07;Castilla y León;Médicos;8623;52.1164328;8.686072133;6
+2020-05-07;Castilla y León;Otros;381;9.186351706;1.837270341;7
+2020-05-07;Castilla y León;Otros sanitarios;364;39.83516484;7.142857143;8
+2020-05-07;Castilla y León;Técnicos sanitarios;2014;23.58490566;4.121151936;11
+2020-05-07;Castilla y León;Total;43351;40.22744573;6.657285876;12
+2020-05-08;Castilla y León;Auxiliares sanitarios;7056;38.69047619;7.171201814;2
+2020-05-08;Castilla y León;Otros;381;9.448818898;2.099737533;7
+2020-05-08;Castilla y León;Personal en formación;1711;46.40561075;7.013442431;9
+2020-05-09;Castilla y León;Celador;3221;20.30425334;5.371002794;3
+2020-05-09;Castilla y León;Enfermero/a;13176;28.28627808;7.392228294;4
+2020-05-09;Castilla y León;Otros;381;5.249343832;1.57480315;7
+2020-05-09;Castilla y León;Otros sanitarios;364;23.35164835;6.868131868;8
+2020-05-09;Castilla y León;Servicios de apoyo no sanitario;2386;9.807208718;2.514668902;10
+2020-05-10;Castilla y León;Celador;3221;20.39739211;5.402049053;3
+2020-05-10;Castilla y León;Enfermero/a;13176;28.43047966;7.422586521;4
+2020-05-10;Castilla y León;Otros;381;5.249343832;1.57480315;7
+2020-05-10;Castilla y León;Personal en formación;1711;28.28755114;6.604324956;9
+2020-05-10;Castilla y León;Total;43351;24.84602431;6.562709049;12
+2020-05-11;Castilla y León;Auxiliares sanitarios;7056;28.88321995;7.157029478;2
+2020-05-11;Castilla y León;Fisioterapeuta;447;18.34451902;4.474272931;5
+2020-05-11;Castilla y León;Personal en formación;1711;28.57977791;6.838106371;9
+2020-05-11;Castilla y León;Técnicos sanitarios;2014;17.22939424;4.121151936;11
+2020-05-12;Castilla y León;Auxiliares sanitarios;7056;29.32256236;7.383786848;2
+2020-05-12;Castilla y León;Fisioterapeuta;447;18.34451902;4.474272931;5
+2020-05-12;Castilla y León;Otros;381;5.249343832;1.57480315;7
+2020-05-12;Castilla y León;Personal en formación;1711;28.81355932;6.896551724;9
+2020-05-13;Castilla y León;Enfermero/a;13176;30.09259259;6.056466302;4
+2020-05-13;Castilla y León;Fisioterapeuta;447;18.56823266;3.579418345;5
+2020-05-13;Castilla y León;Médicos;8623;31.32320538;6.90015076;6
+2020-05-13;Castilla y León;Técnicos sanitarios;2014;17.775571;3.227408143;11
+2020-05-13;Castilla y León;Total;43351;26.54379368;5.243246984;12
+2020-05-14;Castilla y León;Servicios de apoyo no sanitario;2386;13.20201174;2.095557418;10
+2020-05-15;Castilla y León;Auxiliares sanitarios;7056;31.73185941;5.569727891;2
+2020-05-15;Castilla y León;Total;43351;27.51724297;5.259394247;12
+2020-05-16;Castilla y León;Auxiliares sanitarios;7056;31.87358277;5.598072562;2
+2020-05-16;Castilla y León;Médicos;8623;32.68004175;6.95813522;6
+2020-05-16;Castilla y León;Otros;381;6.824146982;1.312335958;7
+2020-05-16;Castilla y León;Técnicos sanitarios;2014;18.3714002;3.227408143;11
+2020-05-16;Castilla y León;Total;43351;27.66026159;5.270928006;12
+2020-05-17;Castilla y León;Médicos;8623;32.73802621;6.95813522;6
+2020-05-17;Castilla y León;Otros;381;6.824146982;1.312335958;7
+2020-05-17;Castilla y León;Personal en formación;1711;30.04091175;5.435417884;9
+2020-05-17;Castilla y León;Servicios de apoyo no sanitario;2386;13.83067896;2.095557418;10
+2020-05-18;Castilla y León;Enfermero/a;13176;31.86854888;6.1095932;4
+2020-05-18;Castilla y León;Servicios de apoyo no sanitario;2386;14.16596815;2.095557418;10
+2020-05-19;Castilla y León;Auxiliares sanitarios;7056;33.48922902;5.640589569;2
+2020-05-19;Castilla y León;Personal en formación;1711;31.15137347;5.435417884;9
+2020-05-20;Castilla y León;Enfermero/a;13176;33.53066181;6.124772313;4
+2020-05-20;Castilla y León;Médicos;8623;34.36159109;6.969732112;6
+2020-05-20;Castilla y León;Otros;381;7.086614173;1.312335958;7
+2020-05-21;Castilla y León;Administrativo;3972;17.14501511;2.744209466;1
+2020-05-21;Castilla y León;Fisioterapeuta;447;23.93736018;3.579418345;5
+2020-05-21;Castilla y León;Otros sanitarios;364;26.64835165;5.769230769;8
+2020-05-21;Castilla y León;Total;43351;30.5298609;5.317063044;12
+2020-05-22;Castilla y León;Administrativo;3972;17.57301108;2.7693857;1
+2020-05-22;Castilla y León;Auxiliares sanitarios;7056;35.98356009;5.697278912;2
+2020-05-22;Castilla y León;Celador;3221;28.06581807;4.129152437;3
+2020-05-22;Castilla y León;Fisioterapeuta;447;25.27964206;3.579418345;5
+2020-05-23;Castilla y León;Auxiliares sanitarios;7056;36.25283447;5.697278912;2
+2020-05-23;Castilla y León;Celador;3221;28.06581807;4.129152437;3
+2020-05-24;Castilla y León;Enfermero/a;13176;34.94231937;6.147540984;4
+2020-05-24;Castilla y León;Personal en formación;1711;33.31385155;5.435417884;9
+2020-05-24;Castilla y León;Técnicos sanitarios;2014;26.26613704;3.277060576;11
+2020-05-25;Castilla y León;Fisioterapeuta;447;25.72706935;3.579418345;5
+2020-05-26;Castilla y León;Celador;3221;29.61813102;4.160198696;3
+2020-05-27;Castilla y León;Auxiliares sanitarios;7056;38.32199546;5.711451247;2
+2020-05-27;Castilla y León;Otros;381;7.874015748;1.312335958;7
+2020-05-28;Castilla y León;Administrativo;3972;18.47935549;2.7693857;1
+2020-05-28;Castilla y León;Otros;381;7.874015748;1.312335958;7
+2020-05-28;Castilla y León;Servicios de apoyo no sanitario;2386;16.05196982;2.137468567;10
+2020-05-29;Castilla y León;Administrativo;3972;18.55488419;2.7693857;1
+2020-05-29;Castilla y León;Personal en formación;1711;34.83343074;5.435417884;9
+2020-05-29;Castilla y León;Técnicos sanitarios;2014;28.00397219;3.277060576;11
+2020-05-29;Castilla y León;Total;43351;33.59092062;5.347050818;12
+2020-05-30;Castilla y León;Administrativo;3972;18.68076536;2.7693857;1
+2020-05-30;Castilla y León;Auxiliares sanitarios;7056;40.13605442;5.725623583;2
+2020-05-30;Castilla y León;Celador;3221;30.42533375;4.160198696;3
+2020-05-30;Castilla y León;Médicos;8623;37.04047315;6.981329004;6
+2020-05-30;Castilla y León;Otros;381;8.13648294;1.312335958;7
+2020-05-30;Castilla y León;Técnicos sanitarios;2014;28.15292949;3.277060576;11
+2020-05-31;Castilla y León;Auxiliares sanitarios;7056;40.16439909;5.725623583;2
+2020-05-31;Castilla y León;Celador;3221;30.42533375;4.160198696;3
+2020-05-31;Castilla y León;Fisioterapeuta;447;27.06935123;3.579418345;5
+2020-05-31;Castilla y León;Médicos;8623;37.04047315;6.981329004;6
+2020-05-31;Castilla y León;Otros;381;8.13648294;1.312335958;7
+2020-06-01;Castilla y León;Administrativo;3972;18.85699899;2.7693857;1
+2020-06-01;Castilla y León;Enfermero/a;13176;39.06344869;6.200667881;4
+2020-06-01;Castilla y León;Médicos;8623;37.5507364;6.981329004;6
+2020-06-01;Castilla y León;Personal en formación;1711;35.7685564;5.435417884;9
+2020-06-02;Castilla y León;Celador;3221;31.07730518;4.129152437;3
+2020-06-02;Castilla y León;Otros sanitarios;364;28.84615385;6.043956044;8
+2020-06-03;Castilla y León;Auxiliares sanitarios;7056;43.1122449;5.739795918;2
+2020-06-04;Castilla y León;Administrativo;3972;21.9284995;2.7693857;1
+2020-06-04;Castilla y León;Enfermero/a;13176;40.86217365;6.200667881;4
+2020-06-04;Castilla y León;Médicos;8623;40.77467239;6.981329004;6
+2020-06-04;Castilla y León;Otros;381;8.661417323;1.312335958;7
+2020-06-04;Castilla y León;Personal en formación;1711;38.98305085;5.493863238;9
+2020-06-04;Castilla y León;Técnicos sanitarios;2014;30.63555114;3.277060576;11
+2020-06-05;Castilla y León;Administrativo;3972;22.25579053;2.794561934;1
+2020-06-05;Castilla y León;Auxiliares sanitarios;7056;44.48696145;5.753968254;2
+2020-06-05;Castilla y León;Médicos;8623;41.02980401;7.01611968;6
+2020-06-05;Castilla y León;Servicios de apoyo no sanitario;2386;20.87175189;2.221290863;10
+2020-06-06;Castilla y León;Celador;3221;35.57901273;4.160198696;3
+2020-06-06;Castilla y León;Otros;381;8.661417323;1.312335958;7
+2020-06-06;Castilla y León;Total;43351;37.63696339;5.377038592;12
+2020-06-07;Castilla y León;Auxiliares sanitarios;7056;44.72789116;5.753968254;2
+2020-06-07;Castilla y León;Fisioterapeuta;447;28.41163311;3.579418345;5
+2020-06-07;Castilla y León;Total;43351;37.66695117;5.377038592;12
+2020-06-08;Castilla y León;Auxiliares sanitarios;7056;45.60657596;5.782312925;2
+2020-06-08;Castilla y León;Celador;3221;37.34864949;4.191244955;3
+2020-06-08;Castilla y León;Otros;381;9.186351706;1.312335958;7
+2020-06-08;Castilla y León;Personal en formación;1711;40.32729398;5.493863238;9
+2020-06-08;Castilla y León;Total;43351;38.30130793;5.383958848;12
+2020-06-09;Castilla y León;Enfermero/a;13176;42.97965999;6.215846995;4
+2020-06-09;Castilla y León;Fisioterapeuta;447;29.08277405;3.579418345;5
+2020-06-09;Castilla y León;Técnicos sanitarios;2014;31.57894737;3.277060576;11
+2020-06-09;Castilla y León;Total;43351;38.84108786;5.386265599;12
+2020-06-10;Castilla y León;Enfermero/a;13176;43.5033394;6.223436551;4
+2020-06-10;Castilla y León;Médicos;8623;41.76040821;7.01611968;6
+2020-06-10;Castilla y León;Otros;381;9.448818898;1.312335958;7
+2020-06-10;Castilla y León;Otros sanitarios;364;33.24175824;6.043956044;8
+2020-06-10;Castilla y León;Personal en formación;1711;40.44418469;5.493863238;9
+2020-06-11;Castilla y León;Personal en formación;1711;43.54178843;5.493863238;9
+2020-06-11;Castilla y León;Servicios de apoyo no sanitario;2386;21.96144174;2.221290863;10
+2020-06-14;Castilla y León;Auxiliares sanitarios;7056;48.37018141;5.796485261;2
+2020-06-14;Castilla y León;Celador;3221;39.21142502;4.191244955;3
+2020-06-14;Castilla y León;Enfermero/a;13176;44.70248937;6.223436551;4
+2020-06-14;Castilla y León;Médicos;8623;42.14310565;7.027716572;6
+2020-06-14;Castilla y León;Técnicos sanitarios;2014;37.78550149;3.277060576;11
+2020-06-15;Castilla y León;Administrativo;3972;29.60725076;2.844914401;1
+2020-06-15;Castilla y León;Auxiliares sanitarios;7056;48.62528345;5.796485261;2
+2020-06-15;Castilla y León;Celador;3221;39.80130394;4.222291214;3
+2020-06-15;Castilla y León;Servicios de apoyo no sanitario;2386;27.78709137;2.221290863;10
+2020-06-15;Castilla y León;Total;43351;41.480012;5.41163987;12
+2020-06-16;Castilla y León;Celador;3221;40.04967401;4.222291214;3
+2020-06-16;Castilla y León;Enfermero/a;13176;45.08196721;6.238615665;4
+2020-06-16;Castilla y León;Médicos;8623;42.51420619;7.062507248;6
+2020-06-16;Castilla y León;Otros;381;9.711286089;1.312335958;7
+2020-06-17;Castilla y León;Administrativo;3972;29.75830816;2.844914401;1
+2020-06-17;Castilla y León;Auxiliares sanitarios;7056;48.83786848;5.810657596;2
+2020-06-17;Castilla y León;Enfermero/a;13176;45.15786278;6.238615665;4
+2020-06-17;Castilla y León;Médicos;8623;42.61857822;7.062507248;6
+2020-06-17;Castilla y León;Otros sanitarios;364;36.53846154;6.318681319;8
+2020-06-17;Castilla y León;Servicios de apoyo no sanitario;2386;28.58340319;2.221290863;10
+2020-06-18;Castilla y León;Celador;3221;40.73269171;4.284383732;3
+2020-06-18;Castilla y León;Médicos;8623;42.75774093;7.062507248;6
+2020-06-18;Castilla y León;Personal en formación;1711;44.41846873;5.493863238;9
+2020-06-18;Castilla y León;Servicios de apoyo no sanitario;2386;28.58340319;2.221290863;10
+2020-06-18;Castilla y León;Total;43351;41.89522733;5.423173629;12
+2020-04-12;Castilla y León;Celador;3221;8.848183794;3.073579634;3
+2020-04-12;Castilla y León;Enfermero/a;13176;15.63448695;5.38099575;4
+2020-04-12;Castilla y León;Fisioterapeuta;447;9.843400447;2.684563758;5
+2020-04-12;Castilla y León;Otros;381;2.099737533;0.787401575;7
+2020-04-12;Castilla y León;Personal en formación;1711;15.78024547;4.617182934;9
+2020-04-12;Castilla y León;Servicios de apoyo no sanitario;2386;4.819782062;1.886001676;10
+2020-04-13;Castilla y León;Enfermero/a;13176;17.4332119;5.510018215;4
+2020-04-13;Castilla y León;Fisioterapeuta;447;12.30425056;2.684563758;5
+2020-04-13;Castilla y León;Otros;381;2.099737533;0.787401575;7
+2020-04-13;Castilla y León;Personal en formación;1711;17.59205143;4.617182934;9
+2020-04-13;Castilla y León;Total;43351;15.24070956;4.7057738;12
+2020-04-14;Castilla y León;Administrativo;3972;11.0020141;2.844914401;1
+2020-04-14;Castilla y León;Auxiliares sanitarios;7056;13.56292517;4.421768707;2
+2020-04-14;Castilla y León;Otros;381;2.624671916;0.787401575;7
+2020-04-14;Castilla y León;Personal en formación;1711;19.40385739;4.792518995;9
+2020-04-14;Castilla y León;Servicios de apoyo no sanitario;2386;5.364626991;2.011735122;10
+2020-04-14;Castilla y León;Técnicos sanitarios;2014;10.27805362;3.326713009;11
+2020-04-14;Castilla y León;Total;43351;16.95001269;4.807270882;12
+2020-04-15;Castilla y León;Administrativo;3972;12.33635448;2.870090634;1
+2020-04-15;Castilla y León;Auxiliares sanitarios;7056;14.22902494;4.492630385;2
+2020-04-15;Castilla y León;Otros sanitarios;364;21.7032967;5.769230769;8
+2020-04-15;Castilla y León;Técnicos sanitarios;2014;10.82423039;3.326713009;11
+2020-04-16;Castilla y León;Celador;3221;11.98385595;3.415088482;3
+2020-04-16;Castilla y León;Enfermero/a;13176;21.79720704;5.775652702;4
+2020-04-16;Castilla y León;Otros;381;4.98687664;0.787401575;7
+2020-04-16;Castilla y León;Técnicos sanitarios;2014;10.92353525;3.326713009;11
+2020-04-17;Castilla y León;Personal en formación;1711;22.67679719;5.026300409;9
+2020-04-17;Castilla y León;Servicios de apoyo no sanitario;2386;5.951383068;2.05364627;10
+2020-04-18;Castilla y León;Otros sanitarios;364;23.62637363;5.769230769;8
+2020-04-18;Castilla y León;Personal en formación;1711;22.73524255;5.084745763;9
+2020-04-18;Castilla y León;Técnicos sanitarios;2014;11.42005958;3.326713009;11
+2020-04-19;Castilla y León;Auxiliares sanitarios;7056;15.98639456;4.691043084;2
+2020-04-19;Castilla y León;Enfermero/a;13176;23.36824529;5.965391621;4
+2020-04-19;Castilla y León;Otros;381;5.249343832;0.787401575;7
+2020-04-19;Castilla y León;Técnicos sanitarios;2014;11.46971202;3.326713009;11
+2020-04-20;Castilla y León;Auxiliares sanitarios;7056;16.90759637;4.761904762;2
+2020-04-20;Castilla y León;Celador;3221;13.44303011;3.570319776;3
+2020-04-20;Castilla y León;Fisioterapeuta;447;22.14765101;3.131991051;5
+2020-04-20;Castilla y León;Otros;381;5.511811024;1.049868766;7
+2020-04-20;Castilla y León;Otros sanitarios;364;24.45054945;5.769230769;8
+2020-04-20;Castilla y León;Personal en formación;1711;23.96259497;5.20163647;9
+2020-04-20;Castilla y León;Total;43351;21.31208046;5.153283661;12
+2020-04-21;Castilla y León;Administrativo;3972;16.89325277;3.147029204;1
+2020-04-21;Castilla y León;Auxiliares sanitarios;7056;18.04138322;4.889455782;2
+2020-04-21;Castilla y León;Enfermero/a;13176;25.63752277;6.139951427;4
+2020-04-21;Castilla y León;Fisioterapeuta;447;22.5950783;3.131991051;5
+2020-04-21;Castilla y León;Otros;381;5.511811024;1.049868766;7
+2020-04-21;Castilla y León;Otros sanitarios;364;24.45054945;5.769230769;8
+2020-04-21;Castilla y León;Servicios de apoyo no sanitario;2386;6.705783738;2.095557418;10
+2020-04-21;Castilla y León;Total;43351;22.35703905;5.243246984;12
+2020-04-22;Castilla y León;Total;43351;23.60037831;5.33782381;12
+2020-04-23;Castilla y León;Administrativo;3972;17.97583082;3.247734139;1
+2020-04-23;Castilla y León;Fisioterapeuta;447;24.16107383;3.579418345;5
+2020-04-23;Castilla y León;Servicios de apoyo no sanitario;2386;7.041072925;2.137468567;10
+2020-04-24;Castilla y León;Celador;3221;19.71437442;4.004967401;3
+2020-04-24;Castilla y León;Fisioterapeuta;447;24.60850112;3.579418345;5
+2020-04-24;Castilla y León;Médicos;8623;36.22869071;7.445204685;6
+2020-04-24;Castilla y León;Otros;381;6.824146982;1.049868766;7
+2020-04-24;Castilla y León;Personal en formación;1711;30.68381064;5.727644652;9
+2020-04-25;Castilla y León;Enfermero/a;13176;29.28051002;6.291742562;4
+2020-04-25;Castilla y León;Fisioterapeuta;447;24.60850112;3.579418345;5
+2020-04-25;Castilla y León;Servicios de apoyo no sanitario;2386;7.795473596;2.221290863;10
+2020-04-25;Castilla y León;Técnicos sanitarios;2014;14.49851043;3.426017875;11
+2020-04-25;Castilla y León;Total;43351;25.90020991;5.462388411;12
+2020-04-26;Castilla y León;Auxiliares sanitarios;7056;22.77494331;5.229591837;2
+2020-04-26;Castilla y León;Celador;3221;20.73890096;4.191244955;3
+2020-04-26;Castilla y León;Fisioterapeuta;447;24.60850112;3.579418345;5
+2020-04-26;Castilla y León;Otros sanitarios;364;27.1978022;6.043956044;8
+2020-04-26;Castilla y León;Total;43351;26.20470116;5.494682937;12
+2020-04-27;Castilla y León;Celador;3221;23.50201801;4.34647625;3
+2020-04-27;Castilla y León;Otros;381;7.349081365;1.837270341;7
+2020-04-27;Castilla y León;Otros sanitarios;364;27.74725275;6.318681319;8
+2020-04-27;Castilla y León;Total;43351;27.54261724;5.598486771;12
+2020-04-28;Castilla y León;Celador;3221;25.14746973;4.563800062;3
+2020-04-28;Castilla y León;Enfermero/a;13176;33.02975106;6.534608379;4
+2020-04-28;Castilla y León;Otros;381;7.611548556;1.837270341;7
+2020-04-29;Castilla y León;Auxiliares sanitarios;7056;28.03287982;5.683106576;2
+2020-04-29;Castilla y León;Servicios de apoyo no sanitario;2386;8.591785415;2.221290863;10
+2020-04-29;Castilla y León;Total;43351;31.7616664;5.859149731;12
+2020-04-30;Castilla y León;Administrativo;3972;24.39577039;3.474320242;1
+2020-04-30;Castilla y León;Celador;3221;28.40732692;4.781123875;3
+2020-04-30;Castilla y León;Otros sanitarios;364;34.61538462;7.142857143;8
+2020-04-30;Castilla y León;Personal en formación;1711;39.8012858;6.487434249;9
+2020-04-30;Castilla y León;Servicios de apoyo no sanitario;2386;9.094719195;2.221290863;10
+2020-04-30;Castilla y León;Total;43351;33.69011095;5.967567069;12
+2020-05-01;Castilla y León;Administrativo;3972;24.64753273;3.474320242;1
+2020-05-01;Castilla y León;Enfermero/a;13176;39.44292653;6.967213115;4
+2020-05-01;Castilla y León;Fisioterapeuta;447;33.78076063;4.026845638;5
+2020-05-01;Castilla y León;Médicos;8623;46.66589354;8.071436855;6
+2020-05-01;Castilla y León;Otros;381;7.611548556;1.57480315;7
+2020-05-01;Castilla y León;Personal en formación;1711;40.15195792;6.487434249;9
+2020-05-01;Castilla y León;Técnicos sanitarios;2014;19.21549156;3.574975174;11
+2020-05-01;Castilla y León;Total;43351;34.24603815;5.999861595;12
+2020-05-02;Castilla y León;Auxiliares sanitarios;7056;30.25793651;5.853174603;2
+2020-05-02;Castilla y León;Personal en formación;1711;40.56107539;6.604324956;9
+2020-05-03;Castilla y León;Celador;3221;28.77988202;4.843216392;3
+2020-05-03;Castilla y León;Enfermero/a;13176;39.88312083;7.020340012;4
+2020-05-03;Castilla y León;Fisioterapeuta;447;35.79418345;4.250559284;5
+2020-05-03;Castilla y León;Otros;381;8.13648294;1.57480315;7
+2020-05-03;Castilla y León;Personal en formación;1711;40.61952075;6.604324956;9
+2020-05-04;Castilla y León;Auxiliares sanitarios;7056;31.8877551;6.193310658;2
+2020-05-04;Castilla y León;Enfermero/a;13176;41.34790528;7.14177292;4
+2020-05-04;Castilla y León;Fisioterapeuta;447;36.68903803;4.697986577;5
+2020-05-04;Castilla y León;Otros;381;8.13648294;1.57480315;7
+2020-05-04;Castilla y León;Personal en formación;1711;41.61309176;6.487434249;9
+2020-05-04;Castilla y León;Servicios de apoyo no sanitario;2386;9.639564124;2.30511316;10
+2020-05-05;Castilla y León;Otros sanitarios;364;37.36263736;6.868131868;8
+2020-05-05;Castilla y León;Personal en formación;1711;43.48334307;6.66277031;9
+2020-05-06;Castilla y León;Servicios de apoyo no sanitario;2386;11.56747695;2.430846605;10
+2020-05-06;Castilla y León;Total;43351;38.43740629;6.426610689;12
+2020-05-07;Castilla y León;Celador;3221;34.74076374;5.277864017;3
+2020-05-07;Castilla y León;Servicios de apoyo no sanitario;2386;12.19614417;2.514668902;10
+2020-05-08;Castilla y León;Administrativo;3972;30.06042296;4.229607251;1
+2020-05-08;Castilla y León;Celador;3221;35.88947532;5.557280348;3
+2020-05-08;Castilla y León;Enfermero/a;13176;47.74590164;7.680631451;4
+2020-05-08;Castilla y León;Médicos;8623;53.55444741;8.836831729;6
+2020-05-09;Castilla y León;Administrativo;3972;12.53776435;3.927492447;1
+2020-05-09;Castilla y León;Auxiliares sanitarios;7056;28.28798186;6.901927438;2
+2020-05-09;Castilla y León;Personal en formación;1711;28.17066043;6.545879603;9
+2020-05-09;Castilla y León;Técnicos sanitarios;2014;16.53426018;3.872889772;11
+2020-05-09;Castilla y León;Total;43351;24.72837997;6.532721275;12
+2020-05-10;Castilla y León;Fisioterapeuta;447;18.12080537;4.474272931;5
+2020-05-10;Castilla y León;Médicos;8623;30.39545402;8.593296996;6
+2020-05-10;Castilla y León;Servicios de apoyo no sanitario;2386;9.807208718;2.514668902;10
+2020-05-10;Castilla y León;Técnicos sanitarios;2014;16.58391261;3.872889772;11
+2020-05-11;Castilla y León;Administrativo;3972;12.99093656;4.204431017;1
+2020-05-11;Castilla y León;Celador;3221;20.76994722;5.650419124;3
+2020-05-11;Castilla y León;Médicos;8623;30.75495767;8.674475241;6
+2020-05-11;Castilla y León;Otros sanitarios;364;23.62637363;6.868131868;8
+2020-05-11;Castilla y León;Total;43351;25.22894512;6.701114161;12
+2020-05-12;Castilla y León;Enfermero/a;13176;29.69793564;7.597146327;4
+2020-05-12;Castilla y León;Otros sanitarios;364;24.45054945;6.868131868;8
+2020-05-12;Castilla y León;Técnicos sanitarios;2014;17.42800397;4.220456802;11
+2020-05-13;Castilla y León;Auxiliares sanitarios;7056;30.42800454;5.569727891;2
+2020-05-13;Castilla y León;Otros sanitarios;364;24.72527473;5.769230769;8
+2020-05-13;Castilla y León;Servicios de apoyo no sanitario;2386;12.9086337;2.095557418;10
+2020-05-14;Castilla y León;Administrativo;3972;15.10574018;2.693856999;1
+2020-05-14;Castilla y León;Auxiliares sanitarios;7056;31.26417234;5.569727891;2
+2020-05-14;Castilla y León;Celador;3221;23.31574045;4.03601366;3
+2020-05-14;Castilla y León;Enfermero/a;13176;30.52519733;6.064055859;4
+2020-05-15;Castilla y León;Celador;3221;23.78143434;4.03601366;3
+2020-05-15;Castilla y León;Fisioterapeuta;447;20.80536913;3.579418345;5
+2020-05-15;Castilla y León;Otros sanitarios;364;25.82417582;5.769230769;8
+2020-05-15;Castilla y León;Técnicos sanitarios;2014;18.32174777;3.227408143;11
+2020-05-16;Castilla y León;Administrativo;3972;15.60926485;2.744209466;1
+2020-05-16;Castilla y León;Celador;3221;23.87457311;4.03601366;3
+2020-05-16;Castilla y León;Enfermero/a;13176;31.17789921;6.079234973;4
+2020-05-17;Castilla y León;Administrativo;3972;15.60926485;2.744209466;1
+2020-05-17;Castilla y León;Auxiliares sanitarios;7056;31.90192744;5.612244898;2
+2020-05-17;Castilla y León;Celador;3221;23.87457311;4.03601366;3
+2020-05-17;Castilla y León;Fisioterapeuta;447;21.47651007;3.579418345;5
+2020-05-17;Castilla y León;Total;43351;27.70639662;5.273234758;12
+2020-05-18;Castilla y León;Administrativo;3972;16.03726083;2.744209466;1
+2020-05-18;Castilla y León;Fisioterapeuta;447;22.14765101;3.579418345;5
+2020-05-18;Castilla y León;Médicos;8623;33.35266149;6.95813522;6
+2020-05-18;Castilla y León;Otros;381;6.824146982;1.312335958;7
+2020-05-18;Castilla y León;Personal en formación;1711;30.45002922;5.435417884;9
+2020-05-18;Castilla y León;Técnicos sanitarios;2014;20.60575968;3.277060576;11
+2020-05-19;Castilla y León;Celador;3221;25.61316361;4.067059919;3
+2020-05-19;Castilla y León;Enfermero/a;13176;32.59714633;6.117182757;4
+2020-05-19;Castilla y León;Fisioterapeuta;447;23.04250559;3.579418345;5
+2020-05-19;Castilla y León;Técnicos sanitarios;2014;23.13803376;3.277060576;11
+2020-05-19;Castilla y León;Total;43351;29.13427603;5.296302277;12
+2020-05-20;Castilla y León;Auxiliares sanitarios;7056;34.80725624;5.654761905;2
+2020-05-20;Castilla y León;Otros sanitarios;364;26.64835165;5.769230769;8
+2020-05-20;Castilla y León;Servicios de apoyo no sanitario;2386;14.79463537;2.137468567;10
+2020-05-20;Castilla y León;Técnicos sanitarios;2014;25.62065541;3.277060576;11
+2020-05-21;Castilla y León;Celador;3221;27.44489289;4.160198696;3
+2020-05-21;Castilla y León;Enfermero/a;13176;34.03157256;6.13236187;4
+2020-05-21;Castilla y León;Personal en formación;1711;32.90473407;5.435417884;9
+2020-05-22;Castilla y León;Personal en formación;1711;33.19696084;5.435417884;9
+2020-05-22;Castilla y León;Total;43351;31.03734631;5.323983299;12
+2020-05-23;Castilla y León;Enfermero/a;13176;34.92714026;6.147540984;4
+2020-05-23;Castilla y León;Médicos;8623;35.30093935;6.969732112;6
+2020-05-23;Castilla y León;Otros;381;7.349081365;1.312335958;7
+2020-05-23;Castilla y León;Personal en formación;1711;33.19696084;5.435417884;9
+2020-05-23;Castilla y León;Técnicos sanitarios;2014;26.26613704;3.277060576;11
+2020-05-24;Castilla y León;Administrativo;3972;17.67371601;2.7693857;1
+2020-05-24;Castilla y León;Auxiliares sanitarios;7056;36.35204082;5.697278912;2
+2020-05-24;Castilla y León;Celador;3221;28.12791059;4.129152437;3
+2020-05-24;Castilla y León;Médicos;8623;35.34732692;6.969732112;6
+2020-05-24;Castilla y León;Servicios de apoyo no sanitario;2386;15.29756915;2.137468567;10
+2020-05-25;Castilla y León;Celador;3221;28.84197454;4.129152437;3
+2020-05-25;Castilla y León;Enfermero/a;13176;35.71645416;6.162720097;4
+2020-05-25;Castilla y León;Médicos;8623;35.5096834;6.969732112;6
+2020-05-25;Castilla y León;Servicios de apoyo no sanitario;2386;15.46521375;2.137468567;10
+2020-05-25;Castilla y León;Técnicos sanitarios;2014;26.46474677;3.277060576;11
+2020-05-26;Castilla y León;Enfermero/a;13176;36.36915604;6.162720097;4
+2020-05-26;Castilla y León;Técnicos sanitarios;2014;26.56405164;3.277060576;11
+2020-05-26;Castilla y León;Total;43351;32.21378976;5.330903555;12
+2020-05-27;Castilla y León;Administrativo;3972;18.45417925;2.7693857;1
+2020-05-27;Castilla y León;Celador;3221;30.02173238;4.160198696;3
+2020-05-27;Castilla y León;Personal en formación;1711;34.42431327;5.435417884;9
+2020-05-27;Castilla y León;Servicios de apoyo no sanitario;2386;16.05196982;2.137468567;10
+2020-05-28;Castilla y León;Enfermero/a;13176;37.43169399;6.170309654;4
+2020-05-28;Castilla y León;Médicos;8623;36.59979126;6.981329004;6
+2020-05-28;Castilla y León;Total;43351;32.97963138;5.340130562;12
+2020-05-29;Castilla y León;Celador;3221;30.42533375;4.160198696;3
+2020-05-29;Castilla y León;Médicos;8623;37.01727937;6.981329004;6
+2020-05-29;Castilla y León;Servicios de apoyo no sanitario;2386;16.17770327;2.137468567;10
+2020-05-30;Castilla y León;Enfermero/a;13176;38.21341834;6.193078324;4
+2020-05-30;Castilla y León;Otros sanitarios;364;28.2967033;6.043956044;8
+2020-05-30;Castilla y León;Servicios de apoyo no sanitario;2386;16.17770327;2.137468567;10
+2020-05-30;Castilla y León;Total;43351;33.65089617;5.34935757;12
+2020-05-31;Castilla y León;Administrativo;3972;18.75629406;2.7693857;1
+2020-05-31;Castilla y León;Enfermero/a;13176;38.22100789;6.193078324;4
+2020-05-31;Castilla y León;Personal en formación;1711;34.8918761;5.435417884;9
+2020-05-31;Castilla y León;Servicios de apoyo no sanitario;2386;16.17770327;2.137468567;10
+2020-06-01;Castilla y León;Auxiliares sanitarios;7056;41.36904762;5.725623583;2
+2020-06-01;Castilla y León;Servicios de apoyo no sanitario;2386;16.80637049;2.179379715;10
+2020-06-02;Castilla y León;Auxiliares sanitarios;7056;42.34693878;5.725623583;2
+2020-06-02;Castilla y León;Médicos;8623;38.30453438;7.004522788;6
+2020-06-02;Castilla y León;Otros;381;8.398950131;1.312335958;7
+2020-06-03;Castilla y León;Administrativo;3972;19.96475327;2.7693857;1
+2020-06-03;Castilla y León;Celador;3221;32.00869295;4.129152437;3
+2020-06-03;Castilla y León;Enfermero/a;13176;40.39921069;6.193078324;4
+2020-06-03;Castilla y León;Médicos;8623;40.29919981;7.004522788;6
+2020-06-03;Castilla y León;Otros sanitarios;364;29.94505495;6.043956044;8
+2020-06-03;Castilla y León;Personal en formación;1711;38.39859731;5.435417884;9
+2020-06-03;Castilla y León;Servicios de apoyo no sanitario;2386;17.89606035;2.179379715;10
+2020-06-03;Castilla y León;Técnicos sanitarios;2014;28.94736842;3.277060576;11
+2020-06-03;Castilla y León;Total;43351;35.98302231;5.356277825;12
+2020-06-04;Castilla y León;Otros sanitarios;364;30.21978022;6.043956044;8
+2020-06-04;Castilla y León;Servicios de apoyo no sanitario;2386;18.94383906;2.221290863;10
+2020-06-04;Castilla y León;Total;43351;36.68658162;5.356277825;12
+2020-06-05;Castilla y León;Celador;3221;35.48587395;4.160198696;3
+2020-06-05;Castilla y León;Fisioterapeuta;447;28.18791946;3.579418345;5
+2020-06-05;Castilla y León;Otros;381;8.661417323;1.312335958;7
+2020-06-05;Castilla y León;Otros sanitarios;364;30.49450549;6.043956044;8
+2020-06-05;Castilla y León;Personal en formación;1711;39.85973115;5.493863238;9
+2020-06-05;Castilla y León;Técnicos sanitarios;2014;30.83416087;3.277060576;11
+2020-06-05;Castilla y León;Total;43351;37.51009204;5.377038592;12
+2020-06-06;Castilla y León;Administrativo;3972;22.55790534;2.794561934;1
+2020-06-06;Castilla y León;Auxiliares sanitarios;7056;44.69954649;5.753968254;2
+2020-06-06;Castilla y León;Enfermero/a;13176;41.71979356;6.215846995;4
+2020-06-06;Castilla y León;Fisioterapeuta;447;28.41163311;3.579418345;5
+2020-06-06;Castilla y León;Médicos;8623;41.09938536;7.01611968;6
+2020-06-06;Castilla y León;Otros sanitarios;364;30.76923077;6.043956044;8
+2020-06-06;Castilla y León;Técnicos sanitarios;2014;30.93346574;3.277060576;11
+2020-06-07;Castilla y León;Celador;3221;35.57901273;4.160198696;3
+2020-06-07;Castilla y León;Enfermero/a;13176;41.74256223;6.215846995;4
+2020-06-07;Castilla y León;Médicos;8623;41.13417604;7.01611968;6
+2020-06-07;Castilla y León;Otros sanitarios;364;30.76923077;6.043956044;8
+2020-06-08;Castilla y León;Fisioterapeuta;447;28.41163311;3.579418345;5
+2020-06-08;Castilla y León;Médicos;8623;41.44729213;7.01611968;6
+2020-06-08;Castilla y León;Otros sanitarios;364;31.31868132;6.043956044;8
+2020-06-08;Castilla y León;Servicios de apoyo no sanitario;2386;21.12321878;2.221290863;10
+2020-06-08;Castilla y León;Técnicos sanitarios;2014;31.08242304;3.277060576;11
+2020-06-09;Castilla y León;Auxiliares sanitarios;7056;46.35770975;5.782312925;2
+2020-06-09;Castilla y León;Celador;3221;38.12480596;4.191244955;3
+2020-06-09;Castilla y León;Servicios de apoyo no sanitario;2386;21.20704107;2.221290863;10
+2020-06-10;Castilla y León;Auxiliares sanitarios;7056;46.95294785;5.796485261;2
+2020-06-11;Castilla y León;Administrativo;3972;28.65055388;2.819738167;1
+2020-06-11;Castilla y León;Auxiliares sanitarios;7056;47.43480726;5.796485261;2
+2020-06-11;Castilla y León;Celador;3221;39.05619373;4.191244955;3
+2020-06-11;Castilla y León;Médicos;8623;41.82998956;7.01611968;6
+2020-06-11;Castilla y León;Otros;381;9.448818898;1.312335958;7
+2020-06-11;Castilla y León;Técnicos sanitarios;2014;37.28897716;3.277060576;11
+2020-06-14;Castilla y León;Administrativo;3972;29.30513595;2.819738167;1
+2020-06-14;Castilla y León;Fisioterapeuta;447;36.68903803;3.579418345;5
+2020-06-14;Castilla y León;Otros sanitarios;364;35.98901099;6.318681319;8
+2020-06-14;Castilla y León;Total;43351;41.03250213;5.395492607;12
+2020-06-15;Castilla y León;Fisioterapeuta;447;36.91275168;3.579418345;5
+2020-06-15;Castilla y León;Médicos;8623;42.37504349;7.062507248;6
+2020-06-15;Castilla y León;Otros;381;9.711286089;1.312335958;7
+2020-06-15;Castilla y León;Otros sanitarios;364;36.26373626;6.318681319;8
+2020-06-16;Castilla y León;Administrativo;3972;29.73313192;2.844914401;1
+2020-06-16;Castilla y León;Fisioterapeuta;447;36.91275168;3.579418345;5
+2020-06-16;Castilla y León;Otros sanitarios;364;36.53846154;6.318681319;8
+2020-06-16;Castilla y León;Personal en formación;1711;44.18468732;5.493863238;9
+2020-06-16;Castilla y León;Servicios de apoyo no sanitario;2386;28.37384744;2.221290863;10
+2020-06-17;Castilla y León;Otros;381;9.973753281;1.312335958;7
+2020-06-17;Castilla y León;Técnicos sanitarios;2014;38.38133069;3.376365442;11
+2020-06-17;Castilla y León;Total;43351;41.74067496;5.418560125;12
+2020-06-18;Castilla y León;Administrativo;3972;29.85901309;2.844914401;1
+2020-06-18;Castilla y León;Auxiliares sanitarios;7056;48.9654195;5.810657596;2
+2020-06-18;Castilla y León;Otros;381;9.973753281;1.312335958;7
+2020-06-18;Castilla y León;Otros sanitarios;364;37.36263736;6.318681319;8
