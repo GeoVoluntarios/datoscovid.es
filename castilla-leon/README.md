@@ -10,6 +10,8 @@
 ## Carpetas:
 - Carpeta _Datos_diarios_13.03.20-12.06.20_: Datos diarios desde el 13 de marzo de 2020 al 12 de junio de 2020 (inclusive).
 - Carpeta _Datos_diarios_13.03.20-12.06.20_Datos_solo_dias_laborables_13.06.20-19.06.20_: Datos diarios desde el 13 de marzo de 2020 al 12 de junio de 2020 (inclusive) y datos facilitados únicamente para los días laborables del 13 de junio de 2020 al 19 de junio de 2020.
+- Carpeta _Límites provinciales de Castilla y León recintos_: Polígonos de límites provinciales de Castilla y León.
+- Carpeta _Mapa de Zonas Básicas de Salud de Castilla y León_: Polígonos de Zonas Básicas de Salud de Castilla y León.
 
 ## Contenido:
 Los datos facilitados se encuentran agrupados en conjuntos de datos. A continuación, se incluye la información de cada uno de los conjuntos de datos extraída del Portal de Análisis de Datos Abiertos de la Junta de Castilla y León y los formatos de archivo plano y/o geográfico disponibles.
